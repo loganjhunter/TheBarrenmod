@@ -2274,8 +2274,8 @@
 	<set xpath="/items/item[@name='gunBotT1JunkSledge']/property[@name='Weight']/@value">125</set>
 	<set xpath="/items/item[@name='gunBotT2JunkTurret']/property[@name='Material']/@value">MmechanicalParts</set>
 	<set xpath="/items/item[@name='gunBotT2JunkTurret']/property[@name='Weight']/@value">150</set>	
-	<set xpath="/items/item[@name='gunBotT3JunkDrone']/property[@name='Material']/@value">MmechanicalParts</set>
-	<set xpath="/items/item[@name='gunBotT3JunkDrone']/property[@name='Weight']/@value">175</set>	
+<!-- 	<set xpath="/items/item[@name='gunBotT3JunkDrone']/property[@name='Material']/@value">MmechanicalParts</set>
+	<set xpath="/items/item[@name='gunBotT3JunkDrone']/property[@name='Weight']/@value">175</set>	 -->
 	
 
 	<!-- Add new atomic ammo into weapons -->
