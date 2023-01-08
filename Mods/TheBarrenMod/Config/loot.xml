@@ -16,7 +16,7 @@
 	<!--<remove xpath="/lootcontainers/lootgroup">  </remove>-->
 		<!-- Remove unwanted books, all schematics -->
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'bookSpearHunter')]"></remove>	
-	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'bookFiremansAlmanacAxes')]"></remove>
+	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'bookFiremansAlmanac')]"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'bookEnforcer')]"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'bookArtOfMining')]"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'bookNeedleAndThread')]"></remove>
@@ -66,7 +66,7 @@
 	<remove xpath="/lootcontainers/lootgroup/item[@name='meleeWpnBladeT3MacheteParts']"></remove>		
 	<remove xpath="/lootcontainers/lootgroup/item[@name='meleeWpnClubT3SteelClubParts']"></remove>		
 	<remove xpath="/lootcontainers/lootgroup/item[@name='meleeWpnKnucklesT3SteelKnucklesParts']"></remove>	
-	
+	<remove xpath="/lootcontainers/lootgroup/item[@name='gunBotRoboticsParts']"></remove>	
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'vehicle')]"></remove>	
 	<!-- Remove unwanted first aid and candy -->
 	<remove xpath="/lootcontainers/lootgroup/item[@name='medicalBloodBag']"></remove>
@@ -366,17 +366,17 @@
 			<item name="gunShotgunT3AutoShotgun"/>
 			<item name="gunShotgunBrokenAutoShotgun"/>
 		</lootgroup>
-		<lootgroup name="groupGunRifleT1HuntingRifle" count="1" loot_quality_template="QLTemplateT1">
-			<item name="gunRifleT1HuntingRifle" loot_prob_template="high" force_prob="true"/>
-			<item name="gunRifleBrokenHuntingRifle" loot_prob_template="veryHigh" force_prob="true"/>
+		<lootgroup name="groupGunRifleT1HuntingRifle" loot_quality_template="QLTemplateT1">
+			<item name="gunRifleT1HuntingRifle"/>
+			<item name="gunRifleBrokenHuntingRifle"/>
 		</lootgroup>
-		<lootgroup name="groupGunRifleT2LeverActionRifle" count="1" loot_quality_template="QLTemplateT2">
-			<item name="gunRifleT2LeverActionRifle" loot_prob_template="high" force_prob="true"/>
-			<item name="gunRifleBrokenLeverActionRifle" loot_prob_template="veryHigh" force_prob="true"/>
+		<lootgroup name="groupGunRifleT2LeverActionRifle" loot_quality_template="QLTemplateT2">
+			<item name="gunRifleT2LeverActionRifle"/>
+			<item name="gunRifleBrokenLeverActionRifle"/>
 		</lootgroup>
-		<lootgroup name="groupGunRifleT3SniperRifle" count="1" loot_quality_template="QLTemplateT3">
-			<item name="gunRifleT3SniperRifle" loot_prob_template="high" force_prob="true"/>
-			<item name="gunRifleBrokenSniperRifle" loot_prob_template="veryHigh" force_prob="true"/>
+		<lootgroup name="groupGunRifleT3SniperRifle" loot_quality_template="QLTemplateT3">
+			<item name="gunRifleT3SniperRifle"/>
+			<item name="gunRifleBrokenSniperRifle"/>
 		</lootgroup>
 		<lootgroup name="groupGunMGT1AK47" count="1" loot_quality_template="QLTemplateT1">
 			<item name="gunMGT1AK47" loot_prob_template="medLow" force_prob="true"/>
@@ -2006,12 +2006,12 @@
 		<lootgroup name="groupSoldier">
 			<item group="groupArmyTruck" loot_prob_template="veryHigh" force_prob="true"/>
 			<item group="groupGunHandgunScaled" loot_prob_template="veryHigh" force_prob="true"/>
-			<item group="groupGunRifleScaled" loot_prob_template="high" force_prob="true"/>
+			<!-- <item group="groupGunRifleScaled" loot_prob_template="high" force_prob="true"/> -->
 			<item group="groupGunMGScaled" loot_prob_template="high" force_prob="true"/>
 			<item group="groupWeaponModsScaled" loot_prob_template="high" force_prob="true"/>
 			<item group="groupRareManmadeResources" loot_prob_template="med" force_prob="true"/>
-			<item group="groupArmorScaled" loot_prob_template="veryHigh" force_prob="true"/>
-			<item group="groupArmorScaledTPlus" loot_prob_template="high" force_prob="true"/>
+			<item group="groupArmorScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupArmorScaledTPlus" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupArmorModsScaled" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupWeapons_Demolitionist" loot_prob_template="med" force_prob="true"/>
 			<item group="groupReinforcedChestT2" loot_prob_template="medHigh" force_prob="true"/>
@@ -2021,8 +2021,8 @@
 		</lootgroup>		
 		<lootgroup name="groupSoldiers" count="all">
 			<item group="groupSoldier" count="1"/>
-			<item group="groupGunRifleScaled" count="1"/>
-			<item group="groupAmmo762mm" count="0,1"/>
+			<item group="groupGunRifleScaled" count="0,1"/>
+			<!-- <item group="groupAmmo762mm" count="0,1"/> -->
 			<item group="groupReinforcedChestT1" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
