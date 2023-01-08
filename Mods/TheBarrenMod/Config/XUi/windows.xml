@@ -1,0 +1,200 @@
+<configs>
+	<set xpath="/windows/window[@name='windowSkillPerkInfo']/@hidden_entries_with_paging">0</set>
+	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect/rect[@name='pagerBox']/@pos">3,-678</set>
+	
+<!-- 	<remove xpath="/windows/window/[@name='windowBackpack']/panel[@name='header']/label"></remove>
+	<remove xpath="/windows/window/[@name='windowBackpack']/panel[@name='header']/sprite"></remove> -->
+<!-- 	<remove xpath="/windows/window/[@name='itemInfoPanel']"/>
+	<remove xpath="/windows/window/[@name='windowBackpack']"/>
+	<remove xpath="/windows/window/[@name='serviceInfoPanel']"/>
+	<append xpath="/windows">
+		<window name="itemInfoPanel" width="606" height="392" controller="ItemInfoWindow" panel="Center" cursor_area="true" >
+
+			<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+				<sprite depth="2" name="windowIcon" style="icon32px" pos="4,-5" sprite="{itemgroupicon}"/>
+				<label depth="2" name="windowName" pos="39,-6" width="340" height="32" text="{itemname}" font_size="32" />
+			</panel>
+
+			<rect name="contentInfo" height="346" depth="1" pos="0,-46" >
+				<sprite depth="5" name="backgroundMain" sprite="menu_empty3px" width="603" height="347" color="[black]" type="sliced" fillcenter="false" />
+				<rect depth="1" pos="3,0" name="preview" width="147" height="130">
+					<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="-3,0" width="153" height="133" color="[black]" type="sliced" fillcenter="false" />
+					<sprite depth="1" color="[darkGrey]" pos="0,0" type="sliced" globalopacity="true" />
+					<sprite depth="2" name="itemPreview" width="110" height="110" atlas="ItemIconAtlas" sprite="{itemicon}" color="{itemicontint}" pos="74,-58" pivot="center" foregroundlayer="true"/>
+					<sprite depth="8" name="itemtypeicon" width="32" height="32" sprite="ui_game_symbol_{itemtypeicon}" pos="4,-8" foregroundlayer="true" visible="{hasitemtypeicon}" color="{itemtypeicontint}" />
+					<sprite depth="3" name="durabilityBackground" height="20" width="145" color="48,48,48,255" type="sliced" pos="1, -107" visible="{hasdurability}"/>
+					<filledsprite depth="4" name="durabilityBar" height="20" width="145" color="{durabilitycolor}" type="filled" pos="1, -107" fill="{durabilityfill}" visible="{hasdurability}" />
+					<label depth="7" name="durabilityValue" pos="0,-98" width="145" height="32" text="{durabilitytext}" font_size="30" justify="{durabilityjustify}" effect="outline" visible="false"/>
+				</rect>
+
+				<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="0,-130" width="153" height="216" color="[black]" type="sliced" fillcenter="false" />
+				<rect pos="3,-133" width="147" height="100%" visible="{shownormaloptions}" >
+					<grid name="itemActions" rows="5" cols="1" pos="0,0" width="147" height="100%" cell_width="147" cell_height="42" controller="ItemActionList"
+						repeat_content="true" visible="false">
+						<item_action_entry />
+					</grid>
+				</rect>
+
+				<rect pos="3,-132" width="147" height="100%" visible="{showtraderoptions}" >
+					<sprite color="[mediumGrey]" type="sliced" height="44" />
+					<rect name="counterControl" width="120" height="42" pos="27,0" controller="Counter">
+						<button depth="2" name="countDown" style="icon30px, press, held" pos="-10,-20" sprite="ui_game_symbol_arrow_left" pivot="center" sound="[paging_click]"/>
+						<textfield name="count_input" depth="2" pos="7,-6" width="40" height="28" character_limit="4" validation="integer" virtual_keyboard_prompt="vkPromptCount" />
+						<button depth="2" name="countUp" style="icon30px, press, held" pos="64,-20" sprite="ui_game_symbol_arrow_right" pivot="center" sound="[paging_click]"/>
+						<button depth="2" name="countMax" style="icon30px, press" pos="96,-20" sprite="ui_game_symbol_arrow_max" pivot="center" sound="[paging_click]"/>
+					</rect>
+					<grid name="vendorItemActions" rows="4" cols="1" pos="0,-43" width="147" height="100%" cell_width="147" cell_height="42" controller="ItemActionList"
+						repeat_content="true" visible="false">
+						<item_action_entry />
+					</grid>
+				</rect>
+
+
+			<rect depth="2" name="searchControls" width="448" height="43" pos="152,0" visible="{showstatanddescription}">
+				<sprite depth="1" color="[mediumGrey]" type="sliced" globalopacity="true" width="449" height="44" />
+				<button depth="4" name="statButton" style="icon30px, press" pos="22,-22" sprite="ui_game_symbol_ping" pivot="center" tooltip="Stats" tooltip_key="lblStats" sound="[paging_click]" selected="true" />
+				<button depth="4" name="descriptionButton" style="icon30px, press" pos="65,-22" sprite="ui_game_symbol_book" pivot="center" tooltip="Description" tooltip_key="lblDescription" sound="[paging_click]" />
+			</rect>
+
+				<rect depth="1" pos="153,0" name="description" width="447" height="271" visible="{showonlydescription}">
+					<sprite depth="1" color="[darkGrey]" type="sliced" globalopacity="true" />
+					<sprite depth="3" name="backgroundMain" sprite="menu_empty3px" pos="-3,0" width="453" height="272" color="[black]" type="sliced" fillcenter="false" />
+
+					<label depth="3" name="descriptionText" pos="6,-5" text="{itemdescription}"  width="440" parse_actions="true" />
+
+				</rect>
+
+				<rect depth="1" pos="153,-43" name="description" width="447" height="228" visible="{showstatanddescription}">
+
+					<sprite depth="3" name="backgroundMain" sprite="menu_empty3px" pos="-3,0" width="453" height="229" color="[black]" type="sliced" fillcenter="false" />
+					<rect depth="3" visible="{showstats}" width="453">
+						<rect pos="-3,0" height="35">
+							<sprite depth="8" sprite="menu_empty3px" height="35" color="[black]" type="sliced" fillcenter="false" />
+							<sprite depth="1" color="[darkestGrey]" pos="0,-1" height="34" type="sliced" />
+							<label depth="3" pos="10,-3" width="430" font_size="26" text="{itemstattitle1}" justify="left" color="[white]" />
+							<label depth="3" pos="10,-3" width="430" font_size="26" text="{itemstat1}" justify="right" color="[selectedColor]" />
+						</rect>
+						<rect pos="-3,-33" height="35">
+							<sprite depth="8" sprite="menu_empty3px" height="34"  color="[black]" type="sliced" fillcenter="false" />
+							<sprite depth="1" color="[darkGrey]" type="sliced" />
+							<label depth="3" pos="10,-3" width="430" font_size="26" text="{itemstattitle2}" justify="left" color="[white]" />
+							<label depth="3" pos="10,-3" width="430" font_size="26" text="{itemstat2}" justify="right" color="[selectedColor]" />
+						</rect>
+						<rect pos="-3,-64" height="35">
+							<sprite depth="8" sprite="menu_empty3px" height="34" color="[black]" type="sliced" fillcenter="false" />
+							<sprite depth="1" color="[darkestGrey]" pos="0,-1" height="33" type="sliced" />
+							<label depth="3" pos="10,-3" width="430" font_size="26" text="{itemstattitle3}" justify="left" color="[white]" />
+							<label depth="3" pos="10,-3" width="430" font_size="26" text="{itemstat3}" justify="right" color="[selectedColor]" />
+						</rect>
+						<rect pos="-3,-94" height="35">
+							<sprite depth="8" sprite="menu_empty3px" height="36"  color="[black]" type="sliced" fillcenter="false" />
+							<sprite depth="1" color="[darkGrey]" type="sliced" />
+							<label depth="3" pos="10,-4" width="430" font_size="26" text="{itemstattitle4}" justify="left" color="[white]" />
+							<label depth="3" pos="10,-4" width="430" font_size="26" text="{itemstat4}" justify="right" color="[selectedColor]" />
+						</rect>
+						<rect pos="-3,-127" height="35">
+							<sprite depth="8" sprite="menu_empty3px" height="35" color="[black]" type="sliced" fillcenter="false" />
+							<sprite depth="1" color="[darkestGrey]" pos="0,-1" height="34" type="sliced" />
+							<label depth="3" pos="10,-4" width="430" font_size="26" text="{itemstattitle5}" justify="left" color="[white]" />
+							<label depth="3" pos="10,-4" width="430" font_size="26" text="{itemstat5}" justify="right" color="[selectedColor]" />
+						</rect>
+						<rect pos="-3,-159" height="35">
+							<sprite depth="8" sprite="menu_empty3px" height="36"  color="[black]" type="sliced" fillcenter="false" />
+							<sprite depth="1" color="[darkGrey]" type="sliced" />
+							<label depth="3" pos="10,-3" width="430" font_size="26" text="{itemstattitle6}" justify="left" color="[white]" />
+							<label depth="3" pos="10,-3" width="430" font_size="26" text="{itemstat6}" justify="right" color="[selectedColor]" />
+						</rect>
+						<rect pos="-3,-192" height="35">
+							<sprite depth="8" sprite="menu_empty3px" height="36" color="[black]" type="sliced" fillcenter="false" />
+							<sprite depth="1" color="[darkestGrey]" pos="0,-1" height="35" type="sliced" />
+							<label depth="3" pos="10,-3" width="430" font_size="26" text="{itemstattitle7}" justify="left" color="[white]" />
+							<label depth="3" pos="10,-3" width="430" font_size="26" text="{itemstat7}" justify="right" color="[selectedColor]" />
+						</rect>
+					</rect>
+
+					<rect visible="{showdescription}">
+						<sprite depth="1" color="[darkGrey]" type="sliced" globalopacity="true" />
+						<label depth="3" name="descriptionText" pos="6,-5" text="{itemdescription}"  width="440" parse_actions="true" />
+					</rect>
+
+				</rect>
+
+				<grid name="parts" rows="1" cols="6" pos="153,-271" cell_width="75" cell_height="75" repeat_content="true" controller="PartList" visible="{isnotcomparing}">
+					<item_stack name="0"/>
+				</grid>
+				<rect visible="{iscomparing}" pos="153,-271" width="450" height="75">
+					<sprite depth="1" color="[mediumGrey]" type="sliced" globalopacity="true" />
+					<label depth="3" name="descriptionText" pos="6,-20" text_key="xuiCompareNoModded" justify="center" color="[selectedColor]" />
+				</rect>
+			</rect>
+		</window>
+		<window name="windowBackpack" width="606" height="349" panel="Center" controller="BackpackWindow" cursor_area="true" >
+
+			<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+				<sprite depth="3" name="windowIcon" style="icon32px" pivot="center" pos="21,-21" sprite="ui_game_symbol_backpack" />
+				<label depth="3" name="windowName" pos="42,-6" width="250" height="32" text="INVENTORY" text_key="xuiInventory" font_size="32" />
+
+
+				<rect pos="303,0" width="300" controller="ContainerStandardControls" move_start_bottom_left="true">
+					<button depth="3" name="btnClearInventory" sprite="ui_game_symbol_trash" tooltip_key="lblClearInventory" pos="200, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]" visible="{creativewindowopen}" />
+
+					<button depth="3" name="btnSort"           sprite="ui_game_symbol_sort"  tooltip_key="lblSortContainer"  pos="0, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]" />
+					
+					<rect pos="0, 0" visible="{lootingorvehiclestorage}">
+						<button   depth="3" name="btnMoveAll"          sprite="ui_game_symbol_store_all_down"     tooltip_key="lblStashAll"             pos="80, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]" />
+						<button   depth="3" name="btnMoveFillAndSmart" sprite="ui_game_symbol_store_similar_down" tooltip_key="lblStashFillAndSmart" pos="40, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]" />
+					</rect>
+				</rect>
+
+			</panel>
+
+			<panel name="content" width="100%" height="303" depth="0" pos="0,-46" disableautobackground="true">
+					<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="606" height="336" color="[black]" type="sliced" fillcenter="false" on_press="true" />
+					<grid depth="10" name="inventory" rows="5" cols="9" pos="3,-3" cell_width="67" cell_height="67" controller="Backpack" repeat_content="true" >
+						<backpack_item_stack name="0"/>
+					</grid>
+			</panel>
+		</window>
+		<window name="serviceInfoPanel" width="603" height="392" controller="ServiceInfoWindow" panel="Center" cursor_area="true" >
+			<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+				<sprite depth="2" name="windowIcon" style="icon32px" pos="4,-5" sprite="{servicegroupicon}"/>
+				<label depth="2" name="windowName" pos="39,-6" width="500" height="32" text="{servicename}" font_size="32" />
+			</panel>
+
+			<rect name="contentInfo" height="346" depth="1" pos="0,-46" >
+				<sprite depth="5" name="backgroundMain" sprite="menu_empty3px" width="603" height="345" color="[black]" type="sliced" fillcenter="false" />
+				<rect depth="1" pos="3,0" name="preview" width="147" height="150">
+					<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="-3,0" width="153" height="153" color="[black]" type="sliced" fillcenter="false" />
+					<sprite depth="1" color="[darkGrey]" pos="0,0" type="sliced" globalopacity="true" />
+					<sprite depth="2" name="servicePreview" width="83" height="83" atlas="UIAtlas" sprite="{serviceicon}" color="{serviceicontint}" pos="33,-30" foregroundlayer="true"/>
+				</rect>
+
+				<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="0,-150" width="153" height="196" color="[black]" type="sliced" fillcenter="false" />
+				<rect pos="3,-153" width="147" height="100%" >
+					<grid name="itemActions" rows="4" cols="1" pos="0,0" width="147" height="100%" cell_width="147" cell_height="42" controller="ItemActionList"
+						repeat_content="true" visible="false">
+						<item_action_entry />
+					</grid>
+				</rect>
+
+				<sprite depth="3" name="fillerBackground" pos="3,-321" height="22" width="147" color="[mediumGrey]" type="sliced"/>
+
+				<rect depth="1" pos="153,0" name="description" width="447" height="198">
+					<sprite depth="1" color="[mediumGrey]" type="sliced" globalopacity="true" />
+					<sprite depth="3" name="backgroundMain" sprite="menu_empty3px" pos="-3,0" width="453" height="201" color="[black]" type="sliced" fillcenter="false" />
+					<label depth="3" name="statText" pos="6,-2" width="254" height="100%" text="{servicestats}" />
+				</rect>
+
+				<rect depth="2" pos="153,-200" name="description" width="447" height="143">
+					<sprite depth="1" color="[darkGrey]" type="sliced" globalopacity="true" />
+					<sprite depth="5" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="453" height="148" color="[black]" type="sliced" fillcenter="false" />
+					<label depth="3" name="descriptionText" pos="6,-5" text="{servicedescription}"  width="440" height="137" />
+				</rect>
+
+			</rect>
+		</window>
+	
+	
+	
+	</append> -->
+</configs>

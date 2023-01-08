@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+	
+	<!-- THIS IS A REWRITE of enZombies - More Server Side Zombies by ErrorNull
+		https://community.7daystodie.com/topic/24594-enzombies-more-zombie-variations/
+		Zombie spawns are increased 10x the amount of what was previously created and 
+		adds in ZombiesAll group chance-->
+	<!-- Remove current Biome spawns -->
+	<remove xpath="/spawning/biome[@name='pine_forest']"></remove>
+	<remove xpath="/spawning/biome[@name='desert']"></remove>
+	<remove xpath="/spawning/biome[@name='snow']"></remove>
+	<remove xpath="/spawning/biome[@name='burnt_forest']"></remove>
+	<remove xpath="/spawning/biome[@name='wasteland']"></remove>
+	<!-- Remove current Biome spawns -->
+	<append xpath="/spawning">
+		<biome name="pine_forest">
+			<!-- <spawn maxcount="10" respawndelay="0.5" time="Day" entitygroup="ZombiesAll" notags="commercial,industrial,downtown" /> -->
+			<spawn maxcount="10" respawndelay="0.5" time="Night" entitygroup="ZombiesNight" notags="commercial,industrial,downtown" />
+			<spawn maxcount="20" respawndelay="0.50"	time="Day" 		entitygroup="PineforestZombiesDay" 				notags="commercial,industrial,downtown" />
+			<spawn maxcount="30" respawndelay="0.50"	time="Day" 		entitygroup="PineforestZombiesDayCity" 			tags="commercial,industrial" notags="downtown" />
+			<spawn maxcount="40" respawndelay="0.25"	time="Day" 		entitygroup="PineforestZombiesDayDowntown" 		tags="downtown" />
+			<spawn maxcount="1" respawndelay="2.00"	time="Day" 		entitygroup="PineforestAnimalsAggroDay" 		spawnDeadChance="0" />
+			<spawn maxcount="1" respawndelay="1.00"	time="Day" 		entitygroup="PineforestAnimalsGameDay" 			spawnDeadChance="0" />
+			<spawn maxcount="30" respawndelay="0.50"	time="Night" 	entitygroup="PineforestZombiesNight" 			notags="commercial,industrial,downtown" />
+			<spawn maxcount="40" respawndelay="0.25"	time="Night" 	entitygroup="PineforestZombiesNightCity" 		tags="commercial,industrial" notags="downtown" />
+			<spawn maxcount="50" respawndelay="0.10"	time="Night" 	entitygroup="PineforestZombiesNightDowntown" 	tags="downtown" />
+			<spawn maxcount="1" respawndelay="1.00"	time="Night" 	entitygroup="PineforestAnimalsAggroNight" 		spawnDeadChance="0" />
+			<spawn maxcount="1" respawndelay="1.00"	time="Night" 	entitygroup="PineforestAnimalsGameNight" 		spawnDeadChance="0" />
+		</biome>
+		<biome name="desert">
+			<!-- 		<spawn maxcount="10" respawndelay="0.5" time="Day" entitygroup="ZombiesAll" notags="commercial,industrial,downtown" />
+	 -->		<spawn maxcount="10" respawndelay="0.5" time="Night" entitygroup="ZombiesNight" notags="commercial,industrial,downtown" />
+			<spawn maxcount="20" respawndelay="0.50" time="Day" 		entitygroup="DesertZombiesDay"				notags="commercial,industrial,downtown" />
+			<spawn maxcount="30" respawndelay="0.50" time="Day" 		entitygroup="DesertZombiesDayCity"			tags="commercial,industrial" notags="downtown" />
+			<spawn maxcount="40" respawndelay="0.25" time="Day" 		entitygroup="DesertZombiesDayDowntown"		tags="downtown" />
+			<spawn maxcount="1" respawndelay="2.00"	time="Day" 		entitygroup="DesertAnimalsAggroDay" 		spawnDeadChance="0" />
+			<spawn maxcount="1" respawndelay="1.00"	time="Day" 		entitygroup="DesertAnimalsGameDay" 			spawnDeadChance="0" />
+			<spawn maxcount="30" respawndelay="0.50"	time="Night" 	entitygroup="DesertZombiesNight" 			notags="commercial,industrial,downtown" />
+			<spawn maxcount="40" respawndelay="0.25"	time="Night" 	entitygroup="DesertZombiesNightCity"		tags="commercial,industrial" notags="downtown" />
+			<spawn maxcount="50" respawndelay="0.10"	time="Night" 	entitygroup="DesertZombiesNightDowntown"	tags="downtown" />
+			<spawn maxcount="1" respawndelay="1.00"	time="Night" 	entitygroup="DesertAnimalsAggroNight" 		spawnDeadChance="0" />
+			<spawn maxcount="1" respawndelay="1.00"	time="Night" 	entitygroup="DesertAnimalsGameNight" 		spawnDeadChance="0" />
+		</biome>
+		<biome name="snow">
+			<spawn maxcount="10" respawndelay="0.5" time="Day" entitygroup="ZombiesAll" notags="commercial,industrial,downtown" />
+			<spawn maxcount="10" respawndelay="0.5" time="Night" entitygroup="ZombiesNight" notags="commercial,industrial,downtown" />
+			<spawn maxcount="20" respawndelay="0.50" time="Day" 		entitygroup="SnowZombiesDay"		 	notags="commercial,industrial,downtown" />
+			<spawn maxcount="30" respawndelay="0.50" time="Day" 		entitygroup="SnowZombiesDayCity"		tags="commercial,industrial" notags="downtown" />
+			<spawn maxcount="40" respawndelay="0.25" time="Day" 		entitygroup="SnowZombiesDayDowntown"	tags="downtown" />
+			<spawn maxcount="1" respawndelay="2.00" time="Day" 		entitygroup="SnowAnimalsAggroDay" 		spawnDeadChance="0" />
+			<spawn maxcount="1" respawndelay="1.00" time="Day" 		entitygroup="SnowAnimalsGameDay" 		spawnDeadChance="0" />
+			<spawn maxcount="30" respawndelay="0.50" time="Night" 	entitygroup="SnowZombiesNight"			notags="commercial,industrial,downtown" />
+			<spawn maxcount="40" respawndelay="0.25" time="Night" 	entitygroup="SnowZombiesNightCity"		tags="commercial,industrial" notags="downtown" />
+			<spawn maxcount="50" respawndelay="0.10" time="Night" 	entitygroup="SnowZombiesNightDowntown"	tags="downtown" />
+			<spawn maxcount="1" respawndelay="1.00" time="Night" 	entitygroup="SnowAnimalsAggroNight" 	spawnDeadChance="0" />
+			<spawn maxcount="1" respawndelay="1.00" time="Night" 	entitygroup="SnowAnimalsGameDay" 		spawnDeadChance="0" />
+		</biome>
+		<biome name="burnt_forest">
+			<spawn maxcount="10" respawndelay="0.5" time="Day" entitygroup="ZombiesAll" notags="commercial,industrial,downtown" />
+			<spawn maxcount="10" respawndelay="0.5" time="Night" entitygroup="ZombiesNight" notags="commercial,industrial,downtown" />
+			<spawn maxcount="20" respawndelay="0.50" time="Day" 		entitygroup="BurntZombiesDay"			notags="commercial,industrial,downtown" />
+			<spawn maxcount="30" respawndelay="0.50" time="Day" 		entitygroup="BurntZombiesDayCity"		tags="commercial,industrial" notags="downtown" />
+			<spawn maxcount="40" respawndelay="0.25" time="Day" 		entitygroup="BurntZombiesDayDowntown"	tags="downtown" />
+			<spawn maxcount="1" respawndelay="2.00" time="Day" 		entitygroup="BurntAnimalsAggroDay"		spawnDeadChance="0" />
+			<spawn maxcount="1" respawndelay="1.00" time="Day" 		entitygroup="BurntAnimalsGameDay" 		spawnDeadChance="0" />
+			<spawn maxcount="30" respawndelay="0.50" time="Night" 	entitygroup="BurntZombiesNight"			notags="commercial,industrial,downtown" />
+			<spawn maxcount="40" respawndelay="0.25" time="Night" 	entitygroup="BurntZombiesNightCity"		tags="commercial,industrial" notags="downtown" />
+			<spawn maxcount="50" respawndelay="0.10" time="Night" 	entitygroup="BurntZombiesNightDowntown"	tags="downtown" />
+			<spawn maxcount="1" respawndelay="1.00" time="Night" 	entitygroup="BurntAnimalsAggroNight" 	spawnDeadChance="0" />
+			<spawn maxcount="1" respawndelay="1.00" time="Night" 	entitygroup="BurntAnimalsGameNight" 	spawnDeadChance="0" />
+		</biome>
+		<biome name="wasteland">
+			<spawn maxcount="10" respawndelay="0.5" time="Day" entitygroup="ZombiesAll" notags="commercial,industrial,downtown" />
+			<spawn maxcount="10" respawndelay="0.5" time="Night" entitygroup="ZombiesNight" notags="commercial,industrial,downtown" />
+			<spawn maxcount="30" respawndelay="0.50"	time="Day" 		entitygroup="WastelandZombiesDay"			notags="commercial,industrial,downtown" />
+			<spawn maxcount="40" respawndelay="0.50"	time="Day" 		entitygroup="WastelandZombiesDayCity"		tags="commercial,industrial" notags="downtown" />
+			<spawn maxcount="50" respawndelay="0.25"	time="Day" 		entitygroup="WastelandZombiesDayDowntown"	tags="downtown" />
+			<spawn maxcount="1" respawndelay="1.00" time="Day" 		entitygroup="WastelandAnimalsAggroDay" 		spawnDeadChance="0" />
+			<spawn maxcount="40" respawndelay="0.40" time="Night" 	entitygroup="WastelandZombiesNight"			notags="commercial,industrial,downtown" />
+			<spawn maxcount="50" respawndelay="0.20" time="Night" 	entitygroup="WastelandZombiesNightCity"		tags="commercial,industrial" notags="downtown" />
+			<spawn maxcount="60" respawndelay="0.08" time="Night" 	entitygroup="WastelandZombiesNightDowntown"	tags="downtown" />
+			<spawn maxcount="1" respawndelay="0.75" time="Night" 	entitygroup="WastelandAnimalsAggroNight" 	spawnDeadChance="0" />
+		</biome>
+	</append>
+
+	<!-- Increases TotalAlive and TotalPerWave for RoamingHordeSpawnDays-->
+	
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='1']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='1']/property[@name='TotalPerWave']/@value">10</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='2']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='2']/property[@name='TotalPerWave']/@value">20</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='3']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='3']/property[@name='TotalPerWave']/@value">30</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='4']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='4']/property[@name='TotalPerWave']/@value">40</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='5']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='5']/property[@name='TotalPerWave']/@value">50</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='6']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='6']/property[@name='TotalPerWave']/@value">10</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='8']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='8']/property[@name='TotalPerWave']/@value">20</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='9']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='9']/property[@name='TotalPerWave']/@value">50</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='10']/property[@name='EntityGroupName']/@value">zombieMiniBomber</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='10']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='10']/property[@name='TotalPerWave']/@value">15</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='11']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='11']/property[@name='TotalPerWave']/@value">50</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='12']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='12']/property[@name='TotalPerWave']/@value">20</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='13']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='13']/property[@name='TotalPerWave']/@value">20</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='14']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='14']/property[@name='TotalPerWave']/@value">50</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='15']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='15']/property[@name='TotalPerWave']/@value">25</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='16']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='16']/property[@name='TotalPerWave']/@value">25,50</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='17']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='17']/property[@name='TotalPerWave']/@value">25,50</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='18']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='18']/property[@name='TotalPerWave']/@value">25,50</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='19']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='19']/property[@name='TotalPerWave']/@value">10,20</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='20']/property[@name='EntityGroupName']/@value">zombieMiniBomber</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='20']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='20']/property[@name='TotalPerWave']/@value">30</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='21']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='21']/property[@name='TotalPerWave']/@value">25,50</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='22']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='22']/property[@name='TotalPerWave']/@value">25</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='23']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='23']/property[@name='TotalPerWave']/@value">25,50</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='25']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='25']/property[@name='TotalPerWave']/@value">25,50</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='27']/property[@name='TotalAlive']/@value">80</set>
+	<set xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']/day[@value='27']/property[@name='TotalPerWave']/@value">30</set>
+	
+	
+	
+	
+	
+	
+	
+	
+</configs>

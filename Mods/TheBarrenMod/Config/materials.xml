@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+	<!-- Increase the Hardness and MaxDamage of top layers to stop mining. Keeping snow level as is  -->
+	<set xpath="/materials/material[@id='MforestGround']/property[@name='Hardness']/@value">10000</set>
+	<set xpath="/materials/material[@id='MforestGround']/property[@name='MaxDamage']/@value">50000</set>
+	<set xpath="/materials/material[@id='MDesertGround']/property[@name='Hardness']/@value">10000</set>
+	<set xpath="/materials/material[@id='MDesertGround']/property[@name='MaxDamage']/@value">50000</set>
+	<set xpath="/materials/material[@id='Mrubble']/property[@name='Hardness']/@value">10000</set>
+	<set xpath="/materials/material[@id='Mrubble']/property[@name='MaxDamage']/@value">50000</set>
+	<set xpath="/materials/material[@id='Mdirt']/property[@name='Hardness']/@value">10000</set>
+	<set xpath="/materials/material[@id='Mdirt']/property[@name='MaxDamage']/@value">50000</set>
+	<append xpath="/materials">
+	<!-- Adding titanium -->	
+		<material id="MresourceForgedTitanium">
+			<property name="damage_category" value="metal"/>
+			<property name="surface_category" value="metal"/>
+			<property name="forge_category" value="iron"/>
+			<property name="Experience" value="30"/>
+		</material>
+		<material id="MtrapSpikesSteel">
+			<property name="damage_category" value="metal"/>
+			<property name="surface_category" value="metal"/>
+			<property name="forge_category" value="iron"/>
+			<property name="Hardness" type="float" value="1"/>
+			<property name="stepsound" value="metal"/>
+			<property name="stability_glue" value="300"/>
+			<property name="Mass" type="int" value="20"/>
+			<property name="explosionresistance" value="1.4"/>
+			<property name="MaxDamage" value="99"/>
+			<property name="Experience" value="2"/>
+			<property name="movement_factor" value="0.18"/>
+		</material>
+		<!-- Adding blade traps -->
+		<material id="MmetalBladeTrapIron">
+			<property name="damage_category" value="metal"/>
+			<property name="surface_category" value="metal"/>
+			<property name="forge_category" value="iron"/>
+			<property name="Hardness" type="float" value="1"/>
+			<property name="stepsound" value="metal"/>
+			<property name="stability_glue" value="40"/>
+			<property name="Mass" type="int" value="12"/>
+			<property name="explosionresistance" value="1.2"/>
+			<property name="MaxDamage" value="2000"/>
+			<property name="Experience" value="2"/>
+		</material>	
+		<material id="MmetalBladeTrapSteel">
+			<property name="damage_category" value="metal"/>
+			<property name="surface_category" value="metal"/>
+			<property name="forge_category" value="iron"/>
+			<property name="Hardness" type="float" value="1"/>
+			<property name="stepsound" value="metal"/>
+			<property name="stability_glue" value="40"/>
+			<property name="Mass" type="int" value="12"/>
+			<property name="explosionresistance" value="1.4"/>
+			<property name="MaxDamage" value="3000"/>
+			<property name="Experience" value="2"/>
+		</material>	
+		<material id="MmetalBladeTrapTitanium">
+			<property name="damage_category" value="metal"/>
+			<property name="surface_category" value="metal"/>
+			<property name="forge_category" value="iron"/>
+			<property name="Hardness" type="float" value="1"/>
+			<property name="stepsound" value="metal"/>
+			<property name="stability_glue" value="40"/>
+			<property name="Mass" type="int" value="12"/>
+			<property name="explosionresistance" value="1.6"/>
+			<property name="MaxDamage" value="4000"/>
+			<property name="Experience" value="2"/>
+		</material>	
+	</append>
+</configs>

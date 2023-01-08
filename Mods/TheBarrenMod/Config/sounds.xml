@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+	
+	<append xpath="/Sounds">
+		<!-- GrandOutdoors -->
+
+		<SoundDataNode name="grandoutdoorsalert"> <AudioSource name="Sounds/Weapons/Motorized/Auger/AugerAudioSource"/>
+			<AudioClip ClipName="Sounds/Twitch/Silly/auger_fire_silly_start"/>
+			<Channel name="Mouth"/>
+			<Priority name="4"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="grandoutdoorsattack"> <!-- <AudioSource name="Sounds/AudioSource_Pain"/>--><AudioSource name="Sounds/AudioSource_Player"/>
+			<!-- <AudioClip ClipName="Sounds/Animals/Chicken/chickenpain1"/>
+			<AudioClip ClipName="Sounds/Animals/Chicken/chickenpain2"/>
+			<AudioClip ClipName="Sounds/Animals/Chicken/chickenpain3"/> --> 
+			<AudioClip ClipName="Sounds/Player_Male/player1painsm1"/>
+			<AudioClip ClipName="Sounds/Player_Male/player1painsm2"/>
+			<AudioClip ClipName="Sounds/Player_Male/player1painsm3"/>
+			<AudioClip ClipName="Sounds/Player_Male/player1painsm4"/>
+			<AudioClip ClipName="Sounds/Player_Male/player1painsm5"/>
+			<Channel name="Mouth"/>
+			<Priority name="3"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="grandoutdoorsdeath"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+			<AudioClip ClipName="Sounds/Twitch/Silly/auger_fire_silly_end"/>
+			<Channel name="Mouth"/>
+			<Priority name="0"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="grandoutdoorspain"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+			<AudioClip ClipName="Sounds/Twitch/Silly/auger_empty_silly"/>
+			<Channel name="Mouth"/>
+			<Priority name="1"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="grandoutdoorsroam"> <AudioSource name="Sounds/Weapons/Motorized/Auger/AugerAudioSource"/>
+			<AudioClip ClipName="Sounds/Twitch/Silly/auger_idle_silly" Loop="true"/>
+			<Channel name="Mouth"/>
+			<Priority name="2"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="grandoutdoorssense"> <AudioSource name="Sounds/Weapons/Motorized/Auger/auger_idle"/>
+			<AudioClip ClipName="Sounds/Twitch/Silly/auger_idle_silly" Loop="true"/>
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> 
+		</SoundDataNode>
+
+	</append>
+	
+</configs>

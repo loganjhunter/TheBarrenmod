@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+	<append xpath="/buffs">
+		<buff name="buffDrugBerserkerJoes" name_key="drugBerserkerJoes" description_key="drugBerserkerJoesDesc" icon="ui_game_symbol_candy_skull_crushers" icon_color="232,142,188">
+			<stack_type value="replace"/><duration value="0"/>
+			<display_value value=".buffDrugBerserkerJoesDisplay"/><display_value_format value="time"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value="20">
+					<requirement name="HoldingItemHasTags" tags="axe,melee,knife,blunt,club"/>
+				</passive_effect>
+				<passive_effect name="MaxRange" operation="base_set" value="6.9">
+					<requirement name="HoldingItemHasTags" tags="axe,melee,knife,blunt,club"/>
+				</passive_effect>
+				<passive_effect name="DismemberChance" operation="perc_add" value="200" tags="arm,leg">
+					<requirement name="HoldingItemHasTags" tags="axe,melee,knife,blunt,club"/>
+				</passive_effect>
+				<passive_effect name="GrazeDamageMultiplier" operation="perc_add" value=".01">
+					<requirement name="HoldingItemHasTags" tags="axe,melee,knife,blunt,club"/>
+				</passive_effect>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="10">
+					<requirement name="HoldingItemHasTags" tags="axe,melee,knife,blunt,club"/>
+				</passive_effect>
+				<passive_effect name="StaminaLoss" operation="base_set" value="0" tags="primary,secondary"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value="1.75"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value="1.75"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInfectionCatch,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryConcussion"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugBerserkerJoesDuration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugBerserkerJoesDisplay" operation="set" value="@$buffDrugBerserkerJoesDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugBerserkerJoesDisplay" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugBerserkerJoes">
+					<requirement name="CVarCompare" cvar="$buffDrugBerserkerJoesDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugBerserkerJoesDisplay" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugBerserkerJoesDuration" operation="set" value="0"/>
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="1" effect_name="Greyscale"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Greyscale"/>
+			</effect_group>
+		</buff>
+		<buff name="buffBurningNapalm" hidden="true">
+			<damage_type value="heat"/>
+			<stack_type value="replace"/><duration value="0"/>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="buffBurningNapalmDuration" operation="LT" value="16"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="buffBurningNapalmDuration" operation="set" value="16"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="buffBurningNapalmDuration" operation="set" value="16"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffIsOnFire"/>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="buffBurningNapalmDuration" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBurningNapalm">
+					<requirement name="CVarCompare" cvar="buffBurningNapalmDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="buffBurningNapalmDuration" operation="set" value="0"/>
+			</effect_group>
+
+			<effect_group>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,16,28,36" value="6,12,24,36">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+
+				<passive_effect name="WaterChangeOT" operation="base_subtract" value="1.5"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="35"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="-15"/>
+			</effect_group>
+
+			<effect_group>
+				<requirement name="!EntityTagCompare" tags="player"/>
+					<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,16,28,36" value="10,36,51,56">
+						<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="0"/></passive_effect>
+					<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,16,28,36" value="7.5,27,38.2,42">
+						<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="1"/></passive_effect>
+
+					<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,16,28,36" value="5,18,25.5,28">
+						<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="2"/></passive_effect>
+
+					<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,16,28,36" value="4.2,14.9,21.1,23.2">
+						<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="3"/></passive_effect>
+					<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,16,28,36" value="3.3,11.9,16.8,18.5">
+						<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="4"/></passive_effect>
+					<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,16,28,36" value="2.5,9,12.7,14">
+						<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="5"/></passive_effect>
+			</effect_group>
+		</buff>
+	</append>
+</configs>

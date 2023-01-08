@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+	<append xpath="/ui_display_info/item_display">
+		<!--<item_display_info display_type="meleeToolAshesChainsaw" display_group="groupMelee">
+			<display_entry name="EntityDamage" display_type="Decimal1" title_key="statEntityDamageMelee" tags="hailToTheKing"/>
+			<display_entry name="BlockDamage" display_type="Decimal1" title_key="statBlockDamage" tags="hailToTheKing"/>
+			<display_entry name="MagazineSize" title_key="statFuelCapacity" tags="hailToTheKing"/>
+			<display_entry name="RoundsPerMinute" title_key="statAttacksPerMinute" tags="hailToTheKing"/>
+			<display_entry name="DegradationMax" title_key="statDegradationMax" tags="hailToTheKing,admin"/>
+		</item_display_info>-->
+		<item_display_info display_type="clothingCollegeRunningShoes" display_group="groupAttire" >
+			<display_entry name="HypothermalResist" display_type="Decimal1" title_key="statHypothermalResist"/>
+			<display_entry name="HyperthermalResist" display_type="Decimal1" title_key="statHyperthermalResist"/>
+			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="clothingCollegeRunningTShirt" display_group="groupAttire" >
+			<display_entry name="HypothermalResist" display_type="Decimal1" title_key="statHypothermalResist"/>
+			<display_entry name="HyperthermalResist" display_type="Decimal1" title_key="statHyperthermalResist"/>
+			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="clothingCollegeRunningShorts" display_group="groupAttire" >
+			<display_entry name="HypothermalResist" display_type="Decimal1" title_key="statHypothermalResist"/>
+			<display_entry name="HyperthermalResist" display_type="Decimal1" title_key="statHyperthermalResist"/>
+			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="clothingCollegeBallCap" display_group="groupAttire" >
+			<display_entry name="HypothermalResist" display_type="Decimal1" title_key="statHypothermalResist"/>
+			<display_entry name="HyperthermalResist" display_type="Decimal1" title_key="statHyperthermalResist"/>
+			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+	</append> 
+	
+</configs>
+
+<!--currently displays:
+melee dmg 0
+blk dmg 0
+fuel cap 0
+attk/min 0
+max dur 0
+
+
+
+ -->

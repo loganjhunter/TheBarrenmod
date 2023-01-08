@@ -1,0 +1,7 @@
+<configs>
+	
+<append xpath="/blocks/block[@name='bedroll']">
+	<property name="BuffsWhenWalkedOn" value="buffHealHealth"/>
+</append>
+
+</configs>

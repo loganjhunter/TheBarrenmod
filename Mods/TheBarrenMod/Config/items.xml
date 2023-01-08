@@ -1,0 +1,2290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+		<!-- Remove unwanted melee tools and weapons -->
+	<remove xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']"></remove>
+	<remove xpath="/items/item[@name='meleeToolRepairT3Nailgun']"></remove>
+	<remove xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']"></remove>
+	<remove xpath="/items/item[@name='meleeToolAxeT2SteelAxe']"></remove>
+	<remove xpath="/items/item[@name='meleeToolPickT1IronPickaxe']"></remove>
+	<remove xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']"></remove>
+	<remove xpath="/items/item[contains(@name, 'Shovel')]"></remove>
+	<remove xpath="/items/item[@name='meleeToolPickT3Auger']"></remove>
+	<remove xpath="/items/item[@name='meleeToolSalvageT2Ratchet']"></remove>
+	<remove xpath="/items/item[@name='meleeToolSalvageT3ImpactDriver']"></remove>
+	<remove xpath="/items/item[contains(@name, 'Candy')]"></remove>
+	<remove xpath="/items/item[@name='meleeToolPaintTool']"></remove>
+	<remove xpath="/items/item[contains(@name, 'meleeWpnSledge')]"></remove>
+	<remove xpath="/items/item[contains(@name, 'Spear')]"></remove>
+	<remove xpath="/items/item[@name='meleeToolFarmT1IronHoe']"></remove>
+
+	<!-- Remove unwanted guns -->
+	<remove xpath="/items/item[@name='gunHandgunT0PipePistol']"></remove>
+	<remove xpath="/items/item[@name='gunHandgunT2Magnum44']"></remove>
+	<remove xpath="/items/item[@name='gunHandgunT3DesertVulture']"></remove>
+	<remove xpath="/items/item[@name='gunShotgunT0PipeShotgun']"></remove>
+	<remove xpath="/items/item[@name='gunRifleT0PipeRifle']"></remove>
+	<remove xpath="/items/item[@name='gunMGT0PipeMachineGun']"></remove>
+	<remove xpath="/items/item[@name='gunBotT3JunkDrone']"></remove>
+	
+	<!-- Remove unwanted ammo -->
+	<remove xpath="/items/item[contains(@name, '44Magnum')]"></remove>
+	<remove xpath="/items/item[contains(@name, 'Flaming')]"></remove>
+<!-- 	<remove xpath="/items/item[contains(@name, 'ShotgunSlug')]"></remove>
+	<remove xpath="/items/item[contains(@name, 'BreachingSlug')]"></remove> -->
+	
+	<!-- Remove unwanted weapon parts and vehicles -->
+	<!--<remove xpath="/items/item[@name='meleeWpnSledgeT3SteelSledgehammerParts']"></remove>-->
+	<remove xpath="/items/item[contains(@name, 'vehicle')]"></remove>	
+	
+	<!-- Remove unwanted first aid and candy -->
+	<remove xpath="/items/item[@name='medicalBloodBag']"></remove>
+	<remove xpath="/items/item[@name='drugSteroids']"></remove>
+	<remove xpath="/items/item[@name='drugFortBites']"></remove>
+	<remove xpath="/items/item[@name='drugCovertCats']"></remove>
+	<remove xpath="/items/item[@name='drugHackers']"></remove>
+	<remove xpath="/items/item[@name='drugJailBreakers']"></remove>
+	<remove xpath="/items/item[@name='drugOhShitzDrops']"></remove>
+	<remove xpath="/items/item[@name='drugRockBusters']"></remove>
+	<remove xpath="/items/item[@name='drugSugarButts']"></remove> 
+	
+	<!-- Remove unwanted food and drink 
+	<remove xpath="/items/item[@name='foodCanBeef']"></remove>-->
+	<remove xpath="/items/item[@name='foodCanChicken']"></remove>
+	<remove xpath="/items/item[@name='foodCanLamb']"></remove>
+	<remove xpath="/items/item[@name='foodCanCatfood']"></remove>
+	<remove xpath="/items/item[@name='foodCanDogfood']"></remove>
+	<remove xpath="/items/item[@name='foodCanSalmon']"></remove>
+	<remove xpath="/items/item[@name='foodCanPeas']"></remove>
+	<!-- <remove xpath="/items/item[@name='foodHoboStew']"></remove> -->
+	<remove xpath="/items/item[@name='foodFishTacos']"></remove>
+	<remove xpath="/items/item[@name='foodChiliDog']"></remove>
+	<remove xpath="/items/item[@name='foodBlueberryPie']"></remove>
+	<remove xpath="/items/item[@name='foodSpaghetti']"></remove>
+	<remove xpath="/items/item[contains(@name, 'Pumpkin')]"></remove>
+	<remove xpath="/items/item[@name='foodGumboStew']"></remove>
+	<remove xpath="/items/item[@name='foodShepardsPie']"></remove>
+	<remove xpath="/items/item[@name='foodTunaFishGravyToast']"></remove>
+	<remove xpath="/items/item[@name='foodCornMeal']"></remove>
+	<remove xpath="/items/item[@name='foodCropBlueberries']"></remove>
+	<remove xpath="/items/item[@name='foodCropGraceCorn']"></remove>
+<!-- 	<remove xpath="/items/item[@name='drinkCanEmpty']"></remove> -->
+	<remove xpath="/items/item[@name='drinkJarBlackStrapCoffee']"></remove>
+	<!--<remove xpath="/items/item[contains(@name, 'JarGrandpas')]"></remove> -->
+	<remove xpath="/items/item[@name='drinkJarGrandpasMoonshine']"></remove>
+	<remove xpath="/items/item[@name='drinkJarGrandpasAwesomeSauce']"></remove>
+	<remove xpath="/items/item[@name='drinkJarGrandpasLearningElixir']"></remove>
+	<remove xpath="/items/item[@name='drinkJarGrandpasForgettingElixir']"></remove>
+	<remove xpath="/items/item[@name='drinkJarFullRespecAdmin']"></remove>
+	
+	<!-- Remove unwanted resources -->
+	<remove xpath="/items/item[@name='resourceBrokenGlass']"></remove>
+	<remove xpath="/items/item[@name='resourceTestosteroneExtract']"></remove>
+	<remove xpath="/items/item[@name='resourceCropHopsFlower']"></remove>
+	<remove xpath="/items/item[@name='resourceDoorKnob']"></remove>
+	<remove xpath="/items/item[@name='resourceCandleStick']"></remove>
+	<remove xpath="/items/item[@name='resourceRadiator']"></remove>
+	<remove xpath="/items/item[@name='resourceFishingWeight']"></remove>
+	<remove xpath="/items/item[@name='resourceTrophy1']"></remove>
+	<remove xpath="/items/item[@name='resourceTrophy2']"></remove>
+	<remove xpath="/items/item[@name='resourceSilverNugget']"></remove>
+	<remove xpath="/items/item[@name='resourceGoldNugget']"></remove>
+	<remove xpath="/items/item[@name='resourceRawDiamond']"></remove>
+	<remove xpath="/items/item[@name='candle']"></remove>
+	<remove xpath="/items/item[@name='casinoCoin']"></remove>
+	<remove xpath="/items/item[@name='oldCash']"></remove>
+	<!-- <remove xpath="/items/item[@name='toolBeaker']"></remove>-->
+	<remove xpath="/items/item[@name='resourceLockPick']"></remove>
+	<remove xpath="/items/item[@name='resourceLockPickBundle']"></remove>
+	<!-- <remove xpath="/items/item[contains(@name, 'bookSpearHunter')]"></remove> Already removed with blanket "spear" above-->
+	<remove xpath="/items/item[contains(@name, 'bookFiremansAlmanacAxes')]"></remove>
+	<remove xpath="/items/item[contains(@name, 'bookEnforcer')]"></remove>
+	<remove xpath="/items/item[contains(@name, 'bookArtOfMining')]"></remove>
+	
+	<!-- Give exploding arrows and bolts a bit more kick and less damage to blocks -->
+	<!-- <set xpath="/items/item[@name='ammoArrowExploding']/property[@class='Action1']/property[@name='Explosion.ParticleIndex']/@value">11</set> -->
+	<set xpath="/items/item[@name='ammoArrowExploding']/property[@class='Action1']/property[@name='Explosion.RadiusEntities']/@value">6</set>
+	<set xpath="/items/item[@name='ammoArrowExploding']/property[@class='Action1']/property[@name='Explosion.DamageBonus.stone']/@value">0</set>
+	<set xpath="/items/item[@name='ammoArrowExploding']/property[@class='Action1']/property[@name='Explosion.DamageBonus.metal']/@value">0</set>
+	<set xpath="/items/item[@name='ammoArrowExploding']/property[@class='Action1']/property[@name='Explosion.DamageBonus.earth']/@value">0</set>
+	<set xpath="/items/item[@name='ammoArrowExploding']/property[@class='Action1']/property[@name='Explosion.DamageBonus.wood']/@value">0</set>
+	<set xpath="/items/item[@name='ammoArrowExploding']/effect_group[@name='ammoArrowExploding']/passive_effect[@name='BlockDamage']/@value">0</set>
+	<set xpath="/items/item[@name='ammoArrowExploding']/effect_group[@name='ammoArrowExploding']/passive_effect[@name='EntityDamage']/@value">200</set>
+	<set xpath="/items/item[@name='ammoArrowExploding']/effect_group[@name='ammoArrowExploding']/display_value[@name='dExRadius']/@value">6</set>
+	
+	<!-- <set xpath="/items/item[@name='ammoCrossbowBoltExploding']/property[@class='Action1']/property[@name='Explosion.ParticleIndex']/@value">11</set> -->
+	<set xpath="/items/item[@name='ammoCrossbowBoltExploding']/property[@class='Action1']/property[@name='Explosion.RadiusEntities']/@value">6</set>
+	<set xpath="/items/item[@name='ammoCrossbowBoltExploding']/property[@class='Action1']/property[@name='Explosion.DamageBonus.stone']/@value">0</set>
+	<set xpath="/items/item[@name='ammoCrossbowBoltExploding']/property[@class='Action1']/property[@name='Explosion.DamageBonus.metal']/@value">0</set>
+	<set xpath="/items/item[@name='ammoCrossbowBoltExploding']/property[@class='Action1']/property[@name='Explosion.DamageBonus.earth']/@value">0</set>
+	<set xpath="/items/item[@name='ammoCrossbowBoltExploding']/property[@class='Action1']/property[@name='Explosion.DamageBonus.wood']/@value">0</set>
+	<set xpath="/items/item[@name='ammoCrossbowBoltExploding']/effect_group[@name='ammoCrossbowBoltExploding']/passive_effect[@name='BlockDamage']/@value">0</set>
+	<set xpath="/items/item[@name='ammoCrossbowBoltExploding']/effect_group[@name='ammoCrossbowBoltExploding']/passive_effect[@name='EntityDamage']/@value">280</set>
+	<set xpath="/items/item[@name='ammoCrossbowBoltExploding']/effect_group[@name='ammoCrossbowBoltExploding']/display_value[@name='dExRadius']/@value">6</set>
+
+	<!-- Give the player a starter weapons bag -->
+	<append xpath="/items">
+		<item name="ctnStarterBag">
+			<property name="Extends" value="noteTestersDelightAdmin"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="cntBackpack03"/>
+			<property name="CustomIconTint" value="ff8080"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="DescriptionKey" value="ctnStarterBagDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Create_item" value="drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,meleeWpnBladeT0BoneKnife,meleeWpnClubT0WoodenClub,meleeWpnBatonT0PipeBaton,meleeWpnKnucklesT0LeatherKnuckles,gunBowT0PrimitiveBow,ammoArrowStone,trapSpikesWoodDmg0,toolCookingPot,bedrollBlockVariantHelper"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1,1,1,50,3"/>
+			</property>
+		</item>
+		<!-- New resources -->
+		<item name="resourceForgedTitanium">
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceForgedTitanium"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="120"/>
+			<property name="CraftingIngredientTime" value="20"/>
+			<property name="RepairTime" value="1.5"/>
+			<property name="RepairAmount" value="500"/>
+			<property name="Group" value="Resources"/>
+			<property name="CustomIcon" value="resourceForgedSteel"/>
+			<property name="CustomIconTint" value="b3f2f2"/> <!--d9d9d9 e6e6e6 f2f2f2 -->
+			<property name="SellableToTrader" value="false"/>
+		</item>	
+		<!-- New Trap ammo -->
+		<item name="ammoDartSteel">
+			<property name="Extends" value="ammoArrowIron" param1="HandMeshfile"/>
+			<property name="Meshfile" value="Entities/Electrical/steel_dartPrefab"/>
+			<property name="HoldType" value="45"/>
+			<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="DisplayType" value="ammoDartSteel"/>
+			<property name="CustomIcon" value="ammoDartIron"/>
+			<property name="CustomIconTint" value="e6e6e6"/>
+			<property name="Stacknumber" value="500"/> <!-- STK ammo -->
+			<property name="EconomicValue" value="68"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="DisplayType" value="ammoDart"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action1">
+				<property name="Velocity" value="65"/>
+				<property name="Gravity" value="-4"/>
+				<property name="LifeTime" value="2"/>
+			</property>
+			<property class="Attributes">
+				<property name="EntityDamage" value="40,75"/>
+				<property name="BlockDamage" value="3,8"/>
+			</property>
+			<effect_group name="ammoDartSteel" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="75"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="3"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth,stone"/>
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="65"/>
+			</effect_group>
+		</item>
+		<item name="ammoDartTitanium">
+			<property name="Extends" value="ammoArrowIron" param1="HandMeshfile"/>
+			<property name="Meshfile" value="Entities/Electrical/steel_dartPrefab"/>
+			<property name="HoldType" value="45"/>
+			<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="DisplayType" value="ammoDartTitanium"/>
+			<property name="Stacknumber" value="500"/> <!-- STK ammo -->
+			<property name="EconomicValue" value="116"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="DisplayType" value="ammoDart"/>
+			<property name="CustomIcon" value="ammoDartIron"/>
+			<property name="CustomIconTint" value="b3f2f2"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action1">
+				<property name="Velocity" value="75"/>
+				<property name="Gravity" value="-4"/>
+				<property name="LifeTime" value="2"/>
+			</property>
+			<property class="Attributes">
+				<property name="EntityDamage" value="65,90"/>
+				<property name="BlockDamage" value="3,8"/>
+			</property>
+			<effect_group name="ammoDartTitanium" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="90"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="4"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth,stone"/>
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="75"/>
+			</effect_group>
+		</item>
+		
+		<!-- Zombie killing chainsaw -->
+		<item name="meleeToolAshesChainsaw">
+		<!-- 	<property name="Tags" value="motorTool,hailToTheKing,chainsaw,canHaveCosmetic"/>-->
+			<property name="Tags" value="motorTool,chainsaw,canHaveCosmetic,perkMiner69r"/>
+			<property name="DisplayType" value="motorTool"/>
+			<property name="HoldType" value="19"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Chainsaw/chainsawPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="450"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="SoundIdle" value="chainsaw_idle"/>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="CustomIcon" value="meleeToolAxeT3Chainsaw"/>
+			<property name="CustomIconTint" value="ff8080"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="Ranged"/>
+				<property name="Hitmask_override" value="Melee"/> <!-- "Class" value="Ranged" is hardcoded to never collide with grass regardless -->
+				<property name="UseMeleeCrosshair" value="true"/>
+				<property name="Single_magazine_usage" value="false"/>
+				<property name="Magazine_items" value="ammoGasCan"/>
+				<property name="Bullet_material" value="metal"/>
+				<property name="Reload_time" value="4.1"/>
+				<property name="Sound_start" value="chainsaw_fire_start"/>
+				<property name="Sound_empty" value="chainsaw_empty"/>
+				<property name="Sound_repeat" value="Sounds/Weapons/Motorized/Chainsaw/chainsaw_fire_lp"/>
+				<property name="Sound_end" value="Sounds/Weapons/Motorized/Chainsaw/chainsaw_fire_end"/>
+				<property name="Sound_reload" value="chainsaw_reload"/>
+				<property name="AutoReload" value="true"/>
+				<property name="Particles_muzzle_smoke" value="nozzlesmoke_chainsaw"/>
+			</property>
+
+			<effect_group name="meleeToolAshesChainsaw">
+				<passive_effect name="EntityDamage" operation="base_set" value="24.3" tags="perkMiner69r"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="0" tags="perkMiner69r"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="300" tags="perkMiner69r"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1400,4200" tier="1,6" tags="perkMiner69r"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
+				<passive_effect name="MaxRange" operation="base_set" value="2.35" tags="perkMiner69r"/>
+				<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkMiner69r"/>
+
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+
+				<passive_effect name="SphereCastRadius" operation="base_set" value=".1"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="100" tags="perkMiner69r"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMiner69r"/> <!-- random effective rng -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkMiner69r"/> <!-- random EntityDmg -->
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
+
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkMiner69r"/> <!-- random DegMax -->
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMiner69r"/> <!-- random APM -->
+				<passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> <!-- random MagazineSize -->
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMiner69r"/> <!-- random WeaponHandling -->
+
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMiner69r"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="300" tags="perkMiner69r"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMiner69r"/> <!-- 3.5s -->
+
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value=".5" tags="perkMiner69r"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value=".5" tags="perkMiner69r"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.25" tags="perkMiner69r"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".25" tags="perkMiner69r"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.45" tags="perkMiner69r"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".45" tags="perkMiner69r"/>
+
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1" tags="perkMiner69r"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="5" tags="perkMiner69r"/>
+			</effect_group> 
+			<!-- Added in to work with JaxTeller718-ActionSkills mod -->
+			<!--<effect_group name="Action Skills">
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="AS_AshesChainsaw_XP" operation="add" value=".01">
+					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="AS_AshesChainsaw_XP" operation="add" value=".01"/>
+			</effect_group>	-->
+		</item>	
+		<!-- New college clothes -->
+		<item name="apparelCollegeRunningShoes">
+			<property name="Extends" value="armorLeatherBoots"/>
+			<property name="DescriptionKey" value="apparelCollegeRunningShoesDesc"/>
+			<property name="CustomIcon" value="apparelRunningShoesRegular"/>
+			<property name="CustomIconTint" value="218,86,255"/>
+			<property name="Tags" value="lowerbody,feet,clothing,noMods"/>
+			<property name="DisplayType" value="clothingCollegeRunningShoes"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="25"/>
+			<property name="Encumbrance" value=".02"/>
+			<property name="ShowQuality" value="false"/>
+			<property name="Group" value="Clothing"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="UMA">
+				<property name="Mesh" value="running_shoes"/>
+				<property name="Overlay0" value="running_shoes"/>
+				<property name="Overlay0Tint" value="218,86,255"/>
+			</property>
+			<property name="EconomicValue" value="350"/>
+			<effect_group tiered="false">
+				<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".2" tags="running"/><display_value name="dStaminaRegen" value=".2"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".15"/><display_value name="dRunSpeed" value=".15"/>
+				<!--<passive_effect name="RunSpeed" operation="perc_add" value=".15"/><display_value name="dRunSpeed" value=".15"/>
+				<requirement name="ProgressionLevel" progression_name="perkTeamPlayer" operation="Equals" value="1"/>
+				</passive_effect> -->
+			</effect_group>
+		</item>
+		<item name="apparelCollegeRunningTShirt">
+			<property name="Extends" value="apparelTShirtPlain" param1="UnlockedBy"/>
+			<property name="Tags" value="upperbody,chest,clothing,noMods"/>
+			<property name="CustomIcon" value="apparelTShirtZU"/>
+			<property name="CustomIconTint" value="218,86,255"/>
+			<property name="EconomicValue" value="350"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="DisplayType" value="clothingCollegeRunningTShirt"/>
+			<property class="UMA">
+				<property name="Overlay1" value="tshirt"/>
+				<property name="Overlay1Tint" value="218,86,255"/>
+				<property name="Overlay2" value="unisex_football_logo"/>
+				<property name="Overlay2Tint" value="44,218,86,255"/>
+			</property>
+			<property name="DescriptionKey" value="apparelCollegeRunningTShirtDesc"/>
+			<effect_group tiered="false">
+				<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".2" tags="running"/><display_value name="dStaminaRegen" value=".2"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".15"/><display_value name="dRunSpeed" value=".15"/>
+				<!--<passive_effect name="RunSpeed" operation="perc_add" value=".15"/><display_value name="dRunSpeed" value=".15"/>
+				<requirement name="ProgressionLevel" progression_name="perkTeamPlayer" operation="Equals" value="1"/>
+				</passive_effect> -->
+			</effect_group>
+		</item>
+		<item name="apparelCollegeRunningShorts">
+			<property name="Extends" value="apparelDenimPants" />
+			<property name="Tags" value="lowerbody,legs,clothing,noMods"/>
+			<property name="CustomIcon" value="apparelDenimShortsPants"/>
+			<property name="CustomIconTint" value="218,86,255"/>
+			<property name="DescriptionKey" value="apparelCollegeRunningShortsDesc"/>
+			<property name="DisplayType" value="clothingCollegeRunningShorts"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="UMA">
+				<property name="Mesh" value="base_legs"/>
+				<property name="Overlay0" value="legs"/>
+				<property name="Overlay0Tint" value="skin"/>
+				<property name="Overlay1" value="shorts"/>
+				<property name="Overlay1Tint" value="218,86,255"/>
+				<property name="Layer" value="0"/>
+				<property name="Mask0" value="legs" param1="inner"/>
+				<property name="UISlot" value="Pants"/>
+			</property>
+			<effect_group tiered="false">
+				<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".2" tags="running"/><display_value name="dStaminaRegen" value=".2"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".15"/><display_value name="dRunSpeed" value=".15"/>
+				<!--<passive_effect name="RunSpeed" operation="perc_add" value=".15"/><display_value name="dRunSpeed" value=".15"/>
+				<requirement name="ProgressionLevel" progression_name="perkTeamPlayer" operation="Equals" value="1"/>
+				</passive_effect> -->
+			</effect_group>
+		</item>
+		<item name="apparelCollegeBallCap">
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="DescriptionKey" value="apparelCollegeBallCapDesc"/>
+			<property name="CustomIcon" value="apparelBallCap"/>
+			<property name="CustomIconTint" value="218,86,255"/>
+			<property name="DisplayType" value="clothingCollegeBallCap"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Waterproof" value=".05"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="Weight" value="15"/>
+			<property name="EconomicValue" value="300"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="Encumbrance" value=".01"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="EquipSlot" value="Head"/>
+			<property name="Group" value="Clothing"/>
+			<property class="UMA">
+				<property name="Mesh" value="gear_ballcap"/>
+				<property name="Overlay0" value="gear_ballcap"/>
+				<property name="Overlay0Tint" value="218,86,255"/>
+				<property name="Layer" value="2"/>
+				<property name="UISlot" value="Headgear"/>
+				<property name="Mask0" value="Head" param1="outer"/>
+				<property name="ShowAltHair" value="true"/>
+			</property>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".15"/><display_value name="dRunSpeed" value=".15"/>
+				<!--<passive_effect name="RunSpeed" operation="perc_add" value=".15"/><display_value name="dRunSpeed" value=".15"/>
+					<requirement name="ProgressionLevel" progression_name="perkTeamPlayer" operation="Equals" value="1"/>
+				</passive_effect> -->
+			</effect_group>
+		</item>
+		<item name="apparelSpartanJacket">
+			<property name="Extends" value="apparelCoatJacketGeneric"/>
+			<property name="DescriptionKey" value="apparelSpartanJacketDesc"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="CustomIcon" value="apparelSuitJacket"/>
+			<property name="CustomIconTint" value="218,86,255"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="UMA">
+				<property name="Mesh" value="clothes_suit_jacket"/>
+				<property name="Overlay0" value="unisex_clothes_suit_jacket"/>
+				<property name="Overlay0Tint" value="159,101,168"/>
+				<property name="Overlay1" value="unisex_clothes_suit_jacket_shirt"/>
+				<property name="Overlay1Tint" value="85,74,96"/>
+				<property name="Layer" value="3"/>
+				<property name="Mask0" value="chest" param1="base"/>
+			</property>
+			<property name="EconomicValue" value="0"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="11.7,15.5"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".05"/><display_value name="dRunSpeed" value=".05"/>
+<!-- 			<passive_effect name="GeneralDamageResist" operation="base_add" value="0.025">
+				<requirement name="ProgressionLevel" progression_name="perkEnforcerApparel" operation="Equals" value="1"/>
+			</passive_effect> -->
+			</effect_group>
+		</item>
+		<!-- New atomic ammo -->
+		<item name="ammoAtomicArrow">
+			<property name="CustomIcon" value="ammoArrowExploding"/>
+			<property name="CustomIconTint" value="ff8080"/>
+			<property name="Extends" value="ammoArrowSteelAP"/>
+			<!--	<property name="DescriptionKey" value="ammoArrowExplodingDesc"/>-->
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/Arrows/arrow_explodingPrefab.prefab"/>
+			<property name="HoldType" value="45"/>
+			<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="IsSticky" value="false"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="65"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="UnlockedBy" value="perkRangersExplodingBolts"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action1">
+				<property name="Explosion.ParticleIndex" value="11"/>
+				<property name="Gravity" value="-5"/>
+				<property name="Explosion.RadiusEntities" value="15"/>
+				<property name="Explosion.DamageBonus.stone" value="0"/>
+				<property name="Explosion.DamageBonus.metal" value="0"/>
+				<property name="Explosion.DamageBonus.earth" value="0"/>
+				<property name="Explosion.DamageBonus.wood" value="0"/>
+				<property name="Explosion.DamageBonus.water" value="0"/>
+				<property name="Explosion.DismemberChance" value="500" tags="arm,leg"/>
+				
+			</property>
+			<effect_group name="ammoAtomicArrow" tiered="false"> <!-- ammoArrowExploding -->
+				<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="650" tags="perkArchery"/>
+				<passive_effect name="DismemberChance" operation="base_add" value="100" tags="arm,leg"/>
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="40" tags="perkArchery"/>
+				<passive_effect name="ProjectileStickChance" operation="perc_set" value="0"/>
+				<display_value name="dExRadius" value="15"/>
+				<!--currently displays range dmg, target armor, blk tmg, proj velo -->
+
+			</effect_group>
+		</item>
+		<item name="ammoAtomicBolt">
+			<property name="CustomIcon" value="ammoCrossbowBoltExploding"/>
+			<property name="CustomIconTint" value="ff8080"/>
+			<property name="Extends" value="ammoCrossbowBoltSteelAP"/>
+			<property name="Tags" value="ammo,ranged,attAgility,perkArchery"/>
+			<property name="DisplayType" value="ammoArrowExploding"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/Arrows/bolt_explodingPrefab.prefab"/>
+			<property name="HoldType" value="45"/>
+			<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="IsSticky" value="false"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="65"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="UnlockedBy" value="perkRangersExplodingBolts"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action1">
+				<property name="Explosion.ParticleIndex" value="11"/>
+				<property name="Gravity" value="-5"/>
+				<property name="Explosion.RadiusEntities" value="15"/>
+				<property name="Explosion.DamageBonus.stone" value="0"/>
+				<property name="Explosion.DamageBonus.metal" value="0"/>
+				<property name="Explosion.DamageBonus.earth" value="0"/>
+				<property name="Explosion.DamageBonus.wood" value="0"/>
+				<property name="Explosion.DamageBonus.water" value="0"/>
+				<property name="Explosion.DismemberChance" value="500"/>
+
+			</property>
+			<effect_group name="ammoAtomicBolt" tiered="false"> <!-- ammoArrowExploding -->
+				<passive_effect name="BlockDamage" operation="base_set" value="0" tags="perkArchery"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="650" tags="perkArchery"/>
+				<passive_effect name="DismemberChance" operation="base_add" level="1" value="100"/>
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="55" tags="perkArchery"/>
+				<passive_effect name="ProjectileStickChance" operation="perc_set" value="0"/>
+				<display_value name="dExRadius" value="15"/>
+				<!--currently displays ex dmg, blk dmg, ex rad, proj velo -->
+			</effect_group>
+		</item>
+		<item name="thrownAmmoAtomicPipeBomb">
+			<property name="CustomIcon" value="thrownAmmoPipeBomb"/>
+			<property name="CustomIconTint" value="ff8080"/>
+			<property name="Extends" value="thrownAmmoPipeBomb"/>
+			<property name="Tags" value="ammo,weapon,attPerception,perkDemolitionsExpert"/>
+			<property name="Explosion.RadiusEntities" value="15"/>
+			<property name="Explosion.DamageBonus.stone" value="0"/>
+			<property name="Explosion.DamageBonus.metal" value="0"/>
+			<property name="Explosion.DamageBonus.earth" value="0"/>
+			<property name="Explosion.DamageBonus.wood" value="0"/>
+			<property name="Explosion.DamageBonus.water" value="0"/>
+			<property name="Explosion.DismemberChance" value="500"/>
+			<property name="Explosion.BlastPower" value="150"/> <!-- (int,100) how far ragdolls and such are flung -->
+			<property name="FuseTime" value="4"/> <!-- End: Needed for  time in sec, max 6 -->
+			<property name="StickPercent" value=".4"/>
+			<property name="Group" value="Ammo/Weapons,Ammo"/>
+			<property name="ActivationTransformToHide" value="Sparks"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/> <!-- obsolete if rounds per minute exists -->
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value="1.25"/>
+				<property name="Sound_start" value="swoosh"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+			</property>
+			<property class="Action1"> <!-- UseAction -->
+				<property name="Class" value="Activate"/>
+				<property name="Delay" value="1"/> <!-- obsolete if rounds per minute exists -->
+			</property>
+			<property name="ThrowableDecoy" value="true"/>
+			<effect_group name="thrownAmmoAtomicPipeBomb" tiered="false">
+				<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="750" tags="perkDemolitionsExpert"/>
+				<display_value name="dExRadius" value="15"/>
+				<display_value name="dFuseTime" value="4"/>
+			</effect_group>
+
+		</item>
+		<item name="thrownAmmoNapalmCocktail">
+			<property name="CustomIcon" value="thrownAmmoMolotovCocktail"/>
+			<property name="CustomIconTint" value="ff8080"/>
+			<property name="Tags" value="ammo,weapon,attPerception,perkDemolitionsExpert"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="DisplayType" value="ammoGrenadeFire"/>
+			<property name="Class" value="ItemClassTimeBomb"/>
+			<property name="HoldType" value="54"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Molotov/molotov_thrownPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Weapons/Ranged/Molotov/molotov_dropPrefab.prefab"/>
+			<property name="HandMeshfile" value="#Other/Items?Weapons/Ranged/Molotov/molotovPrefab.prefab"/>
+		  <property name="ActivationTransformToHide" value="LightMover;Flames;Smoke;ClothFlames;ClothFlamesLight"/>
+		  <property name="DropScale" value="2.1"/>
+		  <property name="FusePrimeOnActivate" value="true"/>
+		  <property name="Material" value="Morganic"/>
+			<property name="ThrowableDecoy" value="true"/>
+			<property name="Weight" value="0"/>
+			<property name="Stacknumber" value="20"/>
+			<property name="LightValue" value=".3"/>
+			<property name="LightSource" value="lightSource"/>
+			<property name="ActivateObject" value="lightSource"/>
+			<property name="Explosion.ParticleIndex" value="10"/>
+			<property name="Explosion.Duration" value="8"/>
+			<property name="Explosion.RadiusBlocks" value="1"/>
+			<property name="Explosion.RadiusEntities" value="1"/>
+			<property name="Explosion.BlastPower" value="35"/>
+			<property name="Explosion.DamageBonus.stone" value=".1"/>
+			<property name="Explosion.DamageBonus.metal" value="0"/>
+			<property name="Explosion.DamageBonus.earth" value="0"/>
+			<property name="Explosion.DamageBonus.water" value="0"/>
+			<property name="Explosion.DamageBonus.wood" value="6"/>
+			<property name="Explosion.Buff" value="buffBurningNapalm"/> <!-- molotovs have a ExplosiveDamageArea script that runs this buff for their ground effect -->
+			<property name="FuseTime" value="20000"/>
+			<property name="ExplodeOnHit" value="true"/>
+			<property name="StickPercent" value=".5"/>
+			<property name="EconomicValue" value="41"/>
+			<property name="Group" value="Ammo/Weapons,Ammo"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Explosion.ParticleIndex" value="7"/>
+				<property name="Throw_strength_default" value="20"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value="1.25"/>
+				<property name="Sound_start" value="swoosh"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+			</property>
+		  <property class="Action1">
+			<!-- UseAction -->
+			<property name="Class" value="Activate"/>
+			<property name="Delay" value="1"/>
+			<!-- obsolete if rounds per minute exists -->
+		  </property>
+
+		  <!-- <property class="Action1">
+				<property name="Class" value="Activate"/>
+				<property name="Delay" value="1"/>
+			</property> -->
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onProjectileImpact" action="ModifyCVar" target="positionAOE" range="2.7" cvar="buffBurningMolotovDuration" operation="set" value="16">
+					<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="0"/></triggered_effect>
+				<triggered_effect trigger="onProjectileImpact" action="ModifyCVar" target="positionAOE" range="2.7" cvar="buffBurningMolotovDuration" operation="set" value="17">
+					<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="NotEquals" value="0"/></triggered_effect>
+				<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="positionAOE" range="2.7" buff="buffBurningMolotov"/>
+
+				<display_value name="dExDamageFire" value="250"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="25" tags="perkDemolitionsExpert"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="0" tags="perkDemolitionsExpert"/>
+				<display_value name="dExRadius" value="9"/>
+				<display_value name="dDuration" value="32"/>
+			</effect_group>
+		</item>
+		<!-- New punchback ammo -->
+<!-- 		<item name="ammoPunchoutArrow">
+			<property name="CustomIcon" value="ammoArrowExploding"/>
+			<property name="CustomIconTint" value="7d7afa"/>
+			<property name="Extends" value="ammoArrowSteelAP"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/Arrows/arrow_explodingPrefab.prefab"/>
+			<property name="HoldType" value="45"/>
+			<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="IsSticky" value="false"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="65"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="UnlockedBy" value="perkRangersExplodingBolts"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action1">
+				<property name="Explosion.ParticleIndex" value="0"/>
+				<property name="Gravity" value="-5"/>
+				<property name="Explosion.RadiusEntities" value="15"/>
+				<property name="Explosion.DamageBonus.stone" value="0"/>
+				<property name="Explosion.DamageBonus.metal" value="0"/>
+				<property name="Explosion.DamageBonus.earth" value="0"/>
+				<property name="Explosion.DamageBonus.wood" value="0"/>
+				<property name="Explosion.DamageBonus.water" value="0"/>
+				<property name="Explosion.DismemberChance" value="500" tags="arm,leg"/>				
+			</property>
+			<effect_group name="ammoPunchoutArrow" tiered="false">
+				<passive_effect name="BlockDamage" operation="base_set" value="0" tags="perkArchery"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="650" tags="perkArchery"/>
+				<passive_effect name="DismemberChance" operation="base_add" value="100" tags="arm,leg"/>
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="40" tags="perkArchery"/>
+				<passive_effect name="ProjectileStickChance" operation="perc_set" value="0"/>
+				<display_value name="dExRadius" value="15"/>
+			</effect_group>
+		</item>
+		<item name="ammoPunchoutBolt">
+			<property name="CustomIcon" value="ammoCrossbowBoltExploding"/>
+			<property name="CustomIconTint" value="7d7afa"/>
+			<property name="Extends" value="ammoCrossbowBoltSteelAP"/>
+			<property name="Tags" value="ammo,ranged,attAgility,perkArchery"/>
+			<property name="DisplayType" value="ammoArrowExploding"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/Arrows/bolt_explodingPrefab.prefab"/>
+			<property name="HoldType" value="45"/>
+			<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="IsSticky" value="false"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="65"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="UnlockedBy" value="perkRangersExplodingBolts"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action1">
+				<property name="Explosion.ParticleIndex" value="0"/>
+				<property name="Gravity" value="-5"/>
+				<property name="Explosion.RadiusEntities" value="15"/>
+				<property name="Explosion.DamageBonus.stone" value="0"/>
+				<property name="Explosion.DamageBonus.metal" value="0"/>
+				<property name="Explosion.DamageBonus.earth" value="0"/>
+				<property name="Explosion.DamageBonus.wood" value="0"/>
+				<property name="Explosion.DamageBonus.water" value="0"/>
+				<property name="Explosion.DismemberChance" value="500"/>
+			</property>
+			<effect_group name="ammoPunchoutBolt" tiered="false">
+				<passive_effect name="BlockDamage" operation="base_set" value="0" tags="perkArchery"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="650" tags="perkArchery"/>
+				<passive_effect name="DismemberChance" operation="base_add" level="1" value="100"/>
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="55" tags="perkArchery"/>
+				<passive_effect name="ProjectileStickChance" operation="perc_set" value="0"/>
+				<display_value name="dExRadius" value="15"/>
+			</effect_group>
+		</item> -->
+		<!-- New candy -->
+		<item name="drugBerserkerJoes">
+			<property name="CustomIcon" value="drugPainkillers"/>
+			<property name="CustomIconTint" value="e88ebc"/>
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugBerserkerJoes"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="10"/> <!-- STK loot -->
+			<property name="Group" value="Science,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_painkillers"/>
+			</property>
+			<effect_group tiered="false" name="Candy Tier 1">
+				
+				<display_value name="dEntityDamage" value="20"/>
+				<display_value name="MaxRange" value="6.9"/>
+				<display_value name="DismemberChance" operation="perc_add" value="200"/>
+				<display_value name="AttacksPerMinute" operation="perc_add" value="10"/>
+				<display_value name="StaminaLoss" value="0"/>
+				<display_value name="WalkSpeed" value="1.75"/>
+				<display_value name="RunSpeed" value="1.75"/>
+				<display_value name="dDuration" value="300"/>
+				<display_value name="BuffResistance" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugBerserkerJoesDuration" operation="add" value="303"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugBerserkerJoesDuration" operation="set" value="903">
+					<requirement name="CVarCompare" cvar="$buffDrugBerserkerJoesDuration" operation="GT" value="903"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugBerserkerJoes"/>
+			</effect_group>
+		</item>			
+		
+		<!-- New food -->			
+		<item name="foodSpartanLoaf"> 
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="foodSpartanLoaf"/>
+			<property name="DescriptionKey" value="foodSpartanLoafDesc"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="3"/>
+			<property name="EconomicBundleSize" value="2"/>
+			<property name="Stacknumber" value="250"/> <!-- STK food -->
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="-5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<display_value name="$waterAmountAdd" value="-5"/>
+			</effect_group>
+		</item>
+		<item name="foodSpartanSingleSizeSteak"> 
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="foodSpartanSingleSizeSteak"/>
+			<property name="DescriptionKey" value="foodSpartanSingleSizeSteakDesc"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="3"/>
+			<property name="EconomicBundleSize" value="2"/>
+			<property name="Stacknumber" value="250"/> <!-- STK food -->
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="-5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<display_value name="$waterAmountAdd" value="-5"/>
+			</effect_group>
+		</item>
+		<item name="foodSpartansLgSizeSteak"> 
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="foodSpartansLgSizeSteak"/>
+			<property name="DescriptionKey" value="foodSpartansLgSizeSteakDesc"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="3"/>
+			<property name="EconomicBundleSize" value="2"/>
+			<property name="Stacknumber" value="250"/> <!-- STK food -->
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="30"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="-10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<display_value name="$waterAmountAdd" value="-10"/>
+			</effect_group>
+		</item>
+		<item name="foodSpartansSingleSizeLasagna"> 
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="foodSpartansSingleSizeLasagna"/>
+			<property name="DescriptionKey" value="foodSpartansSingleSizeLasagnaDesc"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="3"/>
+			<property name="EconomicBundleSize" value="2"/>
+			<property name="Stacknumber" value="250"/> <!-- STK food -->
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="-5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<display_value name="$waterAmountAdd" value="-5"/>
+			</effect_group>
+		</item>
+		<item name="foodSpartansFamilySizeLasagna"> 
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="foodSpartansFamilySizeLasagna"/>
+			<property name="DescriptionKey" value="foodSpartansFamilySizeLasagnaDesc"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="3"/>
+			<property name="EconomicBundleSize" value="2"/>
+			<property name="Stacknumber" value="250"/> <!-- STK food -->
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="30"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="-10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<display_value name="$waterAmountAdd" value="-10"/>
+			</effect_group>
+		</item>
+		<item name="foodSpartansPartySizeLasagna"> 
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="foodSpartansPartySizeLasagna"/>
+			<property name="DescriptionKey" value="foodSpartansPartySizeLasagnaDesc"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="3"/>
+			<property name="EconomicBundleSize" value="2"/>
+			<property name="Stacknumber" value="250"/> <!-- STK food -->
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="45"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="30"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="30"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="-15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<display_value name="$waterAmountAdd" value="-15"/>
+			</effect_group>
+		</item>
+		<item name="foodBobsSyrup"> 
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="foodBobsSyrup"/>
+			<property name="DescriptionKey" value="foodBobsSyrupDesc"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="3"/>
+			<property name="EconomicBundleSize" value="2"/>
+			<property name="Stacknumber" value="250"/> <!-- STK food -->
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="30"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+		<!-- Added in for new entities -->
+		<item name="enHand_farmerGiant">
+			<property name="Extends" value="enHand_farmerFemale1"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="40"/>
+				<property name="DamageBlock" value="500"/>
+				<property name="Range" value="2.0"/>
+			</property>
+			<effect_group name="enHand_farmerGiant" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+		<item name="enHand_forestGiant">
+			<property name="Extends" value="enHand_forestCrawler"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="40"/>
+				<property name="DamageBlock" value="500"/>
+				<property name="Range" value="2.0"/>
+			</property>
+			<effect_group name="enHand_forestGiant" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+		<item name="enHand_forestHikerGiant">
+			<property name="Extends" value="enHand_hikerMale"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="40"/>
+				<property name="DamageBlock" value="500"/>
+				<property name="Range" value="2.0"/>
+			</property>
+			<effect_group name="enHand_forestHikerGiant" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+		<item name="enHand_punkGiant">
+			<property name="Extends" value="enHand_punkKnifeClub"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="40"/>
+				<property name="DamageBlock" value="500"/>
+				<property name="Range" value="2.0"/>
+			</property>
+			<effect_group name="enHand_punkGiant" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+		<item name="enHand_schoolGiant">
+			<property name="Extends" value="enHand_forestMaleFeral"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="40"/>
+				<property name="DamageBlock" value="500"/>
+				<property name="Range" value="2.0"/>
+			</property>
+			<effect_group name="enHand_schoolGiant" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+			</effect_group>
+		</item>
+		<item name="enHand_solderGiant">
+			<property name="Extends" value="enHand_soldierMale"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="40"/>
+				<property name="DamageBlock" value="500"/>
+				<property name="Range" value="2.0"/>
+			</property>
+			<effect_group name="enHand_solderGiant" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+		<item name="enHand_swatGiant">
+			<property name="Extends" value="enHand_swat"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="60"/>
+				<property name="DamageBlock" value="500"/>
+				<property name="Range" value="2.7"/>
+			</property>
+			<effect_group name="enHand_swatGiant" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+		<item name="enHand_utilityGiant">
+			<property name="Extends" value="enHand_utilityMale3"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="40"/>
+				<property name="DamageBlock" value="500"/>
+				<property name="Range" value="2.0"/>
+			</property>
+			<effect_group name="enHand_utilityGiant" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+			</effect_group>
+		</item>
+		<item name="enHand_minerGiant">
+			<property name="Extends" value="enHand_desertMiner3"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="40"/>
+				<property name="DamageBlock" value="500"/>
+				<property name="Range" value="2.8"/>
+			</property>
+			<effect_group name="enHand_minerGiant" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+			</effect_group>
+		</item>
+		<item name="enHand_bikerGiant">
+			<property name="Extends" value="enHand_biker3"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="40"/>
+				<property name="DamageBlock" value="500"/>
+				<property name="Range" value="2.0"/>
+			</property>
+			<effect_group name="enHand_bikerGiant" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="75"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+		<item name="enHand_lumberjackGiant">
+			<property name="Extends" value="enHand_lumberjack4"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="60"/>
+				<property name="DamageBlock" value="500"/>
+				<property name="Range" value="3.0"/>
+			</property>
+			<effect_group name="enHand_lumberjackGiant" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="75"/>
+				</triggered_effect>
+				<passive_effect name="BuffProcChance" operation="base_set" value="1.0" tags="buffInjuryBleedingOne"/>
+			</effect_group>
+		</item>
+		<item name="enHand_nurseGiant">
+			<property name="Extends" value="enHand_nurseHD"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="40"/>
+				<property name="DamageBlock" value="500"/>
+				<property name="Range" value="2.0"/>
+			</property>
+			<effect_group name="enHand_nurseGiant" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+		<item name="enHand_minerGiant">
+			<property name="Extends" value="enHand_desertMale"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="40"/>
+				<property name="DamageBlock" value="500"/>
+				<property name="Range" value="2.0"/>
+			</property>
+			<effect_group name="enHand_minerGiant" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+		<item name="enHand_elementalSandGiant">
+			<property name="Extends" value="meleeHandZombie01"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="34"/>
+				<property name="DamageBlock" value="90"/>
+				<property class="HitSounds"><property name="Override0" value="organic" param1="metalsolidhitorganic"/></property>
+				<property class="GrazeSounds"><property name="Override0" value="organic" param1="metalgrazeorganic"/></property>
+			</property>
+			<effect_group name="enHand_elementalSandGiant" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.25,.14,.15,.29,.36,.11"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1900"/>
+			</effect_group>
+		</item>		
+		<item name="enHand_elementalSandGiantFeral">
+			<property name="Extends" value="enHand_elementalSandGiant"/>
+			<property name="CreativeMode" value="None"/>
+			<effect_group name="enHand_desertCrawlerTorso1Feral" tiered="false">
+				<passive_effect name="DamageModifier" operation="perc_set" value="2"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="3" tags="wood,earth,stone,metal,terrGravel,cloth"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.25,.14,.15,.29,.36,.11"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="7">
+					<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2500"/>
+			</effect_group>
+		</item>
+		<item name="enHand_elementalStoneGiant">
+			<property name="Extends" value="meleeHandZombie01"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="Mstone"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="48"/>
+				<property name="DamageBlock" value="120"/>
+				<property class="HitSounds"><property name="Override0" value="organic" param1="metalsolidhitorganic"/></property>
+				<property class="GrazeSounds"><property name="Override0" value="organic" param1="metalgrazeorganic"/></property>
+			</property>
+			<effect_group name="enHand_elementalStoneGiant" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.40,.14,.20,.29,.36,.11"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="5">
+					<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+				</triggered_effect>
+			</effect_group>
+		</item>		
+		<item name="enHand_elementalStoneGiantFeral">
+			<property name="Extends" value="enHand_elementalStoneGiant"/>
+			<property name="CreativeMode" value="None"/>
+			<effect_group name="enHand_desertCrawlerTorso2Feral" tiered="false">
+				<passive_effect name="DamageModifier" operation="perc_set" value="2"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="3" tags="wood,earth,stone,metal,terrGravel,cloth"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.40,.21,.20,.29,.36,.11"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="7">
+					<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+		<item name="enHand_elementalIronGiant">
+			<property name="Extends" value="meleeHandZombie01"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="Mmetal"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="60"/>
+				<property name="DamageBlock" value="18"/>
+				<property class="HitSounds"><property name="Override0" value="organic" param1="metalsolidhitorganic"/></property>
+				<property class="GrazeSounds"><property name="Override0" value="organic" param1="metalgrazeorganic"/></property>
+			</property>
+			<effect_group name="enHand_elementalIronGiant" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.60,.21,.40,.29,.36,.11"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="5">
+					<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2100"/>
+			</effect_group>
+		</item>		
+		<item name="enHand_elementalIronGiantFeral">
+			<property name="Extends" value="enHand_elementalIronGiant"/>
+			<property name="CreativeMode" value="None"/>
+			<effect_group name="enHand_wastelandCrawlerTorsoFeral" tiered="false">
+				<passive_effect name="DamageModifier" operation="perc_set" value="2"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="3" tags="wood,earth,stone,metal,terrGravel,cloth"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.60,.28,.40,.29,.36,.11"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="7">
+					<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2700"/>
+			</effect_group>
+		</item>	
+		<!-- grandOutdoors -->
+		<item name="meleeHandGrandOutdoors">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="9"/>
+			<property class="Action0">
+				<property name="Sound_start" value="swoosh"/>
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="20"/>
+				<property name="Range" value="1.7"/>
+			</property>
+ 			<effect_group name="meleeHandGrandOutdoors" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+			weights=".11,.07,.07,.05,.29,.36,.11"/>
+			</effect_group>
+		</item>
+		<item name="meleeHandGrandOutdoorsCrawler">
+			<property name="Extends" value="meleeHandGrandOutdoors"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="24"/>
+			<property class="Action0">
+				<property name="Delay" value="2.0"/>
+			</property>
+ 			<effect_group name="meleeHandGrandOutdoorsCrawler" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.07,.07,.05,.29,.36,.11"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+					<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+			</effect_group>
+		</item>
+		<!-- New weapons and ammo -->
+		<item name="meleeWpnBladeBrokenHuntingKnife">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="36"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knives/hunting_knifePrefab.prefab"/>
+			<property name="Material" value="Mmetal"/><property name="Weight" value="25"/>
+			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="meleeWpnBladeT1HuntingKnife"/>
+			<property name="SellableToTrader" value="false"/>
+
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			
+			<effect_group tiered="false" name="meleeWpnBladeBrokenHuntingKnife">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>		
+		<item name="meleeWpnBladeBrokenMachete">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="47"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knives/machetePrefab.prefab"/>
+			<property name="Material" value="Mmetal"/><property name="Weight" value="75"/>
+			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="meleeWpnBladeT3Machete"/>
+			<property name="SellableToTrader" value="false"/>
+
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			
+			<effect_group tiered="false" name="meleeWpnBladeBrokenMachete">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>	
+		<item name="meleeWpnClubBrokenBaseballBat">
+			<property name="Tags" value=""/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Bat/bat_Prefab.prefab"/>
+			<property name="HoldType" value="65"/>
+			<property name="Material" value="Mwood"/> <property name="Weight" value="75"/>
+			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="meleeWpnClubT1BaseballBat"/>
+			<property name="SellableToTrader" value="false"/>
+
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			
+			<effect_group tiered="false" name="meleeWpnClubBrokenBaseballBat">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>			
+		<item name="meleeWpnClubBrokenSteelClub">
+			<property name="Tags" value=""/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/ClubIron/ClubIronPrefab.prefab"/>
+			<property name="HoldType" value="2"/>
+			<property name="Material" value="Mmetal"/><property name="Weight" value="250"/>
+			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="meleeWpnClubT3SteelClub"/>
+			<property name="SellableToTrader" value="false"/>
+
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			
+			<effect_group tiered="false" name="meleeWpnClubBrokenSteelClub">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>		
+		<item name="meleeWpnBatonBrokenPipeBaton">
+			<property name="Tags" value=""/>
+			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/PipeBaton/PipeBatonPrefab.prefab"/>
+			<property name="HoldType" value="80"/>
+			<property name="Material" value="Mmetal"/><property name="Weight" value="50"/>
+			<property name="RepairTools" value="resourceMetalPipe"/>
+			<property name="SoundDestroy" value="metaldestroy1"/>
+			<property name="CustomIcon" value="meleeWpnBatonT0PipeBaton"/>
+			<property name="Stacknumber" value="1"/>
+
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			
+			<effect_group tiered="false" name="meleeWpnBatonBrokenPipeBaton">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>
+		<item name="meleeWpnBatonBrokenStunBaton">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="58"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/TaserBaton/TaserBatonPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/><property name="Weight" value="150"/>
+			<property name="SoundDestroy" value="wooddestroy1"/>
+			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="meleeWpnBatonT2StunBaton"/>
+
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			
+			<effect_group tiered="false" name="meleeWpnBatonBrokenStunBaton">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>
+		<item name="gunHandgunBrokenPistol">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="1"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Pistol/PistolPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="250"/>
+			<property name="SoundJammed" value="BrokenGun"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="CustomIcon" value="gunHandgunT1Pistol"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			
+			<effect_group tiered="false" name="gunHandgunBrokenPistol">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>
+		<item name="gunHandgunBrokenSMG5">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="6"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/SMG/SMGPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="350"/>
+			<property name="SoundJammed" value="BrokenGun"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="CustomIcon" value="gunHandgunT3SMG5"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<effect_group tiered="false" name="gunHandgunBrokenSMG5">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>
+		<item name="gunShotgunBrokenDoubleBarrel">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="56"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/DoubleBarrelShotgun/doubleBarrelShotgunPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="275"/>
+			<property name="SoundJammed" value="BrokenGun"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="CustomIcon" value="gunShotgunT1DoubleBarrel"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<effect_group tiered="false" name="gunShotgunBrokenDoubleBarrel">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>
+		<item name="gunShotgunBrokenPumpShotgun">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="5"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Pump Shotgun/pumpShotgunPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="350"/>
+			<property name="SoundJammed" value="BrokenGun"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="CustomIcon" value="gunShotgunT2PumpShotgun"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<effect_group tiered="false" name="gunShotgunBrokenPumpShotgun">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>
+		<item name="gunShotgunBrokenAutoShotgun">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="76"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Auto Shotgun/autoShotgunPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="450"/>
+			<property name="SoundJammed" value="BrokenGun"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="CustomIcon" value="gunShotgunT3AutoShotgun"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<effect_group tiered="false" name="gunShotgunBrokenAutoShotgun">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>
+		<item name="gunRifleBrokenHuntingRifle">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="30"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/HuntingRifle/HuntingRiflePrefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="250"/>
+			<property name="SoundJammed" value="BrokenGun"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="CustomIcon" value="gunRifleT1HuntingRifle"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<effect_group tiered="false" name="gunRifleBrokenHuntingRifle">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>
+		<item name="gunRifleBrokenLeverActionRifle">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="85"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/LeverActionRifle/leverActionRiflePrefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="350"/>
+			<property name="SoundJammed" value="BrokenGun"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="CustomIcon" value="gunRifleT2LeverActionRifle"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<effect_group tiered="false" name="gunRifleBrokenLeverActionRifle">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>
+		<item name="gunRifleBrokenSniperRifle">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="77"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Sharp Shooter/sharpShooterGunPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="450"/>
+			<property name="SoundJammed" value="BrokenGun"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="CustomIcon" value="gunRifleT3SniperRifle"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<effect_group tiered="false" name="gunRifleBrokenSniperRifle">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>	
+		<item name="gunMGBrokenAK47">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="48"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/ak47/ak47Prefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="450"/>
+			<property name="SoundJammed" value="BrokenGun"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="CustomIcon" value="gunMGT1AK47"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<effect_group tiered="false" name="gunMGBrokenAK47">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>		
+		<item name="gunMGBrokenTacticalAR">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="71"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Tactical Assault Rifle/tacticalAssaultRiflePrefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="550"/>
+			<property name="SoundJammed" value="BrokenGun"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="CustomIcon" value="gunMGT2TacticalAR"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<effect_group tiered="false" name="gunMGBrokenTacticalAR">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>		
+		<item name="gunMGBrokenM60">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="60"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/MachineGun/m60MachinegunPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="700"/>
+			<property name="SoundJammed" value="BrokenGun"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="CustomIcon" value="gunMGT3M60"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<effect_group tiered="false" name="gunMGBrokenM60">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>
+		<item name="gunExplosivesBrokenRocketLauncher">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="10"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/RocketLauncher/rocketlauncherPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="1000"/>
+			<property name="SoundJammed" value="BrokenGun"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="CustomIcon" value="gunExplosivesT3RocketLauncher"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<effect_group tiered="false" name="gunExplosivesBrokenRocketLauncher">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>
+		<item name="meleeWpnKnucklesBrokenLeatherKnuckles">
+			<property name="Tags" value=""/>
+			<property name="Material" value="Mleather"/> <property name="Weight" value="30"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/KnuckleWraps/knuckleWrapsRight_Prefab.prefab"/>
+			<property name="HoldType" value="70"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+			<property name="CustomIcon" value="meleeWpnKnucklesT0LeatherKnuckles"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="DynamicMelee"/>
+			</property>
+			<property class="Action1"> <!-- UseAction -->
+				<property name="Class" value="DynamicMelee"/>
+			</property>
+			
+			<effect_group name="meleeWpnKnucklesBrokenLeatherKnuckles">
+				<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="LeftKnuckles" prefab="#Other/Items?Weapons/Melee/KnuckleWraps/knuckleWrapsLeft_Prefab.prefab" parentTransform="Propjoint" localPos="0,0,0" localRot="0,0,0">
+					<requirement name="IsFPV"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="LeftKnuckles" prefab="#Other/Items?Weapons/Melee/KnuckleWraps/knuckleWrapsLeft_Prefab.prefab" parentTransform="LeftHand" localPos="-0.091,-0.0075,-0.00077" localRot="3.841982,9.94,94.3">
+					<requirement name="!IsFPV"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#painsm"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyStats" stat="Health" operation="subtract" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenKnuckles"/>	
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="LeftKnuckles"/>
+			</effect_group>
+			<effect_group name="Power Attack">
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#painsm"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="ModifyStats" stat="Health" operation="subtract" value="1"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenKnuckles"/>
+			</effect_group>
+		</item>
+		<item name="meleeWpnKnucklesBrokenIronKnuckles">
+			<property name="Tags" value=""/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="50"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knuckles/knucklesRight_Prefab.prefab"/>
+			<property name="HoldType" value="61"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+			<property name="CustomIcon" value="meleeWpnKnucklesT1IronKnuckles"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="DynamicMelee"/>
+			</property>
+			<property class="Action1"> <!-- UseAction -->
+				<property name="Class" value="DynamicMelee"/>
+			</property>
+			
+			<effect_group name="meleeWpnKnucklesBrokenIronKnuckles">
+				<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="LeftKnuckles" prefab="#Other/Items?Weapons/Melee/Knuckles/knucklesLeft_Prefab.prefab" parentTransform="Propjoint" localPos="0,0,0" localRot="0,0,0">
+					<requirement name="IsFPV"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="LeftKnuckles" prefab="#Other/Items?Weapons/Melee/Knuckles/knucklesLeft_Prefab.prefab" parentTransform="LeftHand" localPos="-0.1171,0.004,-0.0187" localRot="-30.53241,-11.3179,135.1055">
+					<requirement name="!IsFPV"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#painsm"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyStats" stat="Health" operation="subtract" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenKnuckles"/>	
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="LeftKnuckles"/>
+			</effect_group>
+			<effect_group name="Power Attack">
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#painsm"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="ModifyStats" stat="Health" operation="subtract" value="5"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenKnuckles"/>
+			</effect_group>
+		</item>
+		<item name="meleeWpnKnucklesBrokenSteelKnuckles">
+			<property name="Tags" value=""/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="100"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knuckles/knucklesSpikedRight_Prefab.prefab"/>
+			<property name="HoldType" value="79"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+			<property name="CustomIcon" value="meleeWpnKnucklesT3SteelKnuckles"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="DynamicMelee"/>
+			</property>
+			<property class="Action1"> <!-- UseAction -->
+				<property name="Class" value="DynamicMelee"/>
+			</property>
+
+			<effect_group name="meleeWpnKnucklesBrokenSteelKnuckles">
+				<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="LeftKnuckles" prefab="#Other/Items?Weapons/Melee/Knuckles/knucklesSpikedLeft_Prefab.prefab" parentTransform="Propjoint" localPos="0,0,0" localRot="0,0,0">
+					<requirement name="IsFPV"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="LeftKnuckles" prefab="#Other/Items?Weapons/Melee/Knuckles/knucklesSpikedLeft_Prefab.prefab" parentTransform="LeftHand" localPos="-0.1171,0.004,-0.0187" localRot="-30.53241,-11.3179,135.1055">
+					<requirement name="!IsFPV"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#painsm"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyStats" stat="Health" operation="subtract" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenKnuckles"/>	
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="LeftKnuckles"/>
+			</effect_group>
+			<effect_group name="Power Attack">
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#painsm"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="ModifyStats" stat="Health" operation="subtract" value="10"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenKnuckles"/>
+			</effect_group>
+		</item>				
+		<item name="gunBowBrokenPrimitiveBow">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="27"/> <!-- "Sway Off" is hardcoded for hold types 26, 27, 53 -->
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/WoodenBow/WoodenBowPrefab.prefab"/>
+			<property name="Material" value="Mwood"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="ShowQuality" value="false"/>
+			<property name="CustomIcon" value="gunBowT0PrimitiveBow"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			
+			<effect_group tiered="false" name="gunBowBrokenPrimitiveBow">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>	
+		<item name="gunBowBrokenWoodenBow">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="68"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/WoodenBow/WoodenBowPrefab.prefab"/>
+			<property name="Material" value="Mwood"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="ShowQuality" value="false"/>
+			<property name="CustomIcon" value="gunBowT1WoodenBow"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			
+			<effect_group tiered="false" name="gunBowBrokenWoodenBow">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>						
+		<item name="gunBowBrokenCompoundBow">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="27"/> <!-- "Sway Off" is hardcoded for hold types 26, 27, 53 -->
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/advancedBow/advancedCompoundBow/advancedCompoundBowPrefab.prefab"/>
+			<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="100"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="ShowQuality" value="false"/>
+			<property name="CustomIcon" value="gunBowT3CompoundBow"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			
+			<effect_group tiered="false" name="gunBowBrokenCompoundBow">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>						
+		<item name="gunBowBrokenIronCrossbow">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="26"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/IronCrossbow/IronCrossbowPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="100"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="ShowQuality" value="false"/>
+			<property name="CustomIcon" value="gunBowT1IronCrossbow"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			
+			<effect_group tiered="false" name="gunBowBrokenIronCrossbow">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>				
+		<item name="gunBowBrokenCompoundCrossbow">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="69"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/AdvancedBow/AdvancedCompoundCrossbow/AdvancedCompoundCrossbowPrefab.prefab"/>
+			<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="100"/>
+			<property name="ShowQuality" value="false"/>
+			<property name="CustomIcon" value="gunBowT3CompoundCrossbow"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			
+			<effect_group tiered="false" name="gunBowBrokenCompoundCrossbow">				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
+		</item>	
+		<!-- New man made resources -->	
+		<item name="meleeToolBrokenWireTool">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="52"/>
+			<property name="Meshfile" value="#Other/Items?Tools/wire_strippersPrefab.prefab"/>
+			<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="100"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="CustomIcon" value="meleeToolWireTool"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Tools/Traps"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+		</item>		
+		<item name="meleeToolBrokenT1ClawHammer">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="32"/>
+			<property name="Meshfile" value="#Other/Items?Tools/hammerPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="100"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="CustomIcon" value="meleeToolRepairT1ClawHammer"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Tools/Traps"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+		</item>	
+		<item name="meleeToolBrokenT1Wrench">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="29"/>
+			<property name="Meshfile" value="#Other/Items?Tools/wrenchPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="200"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="CustomIcon" value="meleeToolSalvageT1Wrench"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Tools/Traps"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+		</item>	
+		<item name="meleeToolAxeBrokenChainsaw">
+			<property name="Tags" value=""/>
+			<property name="HoldType" value="19"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Chainsaw/chainsawPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="450"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="CustomIcon" value="meleeToolAxeT3Chainsaw"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+		</item>
+		<item name="solarBrokenCell">
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MelectricParts"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="100"/>
+			<property name="EconomicValue" value="4000"/>
+			<property name="Group" value="Resources"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="0"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value=".1"/>
+			</property>
+		</item>
+	
+	</append>
+	<!-- Change scrapping due to parts removal -->
+	<set xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/property[@name='Weight']/@value">450</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT3Machete']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT3Machete']/property[@name='Weight']/@value">250</set>
+	<set xpath="/items/item[@name='meleeWpnClubT3SteelClub']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='meleeWpnClubT3SteelClub']/property[@name='Weight']/@value">250</set>
+	<set xpath="/items/item[@name='meleeWpnKnucklesT3SteelKnuckles']/property[@name='Material']/@value">Mmetal</set>
+	<!-- <set xpath="/items/item[@name='meleeWpnKnucklesT3SteelKnuckles']/property[@name='Weight']/@value">175</set> error here-->
+	<set xpath="/items/item[@name='gunHandgunT1Pistol']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='gunHandgunT1Pistol']/property[@name='Weight']/@value">250</set>
+	<set xpath="/items/item[@name='gunHandgunT3SMG5']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='gunHandgunT3SMG5']/property[@name='Weight']/@value">350</set>
+	<set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/property[@name='Weight']/@value">275</set>
+	<set xpath="/items/item[@name='gunShotgunT2PumpShotgun']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='gunShotgunT2PumpShotgun']/property[@name='Weight']/@value">350</set>
+	<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/property[@name='Weight']/@value">450</set>
+	<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/property[@name='Weight']/@value">250</set>
+	<set xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@name='Weight']/@value">350</set>
+	<set xpath="/items/item[@name='gunRifleT3SniperRifle']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='gunRifleT3SniperRifle']/property[@name='Weight']/@value">450</set>
+	<set xpath="/items/item[@name='gunMGT1AK47']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='gunMGT1AK47']/property[@name='Weight']/@value">275</set>
+	<set xpath="/items/item[@name='gunMGT2TacticalAR']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='gunMGT2TacticalAR']/property[@name='Weight']/@value">375</set>
+	<set xpath="/items/item[@name='gunMGT3M60']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='gunMGT3M60']/property[@name='Weight']/@value">475</set>
+	<set xpath="/items/item[@name='gunBowT1WoodenBow']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='gunBowT1WoodenBow']/property[@name='Weight']/@value">475</set>
+	<set xpath="/items/item[@name='gunBowT3CompoundBow']/property[@name='Material']/@value">MmechanicalParts</set>
+	<set xpath="/items/item[@name='gunBowT3CompoundBow']/property[@name='Weight']/@value">125</set>
+	<set xpath="/items/item[@name='gunBowT1IronCrossbow']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='gunBowT1IronCrossbow']/property[@name='Weight']/@value">350</set>
+	<set xpath="/items/item[@name='gunBowT3CompoundCrossbow']/property[@name='Material']/@value">MmechanicalParts</set>
+	<set xpath="/items/item[@name='gunBowT3CompoundCrossbow']/property[@name='Weight']/@value">125</set>
+	<set xpath="/items/item[@name='armorMilitaryMaster']/property[@name='Material']/@value">MresourceScrapPolymers</set>
+	<set xpath="/items/item[@name='armorMilitaryMaster']/property[@name='Weight']/@value">125</set>
+	<set xpath="/items/item[@name='armorSteelMaster']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='armorSteelMaster']/property[@name='Weight']/@value">125</set>
+	<set xpath="/items/item[@name='gunBotT1JunkSledge']/property[@name='Material']/@value">MmechanicalParts</set>
+	<set xpath="/items/item[@name='gunBotT1JunkSledge']/property[@name='Weight']/@value">125</set>
+	<set xpath="/items/item[@name='gunBotT2JunkTurret']/property[@name='Material']/@value">MmechanicalParts</set>
+	<set xpath="/items/item[@name='gunBotT2JunkTurret']/property[@name='Weight']/@value">150</set>	
+	<set xpath="/items/item[@name='gunBotT3JunkDrone']/property[@name='Material']/@value">MmechanicalParts</set>
+	<set xpath="/items/item[@name='gunBotT3JunkDrone']/property[@name='Weight']/@value">175</set>	
+	
+
+	<!-- Add new atomic ammo into weapons -->
+	<set xpath="/items/item[contains(@name, 'Bow')]/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoArrowStone,ammoArrowIron,ammoArrowSteelAP,ammoArrowExploding,ammoAtomicArrow</set>
+	<set xpath="/items/item[contains(@name, 'bow')]/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoCrossbowBoltStone,ammoCrossbowBoltIron,ammoCrossbowBoltSteelAP,ammoCrossbowBoltExploding,ammoAtomicBolt</set>
+	<!-- scrap to metal instead of parts, doesn't work right. van wire tool - 135, trig plat 75 -->
+
+	
+	<!--<remove xpath="/items/item[contains(@name, 'Parts') and not (contains(@name, 'ElectricParts')) and not (contains(@name, 'MechanicalParts'))]"></remove> -->
+	<!-- End of removal -->	
+
+</configs>

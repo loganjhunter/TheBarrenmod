@@ -1,0 +1,7 @@
+<configs>
+    
+	<!-- Add in smaller map sizes -->
+	<set xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/grid/rect/combobox[@values='6144,8192,10240']/@values">2048,3072,4096,5120,6144,7168,8192,9216,10240</set>
+	<!-- Remove the newsWindow on the main game screen -->
+	<remove xpath="/windows/window[@name='newsWindow']"/>
+</configs>

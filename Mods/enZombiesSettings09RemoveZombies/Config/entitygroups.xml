@@ -1,0 +1,254 @@
+<ErrorNull>
+
+<!-- 
+REMOVE ZOMBIES: Remove specific zombies from spawning. Each row below represents one zombie type. Refer to the "name" attribute near the right (enclosed in ? questions marks) for the in-game name of the zombie. To remove a zombie from spawning, just UN-COMMNENT that specific row. This also prevents any feral and radiated variations of that zombie from spawning.
+
+DETAILED STEPS:
+1. Find the row that contains the zombie name you want to remove.
+2. On the left side of that row, delete the left angle bracket, exclaimation point, and the two dashes.
+3. On the far right of that same row, delete the two dashes and the right angle bracket.
+
+DO NOT un-comment any of the section headings like "BIOME: FOREST ZOMBIES", "BIOME: DESERT ZOMBIES", etc. Your computer will explode.
+-->
+
+<!-- ** BIOME: FOREST ZOMBIES ** -->
+<!-- 	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestFemale1')]"/><?name Daisy ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestFemale2')]"/><?name Rose ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestFemale3')]"/><?name Violet ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestFemale4')]"/><?name Dahlia ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestFemale5')]"/><?name Ivy ?>	 -->			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestGiant')]"/><?name Forest Giant ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestGoblin')]"/><?name Forest Goblins ?>		
+<!-- 	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestHikerFemale1')]"/><?name Hiker Heidy ?>	
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestHikerFemale2')]"/><?name Hiker Haley ?>	
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestHikerMale1')]"/><?name Hiker Hans ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestHikerMale2')]"/><?name Hiker Hudson ?>	
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestMale1')]"/><?name Spruce ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestMale2')]"/><?name Oak ?>					
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestMale3')]"/><?name Googly Gonzo ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestMale4')]"/><?name Larch ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestMale5')]"/><?name Birch ?> -->				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestMaleCamo')]"/><?name Grassy Greg ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enForestSpider')]"/><?name Jumpy Jack ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enWildlingFemale1')]"/><?name Wilding Girl ?>
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enElementalOrganicCrawler')]"/><?name Putrefied Crawler ?>	
+
+<!-- ** BIOME: DESERT ZOMBIES ** -->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertCowboy1')]"/><?name Clint ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertCowboy2')]"/>	<?name Jeb ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertCowboy3')]"/><?name Ringo ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertCowgirl1')]"/><?name Josie ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertCowgirl2')]"/><?name Bailey ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertFemale1')]"/><?name Sweaty Sasha ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertFemale2')]"/><?name Sandy Sara ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertFemale3')]"/><?name Roasty Rhonda ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertFemale4')]"/><?name Hobo Helen ?>			
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertGiant')]"/><?name Desert Giant ?>			-->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertGoblin')]"/><?name Desert Goblins ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertMale1')]"/><?name Dusty Devon ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertMale2')]"/><?name Baked Benson ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertMale3')]"/><?name Hobo Henry ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertMale4')]"/><?name Parched Pete ?>			
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertMiner1')]"/><?name Shovelface Shane ?>	-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertMiner2')]"/><?name Picky Pierre ?>		-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertMiner3')]"/><?name Pickaxe Pedro ?>		-->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertOldtimer1')]"/><?name OldTimer Owen ?>	
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enDesertSpider')]"/><?name Hoppy Jose ?>			
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enElementalSandWalker')]"/><?name Sand Elemental ?>				-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enElementalSandCrawler')]"/><?name Sand Elemental Crawler ?>		-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enElementalStoneWalker')]"/><?name Stone Elemental ?>				-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enElementalStoneCrawler')]"/><?name Stone Elemental Crawler ?>	-->
+
+<!-- ** BIOME: SNOW ZOMBIES ** -->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSnowFemale1')]"/><?name Frigid Freda ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSnowFemale2')]"/><?name Icy Irene ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSnowFemale3')]"/><?name Chilly Chelsea ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSnowFemale4')]"/><?name Frozen Fey ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSnowFemale5')]"/><?name Arctic Ana ?>			
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSnowGiant')]"/><?name Snow Giant ?>				-->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSnowGoblin')]"/><?name Snow Goblins ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSnowMale1')]"/><?name Frosty Frank ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSnowMale2')]"/><?name Snowy Stu ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSnowMale3')]"/><?name Googly Gordon ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSnowMale4')]"/><?name Freezing Franz ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSnowMale5')]"/><?name Slushy Sven ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSnowMale6')]"/><?name Blizzardy Byron ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSnowMaleCamo')]"/><?name Snowy Snyder ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSnowSanta1')]"/><?name Sussy Santa ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSnowSantaHelper1')]"/><?name Santa Servant ?>	
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSnowSpider')]"/><?name Bouncy Burk ?>			
+
+<!-- ** BIOME: BURNT ZOMBIES ** -->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBurntFemale1')]"/><?name Crispy Cara ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBurntFemale2')]"/><?name Burnt Bonnie ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBurntFemaleFlamer')]"/><?name Flaming Freda ?>	
+	<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBurntGiant')]"/><?name Red Giant ?>				-->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBurntGoblin')]"/><?name Red Goblins ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBurntMale1')]"/><?name Toasty Tom ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBurntMale2')]"/><?name Ashy Aaron ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBurntMaleFlamer')]"/><?name Smokin Steve ?>		
+
+<!-- ** BIOME: WASTELAND ZOMBIES ** -->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enWastelandFemale1')]"/><?name Doomed Dora ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enWastelandFemale2')]"/><?name Bleak Barbara ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enWastelandFemale3')]"/><?name Hopeless Hanna ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enWastelandFemaleCrazy')]"/><?name Crazy Kathy ?>		
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enWastelandGiant')]"/><?name Wasteland Giant ?>		-->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enWastelandGoblin')]"/><?name Wasteland Goblins ?>	
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enWastelandMale1')]"/><?name Wailing Weyland ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enWastelandMale2')]"/><?name Agonizing Adam ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enWastelandMale3')]"/><?name Tortured Trevor ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enWastelandMaleCrazy')]"/><?name Raging Ryan ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enWastelandSpider')]"/><?name Springy Saul ?>			
+
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enElementalIronWalker')]"/><?name Iron Elemental ?>			-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enElementalIronCrawler')]"/><?name Iron Elemental Crawler ?>	-->
+
+<!-- ** BIKERS & PUNKS ** -->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBiker1')]"/><?name Abobo ?>						-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBiker2')]"/><?name Buffalo Bill ?>				-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBiker3')]"/><?name Moose ?>						-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBiker4')]"/><?name Roper ?>						-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enPunkFemale1')]"/><?name Edgy Edi ?>				-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enPunkFemale2')]"/><?name Bashy Bianca ?>			-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enPunkFemale3')]"/><?name Pissy Paige ?>			-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enPunkFemale4')]"/><?name Stabby Stephie ?>		-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enPunkMale1')]"/><?name Knifey Nico ?>			-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enPunkMale2')]"/><?name Clubby Cristo ?>			-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enPunkMale3')]"/><?name Hangry Hank ?>			-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enPunkMale4')]"/><?name Pokey Peng ?>				-->
+
+<!-- ** BUSINESS ZOMBIES ** -->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBusinessman1')]"/><?name Zuckergerg ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBusinessman2')]"/><?name Musk ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBusinessman3')]"/><?name Bloomberg ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBusinessman4')]"/><?name Bezos ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBusinesswoman1')]"/><?name Bossy Becky ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBusinesswoman2')]"/><?name Pushy Pam ?>			
+
+<!-- ** FARMERS ** -->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enFarmerFemale1')]"/><?name Pumpkin ?>			-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enFarmerFemale2')]"/><?name Helga ?>				-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enFarmerFemale3')]"/><?name Stabby Starla ?>		-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enFarmerMale1')]"/><?name Papa Pablo ?>			-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enFarmerMale2')]"/><?name Big Billy ?>			-->
+
+<!-- ** FOOTBALL / ATHLETIC ZOMBIES ** -->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enFootballMale1')]"/><?name Brady ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enFootballMale2')]"/><?name Montana ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enFootballMale3')]"/><?name Mahomes ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enFootballMale4')]"/><?name Slye ?>				
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enJoggerFemale1')]"/><?name Jogging Jenny ?>		
+<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enJoggerFemale2')]"/><?name Running Rachel ?>		
+<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enJoggerFemale3')]"/><?name Sprinty Sue ?>		
+<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enJoggerFemale4')]"/><?name Trotting Tracey ?>	
+<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enJoggerFemale5')]"/><?name Shuffling Sheila ?>	-->
+
+<!-- ** SCHOOL ZOMBIES ** -->
+<!-- 	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSchoolFemale1')]"/><?name Brainy Brenda ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSchoolFemale2')]"/><?name Gossipy Gwen ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSchoolMale1')]"/><?name Geeky Gabe ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSchoolMale2')]"/><?name Jocky Jake ?>	 -->		
+
+<!-- ** HAZMAT ZOMBIES ** -->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enHazmatFemale1')]"/><?name Infected Eva ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enHazmatFemale2')]"/><?name Poisoned Paula ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enHazmatMale1')]"/><?name Covid Carter ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enHazmatMale2')]"/><?name Viral Vinnie ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enHazmatMale3')]"/><?name PPE Patrick ?>			
+
+<!-- ** HOSPITAL ZOMBIES ** -->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enPatientFemale1')]"/><?name Liverjabbed Lilly ?>	
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enPatientFemale2')]"/><?name Prego Polly ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enPatientFemale3')]"/><?name Kneepain Nikki ?>	
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enPatientMale1')]"/><?name Kneebroke Nelson ?>	
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enPatientMale2')]"/><?name Heartattack Hugo ?>
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enNurseHD')]"/><?name Nurse Nora ?>		-->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enLabFemale1')]"/><?name Sally SARS ?>	
+
+<!-- ** LAB CREATURES ** -->
+	<remove xpath="/entitygroups/entitygroup[contains(@name,'testChamber')]"/>
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enLabCreatureFemale1')]"/><?name Lab Creature vF1 ?>	
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enLabCreatureFemale2')]"/><?name Lab Creature vF2 ?>	
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enLabCreatureFemale3')]"/><?name Lab Creature vF3 ?>	
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enLabCreatureFemale4')]"/><?name Lab Creature vF4 ?>	
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enLabCreatureMale1')]"/><?name Lab Creature vM1 ?>	
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enLabCreatureMale2')]"/><?name Lab Creature vM2 ?>	
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enLabCreatureMale3')]"/><?name Lab Creature vM3 ?>	
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enLabCreatureMale4')]"/><?name Lab Creature vM4 ?>	
+
+<!-- ** LUMBERJACKS ** -->
+<!--	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enLumberjack1')]"/><?name Lumber Larry ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enLumberjack2')]"/><?name Logger Loyd ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enLumberjack3')]"/><?name Chopper Chad ?>		
+  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enLumberjack4')]"/><?name Chainsaw Charlie ?>		-->
+
+<!-- ** SCREAMERS ** -->
+<!-- 	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enScreamer196')]"/><?name Korea Karen ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enScreamer1')]"/><?name Walmart Karen ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enScreamer2')]"/><?name Kmart Karen ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enScreamer3')]"/><?name Costco Karen ?>	 -->	
+
+<!-- ** SOLDIERS / MILITARY ** -->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSoldierFemale1')]"/><?name GI Jane ?>			-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSoldierFemale2')]"/><?name Sergeant Starr ?>	-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSoldierMale1')]"/><?name Colonel Kang ?>		-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSoldierMale2')]"/><?name Sergeant Slade ?>		-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSoldier196')]"/><?name Lt Lima ?>				-->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enStealthMale1')]"/><?name Swifty Shuzo ?>		
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSwatMale1')]"/><?name SWAT Fryer ?>				-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSwatMale2')]"/><?name SWAT Shocker ?>			-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSwatMale3')]"/><?name SWAT Stinger ?>			-->
+
+<!-- ** STRIPPERS ** -->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enStripper1')]"/><?name Bambi ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enStripper2')]"/><?name Kinky Kandi ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enStripper3')]"/><?name Scarlett ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enStripper4')]"/><?name DD Dallas ?>			
+
+<!-- ** MORE SPIDER ZOMBIES ** -->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSpider196')]"/><?name Spider Clark ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enSpiderTom')]"/><?name Spider Tom ?>			
+
+<!-- ** UTILITY WORKERS ** -->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enUtilityFemale1')]"/><?name Nailgun Nona ?>		-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enUtilityFemale2')]"/><?name Waterpail Wanda ?>	-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enUtilityMale1')]"/><?name Cableguy Carlos ?>		-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enUtilityMale2')]"/><?name Wireguy Wayne ?>		-->
+<!-- 	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enUtilityMale3')]"/><?name Builder Bob ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enUtilityMale4')]"/><?name Digger Dick ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enUtilityMale5')]"/><?name Rekt-it Ralph ?>	 -->	
+
+<!-- ** LAB LADY ZOMBIE ** -->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enLab196')]"/><?name Dr Delta ?>				
+
+<!-- ** BOSS ZOMBIES ** -->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enBusinessmanBoss')]"/><?name CEO Chairman Cho ?>		-->
+<!--  <remove xpath="/entitygroups/entitygroup/entity[contains(@name,'enScientistBoss1')]"/><?name Evil Scientist ?>		-->
+
+<!-- ** KHZ ZOMBIES ** -->
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzAiden')]"/><?name Aiden ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzChang')]"/><?name Chang ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzCharlotte')]"/><?name Charlotte ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzClint')]"/><?name Clint ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzEmma')]"/><?name Emma ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzGabrielle')]"/><?name Gabrielle ?>		
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzGrace')]"/><?name Grace ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzHank')]"/><?name Hank ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzHelen')]"/><?name Helen ?>
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzJack')]"/><?name Jack ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzJeff')]"/><?name Jeff ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzMaria')]"/><?name Maria ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzMiguel')]"/><?name Miguel ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzRayah')]"/><?name Rayah ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzRichie')]"/><?name Richie ?>			
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzRoxy')]"/><?name Roxy ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzVince')]"/><?name Vince ?>				
+	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'khzWillie')]"/><?name Willie ?>			
+
+
+
+
+
+
+</ErrorNull>

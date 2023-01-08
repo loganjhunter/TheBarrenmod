@@ -1,0 +1,24 @@
+<ErrorNull>
+
+	<!-- 
+	installable_tags="weapon,tool,ranged"
+	modifier_tags="specialDamage"
+	-->
+	
+<append xpath="/item_modifiers">
+
+	
+	<item_modifier name="modDanceFever" installable_tags="weapon,tool" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="CustomIcon" value="questRallyMarker"/>
+		<property name="CustomIconTint" value="150,0,150"/>
+		<effect_group tiered="false">
+			<requirement name="EntityTagCompare" target="other" tags="zombie,trader"/>
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="other" buff="buffDanceFever"/>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffDanceFever"/>
+		</effect_group>
+	</item_modifier>
+	
+	
+</append>
+</ErrorNull>

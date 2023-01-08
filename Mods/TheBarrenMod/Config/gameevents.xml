@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+	<!-- Remove Tutorial quests -->
+	<remove xpath="/gameevents/action_sequence[@name='game_first_spawn']/action[@class='AddQuest']"></remove>
+</configs>
+

@@ -1,0 +1,304 @@
+<configs>
+
+	<!-- Modified version of Three Thirty's XML -->
+	<!-- Remove existing worlds -->
+	<remove xpath="/rwgmixer/world[@name='tiny']"></remove>
+    <remove xpath="/rwgmixer/world[@name='small']"></remove>
+    <remove xpath="/rwgmixer/world[@name='medium']"></remove>
+    <remove xpath="/rwgmixer/world[@name='large']"></remove>
+	
+	<!-- Create worlds from scracth, need to always include the rivers and wilderness or it will error out!-->
+	<!-- 2k maps only generate one biome -->
+    <append xpath="/rwgmixer">
+		<world name="tiny">
+			<property name="world_size" value="0,5000"/>
+			<property name="border_step_distance" value="64"/>
+
+			<property class="mountains">
+				<property name="scale" value="0,0"/>
+				<property name="cluster_iterations" value="0"/>
+				<property name="cluster_range" value="0"/>
+				<property name="use_biome_mask" value="true"/>
+			</property>
+			
+			<property class="desert_mountains">
+				<property name="scale" value="0,0"/>
+				<property name="cluster_iterations" value="0"/>
+				<property name="cluster_range" value="0"/>
+				<property name="use_biome_mask" value="true"/>
+				<property name="biome_mask_min" value="0"/>
+			</property>
+			
+			<property class="hills">
+				<property name="scale" value="0,0"/>
+				<property name="cluster_iterations" value="0"/>
+				<property name="cluster_range" value="0"/>
+				<property name="use_biome_mask" value="false"/>
+			</property>
+			
+			<property class="plains">
+				<property name="scale" value="0,0"/>
+				<property name="cluster_iterations" value="0"/>
+				<property name="cluster_range" value="0"/>
+				<property name="use_biome_mask" value="false"/>
+			</property>
+			
+			<property class="lakes">
+				<property name="scale" value="0,0"/>
+				<property name="few" value="0"/>
+				<property name="default" value="1"/>
+				<property name="many" value="1"/>
+			</property>
+
+			<property class="rivers">
+				<property name="scale" value="1,1.5"/>
+				<property name="few" value="0"/>
+				<property name="default" value="1"/>
+				<property name="many" value="1"/>
+			</property>
+			
+			<property class="craters">
+				<property name="scale" value="0,0"/>
+				<property name="few" value="0"/>
+				<property name="default" value="0"/>
+				<property name="many" value="0"/>
+			</property>
+			
+			<property class="canyons">
+				<property name="scale" value="0,0"/>
+				<property name="few" value="0"/>
+				<property name="default" value="0"/>
+				<property name="many" value="0"/>
+			</property>
+			
+			<property class="border">
+				<property name="scale" value="0.5,0.75"/>
+			</property>
+
+			<property class="wilderness">
+				<property name="few" value="1"/>
+				<property name="default" value="1"/>
+				<property name="many" value="1"/>
+			</property>
+		</world>
+		<world name="small">
+			<property name="world_size" value="5000,7000"/>
+			<property name="border_step_distance" value="256"/>
+
+			<property class="mountains">
+				<property name="scale" value="0,0"/>
+				<property name="cluster_iterations" value="0"/>
+				<property name="cluster_range" value="0"/>
+				<property name="use_biome_mask" value="true"/>
+			</property>
+			
+			<property class="desert_mountains">
+				<property name="scale" value="0,0"/>
+				<property name="cluster_iterations" value="0"/>
+				<property name="cluster_range" value="0"/>
+				<property name="use_biome_mask" value="true"/>
+				<property name="biome_mask_min" value="0"/>
+			</property>
+			
+			<property class="hills">
+				<property name="scale" value="0,0"/>
+				<property name="cluster_iterations" value="0"/>
+				<property name="cluster_range" value="0"/>
+				<property name="use_biome_mask" value="false"/>
+			</property>
+			
+			<property class="plains">
+				<property name="scale" value="0,0"/>
+				<property name="cluster_iterations" value="0"/>
+				<property name="cluster_range" value="0"/>
+				<property name="use_biome_mask" value="false"/>
+			</property>
+			
+			<property class="lakes">
+				<property name="scale" value="0,0"/>
+				<property name="few" value="0"/>
+				<property name="default" value="0"/>
+				<property name="many" value="0"/>
+			</property>
+			
+			<property class="rivers">
+				<property name="scale" value="1,1.5"/>
+				<property name="few" value="0"/>
+				<property name="default" value="1"/>
+				<property name="many" value="2"/>
+			</property>
+			
+			<property class="craters">
+				<property name="scale" value="0,0"/>
+				<property name="few" value="0"/>
+				<property name="default" value="0"/>
+				<property name="many" value="0"/>
+			</property>
+			
+			<property class="canyons">
+				<property name="scale" value="0,0"/>
+				<property name="few" value="0"/>
+				<property name="default" value="0"/>
+				<property name="many" value="0"/>
+			</property>
+			
+			<property class="border">
+				<property name="scale" value="1,2"/>
+			</property>
+
+			<property class="wilderness">
+				<property name="few" value="1"/>
+				<property name="default" value="1"/>
+				<property name="many" value="1"/>
+			</property>
+		</world>
+		
+		<world name="medium">
+			<property name="world_size" value="7000,10000"/>
+			<property name="border_step_distance" value="256"/>
+	
+			<property class="mountains">
+				<property name="scale" value="0,0"/>
+				<property name="cluster_iterations" value="0"/>
+				<property name="cluster_range" value="0"/>
+				<property name="use_biome_mask" value="true"/>
+			</property>
+			
+			<property class="desert_mountains">
+				<property name="scale" value="0,0"/>
+				<property name="cluster_iterations" value="0"/>
+				<property name="cluster_range" value="0"/>
+				<property name="use_biome_mask" value="true"/>
+				<property name="biome_mask_min" value="0"/>
+			</property>
+			
+			<property class="hills">
+				<property name="scale" value="0,0"/>
+				<property name="cluster_iterations" value="0"/>
+				<property name="cluster_range" value="0"/>
+				<property name="use_biome_mask" value="false"/>
+			</property>
+			
+			<property class="plains">
+				<property name="scale" value="0,0"/>
+				<property name="cluster_iterations" value="0"/>
+				<property name="cluster_range" value="0"/>
+				<property name="use_biome_mask" value="false"/>
+			</property>
+			
+			<property class="lakes">
+				<property name="scale" value="0,0"/>
+				<property name="few" value="0"/>
+				<property name="default" value="1"/>
+				<property name="many" value="1"/>
+			</property>
+
+			<property class="rivers">
+				<property name="scale" value="1,1.5"/>
+				<property name="few" value="0"/>
+				<property name="default" value="1"/>
+				<property name="many" value="1"/>
+			</property>
+			
+			<property class="craters">
+				<property name="scale" value="0,0"/>
+				<property name="few" value="0"/>
+				<property name="default" value="0"/>
+				<property name="many" value="0"/>
+			</property>
+			
+			<property class="canyons">
+				<property name="scale" value="0,0"/>
+				<property name="few" value="0"/>
+				<property name="default" value="0"/>
+				<property name="many" value="0"/>
+			</property>
+			
+			<property class="border">
+				<property name="scale" value="1.5,3.5"/>
+			</property>
+
+			<property class="wilderness">
+				<property name="few" value="1"/>
+				<property name="default" value="1"/>
+				<property name="many" value="1"/>
+			</property>
+		</world>
+		
+		<world name="large">
+		<property name="world_size" value="10000,16000"/>
+		<property name="border_step_distance" value="256"/>
+
+			<property class="mountains">
+				<property name="scale" value="0,0"/>
+				<property name="cluster_iterations" value="0"/>
+				<property name="cluster_range" value="0"/>
+				<property name="use_biome_mask" value="true"/>
+			</property>
+			
+			<property class="desert_mountains">
+				<property name="scale" value="0,0"/>
+				<property name="cluster_iterations" value="0"/>
+				<property name="cluster_range" value="0"/>
+				<property name="use_biome_mask" value="true"/>
+				<property name="biome_mask_min" value="0"/>
+			</property>
+			
+			<property class="hills">
+				<property name="scale" value="0,0"/>
+				<property name="cluster_iterations" value="0"/>
+				<property name="cluster_range" value="0"/>
+				<property name="use_biome_mask" value="false"/>
+			</property>
+			
+			<property class="plains">
+				<property name="scale" value="0,0"/>
+				<property name="cluster_iterations" value="0"/>
+				<property name="cluster_range" value="0"/>
+				<property name="use_biome_mask" value="false"/>
+			</property>
+			
+			<property class="lakes">
+				<property name="scale" value="0,0"/>
+				<property name="few" value="0"/>
+				<property name="default" value="1"/>
+				<property name="many" value="1"/>
+			</property>
+
+			<property class="rivers">
+				<property name="scale" value="1,1.5"/>
+				<property name="few" value="0"/>
+				<property name="default" value="1"/>
+				<property name="many" value="1"/>
+			</property>
+			
+			<property class="craters">
+				<property name="scale" value="0,0"/>
+				<property name="few" value="0"/>
+				<property name="default" value="0"/>
+				<property name="many" value="0"/>
+			</property>
+			
+			<property class="canyons">
+				<property name="scale" value="0,0"/>
+				<property name="few" value="0"/>
+				<property name="default" value="0"/>
+				<property name="many" value="0"/>
+			</property>
+			
+			<property class="water_border">
+				<property name="scale" value="1.5,3.5"/>
+			</property>
+			
+			<property class="wilderness">
+				<property name="few" value="1"/>
+				<property name="default" value="1"/>
+				<property name="many" value="1"/>
+			</property>
+		</world>
+		
+		
+    </append>
+
+
+</configs>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+	<!-- Remove existing loading tips -->
+	<remove xpath="/doc/tips"></remove>
+	<!-- Add new loading tips -->
+	<append xpath="/doc">
+		<tips>
+			<tip key="loadingTipWelcome"/>
+			<tip key="loadingTipZombieTiers"/>
+			<tip key="loadingTipLootDrops"/>
+			<tip key="loadingTipElementalLootDrops"/>
+			<tip key="loadingTipResources"/>
+			<tip key="loadingTipOffense"/>
+			<tip key="loadingTipGetSomeRest"/>			
+			<tip key="loadingTipEight"/>	
+			<tip key="loadingTipMapSize"/>
+			<tip key="loadingTipStillReading"/>
+			<tip key="loadingTipHowDidIGetHere"/>
+			<tip key="loadingTipSameAsItEverWas"/>
+			<tip key="loadingTipReallyStillReading"/>
+		</tips>
+		
+	</append> 
+	
+</configs>

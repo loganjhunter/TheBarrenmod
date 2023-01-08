@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="The Barren Mod" />
+		<Description value="Mod that removes POIs, roads, traders, books, schematics, along with lots of items but adds in some fun things as well. A modified version of Three Thirty's RWG files were used. Also removes all but a few and adds specific loot from enZombies - More Server Side Zombies https://community.7daystodie.com/topic/24594-enzombies-more-zombie-variations/ and Snufkin Custom Zombies PLUS, Community zombies built into the Snufkin Custom Zombies Mod, oakraven and arramus (Snufkin for base mod), https://community.7daystodie.com/topic/22698-snufkins-custom-server-side-zombies-plus/ " />
+		<Author value="loganjhunter" />
+		<Version value="1.26b9" />
+		<Website value="" />
+	</ModInfo>
+</xml>

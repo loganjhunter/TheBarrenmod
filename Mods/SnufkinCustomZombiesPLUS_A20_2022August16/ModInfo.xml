@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="SnufkinCustomZombiesPLUS_A20_2022August16" />
+		<Description value="Community zombies built into the Snufkin Custom Zombies Mod" />
+		<Author value="oakraven and arramus (Snufkin for base mod)" />
+		<Version value="A20" />
+		<Website value="https://community.7daystodie.com/topic/22698-snufkins-custom-server-side-zombies-plus/" />
+	</ModInfo>
+</xml>

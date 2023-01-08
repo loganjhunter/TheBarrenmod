@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+	<!-- Remove trader info -->	
+	<remove xpath="/traders/trader_item_groups"></remove>
+	<remove xpath="/traders/trader_info"></remove>
+	<!-- End of removal -->	
+</configs>

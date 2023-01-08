@@ -1,0 +1,6 @@
+<configs>
+        <set xpath="/windows/window[@name='worldGeneration']/rect/rect/rect/grid/rect/combobox[@values='6144,8192,10240']/@values">4096</set>
+        <set xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/grid/rect/combobox[@values='6144,8192,10240']/@values">4096</set>
+     <!--   <set xpath="/windows/window[@name='worldGeneration']/rect/rect/rect/grid/rect/combobox[@values='6144,8192,10240']/@values">3072</set>
+        <set xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/grid/rect/combobox[@values='6144,8192,10240']/@values">3072</set>-->
+</configs>
