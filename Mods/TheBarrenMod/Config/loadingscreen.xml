@@ -18,6 +18,7 @@
 			<tip key="loadingTipHowDidIGetHere"/>
 			<tip key="loadingTipSameAsItEverWas"/>
 			<tip key="loadingTipReallyStillReading"/>
+			<tip key="loadingTipPlaceableLoot"/>
 		</tips>
 		
 	</append> 

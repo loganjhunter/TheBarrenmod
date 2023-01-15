@@ -68,6 +68,8 @@
 	<remove xpath="/lootcontainers/lootgroup/item[@name='meleeWpnKnucklesT3SteelKnucklesParts']"></remove>	
 	<remove xpath="/lootcontainers/lootgroup/item[@name='gunBotRoboticsParts']"></remove>	
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'vehicle')]"></remove>	
+	<remove xpath="/lootcontainers/lootgroup/item[contains(@group, 'RangedParts')]"></remove>
+	<remove xpath="/lootcontainers/lootgroup/item[contains(@group, 'MeleeParts')]"></remove>
 	<!-- Remove unwanted first aid and candy -->
 	<remove xpath="/lootcontainers/lootgroup/item[@name='medicalBloodBag']"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[@name='drugSteroids']"></remove>
@@ -321,114 +323,159 @@
 			<item name="ammoCrossbowBoltExploding" loot_prob_template="ProbT3" count="5,10"/>
 			<item name="ammoAtomicBolt" loot_prob_template="ProbT3" count="1,2"/>
 		</lootgroup>
-		<!-- Start new lootgroups for broken item chance -->		
+		<!-- Start new lootgroups for broken item chance -->	
+		<lootgroup name="groupMeleeWpnBladeT0BoneKnife" count="1" loot_quality_template="QLTemplateT0">
+			<item name="meleeWpnBladeT0BoneKnife"/>			
+			<item name="meleeWpnBladeBrokenHuntingKnife"/>
+			<item name="meleeWpnBladeBrokenMachete"/>
+		</lootgroup>
 		<lootgroup name="groupMeleeWpnBladeT1HuntingKnife" count="1" loot_quality_template="QLTemplateT1">
-			<item name="meleeWpnBladeT1HuntingKnife" loot_prob_template="medLow" force_prob="true"/>
-			<item name="meleeWpnBladeBrokenHuntingKnife" loot_prob_template="high" force_prob="true"/>
+			<item name="meleeWpnBladeT1HuntingKnife"/>
+			<item name="meleeWpnBladeBrokenHuntingKnife"/>
 		</lootgroup>
 		<lootgroup name="groupMeleeWpnBladeT3Machete" count="1" loot_quality_template="QLTemplateT2">
-			<item name="meleeWpnBladeT3Machete" loot_prob_template="medLow" force_prob="true"/>
-			<item name="meleeWpnBladeBrokenMachete" loot_prob_template="high" force_prob="true"/>
+			<item name="meleeWpnBladeT3Machete"/>
+			<item name="meleeWpnBladeBrokenMachete"/>
+		</lootgroup>
+		<lootgroup name="groupMeleeWpnClubT0WoodenClub" count="1" loot_quality_template="QLTemplateT0">
+			<item name="meleeWpnClubT0WoodenClub"/>
 		</lootgroup>
 		<lootgroup name="groupMeleeWpnClubT1BaseballBat" count="1" loot_quality_template="QLTemplateT1">
-			<item name="meleeWpnClubT1BaseballBat" loot_prob_template="medLow" force_prob="true"/>
-			<item name="meleeWpnClubBrokenBaseballBat" loot_prob_template="high" force_prob="true"/>
+			<item name="meleeWpnClubT1BaseballBat"/>
+			<item name="meleeWpnClubBrokenBaseballBat"/>
 		</lootgroup>
 		<lootgroup name="groupMeleeWpnClubT3SteelClub" count="1" loot_quality_template="QLTemplateT2">
-			<item name="meleeWpnClubT3SteelClub" loot_prob_template="medLow" force_prob="true"/>
-			<item name="meleeWpnClubBrokenSteelClub" loot_prob_template="high" force_prob="true"/>
+			<item name="meleeWpnClubT3SteelClub"/>
+			<item name="meleeWpnClubBrokenSteelClub"/>
 		</lootgroup>
 		<lootgroup name="groupMeleeWpnBatonT0PipeBaton" count="1" loot_quality_template="QLTemplateT0">
-			<item name="meleeWpnBatonT0PipeBaton" loot_prob_template="medLow" force_prob="true"/>
-			<item name="meleeWpnBatonBrokenPipeBaton" loot_prob_template="high" force_prob="true"/>
+			<item name="meleeWpnBatonT0PipeBaton"/>
+			<item name="meleeWpnBatonBrokenPipeBaton"/>
 		</lootgroup>
 		<lootgroup name="groupMeleeWpnBatonT2StunBaton" count="1" loot_quality_template="QLTemplateT2">
-			<item name="meleeWpnBatonT2StunBaton" loot_prob_template="medLow" force_prob="true"/>
-			<item name="meleeWpnBatonBrokenStunBaton" loot_prob_template="high" force_prob="true"/>
+			<item name="meleeWpnBatonT2StunBaton"/>
+			<item name="meleeWpnBatonBrokenStunBaton"/>
+		</lootgroup>
+		<lootgroup name="groupGunHandgunT0Handguns" count="1" loot_quality_template="QLTemplateT0">
+			<item name="gunHandgunT1Pistol"/>
+			<item name="gunHandgunBrokenPistol"/>
+			<item name="gunHandgunBrokenSMG5"/>
 		</lootgroup>
 		<lootgroup name="groupGunHandgunT1Pistol" count="1" loot_quality_template="QLTemplateT1">
-			<item name="gunHandgunT1Pistol" loot_prob_template="high" force_prob="true"/>
-			<item name="gunHandgunBrokenPistol" loot_prob_template="veryHigh" force_prob="true"/>
+			<item name="gunHandgunT1Pistol"/>
+			<item name="gunHandgunBrokenPistol"/>
 		</lootgroup>
 		<lootgroup name="groupGunHandgunT3SMG5" count="1" loot_quality_template="QLTemplateT2">
-			<item name="gunHandgunT3SMG5" loot_prob_template="medLow" force_prob="true"/>
-			<item name="gunHandgunBrokenSMG5" loot_prob_template="high" force_prob="true"/>
+			<item name="gunHandgunT3SMG5"/>
+			<item name="gunHandgunBrokenSMG5"/>
 		</lootgroup>
-		<lootgroup name="groupGunShotgunT1DoubleBarrel" loot_quality_template="QLTemplateT1">
+		<lootgroup name="groupGunShotgunT0Shotguns" count="1" loot_quality_template="QLTemplateT0">
+			<item name="gunShotgunT1DoubleBarrel"/>
+			<item name="gunShotgunBrokenDoubleBarrel"/>
+			<item name="gunShotgunBrokenPumpShotgun"/>
+			<item name="gunShotgunBrokenAutoShotgun"/>
+		</lootgroup>
+		<lootgroup name="groupGunShotgunT1DoubleBarrel" count="1" loot_quality_template="QLTemplateT1">
 			<item name="gunShotgunT1DoubleBarrel"/>
 			<item name="gunShotgunBrokenDoubleBarrel"/>
 		</lootgroup>
-		<lootgroup name="groupGunShotgunT2PumpShotgun" loot_quality_template="QLTemplateT2">
+		<lootgroup name="groupGunShotgunT2PumpShotgun" count="1" loot_quality_template="QLTemplateT2">
 			<item name="gunShotgunT2PumpShotgun"/>
 			<item name="gunShotgunBrokenPumpShotgun"/>
 		</lootgroup>
-		<lootgroup name="groupGunShotgunT3AutoShotgun" loot_quality_template="QLTemplateT3">
+		<lootgroup name="groupGunShotgunT3AutoShotgun" count="1" loot_quality_template="QLTemplateT3">
 			<item name="gunShotgunT3AutoShotgun"/>
 			<item name="gunShotgunBrokenAutoShotgun"/>
 		</lootgroup>
-		<lootgroup name="groupGunRifleT1HuntingRifle" loot_quality_template="QLTemplateT1">
+		<lootgroup name="groupGunRifleT0Rifles" count="1" loot_quality_template="QLTemplateT0">
+			<item name="gunRifleT1HuntingRifle"/>
+			<item name="gunRifleBrokenHuntingRifle"/>
+			<item name="gunRifleBrokenLeverActionRifle"/>
+			<item name="gunRifleBrokenSniperRifle"/>
+		</lootgroup>
+		<lootgroup name="groupGunRifleT1HuntingRifle" count="1" loot_quality_template="QLTemplateT1">
 			<item name="gunRifleT1HuntingRifle"/>
 			<item name="gunRifleBrokenHuntingRifle"/>
 		</lootgroup>
-		<lootgroup name="groupGunRifleT2LeverActionRifle" loot_quality_template="QLTemplateT2">
+		<lootgroup name="groupGunRifleT2LeverActionRifle" count="1" loot_quality_template="QLTemplateT2">
 			<item name="gunRifleT2LeverActionRifle"/>
 			<item name="gunRifleBrokenLeverActionRifle"/>
 		</lootgroup>
-		<lootgroup name="groupGunRifleT3SniperRifle" loot_quality_template="QLTemplateT3">
+		<lootgroup name="groupGunRifleT3SniperRifle" count="1" loot_quality_template="QLTemplateT3">
 			<item name="gunRifleT3SniperRifle"/>
 			<item name="gunRifleBrokenSniperRifle"/>
 		</lootgroup>
+		<lootgroup name="groupGunMGT0MGs" count="1" loot_quality_template="QLTemplateT0">
+			<item name="gunMGT1AK47" loot_prob_template="medLow"/>
+			<item name="gunMGBrokenAK47"/>
+			<item name="gunMGBrokenTacticalAR"/>
+			<item name="gunMGBrokenM60"/>
+		</lootgroup>
 		<lootgroup name="groupGunMGT1AK47" count="1" loot_quality_template="QLTemplateT1">
-			<item name="gunMGT1AK47" loot_prob_template="medLow" force_prob="true"/>
-			<item name="gunMGBrokenAK47" loot_prob_template="high" force_prob="true"/>
+			<item name="gunMGT1AK47"/>
+			<item name="gunMGBrokenAK47"/>
 		</lootgroup>
 		<lootgroup name="groupGunMGT2TacticalAR" count="1" loot_quality_template="QLTemplateT2">
-			<item name="gunMGT2TacticalAR" loot_prob_template="medLow" force_prob="true"/>
-			<item name="gunMGBrokenTacticalAR" loot_prob_template="high" force_prob="true"/>
+			<item name="gunMGT2TacticalAR"/>
+			<item name="gunMGBrokenTacticalAR"/>
 		</lootgroup>
 		<lootgroup name="groupGunMGT3M60" count="1" loot_quality_template="QLTemplateT3">
-			<item name="gunMGT3M60" loot_prob_template="medLow" force_prob="true"/>
-			<item name="gunMGBrokenM60" loot_prob_template="high" force_prob="true"/>
+			<item name="gunMGT3M60"/>
+			<item name="gunMGBrokenM60"/>
 		</lootgroup>
-		<lootgroup name="groupMeleeWpnKnucklesT0LeatherKnuckles" count="1" loot_quality_template="QLTemplateT0">
-			<item name="meleeWpnKnucklesT0LeatherKnuckles" loot_prob_template="medLow" force_prob="true"/>
-			<item name="meleeWpnKnucklesBrokenLeatherKnuckles" loot_prob_template="high" force_prob="true"/>
+		<lootgroup name="groupMeleeWpnKnucklesT0Knuckles" count="1" loot_quality_template="QLTemplateT0">
+			<item name="meleeWpnKnucklesT0LeatherKnuckles"/>
+			<item name="meleeWpnKnucklesBrokenLeatherKnuckles"/>
+			<item name="meleeWpnKnucklesBrokenIronKnuckles"/>
+			<item name="meleeWpnKnucklesBrokenSteelKnuckles"/>
 		</lootgroup>
 		<lootgroup name="groupMeleeWpnKnucklesT1IronKnuckles" count="1" loot_quality_template="QLTemplateT1">
-			<item name="meleeWpnKnucklesT1IronKnuckles" loot_prob_template="medLow" force_prob="true"/>
-			<item name="meleeWpnKnucklesBrokenIronKnuckles" loot_prob_template="high" force_prob="true"/>
+			<item name="meleeWpnKnucklesT1IronKnuckles"/>
+			<item name="meleeWpnKnucklesBrokenIronKnuckles"/>
 		</lootgroup>
 		<lootgroup name="groupMeleeWpnKnucklesT3SteelKnuckles" count="1" loot_quality_template="QLTemplateT2">
-			<item name="meleeWpnKnucklesT3SteelKnuckles" loot_prob_template="medLow" force_prob="true"/>
-			<item name="meleeWpnKnucklesBrokenSteelKnuckles" loot_prob_template="high" force_prob="true"/>
+			<item name="meleeWpnKnucklesT3SteelKnuckles"/>
+			<item name="meleeWpnKnucklesBrokenSteelKnuckles"/>
 		</lootgroup>		
-		<lootgroup name="groupGunBowT0PrimitiveBow" count="1" loot_quality_template="QLTemplateT0">
-			<item name="gunBowT0PrimitiveBow" loot_prob_template="medLow" force_prob="true"/>
-			<item name="gunBowBrokenPrimitiveBow" loot_prob_template="high" force_prob="true"/>
+		<lootgroup name="groupGunBowT0Bows" count="1" loot_quality_template="QLTemplateT0">
+			<item name="gunBowT0PrimitiveBow"/>
+			<item name="gunBowBrokenPrimitiveBow"/>
+			<item name="gunBowBrokenWoodenBow"/>
+			<item name="gunBowBrokenCompoundBow"/>
+			<item name="gunBowBrokenIronCrossbow"/>
+			<item name="gunBowBrokenCompoundCrossbow"/>
 		</lootgroup>
 		<lootgroup name="groupGunBowT1WoodenBow" count="1" loot_quality_template="QLTemplateT1">
-			<item name="gunBowT1WoodenBow" loot_prob_template="medLow" force_prob="true"/>
-			<item name="gunBowBrokenWoodenBow" loot_prob_template="high" force_prob="true"/>
+			<item name="gunBowT1WoodenBow"/>
+			<item name="gunBowBrokenWoodenBow"/>
 		</lootgroup>
 		<lootgroup name="groupGunBowT3CompoundBow" count="1" loot_quality_template="QLTemplateT2">
-			<item name="gunBowT3CompoundBow" loot_prob_template="medLow" force_prob="true"/>
-			<item name="gunBowBrokenCompoundBow" loot_prob_template="high" force_prob="true"/>
+			<item name="gunBowT3CompoundBow"/>
+			<item name="gunBowBrokenCompoundBow"/>
 		</lootgroup>
 		<lootgroup name="groupGunBowT1IronCrossbow" count="1" loot_quality_template="QLTemplateT1">
-			<item name="gunBowT1IronCrossbow" loot_prob_template="medLow" force_prob="true"/>
-			<item name="gunBowBrokenIronCrossbow" loot_prob_template="high" force_prob="true"/>
+			<item name="gunBowT1IronCrossbow"/>
+			<item name="gunBowBrokenIronCrossbow"/>
 		</lootgroup>
 		<lootgroup name="groupGunT3CompoundCrossbow" count="1" loot_quality_template="QLTemplateT2">
-			<item name="gunBowT3CompoundCrossbow" loot_prob_template="medLow" force_prob="true"/>
-			<item name="gunBowBrokenCompoundCrossbow" loot_prob_template="high" force_prob="true"/>
+			<item name="gunBowT3CompoundCrossbow"/>
+			<item name="gunBowBrokenCompoundCrossbow"/>
 		</lootgroup>	
 		
 		<!-- Start new single weapon lootgroups -->
+		<lootgroup name="groupMeleeWpnBladeT0Knifes">
+			<item group="groupMeleeWpnBladeT0BoneKnife"/>
+			<item name="meleeWpnBladeBrokenHuntingKnife"/>
+			<item name="meleeWpnBladeBrokenMachete"/>
+		</lootgroup>
 		<lootgroup name="groupMeleeWpnBladeHuntingKnives">
 			<item group="groupMeleeWpnBladeT1HuntingKnife"/>
 		</lootgroup>
 		<lootgroup name="groupMeleeWpnBladeT3Machetes">
 			<item group="groupMeleeWpnBladeT3Machete"/>
+		</lootgroup>
+		<lootgroup name="groupMeleeWpnClubT0WoodenClubs">
+			<item group="groupMeleeWpnClubT0WoodenClub"/>
 		</lootgroup>
 		<lootgroup name="groupMeleeWpnClubT1BaseballBats">
 			<item group="groupMeleeWpnClubT1BaseballBat"/>
@@ -486,22 +533,10 @@
 			<item group="groupGunMGT3M60" count="1"/>
 			<item group="groupAmmo762mm" count="0,1"/>
 		</lootgroup>
-		<lootgroup name="groupMeleeWpnKnucklesLeatherKnuckles">
-			<item group="groupMeleeWpnKnucklesT0LeatherKnuckles" loot_prob_template="medLow"/>
-			<item name="meleeWpnKnucklesBrokenLeatherKnuckles" loot_prob_template="high" force_prob="true"/>
+		<lootgroup name="groupunBowT0PrimitiveBows" count="all">
+			<item group="groupGunBowT0Bows"/>
+			<item group="groupAmmoArrows" count="0,1"/>
 		</lootgroup>
-		<lootgroup name="groupMeleeWpnKnucklesIronKnuckles">
-			<item group="groupMeleeWpnKnucklesT1IronKnuckles" loot_prob_template="medLow"/>
-			<item name="meleeWpnKnucklesBrokenIronKnuckles" loot_prob_template="high" force_prob="true"/>
-		</lootgroup>
-		<lootgroup name="groupMeleeWpnKnucklesSteelKnuckles">
-			<item group="groupMeleeWpnKnucklesT3SteelKnuckles" loot_prob_template="medLow"/>
-			<item name="meleeWpnKnucklesBrokenSteelKnuckles" loot_prob_template="high" force_prob="true"/>
-		</lootgroup>
-<!-- 		<lootgroup name="groupAmmoBolts">
-			<item group="groupGunBowT0PrimitiveBow" loot_prob_template="medHigh" force_prob="true"/>
-			<item name="gunBowBrokenPrimitiveBow" loot_prob_template="high" force_prob="true"/>
-		</lootgroup> -->
 		<lootgroup name="groupGunBowT1WoodenBows" count="all">
 			<item group="groupGunBowT1WoodenBow" count="1"/>
 			<item group="groupAmmoArrows" count="0,1"/>
@@ -517,49 +552,58 @@
 		<lootgroup name="groupGunT3CompoundCrossbows" count="all">
 			<item group="groupGunT3CompoundCrossbow" count="1"/>
 			<item group="groupAmmoBolts" count="0,1"/>
-		</lootgroup>	
-		<lootgroup name="groupMeleeWpnBladeScaled" count="1">
-			<item group="groupMeleeWpnBladeHuntingKnives" loot_prob_template="ProbT1Cap"/>
-			<item group="groupMeleeWpnBladeT3Machetes" loot_prob_template="ProbT2Cap"/>
 		</lootgroup>
-		<lootgroup name="groupMeleeWpnClubScaled" count="1">
+
+		<!-- Start new scaled weapon lootgroups -->
+		<lootgroup name="groupMeleeWpnBladeScaled" count="1">
+			<item group="groupMeleeWpnBladeT0Knifes" loot_prob_template="ProbT0"/>
+			<item group="groupMeleeWpnBladeHuntingKnives" loot_prob_template="ProbT1"/>
+			<item group="groupMeleeWpnBladeT3Machetes" loot_prob_template="ProbT2"/>
+		</lootgroup>
+		<lootgroup name="groupMeleeWpnClubScaled" count="1">		
+			<item group="groupMeleeWpnClubT0WoodenClubs" loot_prob_template="ProbT0"/>
 			<item group="groupMeleeWpnClubT1BaseballBats" loot_prob_template="ProbT1"/>
 			<item group="groupMeleeWpnClubT3SteelClubs" loot_prob_template="ProbT2"/>
 		</lootgroup>
 		<lootgroup name="groupMeleeWpnBatonScaled" count="1">
-			<item group="groupMeleeWpnBatonT0PipeBatons" loot_prob_template="ProbT1"/>
+			<item group="groupMeleeWpnBatonT0PipeBatons" loot_prob_template="ProbT0"/>
 			<item group="groupMeleeWpnBatonT2StunBatons" loot_prob_template="ProbT2"/>
-		</lootgroup>
-		<lootgroup name="groupMeleeWpnAllScaled" count="1">
-			<item group="groupMeleeWpnBladeScaled"/>
-			<item group="groupMeleeWpnClubScaled"/>
-			<item group="groupMeleeWpnBatonScaled"/>
-		</lootgroup>
+		</lootgroup>		
 		<lootgroup name="groupGunHandgunScaled" count="1">
 			<item group="groupGunHandgunT1Pistols" loot_prob_template="ProbT1"/>
 			<item group="groupGunHandgunSMG5s" loot_prob_template="ProbT2"/>
 		</lootgroup>
 		<lootgroup name="groupGunShotgunScaled" count="1">
+			<item group="groupGunShotgunT0Shotguns" loot_prob_template="ProbT0"/>
 			<item group="groupGunShotgunT1DoubleBarrels" loot_prob_template="ProbT1"/>
 			<item group="groupGunShotgunT2PumpShotguns" loot_prob_template="ProbT2"/>
 			<item group="groupGunShotgunT3AutoShotguns" loot_prob_template="ProbT3"/>
 		</lootgroup>
 		<lootgroup name="groupGunRifleScaled" count="1">
-			<item group="groupGunRifleT1HuntingRifles"  count="1" loot_prob_template="ProbT1"/>
-			<item group="groupGunRifleT2LeverActionRifles"  count="1" loot_prob_template="ProbT2"/>
-			<item group="groupGunRifleT3SniperRifles"  count="1" loot_prob_template="ProbT3"/>
+			<item group="groupGunRifleT0Rifles" loot_prob_template="ProbT0"/>
+			<item group="groupGunRifleT1HuntingRifles" loot_prob_template="ProbT1"/>
+			<item group="groupGunRifleT2LeverActionRifles" loot_prob_template="ProbT2"/>
+			<item group="groupGunRifleT3SniperRifles" loot_prob_template="ProbT3"/>
 		</lootgroup>
 		<lootgroup name="groupGunMGScaled" count="1">
+			<item group="groupGunMGT0MGs" loot_prob_template="ProbT0"/>
 			<item group="groupGunMGT1AK47s" loot_prob_template="ProbT1"/>
 			<item group="groupGunMGT2TacticalARs" loot_prob_template="ProbT2"/>
 			<item group="groupGunMGT3M60s" loot_prob_template="ProbT3"/>
 		</lootgroup>
 		<lootgroup name="groupMeleeWpnKnucklesScaled" count="1">
-			<item group="groupMeleeWpnKnucklesLeatherKnuckles" loot_prob_template="ProbT1"/>
-			<item group="groupMeleeWpnKnucklesIronKnuckles" loot_prob_template="ProbT2"/>
-			<item group="groupMeleeWpnKnucklesSteelKnuckles" loot_prob_template="ProbT3"/>
+			<item group="groupMeleeWpnKnucklesT0Knuckles" loot_prob_template="ProbT0"/>
+			<item group="groupMeleeWpnKnucklesT1IronKnuckles" loot_prob_template="ProbT1"/>
+			<item group="groupMeleeWpnKnucklesT3SteelKnuckles" loot_prob_template="ProbT2"/>
 		</lootgroup>
-		<lootgroup name="groupGunBowScaled" count="1">
+		<lootgroup name="groupMeleeWpnAllScaled" count="1">
+			<item group="groupMeleeWpnKnucklesScaled"/>
+			<item group="groupMeleeWpnBladeScaled"/>
+			<item group="groupMeleeWpnClubScaled"/>
+			<item group="groupMeleeWpnBatonScaled"/>
+		</lootgroup>
+		<lootgroup name="groupGunBowScaled" count="1">		
+			<item group="groupunBowT0PrimitiveBows" loot_prob_template="ProbT0"/>
 			<item group="groupGunBowT1WoodenBows" loot_prob_template="ProbT1"/>
 			<item group="groupGunBowT1IronCrossbows" loot_prob_template="ProbT1"/>
 			<item group="groupGunBowT3CompoundBows" loot_prob_template="ProbT2"/>
@@ -684,19 +728,19 @@
 			<item group="groupUncommonLabResources" loot_prob_template="ProbT2Cap"/>
 			<item group="groupRareLabResources" loot_prob_template="ProbT3"/>
 		</lootgroup>
-		<lootgroup name="meleeToolRepairT1ClawHammers">
-			<item name="meleeToolRepairT1ClawHammer" loot_prob_template="medHigh" force_prob="true"/>
-			<item name="meleeToolBrokenT1ClawHammer" loot_prob_template="high" force_prob="true"/>
+		<lootgroup name="meleeToolRepairT1ClawHammers" count="1">
+			<item name="meleeToolRepairT1ClawHammer"/>
+			<item name="meleeToolBrokenT1ClawHammer"/>
 		</lootgroup>
-		<lootgroup name="meleeToolSalvageT1Wrenchs">
-			<item name="meleeToolBrokenT1Wrench" loot_prob_template="high" force_prob="true"/>
-			<item name="meleeToolSalvageT1Wrench" loot_prob_template="medHigh" force_prob="true"/>			
+		<lootgroup name="meleeToolSalvageT1Wrenchs" count="1">
+			<item name="meleeToolBrokenT1Wrench"/>
+			<item name="meleeToolSalvageT1Wrench"/>			
 		</lootgroup>
-		<lootgroup name="meleeToolWireTools">
-			<item name="meleeToolWireTool" loot_prob_template="medHigh" force_prob="true"/>
-			<item name="meleeToolBrokenWireTool" loot_prob_template="high" force_prob="true"/>
+		<lootgroup name="meleeToolWireTools" count="1">
+			<item name="meleeToolWireTool"/>
+			<item name="meleeToolBrokenWireTool"/>
 		</lootgroup>
-		<lootgroup name="groupMeleeTool">
+		<lootgroup name="groupMeleeTool" count="1">
 			<item group="meleeToolSalvageT1Wrenchs"/>
 			<item group="meleeToolWireTools"/>
 			<item group="meleeToolRepairT1ClawHammers"/>
@@ -710,49 +754,48 @@
 			<item group="groupEvilDead" loot_prob_template="ProbT2"/>
 		</lootgroup>
 		<lootgroup name="groupSmallEngine" count="1">
-			<item name="smallEngine" loot_prob_template="high" force_prob="true"/>
-			<item name="brokenSmallEngine" loot_prob_template="veryHigh" force_prob="true"/>
+			<item name="smallEngine"/>
+			<item name="brokenSmallEngine"/>
 		</lootgroup>
 		<lootgroup name="groupGeneratorbank" count="1">
-			<item name="generatorbank" loot_prob_template="high" force_prob="true"/>
-			<item name="brokenGeneratorbank" loot_prob_template="veryHigh" force_prob="true"/>
+			<item name="generatorbank"/>
+			<item name="brokenGeneratorbank"/>
 		</lootgroup>
 		<lootgroup name="groupCarBattery" count="1">
-			<item name="carBattery" loot_prob_template="high" force_prob="true"/>
-			<item name="brokenCarBattery" loot_prob_template="veryHigh" force_prob="true"/>
+			<item name="carBattery"/>
+			<item name="brokenCarBattery"/>
 		</lootgroup>
 		<lootgroup name="groupBatterybank" count="1">
-			<item name="batterybank" loot_prob_template="high" force_prob="true"/>
-			<item name="brokenBatterybank" loot_prob_template="veryHigh" force_prob="true"/>
+			<item name="batterybank"/>
+			<item name="brokenBatterybank"/>
 		</lootgroup>
 		<lootgroup name="groupSolarbank" count="1">
-			<item name="solarbank" loot_prob_template="high" force_prob="true"/>
-			<item name="brokenSolarbank" loot_prob_template="veryHigh" force_prob="true"/>
+			<item name="solarbank"/>
+			<item name="brokenSolarbank"/>
 		</lootgroup>
 		<lootgroup name="armorMiningHelmets" count="1">
-			<item name="armorMiningHelmet" mod_chance="0" loot_prob_template="high" force_prob="true"/>
-			<item name="armorMiningHelmet" mods="modArmorHelmetLight" mod_chance="1" loot_prob_template="medHigh" force_prob="true"/>
+			<item name="armorMiningHelmet" mod_chance="0"/>
+			<item name="armorMiningHelmet" mods="modArmorHelmetLight" mod_chance="1"/>
 		</lootgroup>
 		<!-- Start Melee lootgroups -->
 		<lootgroup name="groupCommonMelee">
 			<item name="meleeToolTorch"/>
 			<item name="meleeWpnClubT0WoodenClub"/>
 			<item name="meleeWpnBladeT0BoneKnife"/>	
-			<item group="groupMeleeWpnKnucklesLeatherKnuckles"/>
+			<item group="groupMeleeWpnKnucklesT0Knuckles"/>
 			<item group="groupMeleeWpnBatonT0PipeBatons"/>
 		</lootgroup>	
 		<lootgroup name="groupUncommonMelee">
 			<item name="meleeToolFlashlight02"/>
 			<item group="groupMeleeWpnBatonT2StunBatons"/>
 			<item group="groupMeleeWpnBladeHuntingKnives"/>
-			<item group="groupMeleeWpnKnucklesIronKnuckles"/>
-			<item group="groupMeleeWpnClubT1BaseballBats"/>
-						
+			<item group="groupMeleeWpnKnucklesT1IronKnuckles"/>
+			<item group="groupMeleeWpnClubT1BaseballBats"/>						
 		</lootgroup>	
 		<lootgroup name="groupRareMelee">
 			<item group="groupMeleeWpnClubT3SteelClubs"/>
 			<item group="groupMeleeWpnBladeT3Machetes"/>
-			<item group="groupMeleeWpnKnucklesSteelKnuckles"/>
+			<item group="groupMeleeWpnKnucklesT3SteelKnuckles"/>
 		</lootgroup>
 		<lootgroup name="groupAllMeleeTiered">
 			<item group="groupCommonMelee" loot_prob_template="ProbT0"/>
@@ -800,37 +843,6 @@
 			<item group="drinks" loot_prob_template="high" force_prob="true"/>
 			<item group="seeds" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="rareFoodDrink" loot_prob_template="med" force_prob="true"/>
-		</lootgroup>
-		<lootgroup name="groupWeaponsDeadEyeScaled">
-			<item group="groupWeaponsT0_DeadEye" loot_prob_template="ProbT0"/>
-			<item group="groupWeaponsT1_DeadEye" loot_prob_template="ProbT1"/>
-			<item group="groupWeaponsT2_DeadEye" loot_prob_template="ProbT2"/>
-			<item group="groupWeaponsT3_DeadEye" loot_prob_template="ProbT3"/>
-		</lootgroup>	
-		<lootgroup name="groupWeaponsBoomstickScaled">
-			<item group="groupWeaponsT0_Boomstick" loot_prob_template="ProbT0"/>
-			<item group="groupWeaponsT1_Boomstick" loot_prob_template="ProbT1"/>
-			<item group="groupWeaponsT2_Boomstick" loot_prob_template="ProbT2"/>
-			<item group="groupWeaponsT3_Boomstick" loot_prob_template="ProbT3"/>
-		</lootgroup>
-		<lootgroup name="groupWeaponsMachinegunnerScaled">
-			<item group="groupWeaponsT0_Machinegunner" loot_prob_template="ProbT0"/>
-			<item group="groupWeaponsT1_Machinegunner" loot_prob_template="ProbT1"/>
-			<item group="groupWeaponsT2_Machinegunner" loot_prob_template="ProbT2"/>
-			<item group="groupWeaponsT3_Machinegunner" loot_prob_template="ProbT3"/>
-		</lootgroup>
-		<lootgroup name="groupWeaponsArcheryScaled">
-			<item group="groupWeaponsT1_Archery01" loot_prob_template="ProbT0"/>
-			<item group="groupWeaponsT1_Archery01" loot_prob_template="ProbT0"/>
-			<item group="groupWeaponsT1_Archery02" loot_prob_template="ProbT1"/>
-			<item group="groupWeaponsT3_Archery01" loot_prob_template="ProbT2"/>
-			<item group="groupWeaponsT3_Archery02" loot_prob_template="ProbT3"/>
-		</lootgroup>
-		<lootgroup name="groupWeaponsGunslingerScaled">
-			<item group="groupWeaponsT1_Gunslinger" loot_prob_template="ProbT0"/>
-			<item group="groupWeaponsT1_Gunslinger" loot_prob_template="ProbT1"/>
-			<item group="groupWeaponsT3_Gunslinger01" loot_prob_template="ProbT2"/>
-			<item group="groupWeaponsT3_Gunslinger01" loot_prob_template="ProbT3"/>
 		</lootgroup>
 		<!-- Create lootgroup for new npc -->
 		<lootgroup name="groupGrandOutdoors" count="all">
@@ -1320,6 +1332,7 @@
 		</lootgroup>
 		<lootgroup name="groupJanitor">
 			<item group="workstationToolsScaled" loot_prob_template="high" force_prob="true"/>	
+			<item group="groupWorkingStiffsCrate" loot_prob_template="veryHigh" force_prob="true"/>	
 			<item group="groupGunShotgunScaled" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupMeleeWpnBatonScaled" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupWorkbenchLoot02" loot_prob_template="medHigh" force_prob="true"/>
@@ -1521,32 +1534,32 @@
 		</lootgroup>
 		<lootgroup name="groupYo">
 			<item group="groupBasicSurvival" loot_prob_template="veryHigh" force_prob="true"/>
-			<item group="groupDrinksUncommon" loot_prob_template="high" force_prob="true"/>
-			<item group="groupMeleeWpnBladeScaled" loot_prob_template="medHigh" force_prob="true"/>
-			<item group="groupGunHandgunScaled" loot_prob_template="medHigh" force_prob="true"/>
-			<item group="groupUncommonMelee" loot_prob_template="medHigh" force_prob="true"/>
+			<item group="groupDrinksUncommon" loot_prob_template="high" force_prob="true"/>4
 			<item group="groupCommonManmadeResources" loot_prob_template="medHigh" force_prob="true"/>
 			<item name="resourceMechanicalParts" count="1,3" loot_prob_template="medHigh" force_prob="true"/>
 			<item name="resourceOil" count="1,2" loot_prob_template="med" force_prob="true"/>
 			<item group="groupRareManmadeResources" loot_prob_template="low" force_prob="true"/>
-		</lootgroup>		
+		</lootgroup>
+		<lootgroup name="groupYoWeapons">
+			<item group="groupMeleeWpnClubScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupMeleeWpnBatonScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupMeleeWpnBladeScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupGunHandgunScaled" loot_prob_template="medHigh" force_prob="true"/>
+		</lootgroup>			
 		<lootgroup name="groupYos" count="all">
 			<item group="groupYo" count="0,1"/>
-			<item group="groupApparelShirtLong" count="0,1"/>
-			<item group="groupUncommonManmadeResources" count="0,1"/>
-			<item group="groupUncommonOrganicResources" count="0,1"/>
-			<item group="groupGunHandgunScaled" count="0,1"/>
+			<item group="groupYoWeapons" count="0,1"/>
+			<item group="groupApparelShirtLong" count="0,1"/>			
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceCloth" count="1,3"/>
 		</lootgroup>
 		<lootgroup name="groupYosFeral" count="all">
 			<item group="groupYo" count="0,2"/>
+			<item group="groupYoWeapons" count="1"/>
 			<item group="groupApparelShirtLong" count="0,1"/>
 			<item group="groupUncommonManmadeResources" count="1,2"/>
 			<item group="groupUncommonOrganicResources" count="1,2"/>
-			<item group="groupAllMeleeTiered" count="0,1"/>
-			<item group="groupGunHandgunScaled" count="0,1"/>
 			<item group="groupAmmo9mm"/>
 			<item name="resourceMechanicalParts" count="0,3"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
@@ -1555,12 +1568,10 @@
 		</lootgroup>	
 		<lootgroup name="groupYosRadiated" count="all">
 			<item group="groupYo" count="1,3"/>
+			<item group="groupYoWeapons" count="1,2"/>
 			<item group="groupApparelShirtLong" count="0,1"/>
 			<item group="groupUncommonManmadeResources" count="1,2"/>
 			<item group="groupUncommonOrganicResources" count="1,2"/>
-			<item group="groupMeleeWpnBladeScaled" count="0,1"/>
-			<item group="groupAllMeleeTiered" count="0,1"/>
-			<item group="groupGunHandgunScaled" count="0,1"/>
 			<item group="groupAmmo9mm"/>
 			<item name="resourceMechanicalParts" count="1,4"/>
 			<item group="groupRareManmadeResources" count="0,1"/>
@@ -1570,6 +1581,7 @@
 		</lootgroup>
 		<lootgroup name="groupYosGiant" count="all">
 			<item group="groupYo" count="1,4"/>
+			<item group="groupYoWeapons" count="1"/>
 			<item group="groupApparelShirtLong" count="0,1"/>
 			<item group="groupCommonManmadeResources"/>
 			<item group="groupMeleeWpnBladeScaled" count="0,1"/>
@@ -1637,28 +1649,32 @@
 		</lootgroup>
 		<lootgroup name="groupBiker">
 			<item group="groupBasicSurvival" loot_prob_template="veryHigh" force_prob="true"/>
-			<item group="groupMeleeWpnBladeScaled" loot_prob_template="high" force_prob="true"/>
 			<item group="groupApparelFaceCover" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupArmorScaled" loot_prob_template="medHigh" force_prob="true"/>
-			<item group="groupWeaponsMeleeScaled" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupSmallEngine" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupCarBattery" loot_prob_template="medHigh" force_prob="true"/>
 			<item name="drinkJarBeer" count="1,2" loot_prob_template="veryHigh"/>
 			<item name="apparelBandana" loot_prob_template="high" force_prob="true" mods="dye" mod_chance="0"/>
 			<item name="apparelToughGuySunglasses" loot_prob_template="med" force_prob="true"/>
+		</lootgroup>
+		<lootgroup name="groupBikerWeapons">
+			<item group="groupMeleeWpnClubScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupGunHandgunScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupMeleeWpnBladeScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupGunShotgunScaled" loot_prob_template="medHigh" force_prob="true"/>
 		</lootgroup>		
 		<lootgroup name="groupBikers" count="all">
 			<item group="groupBiker" count="0,1"/>
+			<item group="groupBikerWeapons" count="0,1"/>
 			<item group="groupUncommonManmadeResources" count="0,1"/>
-			<item group="groupGunHandgunScaled" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="2,3"/>
 			<item name="resourceCloth" count="2,4"/>
 		</lootgroup>
 		<lootgroup name="groupBikersFeral" count="all">
 			<item group="groupBiker" count="0,2"/>
+			<item group="groupBikerWeapons" count="1"/>
 			<item group="groupUncommonManmadeResources" count="0,1"/>
-			<item group="groupGunHandgunScaled" count="0,1"/>
 			<item group="groupAmmo9mm" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="2,3"/>
@@ -1666,23 +1682,18 @@
 		</lootgroup>	
 		<lootgroup name="groupBikersRadiated" count="all">
 			<item group="groupBiker" count="1,3"/>
+			<item group="groupBikerWeapons" count="1,2"/>
 			<item group="groupUncommonManmadeResources" count="0,1"/>
 			<item group="groupGunShotgunScaled" count="0,1"/>
-			<item group="groupAmmoShells" count="1"/>
-			<item group="groupGunBowScaled" count="0,1"/>
-			<item group="groupMeleeWpnKnucklesScaled" count="0,1"/>
-			<item group="groupMeleeWpnClubT3SteelClubs" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="2,3"/>
 			<item name="resourceCloth" count="2,4"/>
 		</lootgroup>		
 		<lootgroup name="groupBikersGiant" count="all">
 			<item group="groupBiker" count="1,4"/>
+			<item group="groupBikerWeapons" count="1"/>
 			<item group="groupUncommonManmadeResources" count="0,1"/>
-			<item group="groupGunShotgunScaled" count="0,1"/>
 			<item group="groupAmmoShells" count="1"/>
-			<item group="groupMeleeWpnBladeT3Machetes" count="0,1"/>
-			<item group="groupMeleeWpnKnucklesScaled" count="0,1"/>
 			<item group="groupArmorScaled"  count="0,1"/>
 			<item group="groupGoreResources" count="2,4"/>
 			<item name="resourceCloth" count="3,6"/>
@@ -1897,16 +1908,18 @@
 			<item group="groupFoodPileMed" loot_prob_template="high" force_prob="true"/>
 			<item group="groupShamwayCrate" loot_prob_template="high" force_prob="true"/>
 			<item group="groupFoodPileLarge" loot_prob_template="medHigh" force_prob="true"/>
-			<item group="groupMeleeWpnClubScaled" loot_prob_template="high" force_prob="true"/>
-			<item group="groupMeleeWpnBatonScaled" loot_prob_template="high" force_prob="true"/>
-			<item group="groupGunHandgunScaled" loot_prob_template="high" force_prob="true"/>
-			<item group="groupGunShotgunScaled" loot_prob_template="high" force_prob="true"/>
 			<item name="resourceAcid" loot_prob_template="high" count="1,2"/>
-		</lootgroup>		
+		</lootgroup>	
+		<lootgroup name="groupFatCopWeapons">
+			<item group="groupMeleeWpnClubScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupGunHandgunScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupGunShotgunScaled" loot_prob_template="medHigh" force_prob="true"/>
+			<item group="groupGunMGScaled" loot_prob_template="med" force_prob="true"/>
+		</lootgroup>
 		<lootgroup name="groupFatCops" count="all">
 			<item group="groupFatCop" count="0,1"/>
+			<item group="groupFatCopWeapons" count="0,1"/>
 			<item group="groupApparelClothes" count="0,1"/>
-			<item group="groupGunHandgunScaled" count="1"/>
 			<item group="groupAmmo9mm" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,3"/>
 			<item group="groupGoreResources" count="2,4"/>
@@ -1914,6 +1927,7 @@
 		</lootgroup>
 		<lootgroup name="groupFatCopsFeral" count="all">
 			<item group="groupFatCop" count="0,2"/>
+			<item group="groupFatCopWeapons" count="1"/>
 			<item group="groupApparelClothes" count="0,1"/>
 			<item group="groupGunHandgunScaled" count="1"/>
 			<item group="groupAmmo9mm" count="1"/>
@@ -1923,6 +1937,7 @@
 		</lootgroup>	
 		<lootgroup name="groupFatCopsRadiated" count="all">
 			<item group="groupFatCop" count="1,3"/>
+			<item group="groupFatCopWeapons" count="1,2"/>
 			<item group="groupApparelClothes" count="0,1"/>
 			<item group="groupGunHandgunScaled" count="0,1"/>
 			<item group="groupAmmo9mm" count="0,1"/>
@@ -1934,6 +1949,7 @@
 		</lootgroup>
 		<lootgroup name="groupFatCopsGiant" count="all">
 			<item group="groupFatCop" count="1,4"/>
+			<item group="groupFatCopWeapons" count="1"/>
 			<item group="groupApparelClothes" count="0,1"/>
 			<item group="groupGunShotgunScaled" count="0,1"/>
 			<item group="groupAmmoShells" count="0,1"/>
@@ -1944,30 +1960,31 @@
 		<lootgroup name="groupSkateboarder">
 			<item group="groupBasicSurvival" loot_prob_template="veryHigh" force_prob="true"/>
 			<item group="groupDrinksUncommon" loot_prob_template="high" force_prob="true"/>
-			<item group="groupMeleeWpnBladeScaled" loot_prob_template="medHigh" force_prob="true"/>
-			<item group="groupGunHandgunScaled" loot_prob_template="medHigh" force_prob="true"/>
-			<item group="groupUncommonMelee" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupCommonManmadeResources" loot_prob_template="medHigh" force_prob="true"/>
 			<item name="resourceMechanicalParts" count="1,3" loot_prob_template="medHigh" force_prob="true"/>
 			<item name="resourceOil" count="1,2" loot_prob_template="med" force_prob="true"/>
 			<item group="groupRareManmadeResources" loot_prob_template="low" force_prob="true"/>
 			<item group="foodCandy" loot_prob_template="low" force_prob="true"/>
 		</lootgroup>		
+		<lootgroup name="groupSkateboarderWeapons">
+			<item group="groupMeleeWpnBladeScaled" loot_prob_template="veryHigh" force_prob="true"/>
+			<item group="groupMeleeWpnClubScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupGunHandgunScaled" loot_prob_template="medHigh" force_prob="true"/>
+		</lootgroup>
 		<lootgroup name="groupSkateboarders" count="all">
 			<item group="groupSkateboarder" count="0,1"/>
+			<item group="groupSkateboarderWeapons" count="0,1"/>
 			<item group="groupApparelShirtLong" count="0,1"/>
 			<item group="groupUncommonManmadeResources" count="0,1"/>
-			<item group="groupGunHandgunScaled" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceCloth" count="1,3"/>
 		</lootgroup>
 		<lootgroup name="groupSkateboardersFeral" count="all">
 			<item group="groupSkateboarder" count="0,2"/>
+			<item group="groupSkateboarderWeapons" count="1"/>
 			<item group="groupApparelShirtLong" count="0,1"/>
 			<item group="groupUncommonManmadeResources" count="1,2"/>
-			<item group="groupAllMeleeTiered" count="0,1"/>
-			<item group="groupGunHandgunScaled" count="0,1"/>
 			<item group="groupAmmo9mm"/>
 			<item name="resourceMechanicalParts" count="0,3"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
@@ -1976,12 +1993,10 @@
 		</lootgroup>	
 		<lootgroup name="groupSkateboardersRadiated" count="all">
 			<item group="groupSkateboarder" count="1,3"/>
+			<item group="groupSkateboarderWeapons" count="1,21"/>
 			<item group="groupApparelShirtLong" count="0,1"/>
 			<item group="groupUncommonManmadeResources" count="1,2"/>
 			<item group="groupUncommonOrganicResources" count="1,2"/>
-			<item group="groupMeleeWpnBladeScaled" count="0,1"/>
-			<item group="groupAllMeleeTiered" count="0,1"/>
-			<item group="groupGunHandgunScaled" count="0,1"/>
 			<item group="groupAmmo9mm"/>
 			<item name="resourceMechanicalParts" count="1,4"/>
 			<item name="resourceOil" count="1,2"/>
@@ -1992,10 +2007,8 @@
 		</lootgroup>
 		<lootgroup name="groupSkateboardersGiant" count="all">
 			<item group="groupSkateboarder" count="1,4"/>
+			<item group="groupSkateboarderWeapons" count="1"/>
 			<item group="groupApparelShirtLong" count="0,1"/>
-			<item group="groupMeleeWpnBladeScaled" count="0,1"/>
-			<item group="groupAllMeleeTiered" count="0,1"/>
-			<item group="groupGunHandgunScaled" count="0,1"/>
 			<item name="resourceMechanicalParts" count="1,4"/>
 			<item name="resourceOil" count="1,2"/>
 			<item group="groupRareManmadeResources" count="0,1"/>
@@ -2005,9 +2018,6 @@
 		</lootgroup>
 		<lootgroup name="groupSoldier">
 			<item group="groupArmyTruck" loot_prob_template="veryHigh" force_prob="true"/>
-			<item group="groupGunHandgunScaled" loot_prob_template="veryHigh" force_prob="true"/>
-			<!-- <item group="groupGunRifleScaled" loot_prob_template="high" force_prob="true"/> -->
-			<item group="groupGunMGScaled" loot_prob_template="high" force_prob="true"/>
 			<item group="groupWeaponModsScaled" loot_prob_template="high" force_prob="true"/>
 			<item group="groupRareManmadeResources" loot_prob_template="med" force_prob="true"/>
 			<item group="groupArmorScaled" loot_prob_template="high" force_prob="true"/>
@@ -2018,41 +2028,45 @@
 			<item group="groupReinforcedChestT3" loot_prob_template="med" force_prob="true"/>
 			<item group="groupHardenedChestT4" loot_prob_template="medLow" force_prob="true"/>
 			<item group="groupHardenedChestT5" loot_prob_template="low" force_prob="true"/>
-		</lootgroup>		
+		</lootgroup>
+		<lootgroup name="groupSoldierWeapons">
+			<item group="groupMeleeWpnBladeScaled" loot_prob_template="veryHigh" force_prob="true"/>
+			<item group="groupGunHandgunScaled" loot_prob_template="veryHigh" force_prob="true"/>
+			<item group="groupGunRifleScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupGunMGScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupWeapons_Demolitionist" loot_prob_template="low" force_prob="true"/>
+		</lootgroup>
 		<lootgroup name="groupSoldiers" count="all">
 			<item group="groupSoldier" count="1"/>
-			<item group="groupGunRifleScaled" count="0,1"/>
-			<!-- <item group="groupAmmo762mm" count="0,1"/> -->
-			<item group="groupReinforcedChestT1" count="0,1"/>
+			<item group="groupSoldierWeapons" count="0,1"/>
+			<item group="groupArmorScaled" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceCloth" count="1,3"/>
 		</lootgroup>
 		<lootgroup name="groupSoldiersFeral" count="all">
 			<item group="groupSoldier" count="0,2"/>
-			<item group="groupGunRifleScaled" count="0,1"/>
+			<item group="groupSoldierWeapons" count="1"/>
 			<item group="groupAmmo762mm" count="0,1"/>
-			<item group="groupReinforcedChestT1" count="1"/>
+			<item group="groupArmorScaled" count="1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceCloth" count="1,3"/>
 		</lootgroup>	
 		<lootgroup name="groupSoldiersRadiated" count="all">
 			<item group="groupSoldier" count="1,3"/>
-			<item group="groupGunRifleScaled" count="0,1"/>
-			<item group="groupGunMGScaled" count="0,1"/>
+			<item group="groupSoldierWeapons" count="1,2"/>
 			<item group="groupAmmo762mm" count="1,2"/>
-			<item group="groupReinforcedChestT1" count="1,2"/>
+			<item group="groupArmorScaledTPlus" count="1,2"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceCloth" count="1,3"/>
 		</lootgroup>
 		<lootgroup name="groupSoldiersGiant" count="all">
 			<item group="groupSoldier" count="1,4"/>
-			<item group="groupGunRifleScaled" count="0,1"/>
-			<item group="groupArmorScaled" count="0,1"/>
+			<item group="groupSoldierWeapons" count="1"/>
 			<item group="groupAmmo762mm" count="1"/>
-			<item group="groupReinforcedChestT1" count="1,2"/>
+			<item group="groupArmorScaled" count="1,2"/>
 			<item group="groupCommonOrganicResources" count="1,3"/>
 			<item group="groupGoreResources" count="2,3"/>
 			<item name="resourceCloth" count="2,5"/>
@@ -2322,6 +2336,7 @@
 		<lootgroup name="groupenForests" count="all">
 			<item group="groupenForest" count="0,1"/>
 			<item group="groupAmmoArrows" count="0,1"/>
+			<item group="groupGunBowScaled" count="1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceCloth" count="1,3"/>
@@ -2348,14 +2363,9 @@
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>
 		<lootgroup name="groupenForestHiker">
-			<item group="groupGunBowScaled" loot_prob_template="veryHigh" force_prob="true"/>
 			<item group="groupDrinksUncommon" loot_prob_template="high" force_prob="true"/>
-			<item group="groupMeleeWpnBladeScaled" loot_prob_template="high" force_prob="true"/>
-			<item group="groupCookingTools" loot_prob_template="high" force_prob="true"/>
+			<item group="groupCookingTools" loot_prob_template="veryHigh" force_prob="true"/>
 			<item group="groupIngredientsCommon" loot_prob_template="high" force_prob="true"/>
-			<item group="groupAmmoArrows" loot_prob_template="high" force_prob="true"/>
-			<item group="groupAmmoBolts" loot_prob_template="medHigh" force_prob="true"/>
-			<item group="groupGunHandgunScaled" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupIngredientsUncommon" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupUncommonManmadeResources" loot_prob_template="med" force_prob="true"/>
 			<item group="groupIngredientsRare" loot_prob_template="med" force_prob="true"/>	
@@ -2365,20 +2375,28 @@
 			<item name="apparelTShirtPlain" mods="dye" mod_chance="0" loot_prob_template="veryHigh" force_prob="true"/>
 			<item name="apparelHoodySweatshirt" mods="dye" mod_chance="0" loot_prob_template="veryHigh" force_prob="true"/>
 		</lootgroup>
+		<lootgroup name="groupenForestHikerWeapons">
+			<item group="groupMeleeWpnBladeScaled" loot_prob_template="veryHigh" force_prob="true"/>
+			<item group="groupGunBowScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupGunHandgunScaled" loot_prob_template="medHigh" force_prob="true"/>
+		</lootgroup>
 		<lootgroup name="groupenForestHikers" count="all">
 			<item group="groupenForestHiker" count="0,1"/>
+			<item group="groupenForestHikerWeapons" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceCloth" count="1,3"/>
 		</lootgroup>
 		<lootgroup name="groupenForestHikersFeral" count="all">
 			<item group="groupenForestHiker" count="0,2"/>
+			<item group="groupenForestHikerWeapons" count="1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceCloth" count="1,3"/>
 		</lootgroup>		
 		<lootgroup name="groupenForestHikersRadiated" count="all">
 			<item group="groupenForestHiker" count="1,3"/>
+			<item group="groupenForestHikerWeapons" count="1,2"/>
 			<item group="groupIngredientsRare" count="0,1"/>
 			<item group="groupMedicalSmall01" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
@@ -2387,6 +2405,7 @@
 		</lootgroup>
 		<lootgroup name="groupenForestHikersGiant" count="all">
 			<item group="groupenForestHiker" count="1,4"/>
+			<item group="groupenForestHikerWeapons" count="1"/>
 			<item group="groupIngredientsRare" count="0,1"/>
 			<item group="groupMedicalSmall01" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,3"/>
@@ -2442,8 +2461,8 @@
 		</lootgroup>		
 		<lootgroup name="groupenLumberjack">
 			<item group="groupCommonOrganicResources"/>
+			<item group="groupWorkingStiffsCrate" loot_prob_template="veryHigh" force_prob="true"/>	
 			<item group="groupChainsawsTiered" loot_prob_template="high" force_prob="true"/>
-			<item group="groupChainsawsTiered" loot_prob_template="veryLow" force_prob="true"/>
 			<item name="resourceWood" count="10,225" loot_prob_template="medHigh" force_prob="true"/>
 			<item name="apparelWornBoots" mods="dye" mod_chance="0"/>
 			<item name="apparelFlannelShirt" mods="dye" mod_chance="0"/>
@@ -2535,10 +2554,6 @@
 		</lootgroup>
 		<lootgroup name="groupenPunk">
 			<item group="groupDrinksUncommon" loot_prob_template="high" force_prob="true"/>
-			<item group="groupMeleeWpnBladeScaled" loot_prob_template="high" force_prob="true"/>
-			<item group="groupAllMeleeTiered" loot_prob_template="high" force_prob="true"/>
-			<item group="groupGunHandgunScaled" loot_prob_template="medHigh" force_prob="true"/>
-			<item group="groupUncommonMelee" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupUncommonManmadeResources" loot_prob_template="med" force_prob="true"/>
 			<item group="dyes" loot_prob_template="med" force_prob="true"/>
 			<item name="resourceMechanicalParts" count="1,3" loot_prob_template="medHigh" force_prob="true"/>
@@ -2550,22 +2565,24 @@
 			<item name="apparelHoodySweatshirt" mods="dye" mod_chance="0" loot_prob_template="veryHigh" force_prob="true"/>
 			<item group="foodCandy" loot_prob_template="low" force_prob="true"/>
 		</lootgroup>
+		<lootgroup name="groupenPunkWeapons">
+			<item group="groupMeleeWpnBladeScaled" loot_prob_template="veryHigh" force_prob="true"/>
+			<item group="groupMeleeWpnClubScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupGunHandgunScaled" loot_prob_template="medHigh" force_prob="true"/>
+		</lootgroup>
 		<lootgroup name="groupenPunks" count="all">
 			<item group="groupenPunk" count="0,1"/>
+			<item group="groupenPunkWeapons" count="0,1"/>
 			<item group="groupApparelShirtLong" count="0,1"/>
 			<item group="groupUncommonManmadeResources" count="0,1"/>
-			<item group="groupMeleeWpnClubScaled" count="0,1"/>
-			<item group="groupGunHandgunScaled" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceCloth" count="1,3"/>
 		</lootgroup>
 		<lootgroup name="groupenPunksFeral" count="all">
 			<item group="groupenPunk" count="0,2"/>
-			<item group="groupMeleeWpnClubScaled" count="0,1"/>
+			<item group="groupenPunkWeapons" count="1"/>
 			<item group="groupUncommonManmadeResources" count="1,2"/>
-			<item group="groupAllMeleeTiered" count="0,1"/>
-			<item group="groupGunHandgunScaled" count="0,1"/>
 			<item group="groupAmmo9mm" count="0,1"/>
 			<item name="resourceMechanicalParts" count="0,3"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
@@ -2574,9 +2591,7 @@
 		</lootgroup>		
 		<lootgroup name="groupenPunksRadiated" count="all">
 			<item group="groupenPunk" count="1,3"/>
-			<item group="groupMeleeWpnBladeScaled" count="0,1"/>
-			<item group="groupMeleeWpnClubScaled" count="0,1"/>
-			<item group="groupGunHandgunScaled" count="0,1"/>
+			<item group="groupenPunkWeapons" count="1,2"/>
 			<item group="groupAmmo9mm" count="0,1"/>
 			<item group="groupRareManmadeResources" count="0,1"/>
 			<item name="resourceMechanicalParts" count="0,3"/>
@@ -2587,10 +2602,8 @@
 		</lootgroup>
 		<lootgroup name="groupenPunksGiant" count="all">
 			<item group="groupenPunk" count="1,4"/>
+			<item group="groupenPunkWeapons" count="1"/>
 			<item group="groupApparelShirtLong" count="0,1"/>
-			<item group="groupMeleeWpnBladeScaled" count="0,1"/>
-			<item group="groupAllMeleeTiered" count="0,1"/>
-			<item group="groupGunHandgunScaled" count="0,1"/>
 			<item group="groupAmmo9mm"/>
 			<item name="resourceMechanicalParts" count="1,4"/>
 			<item name="resourceOil" count="0,2"/>
@@ -2653,18 +2666,18 @@
 		<lootgroup name="groupenSoldierWeapons">
 			<item group="groupMeleeWpnBladeScaled" loot_prob_template="veryHigh" force_prob="true"/>
 			<item group="groupAmmo762mm" count="10,40" loot_prob_template="veryHigh" force_prob="true"/>
-			<item group="groupWeaponsDeadEyeScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupGunRifleScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupWeapons_Demolitionist" loot_prob_template="low" force_prob="true"/>
 		</lootgroup>
 		<lootgroup name="groupenSoldiers" count="all">
 			<item group="groupenSoldier" count="1"/>
-			<item group="groupWeaponsMachinegunnerScaled" count="0,1"/>
-			<item group="groupGunBowScaled" count="0,1"/>
+			<item group="groupGunMGScaled" count="0,1"/>
 			<item group="groupenSoldierWeapons" count="0,1"/>
 			<item group="groupMeleeWpnBladeScaled" count="0,1"/>
 			<item group="groupAmmo762mm" count="0,25"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
-			<item name="resourceCloth" count="1,3"/>
+			<item name="resourceMilitaryFiber" count="1,3"/>
 		</lootgroup>
 		<lootgroup name="groupenSoldiersFeral" count="all">
 			<item group="groupenSoldier" count="0,2"/>
@@ -2673,7 +2686,7 @@
 			<item group="groupAmmo762mm" count="10,35"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
-			<item name="resourceCloth" count="1,3"/>
+			<item name="resourceMilitaryFiber" count="1,3"/>
 		</lootgroup>		
 		<lootgroup name="groupenSoldiersRadiated" count="all">
 			<item group="groupenSoldier" count="1,3"/>
@@ -2682,7 +2695,7 @@
 			<item group="groupAmmo762mm" count="20,50"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
-			<item name="resourceCloth" count="1,3"/>
+			<item name="resourceMilitaryFiber" count="1,3"/>
 		</lootgroup>	
 		<lootgroup name="groupenSoldiersGiant" count="all">
 			<item group="groupenSoldier" count="1,4"/>
@@ -2692,7 +2705,7 @@
 			<item group="groupAmmo762mm" count="20,50"/>
 			<item group="groupCommonOrganicResources" count="1,3"/>
 			<item group="groupGoreResources" count="2,3"/>
-			<item name="resourceCloth" count="2,5"/>
+			<item name="resourceMilitaryFiber" count="2,5"/>
 		</lootgroup> 		
 		<lootgroup name="groupenSoldier196" count="all">
 			<item group="groupenSoldier" count="0,1"/>
@@ -2701,7 +2714,7 @@
 			<item group="groupAmmo762mm" count="0,25"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
-			<item name="resourceCloth" count="1,3"/>
+			<item name="resourceMilitaryFiber" count="1,3"/>
 		</lootgroup>
 		<lootgroup name="groupenSoldier196Feral" count="all">
 			<item group="groupenSoldier" count="0,2"/>
@@ -2710,7 +2723,7 @@
 			<item group="groupAmmo762mm" count="10,35"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
-			<item name="resourceCloth" count="1,3"/>
+			<item name="resourceMilitaryFiber" count="1,3"/>
 		</lootgroup>
 		<lootgroup name="groupenSoldier196Radiated" count="all">
 			<item group="groupenSoldier" count="1,3"/>
@@ -2720,7 +2733,7 @@
 			<item group="groupAmmo762mm" count="20,50"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
-			<item name="resourceCloth" count="1,3"/>
+			<item name="resourceMilitaryFiber" count="1,3"/>
 		</lootgroup>
 		<lootgroup name="groupenSoldier196Giant" count="all">
 			<item group="groupenSoldier" count="1,4"/>
@@ -2730,7 +2743,7 @@
 			<item group="groupAmmo762mm" count="20,50"/>
 			<item group="groupCommonOrganicResources" count="1,3"/>
 			<item group="groupGoreResources" count="2,3"/>
-			<item name="resourceCloth" count="2,5"/>
+			<item name="resourceMilitaryFiber" count="2,5"/>
 		</lootgroup>
 		<lootgroup name="groupenSwat">
 			<item group="groupRareManmadeResources" loot_prob_template="high" force_prob="true"/>
@@ -2743,11 +2756,11 @@
 		</lootgroup>
 		<lootgroup name="groupenSwatWeapons">
 			<item group="groupMeleeWpnClubScaled" loot_prob_template="high" force_prob="true"/>
-			<item group="groupMeleeWpnBatonScaled" loot_prob_template="high" force_prob="true"/>
-			<item group="groupGunShotgunScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupMeleeWpnBatonScaled" loot_prob_template="veryHigh" force_prob="true"/>
+			<item group="groupGunShotgunScaled" loot_prob_template="veryHigh" force_prob="true"/>
 			<item group="groupGunRifleScaled" loot_prob_template="med" force_prob="true"/>	
 			<item group="groupWeapons_Demolitionist" loot_prob_template="medLow" force_prob="true"/>
-			<item group="groupWeapons_DemolitionistTPlus" loot_prob_template="highLow" force_prob="true"/>		
+			<item group="groupWeapons_DemolitionistTPlus" loot_prob_template="low" force_prob="true"/>		
 		</lootgroup>
 		<lootgroup name="groupenSwats" count="all">
 			<item group="groupenSwat" count="0,1"/>
@@ -2786,10 +2799,12 @@
 			<item group="groupGoreResources" count="2,3"/>
 			<item name="resourceMilitaryFiber" count="2,5"/>
 		</lootgroup> 
-		<lootgroup name="groupenUtility">					
+		<lootgroup name="groupenUtility">		
 			<item group="armorMiningHelmets" mod_chance="0" loot_prob_template="veryHigh" force_prob="true"/>
 			<item group="groupMeleeTool" loot_prob_template="veryHigh"/>
-			<item group="groupUncommonManmadeResources" loot_prob_template="high" force_prob="true"/>
+			<item group="workstationToolsScaled" loot_prob_template="high" force_prob="true"/>	
+			<item group="groupUncommonManmadeResources" loot_prob_template="high" force_prob="true"/>		
+			<item group="groupWorkingStiffsCrate" loot_prob_template="high" force_prob="true"/>
 			<item group="groupRareManmadeResources" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupSmallEngine" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupCarBattery" loot_prob_template="medHigh" force_prob="true"/>
@@ -2841,6 +2856,7 @@
 			<item group="armorMiningHelmets" mod_chance="0" loot_prob_template="veryHigh" force_prob="true"/>
 			<item group="groupMeleeTool" loot_prob_template="veryHigh"/>
 			<item group="groupUncommonManmadeResources" loot_prob_template="high" force_prob="true"/>
+			<item group="groupWorkingStiffsCrate" loot_prob_template="high" force_prob="true"/>
 			<item group="groupRareManmadeResources" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupSmallEngine" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupCarBattery" loot_prob_template="medHigh" force_prob="true"/>
@@ -2900,20 +2916,24 @@
 			<item group="groupArmorScaled" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupWeaponsMeleeScaled" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupWeaponModsScaled" loot_prob_template="medHigh" force_prob="true"/>
-			<item group="groupGunShotgunScaled" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupSmallEngine" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupCarBattery" loot_prob_template="medHigh" force_prob="true"/>
-			<item group="groupWeapons_Demolitionist" loot_prob_template="med" force_prob="true"/>
-			<item group="groupWeapons_DemolitionistTPlus" loot_prob_template="low" force_prob="true"/>
-			<item name="drinkJarBeer" count="1,2" loot_prob_template="veryHigh"/>
-			<item name="resourceGunPowder" count="0,125" loot_prob_template="medHigh" force_prob="true"/>
+			<item name="drinkJarBeer" count="1,2" loot_prob_template="veryHigh"/>			
 			<item name="apparelBandana" loot_prob_template="high" force_prob="true" mods="dye" mod_chance="0"/>
 			<item name="apparelToughGuySunglasses" loot_prob_template="med" force_prob="true"/>
 		</lootgroup>
+		<lootgroup name="groupenBikerWeapons">
+			<item group="groupMeleeWpnClubScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupGunHandgunScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupMeleeWpnBladeScaled" loot_prob_template="high" force_prob="true"/>
+			<item group="groupGunShotgunScaled" loot_prob_template="medHigh" force_prob="true"/>
+			<item name="resourceGunPowder" count="0,125" loot_prob_template="medHigh" force_prob="true"/>
+			<item group="groupWeapons_Demolitionist" loot_prob_template="low" force_prob="true"/>
+			<item group="groupWeapons_DemolitionistTPlus" loot_prob_template="veryLow" force_prob="true"/>
+		</lootgroup>	
 		<lootgroup name="groupenBikers" count="all">
 			<item group="groupenBiker" count="0,1"/>
-			<item group="groupMeleeWpnBatonScaled" count="0,1"/>
-			<item group="groupGunHandgunScaled" count="0,1"/>
+			<item group="groupenBikerWeapons" count="0,1"/>
 			<item name="drinkJarBeer" count="0,1"/>
 			<item name="ammoGasCan" count="0,75"/>
 			<item group="groupGoreResources" count="2,3"/>
@@ -2921,19 +2941,15 @@
 		</lootgroup>
 		<lootgroup name="groupenBikersFeral" count="all">
 			<item group="groupenBiker" count="0,2"/>
-			<item group="groupMeleeWpnClubScaled" count="0,1"/>
-			<item group="groupGunShotgunScaled" count="0,1"/>
+			<item group="groupenBikerWeapons" count="1"/>
 			<item name="drinkJarBeer" count="1,2"/>
 			<item name="ammoGasCan" count="25,75"/>
 			<item group="groupGoreResources" count="2,3"/>
 			<item name="resourceCloth" count="2,4"/>
 		</lootgroup>		
 		<lootgroup name="groupenBikersRadiated" count="all">
-			<item group="groupenBiker" count="1,2" loot_prob_template="veryHigh"/>
-			<item group="groupMeleeWpnBladeScaled" count="0,1"/>
-			<item group="groupMeleeWpnClubScaled" count="0,1"/>
-			<item group="groupMeleeWpnBatonScaled" count="0,1"/>
-			<item group="groupGunShotgunScaled" count="0,1"/>
+			<item group="groupenBiker" count="1,2"/>
+			<item group="groupenBikerWeapons" count="1,2"/>
 			<item group="groupWeapons_Demolitionist" count="0,1"/>
 			<item name="drinkJarBeer" count="1,2"/>
 			<item name="ammoGasCan" count="25,75"/>
@@ -2942,8 +2958,7 @@
 		</lootgroup>
 		<lootgroup name="groupenBikerGiant" count="all">
 			<item group="groupenBiker" count="1,4"/>
-			<item group="groupMeleeWpnKnucklesScaled"/>
-			<item group="groupGunShotgunScaled" count="0,1"/>
+			<item group="groupenBikerWeapons" count="1"/>
 			<item group="groupWeapons_Demolitionist" count="0,1"/>
 			<item name="ammoGasCan" count="25,75"/>
 			<item group="groupArmorScaled"  count="0,1"/>

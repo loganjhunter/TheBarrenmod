@@ -301,7 +301,7 @@
 			<property name="DescriptionKey" value="apparelCollegeRunningShoesDesc"/>
 			<property name="CustomIcon" value="apparelRunningShoesRegular"/>
 			<property name="CustomIconTint" value="218,86,255"/>
-			<property name="Tags" value="lowerbody,feet,clothing,noMods"/>
+			<property name="Tags" value="lowerbody,feet,clothing,tool,noMods"/>
 			<property name="DisplayType" value="clothingCollegeRunningShoes"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Weight" value="25"/>
@@ -328,7 +328,7 @@
 		</item>
 		<item name="apparelCollegeRunningTShirt">
 			<property name="Extends" value="apparelTShirtPlain" param1="UnlockedBy"/>
-			<property name="Tags" value="upperbody,chest,clothing,noMods"/>
+			<property name="Tags" value="upperbody,chest,clothing,tool,noMods"/>
 			<property name="CustomIcon" value="apparelTShirtZU"/>
 			<property name="CustomIconTint" value="218,86,255"/>
 			<property name="EconomicValue" value="350"/>
@@ -354,7 +354,7 @@
 		</item>
 		<item name="apparelCollegeRunningShorts">
 			<property name="Extends" value="apparelDenimPants" />
-			<property name="Tags" value="lowerbody,legs,clothing,noMods"/>
+			<property name="Tags" value="lowerbody,legs,clothing,tool,noMods"/>
 			<property name="CustomIcon" value="apparelDenimShortsPants"/>
 			<property name="CustomIconTint" value="218,86,255"/>
 			<property name="DescriptionKey" value="apparelCollegeRunningShortsDesc"/>
@@ -382,7 +382,7 @@
 			</effect_group>
 		</item>
 		<item name="apparelCollegeBallCap">
-			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="Tags" value="head,clothing,tool,noMods"/>
 			<property name="DescriptionKey" value="apparelCollegeBallCapDesc"/>
 			<property name="CustomIcon" value="apparelBallCap"/>
 			<property name="CustomIconTint" value="218,86,255"/>
@@ -1285,7 +1285,7 @@
 		</item>
 		<!-- New weapons and ammo -->
 		<item name="meleeWpnBladeBrokenHuntingKnife">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="36"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knives/hunting_knifePrefab.prefab"/>
 			<property name="Material" value="Mmetal"/><property name="Weight" value="25"/>
@@ -1293,7 +1293,7 @@
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="meleeWpnBladeT1HuntingKnife"/>
 			<property name="SellableToTrader" value="false"/>
-
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1307,9 +1307,9 @@
 				<property name="Throw_strength_default" value="8"/>
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
-			</property>
-			
-			<effect_group tiered="false" name="meleeWpnBladeBrokenHuntingKnife">				
+			</property>	
+			<effect_group name="meleeWpnBladeBrokenHuntingKnife">	
+				<passive_effect name="DegradationMax" tier="1,6"/>			
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1317,7 +1317,7 @@
 			</effect_group>
 		</item>		
 		<item name="meleeWpnBladeBrokenMachete">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="47"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knives/machetePrefab.prefab"/>
 			<property name="Material" value="Mmetal"/><property name="Weight" value="75"/>
@@ -1325,7 +1325,7 @@
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="meleeWpnBladeT3Machete"/>
 			<property name="SellableToTrader" value="false"/>
-
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1339,9 +1339,9 @@
 				<property name="Throw_strength_default" value="8"/>
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
-			</property>
-			
-			<effect_group tiered="false" name="meleeWpnBladeBrokenMachete">				
+			</property>		
+			<effect_group name="meleeWpnBladeBrokenMachete">		
+				<passive_effect name="DegradationMax" tier="1,6"/>		
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1349,7 +1349,7 @@
 			</effect_group>
 		</item>	
 		<item name="meleeWpnClubBrokenBaseballBat">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Bat/bat_Prefab.prefab"/>
 			<property name="HoldType" value="65"/>
 			<property name="Material" value="Mwood"/> <property name="Weight" value="75"/>
@@ -1357,7 +1357,7 @@
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="meleeWpnClubT1BaseballBat"/>
 			<property name="SellableToTrader" value="false"/>
-
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1371,9 +1371,9 @@
 				<property name="Throw_strength_default" value="8"/>
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
-			</property>
-			
-			<effect_group tiered="false" name="meleeWpnClubBrokenBaseballBat">				
+			</property>		
+			<effect_group name="meleeWpnClubBrokenBaseballBat">	
+				<passive_effect name="DegradationMax" tier="1,6"/>			
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1381,7 +1381,7 @@
 			</effect_group>
 		</item>			
 		<item name="meleeWpnClubBrokenSteelClub">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Melee/ClubIron/ClubIronPrefab.prefab"/>
 			<property name="HoldType" value="2"/>
 			<property name="Material" value="Mmetal"/><property name="Weight" value="250"/>
@@ -1389,7 +1389,7 @@
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="meleeWpnClubT3SteelClub"/>
 			<property name="SellableToTrader" value="false"/>
-
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1405,7 +1405,8 @@
 				<property name="Max_strain_time" value=".1"/>
 			</property>
 			
-			<effect_group tiered="false" name="meleeWpnClubBrokenSteelClub">				
+			<effect_group name="meleeWpnClubBrokenSteelClub">
+				<passive_effect name="DegradationMax" tier="1,6"/>				
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1413,7 +1414,7 @@
 			</effect_group>
 		</item>		
 		<item name="meleeWpnBatonBrokenPipeBaton">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Melee/PipeBaton/PipeBatonPrefab.prefab"/>
 			<property name="HoldType" value="80"/>
@@ -1422,7 +1423,7 @@
 			<property name="SoundDestroy" value="metaldestroy1"/>
 			<property name="CustomIcon" value="meleeWpnBatonT0PipeBaton"/>
 			<property name="Stacknumber" value="1"/>
-
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1436,9 +1437,9 @@
 				<property name="Throw_strength_default" value="8"/>
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
-			</property>
-			
-			<effect_group tiered="false" name="meleeWpnBatonBrokenPipeBaton">				
+			</property>		
+			<effect_group name="meleeWpnBatonBrokenPipeBaton">	
+				<passive_effect name="DegradationMax" tier="1,6"/>			
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1446,7 +1447,7 @@
 			</effect_group>
 		</item>
 		<item name="meleeWpnBatonBrokenStunBaton">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="58"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Melee/TaserBaton/TaserBatonPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/><property name="Weight" value="150"/>
@@ -1454,7 +1455,7 @@
 			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="meleeWpnBatonT2StunBaton"/>
-
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1470,7 +1471,8 @@
 				<property name="Max_strain_time" value=".1"/>
 			</property>
 			
-			<effect_group tiered="false" name="meleeWpnBatonBrokenStunBaton">				
+			<effect_group name="meleeWpnBatonBrokenStunBaton">	
+				<passive_effect name="DegradationMax" tier="1,6"/>			
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1478,7 +1480,7 @@
 			</effect_group>
 		</item>
 		<item name="gunHandgunBrokenPistol">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="1"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Pistol/PistolPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="250"/>
@@ -1487,6 +1489,7 @@
 			<property name="CustomIcon" value="gunHandgunT1Pistol"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="Stacknumber" value="1"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1500,9 +1503,9 @@
 				<property name="Throw_strength_default" value="8"/>
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
-			</property>
-			
-			<effect_group tiered="false" name="gunHandgunBrokenPistol">				
+			</property>			
+			<effect_group name="gunHandgunBrokenPistol">		
+				<passive_effect name="DegradationMax" tier="1,6"/>		
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1510,7 +1513,7 @@
 			</effect_group>
 		</item>
 		<item name="gunHandgunBrokenSMG5">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="6"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/SMG/SMGPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="350"/>
@@ -1519,6 +1522,7 @@
 			<property name="CustomIcon" value="gunHandgunT3SMG5"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="Stacknumber" value="1"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1533,7 +1537,8 @@
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
 			</property>
-			<effect_group tiered="false" name="gunHandgunBrokenSMG5">				
+			<effect_group name="gunHandgunBrokenSMG5">	
+				<passive_effect name="DegradationMax" tier="1,6"/>			
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1541,7 +1546,7 @@
 			</effect_group>
 		</item>
 		<item name="gunShotgunBrokenDoubleBarrel">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="56"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/DoubleBarrelShotgun/doubleBarrelShotgunPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="275"/>
@@ -1550,6 +1555,7 @@
 			<property name="CustomIcon" value="gunShotgunT1DoubleBarrel"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="Stacknumber" value="1"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1564,7 +1570,8 @@
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
 			</property>
-			<effect_group tiered="false" name="gunShotgunBrokenDoubleBarrel">				
+			<effect_group name="gunShotgunBrokenDoubleBarrel">			
+				<passive_effect name="DegradationMax" tier="1,6"/>	
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1572,7 +1579,7 @@
 			</effect_group>
 		</item>
 		<item name="gunShotgunBrokenPumpShotgun">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="5"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Pump Shotgun/pumpShotgunPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="350"/>
@@ -1581,6 +1588,7 @@
 			<property name="CustomIcon" value="gunShotgunT2PumpShotgun"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="Stacknumber" value="1"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1595,7 +1603,8 @@
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
 			</property>
-			<effect_group tiered="false" name="gunShotgunBrokenPumpShotgun">				
+			<effect_group name="gunShotgunBrokenPumpShotgun">		
+				<passive_effect name="DegradationMax" tier="1,6"/>		
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1603,7 +1612,7 @@
 			</effect_group>
 		</item>
 		<item name="gunShotgunBrokenAutoShotgun">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="76"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Auto Shotgun/autoShotgunPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="450"/>
@@ -1612,6 +1621,7 @@
 			<property name="CustomIcon" value="gunShotgunT3AutoShotgun"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="Stacknumber" value="1"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1626,7 +1636,8 @@
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
 			</property>
-			<effect_group tiered="false" name="gunShotgunBrokenAutoShotgun">				
+			<effect_group name="gunShotgunBrokenAutoShotgun">
+				<passive_effect name="DegradationMax" tier="1,6"/>				
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1634,7 +1645,7 @@
 			</effect_group>
 		</item>
 		<item name="gunRifleBrokenHuntingRifle">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="30"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/HuntingRifle/HuntingRiflePrefab.prefab"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="250"/>
@@ -1643,6 +1654,7 @@
 			<property name="CustomIcon" value="gunRifleT1HuntingRifle"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="Stacknumber" value="1"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1657,7 +1669,8 @@
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
 			</property>
-			<effect_group tiered="false" name="gunRifleBrokenHuntingRifle">				
+			<effect_group name="gunRifleBrokenHuntingRifle">		
+				<passive_effect name="DegradationMax" tier="1,6"/>			
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1665,7 +1678,7 @@
 			</effect_group>
 		</item>
 		<item name="gunRifleBrokenLeverActionRifle">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="85"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/LeverActionRifle/leverActionRiflePrefab.prefab"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="350"/>
@@ -1674,6 +1687,7 @@
 			<property name="CustomIcon" value="gunRifleT2LeverActionRifle"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="Stacknumber" value="1"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1688,7 +1702,8 @@
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
 			</property>
-			<effect_group tiered="false" name="gunRifleBrokenLeverActionRifle">				
+			<effect_group name="gunRifleBrokenLeverActionRifle">		
+				<passive_effect name="DegradationMax" tier="1,6"/>		
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1696,7 +1711,7 @@
 			</effect_group>
 		</item>
 		<item name="gunRifleBrokenSniperRifle">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="77"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Sharp Shooter/sharpShooterGunPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="450"/>
@@ -1705,6 +1720,7 @@
 			<property name="CustomIcon" value="gunRifleT3SniperRifle"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="Stacknumber" value="1"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1719,7 +1735,8 @@
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
 			</property>
-			<effect_group tiered="false" name="gunRifleBrokenSniperRifle">				
+			<effect_group name="gunRifleBrokenSniperRifle">		
+				<passive_effect name="DegradationMax" tier="1,6"/>		
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1727,15 +1744,16 @@
 			</effect_group>
 		</item>	
 		<item name="gunMGBrokenAK47">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="48"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/ak47/ak47Prefab.prefab"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="450"/>
 			<property name="SoundJammed" value="BrokenGun"/>
 			<property name="Stacknumber" value="1"/>
-			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="Group" value=""/>
 			<property name="CustomIcon" value="gunMGT1AK47"/>
 			<property name="SellableToTrader" value="false"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1750,7 +1768,8 @@
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
 			</property>
-			<effect_group tiered="false" name="gunMGBrokenAK47">				
+			<effect_group name="gunMGBrokenAK47">	
+				<passive_effect name="DegradationMax" tier="1,6"/>			
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1758,15 +1777,16 @@
 			</effect_group>
 		</item>		
 		<item name="gunMGBrokenTacticalAR">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Tactical Assault Rifle/tacticalAssaultRiflePrefab.prefab"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="550"/>
 			<property name="SoundJammed" value="BrokenGun"/>
 			<property name="Stacknumber" value="1"/>
-			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="Group" value=""/>
 			<property name="CustomIcon" value="gunMGT2TacticalAR"/>
 			<property name="SellableToTrader" value="false"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1781,7 +1801,8 @@
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
 			</property>
-			<effect_group tiered="false" name="gunMGBrokenTacticalAR">				
+			<effect_group name="gunMGBrokenTacticalAR">	
+				<passive_effect name="DegradationMax" tier="1,6"/>			
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1789,16 +1810,17 @@
 			</effect_group>
 		</item>		
 		<item name="gunMGBrokenM60">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="60"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/MachineGun/m60MachinegunPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="700"/>
 			<property name="SoundJammed" value="BrokenGun"/>
 			<property name="Stacknumber" value="1"/>
-			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="Group" value=""/>
 			<property name="CustomIcon" value="gunMGT3M60"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="Stacknumber" value="1"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1813,15 +1835,16 @@
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
 			</property>
-			<effect_group tiered="false" name="gunMGBrokenM60">				
+			<effect_group name="gunMGBrokenM60">	
+				<passive_effect name="DegradationMax" tier="1,6"/>
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>				
 			</effect_group>
 		</item>
 		<item name="gunExplosivesBrokenRocketLauncher">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="10"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/RocketLauncher/rocketlauncherPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="1000"/>
@@ -1831,6 +1854,7 @@
 			<property name="CustomIcon" value="gunExplosivesT3RocketLauncher"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="Stacknumber" value="1"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1845,7 +1869,8 @@
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
 			</property>
-			<effect_group tiered="false" name="gunExplosivesBrokenRocketLauncher">				
+			<effect_group name="gunExplosivesBrokenRocketLauncher">	
+				<passive_effect name="DegradationMax" tier="1,6"/>			
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1853,7 +1878,7 @@
 			</effect_group>
 		</item>
 		<item name="meleeWpnKnucklesBrokenLeatherKnuckles">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="Material" value="Mleather"/> <property name="Weight" value="30"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Melee/KnuckleWraps/knuckleWrapsRight_Prefab.prefab"/>
 			<property name="HoldType" value="70"/>
@@ -1861,6 +1886,7 @@
 			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 			<property name="CustomIcon" value="meleeWpnKnucklesT0LeatherKnuckles"/>
 			<property name="SellableToTrader" value="false"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="DynamicMelee"/>
 			</property>
@@ -1869,6 +1895,7 @@
 			</property>
 			
 			<effect_group name="meleeWpnKnucklesBrokenLeatherKnuckles">
+				<passive_effect name="DegradationMax" tier="1,6"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="LeftKnuckles" prefab="#Other/Items?Weapons/Melee/KnuckleWraps/knuckleWrapsLeft_Prefab.prefab" parentTransform="Propjoint" localPos="0,0,0" localRot="0,0,0">
 					<requirement name="IsFPV"/>
 				</triggered_effect>
@@ -1887,7 +1914,7 @@
 			</effect_group>
 		</item>
 		<item name="meleeWpnKnucklesBrokenIronKnuckles">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="50"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knuckles/knucklesRight_Prefab.prefab"/>
 			<property name="HoldType" value="61"/>
@@ -1895,6 +1922,7 @@
 			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 			<property name="CustomIcon" value="meleeWpnKnucklesT1IronKnuckles"/>
 			<property name="SellableToTrader" value="false"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="DynamicMelee"/>
 			</property>
@@ -1903,6 +1931,7 @@
 			</property>
 			
 			<effect_group name="meleeWpnKnucklesBrokenIronKnuckles">
+				<passive_effect name="DegradationMax" tier="1,6"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="LeftKnuckles" prefab="#Other/Items?Weapons/Melee/Knuckles/knucklesLeft_Prefab.prefab" parentTransform="Propjoint" localPos="0,0,0" localRot="0,0,0">
 					<requirement name="IsFPV"/>
 				</triggered_effect>
@@ -1921,7 +1950,7 @@
 			</effect_group>
 		</item>
 		<item name="meleeWpnKnucklesBrokenSteelKnuckles">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="100"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knuckles/knucklesSpikedRight_Prefab.prefab"/>
 			<property name="HoldType" value="79"/>
@@ -1929,6 +1958,7 @@
 			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 			<property name="CustomIcon" value="meleeWpnKnucklesT3SteelKnuckles"/>
 			<property name="SellableToTrader" value="false"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="DynamicMelee"/>
 			</property>
@@ -1937,6 +1967,7 @@
 			</property>
 
 			<effect_group name="meleeWpnKnucklesBrokenSteelKnuckles">
+				<passive_effect name="DegradationMax" tier="1,6"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="LeftKnuckles" prefab="#Other/Items?Weapons/Melee/Knuckles/knucklesSpikedLeft_Prefab.prefab" parentTransform="Propjoint" localPos="0,0,0" localRot="0,0,0">
 					<requirement name="IsFPV"/>
 				</triggered_effect>
@@ -1955,7 +1986,7 @@
 			</effect_group>
 		</item>				
 		<item name="gunBowBrokenPrimitiveBow">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="27"/> <!-- "Sway Off" is hardcoded for hold types 26, 27, 53 -->
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/WoodenBow/WoodenBowPrefab.prefab"/>
 			<property name="Material" value="Mwood"/>
@@ -1964,6 +1995,7 @@
 			<property name="ShowQuality" value="false"/>
 			<property name="CustomIcon" value="gunBowT0PrimitiveBow"/>
 			<property name="SellableToTrader" value="false"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -1979,7 +2011,8 @@
 				<property name="Max_strain_time" value=".1"/>
 			</property>
 			
-			<effect_group tiered="false" name="gunBowBrokenPrimitiveBow">				
+			<effect_group name="gunBowBrokenPrimitiveBow">	
+				<passive_effect name="DegradationMax" tier="1,6"/>			
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -1987,7 +2020,7 @@
 			</effect_group>
 		</item>	
 		<item name="gunBowBrokenWoodenBow">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="68"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/WoodenBow/WoodenBowPrefab.prefab"/>
 			<property name="Material" value="Mwood"/>
@@ -1996,6 +2029,7 @@
 			<property name="ShowQuality" value="false"/>
 			<property name="CustomIcon" value="gunBowT1WoodenBow"/>
 			<property name="SellableToTrader" value="false"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -2011,7 +2045,8 @@
 				<property name="Max_strain_time" value=".1"/>
 			</property>
 			
-			<effect_group tiered="false" name="gunBowBrokenWoodenBow">				
+			<effect_group name="gunBowBrokenWoodenBow">	
+				<passive_effect name="DegradationMax" tier="1,6"/>			
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -2019,7 +2054,7 @@
 			</effect_group>
 		</item>						
 		<item name="gunBowBrokenCompoundBow">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="27"/> <!-- "Sway Off" is hardcoded for hold types 26, 27, 53 -->
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/advancedBow/advancedCompoundBow/advancedCompoundBowPrefab.prefab"/>
 			<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="100"/>
@@ -2028,6 +2063,7 @@
 			<property name="ShowQuality" value="false"/>
 			<property name="CustomIcon" value="gunBowT3CompoundBow"/>
 			<property name="SellableToTrader" value="false"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -2043,7 +2079,8 @@
 				<property name="Max_strain_time" value=".1"/>
 			</property>
 			
-			<effect_group tiered="false" name="gunBowBrokenCompoundBow">				
+			<effect_group name="gunBowBrokenCompoundBow">	
+				<passive_effect name="DegradationMax" tier="1,6"/>			
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -2051,7 +2088,7 @@
 			</effect_group>
 		</item>						
 		<item name="gunBowBrokenIronCrossbow">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="26"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/IronCrossbow/IronCrossbowPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="100"/>
@@ -2060,6 +2097,7 @@
 			<property name="ShowQuality" value="false"/>
 			<property name="CustomIcon" value="gunBowT1IronCrossbow"/>
 			<property name="SellableToTrader" value="false"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -2075,7 +2113,8 @@
 				<property name="Max_strain_time" value=".1"/>
 			</property>
 			
-			<effect_group tiered="false" name="gunBowBrokenIronCrossbow">				
+			<effect_group name="gunBowBrokenIronCrossbow">
+				<passive_effect name="DegradationMax" tier="1,6"/>				
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -2083,7 +2122,7 @@
 			</effect_group>
 		</item>				
 		<item name="gunBowBrokenCompoundCrossbow">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="69"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/AdvancedBow/AdvancedCompoundCrossbow/AdvancedCompoundCrossbowPrefab.prefab"/>
 			<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="100"/>
@@ -2092,6 +2131,7 @@
 			<property name="SellableToTrader" value="false"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -2107,7 +2147,8 @@
 				<property name="Max_strain_time" value=".1"/>
 			</property>
 			
-			<effect_group tiered="false" name="gunBowBrokenCompoundCrossbow">				
+			<effect_group name="gunBowBrokenCompoundCrossbow">	
+				<passive_effect name="DegradationMax" tier="1,6"/>			
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
@@ -2116,7 +2157,7 @@
 		</item>	
 		<!-- New man made resources -->	
 		<item name="meleeToolBrokenWireTool">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="52"/>
 			<property name="Meshfile" value="#Other/Items?Tools/wire_strippersPrefab.prefab"/>
 			<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="100"/>
@@ -2125,6 +2166,7 @@
 			<property name="SellableToTrader" value="false"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Group" value="Tools/Traps"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -2141,7 +2183,7 @@
 			</property>
 		</item>		
 		<item name="meleeToolBrokenT1ClawHammer">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="32"/>
 			<property name="Meshfile" value="#Other/Items?Tools/hammerPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="100"/>
@@ -2150,6 +2192,7 @@
 			<property name="SellableToTrader" value="false"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Group" value="Tools/Traps"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -2164,9 +2207,16 @@
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
 			</property>
+			<effect_group name="meleeToolBrokenT1ClawHammer">
+				<passive_effect name="DegradationMax" tier="1,6"/>				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
 		</item>	
 		<item name="meleeToolBrokenT1Wrench">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="29"/>
 			<property name="Meshfile" value="#Other/Items?Tools/wrenchPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="200"/>
@@ -2175,6 +2225,7 @@
 			<property name="SellableToTrader" value="false"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Group" value="Tools/Traps"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -2189,9 +2240,16 @@
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
 			</property>
+			<effect_group name="meleeToolBrokenT1Wrench">
+				<passive_effect name="DegradationMax" tier="1,6"/>				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
 		</item>	
 		<item name="meleeToolAxeBrokenChainsaw">
-			<property name="Tags" value=""/>
+			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="19"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Chainsaw/chainsawPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="450"/>
@@ -2199,6 +2257,7 @@
 			<property name="CustomIcon" value="meleeToolAxeT3Chainsaw"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="Stacknumber" value="1"/>
+			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="ThrowAway"/>
 				<property name="Delay" value="0"/>
@@ -2206,6 +2265,13 @@
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
 			</property>
+			<effect_group name="meleeToolAxeBrokenChainsaw">
+				<passive_effect name="DegradationMax" tier="1,6"/>				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+			</effect_group>
 		</item>
 		<item name="solarBrokenCell">
 			<property name="HoldType" value="45"/>
