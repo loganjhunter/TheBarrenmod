@@ -1881,6 +1881,7 @@
 			<property name="Tags" value="tool,noMods"/>
 			<property name="Material" value="Mleather"/> <property name="Weight" value="30"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Melee/KnuckleWraps/knuckleWrapsRight_Prefab.prefab"/>
+			<property name="Material" value="Mleather"/> <property name="Weight" value="100"/>
 			<property name="HoldType" value="70"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
@@ -1917,6 +1918,7 @@
 			<property name="Tags" value="tool,noMods"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="50"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knuckles/knucklesRight_Prefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="100"/>
 			<property name="HoldType" value="61"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
@@ -1953,6 +1955,7 @@
 			<property name="Tags" value="tool,noMods"/>
 			<property name="Material" value="Mmetal"/> <property name="Weight" value="100"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knuckles/knucklesSpikedRight_Prefab.prefab"/>
+			<property name="Material" value="Mmetal"/> <property name="Weight" value="300"/>
 			<property name="HoldType" value="79"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
@@ -1989,7 +1992,7 @@
 			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="27"/> <!-- "Sway Off" is hardcoded for hold types 26, 27, 53 -->
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/WoodenBow/WoodenBowPrefab.prefab"/>
-			<property name="Material" value="Mwood"/>
+			<property name="Material" value="Mwood"/> <property name="Weight" value="100"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
 			<property name="ShowQuality" value="false"/>
@@ -2023,7 +2026,7 @@
 			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="68"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/WoodenBow/WoodenBowPrefab.prefab"/>
-			<property name="Material" value="Mwood"/>
+			<property name="Material" value="Mwood"/> <property name="Weight" value="200"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
 			<property name="ShowQuality" value="false"/>

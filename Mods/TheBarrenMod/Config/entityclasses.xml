@@ -1922,6 +1922,15 @@
 	<append xpath="/entity_classes/entity_class[@name='enLumberjack3Radiated']">
 		<property name="LootDropEntityClass" value="EntityLootContainerLumberjackRadiated"/>
 	</append>
+	<append xpath="/entity_classes/entity_class[@name='enLumberjack4']">
+		<property name="LootDropEntityClass" value="EntityLootContainerLumberjack"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enLumberjack4Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerLumberjackFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enLumberjack4Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerLumberjackRadiated"/>
+	</append>
 	<append xpath="/entity_classes/entity_class[@name='enNurseHD']">
 		<property name="LootDropEntityClass" value="EntityLootContainerNurseHD"/>
 	</append>
@@ -2229,6 +2238,9 @@
 	<append xpath="/entity_classes/entity_class[@name='enScreamer196']">
 		<property name="LootDropEntityClass" value="zPackScreamer"/>
 	</append>
+	<append xpath="/entity_classes/entity_class[contains(@name, 'enSnowGiant')]">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowGiant"/>
+	</append>
 		<!-- Set the loot drops for Snufkin Zs -->
 	<set xpath="/entity_classes/entity_class[@name='zombieBanshee']/property[@name='LootDropEntityClass']/@value">EntityLootContainerBanshee</set>
 	<set xpath="/entity_classes/entity_class[@name='zombieMotorhead']/property[@name='LootDropEntityClass']/@value">EntityLootContainerMotorhead</set>
@@ -2245,9 +2257,7 @@
 	<append xpath="/entity_classes/entity_class[contains(@name, 'enWastelandGiant')]">
 		<property name="LootDropEntityClass" value="EntityLootContainerWastelandGiant"/>
 	</append>
-	<append xpath="/entity_classes/entity_class[contains(@name, 'enSnowGiant')]">
-		<property name="LootDropEntityClass" value="EntityLootContainerSnowGiant"/>
-	</append>
+	
 	
 	<append xpath="/entity_classes/entity_class[contains(@name, 'enBusinessmanBoss')]">
 		<property name="LootDropEntityClass" value="EntityLootContainerBusinessmanBoss"/>
@@ -4471,8 +4481,19 @@
 			<property name="LootListOnDeath" value="enPackBikerGiant"/> 
 			<property name="Faction" value="none"/>	
 		</entity_class>	
+		<entity_class name="EntityLootContainerSnowGiant">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackSnowGiant"/> 
+			<property name="Faction" value="none"/>
+		</entity_class>
 <!-- not sold yet on including these -->		
-<!--		<entity_class name="EntityLootContainerBurntGiant">	<property name="HideInSpawnMenu" value="true"/>
+<!-- 		<entity_class name="EntityLootContainerBurntGiant">	<property name="HideInSpawnMenu" value="true"/>
 			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
 			<property name="ModelType" value="Custom"/>
 			<property name="Prefab" value="Backpack"/>
@@ -4493,19 +4514,9 @@
 			<property name="TimeStayAfterDeath" value="1200"/>
 			<property name="LootListOnDeath" value="enPackWastelandGiant"/> 
 			<property name="Faction" value="none"/>
-		</entity_class>	
-		<entity_class name="EntityLootContainerSnowGiant">	<property name="HideInSpawnMenu" value="true"/>
-			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
-			<property name="ModelType" value="Custom"/>
-			<property name="Prefab" value="Backpack"/>
-			<property name="Class" value="EntityLootContainer"/>
-			<property name="Parent" value="Backpack"/>
-			<property name="IsEnemyEntity" value="false"/>
-			<property name="TimeStayAfterDeath" value="1200"/>
-			<property name="LootListOnDeath" value="enPackSnowGiant"/> 
-			<property name="Faction" value="none"/>
-		</entity_class>
-		<entity_class name="EntityLootContainerBusinessmanBoss">	<property name="HideInSpawnMenu" value="true"/>
+		</entity_class>	 -->
+		
+<!-- 		<entity_class name="EntityLootContainerBusinessmanBoss">	<property name="HideInSpawnMenu" value="true"/>
 			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
 			<property name="ModelType" value="Custom"/>
 			<property name="Prefab" value="Backpack"/>
@@ -4526,7 +4537,7 @@
 			<property name="TimeStayAfterDeath" value="1200"/>
 			<property name="LootListOnDeath" value="enPackScientistBoss1"/> 
 			<property name="Faction" value="none"/>
-		</entity_class>	-->
+		</entity_class> -->
 		<!-- Set the loot containers for Snufkin Zs -->
 		<entity_class name="EntityLootContainerBanshee">	<property name="HideInSpawnMenu" value="true"/>
 			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>

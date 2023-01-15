@@ -22,6 +22,7 @@
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'bookNeedleAndThread')]"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'Schematic')]"></remove>
 	<remove xpath="/lootcontainers/lootgroup[@name='groupTreasureMaps']"></remove>
+	<remove xpath="/lootcontainers/lootgroup[@name='vehicleMods']"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[@group='groupTreasureMaps']"></remove>
 	<!-- Remove unwanted tools -->
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'meleeToolRepairT0TazasStoneAxe')]"></remove>
@@ -67,9 +68,18 @@
 	<remove xpath="/lootcontainers/lootgroup/item[@name='meleeWpnClubT3SteelClubParts']"></remove>		
 	<remove xpath="/lootcontainers/lootgroup/item[@name='meleeWpnKnucklesT3SteelKnucklesParts']"></remove>	
 	<remove xpath="/lootcontainers/lootgroup/item[@name='gunBotRoboticsParts']"></remove>	
-	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'vehicle')]"></remove>	
+	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'vehicle')]"></remove>
+	<remove xpath="/lootcontainers/lootgroup/item[contains(@group, 'vehicle')]"></remove>		
+	<remove xpath="/lootcontainers/lootgroup[contains(@name, 'vehicle')]"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@group, 'RangedParts')]"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@group, 'MeleeParts')]"></remove>
+	<remove xpath="/lootcontainers/lootgroup/item[contains(@group, 'toolParts')]"></remove>
+	<remove xpath="/lootcontainers/lootgroup/item[contains(@group, 'weaponParts')]"></remove>
+
+	
+	
+	
+	
 	<!-- Remove unwanted first aid and candy -->
 	<remove xpath="/lootcontainers/lootgroup/item[@name='medicalBloodBag']"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[@name='drugSteroids']"></remove>
@@ -2856,6 +2866,7 @@
 			<item group="armorMiningHelmets" mod_chance="0" loot_prob_template="veryHigh" force_prob="true"/>
 			<item group="groupMeleeTool" loot_prob_template="veryHigh"/>
 			<item group="groupUncommonManmadeResources" loot_prob_template="high" force_prob="true"/>
+			<item group="workstationToolsScaled" loot_prob_template="high" force_prob="true"/>	
 			<item group="groupWorkingStiffsCrate" loot_prob_template="high" force_prob="true"/>
 			<item group="groupRareManmadeResources" loot_prob_template="medHigh" force_prob="true"/>
 			<item group="groupSmallEngine" loot_prob_template="medHigh" force_prob="true"/>
@@ -2964,8 +2975,19 @@
 			<item group="groupArmorScaled"  count="0,1"/>
 			<item group="groupGoreResources" count="2,4"/>
 			<item name="resourceCloth" count="3,6"/>
+		</lootgroup>		
+		<lootgroup name="groupenSnowGiant" count="all">
+			<item group="groupMeleeWpnClubScaled"  count="0,1"/>
+			<item group="groupArmorScaled" count="0,1"/>
+			<item group="groupGoreResources" count="2,4"/>
+			<item name="resourceCloth" count="3,6"/>
 		</lootgroup>
-
+		<lootgroup name="groupenDesertGiant" count="all">
+			<item name="medicalAloeCream" count="0,3"/>
+			<item name="resourceCropAloeLeaf" count="0,6"/>
+			<item name="resourceYuccaFibers" count="0,12"/>
+			<item name="resourceCrushedSand" count="0,150"/>
+		</lootgroup>
 <!-- not sold yet on including these -->
 <!--		<lootgroup name="groupenBurntGiant">
 			<item name="meleeWpnBladeT1HuntingKnife" loot_prob_template="med" force_prob="true"/>
@@ -2974,17 +2996,8 @@
 		<lootgroup name="groupenWastelandGiant">
 			<item name="meleeWpnBladeT1HuntingKnife" loot_prob_template="med" force_prob="true"/>
 			<item group="groupMeleeWpnClubT1BaseballBats" loot_prob_template="med" force_prob="true"/>
-		</lootgroup>
-		<lootgroup name="groupenSnowGiant">
-			<item name="meleeWpnBladeT1HuntingKnife" loot_prob_template="med" force_prob="true"/>
-			<item group="groupMeleeWpnClubT1BaseballBats" loot_prob_template="med" force_prob="true"/>
 		</lootgroup>-->
-		<lootgroup name="groupenDesertGiant" count="all">
-			<item name="medicalAloeCream" count="0,3"/>
-			<item name="resourceCropAloeLeaf" count="0,6"/>
-			<item name="resourceYuccaFibers" count="0,12"/>
-			<item name="resourceCrushedSand" count="0,150"/>
-		</lootgroup>
+		
 <!-- 		<lootgroup name="groupenBusinessmanBoss">
 			<item name="meleeWpnBladeT1HuntingKnife" loot_prob_template="med" force_prob="true"/>
 			<item group="groupMeleeWpnClubT1BaseballBats" loot_prob_template="med" force_prob="true"/>
@@ -3646,19 +3659,20 @@
 		</lootcontainer>
 		<lootcontainer name="enPackBikerGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupenBikerGiant"/>
-		</lootcontainer>	 		
+		</lootcontainer>
+		<lootcontainer name="enSnowGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenSnowGiant"/>
+		</lootcontainer>		
+		<lootcontainer name="enDesertGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenDesertGiant"/>
+		</lootcontainer>
 <!-- 			<lootcontainer name="enBurntGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenBurntGiant"/>
 		</lootcontainer>
 		<lootcontainer name="enWastelandGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenWastelandGiant"/>
 		</lootcontainer>
-		<lootcontainer name="enSnowGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupenSnowGiant"/>
-		</lootcontainer>-->	
-		<lootcontainer name="enDesertGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupenDesertGiant"/>
-		</lootcontainer>
+		-->	
 <!-- 		<lootcontainer name="enBusinessmanBoss" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenBusinessmanBoss"/>
 		</lootcontainer>
