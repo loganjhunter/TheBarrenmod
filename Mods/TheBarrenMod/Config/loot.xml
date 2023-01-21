@@ -53,10 +53,6 @@
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'ShotgunSlug')]"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'BreachingSlug')]"></remove>
 	<!-- Remove unwanted weapon parts and vehicles -->
-	<!--<remove xpath="/lootcontainers/lootgroup/item[@name='meleeWpnSledgeT3SteelSledgehammerParts']"></remove>-->
-<!-- 	<remove xpath="/lootcontainers/lootgroup/lootgroup[@name='weaponParts']"></remove>	
-	<remove xpath="/lootcontainers/lootgroup/lootgroup[@name='groupWeapons_RangedParts']"></remove>	 -->
-	
 	<remove xpath="/lootcontainers/lootgroup/item[@name='gunMGT1AK47Parts']"></remove>	
 	<remove xpath="/lootcontainers/lootgroup/item[@name='gunHandgunT1PistolParts']"></remove>	
 	<remove xpath="/lootcontainers/lootgroup/item[@name='gunBowT1WoodenBowParts']"></remove>	
@@ -75,11 +71,6 @@
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@group, 'MeleeParts')]"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@group, 'toolParts')]"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@group, 'weaponParts')]"></remove>
-
-	
-	
-	
-	
 	<!-- Remove unwanted first aid and candy -->
 	<remove xpath="/lootcontainers/lootgroup/item[@name='medicalBloodBag']"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[@name='drugSteroids']"></remove>
@@ -134,7 +125,7 @@
 	<remove xpath="/lootcontainers/lootcontainer/item[@name='casinoCoin']"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'bladeTrap')]"></remove>
 
-	<!-- New food -->
+	<!-- New food and candy-->
 	<append xpath="/lootcontainers/lootgroup[@name='rottenFood']">
 		<item name="foodSpartanLoaf"/>
 		<item name="foodSpartanSingleSizeSteak"/>
@@ -3040,8 +3031,8 @@
 			<item name="resourceSpring" count="1,3"/>
 			<item name="resourceScrapIron" count="9,17"/>
 			<item name="resourceGunPowder" count="50,75"/>
-			<item name="thrownGrenadeContact" count="1,4"/>
-			<item name="thrownTimedCharge" count="2,4"/>
+			<item name="thrownGrenadeContact" count="0,4"/>
+			<item name="thrownTimedCharge" count="0,4"/>
 			<item group="groupGoreResources" count="1,2"/>
 		</lootgroup>
 		<lootgroup name="groupMiniBomber" count="all">
@@ -3049,12 +3040,14 @@
 			<item name="resourceSpring" count="1,2"/>
 			<item name="resourceScrapIron" count="3,11"/>
 			<item name="resourceGunPowder" count="15,45"/>
-			<item name="thrownGrenadeContact" count="1,2"/>
-			<item name="thrownTimedCharge" count="1,2"/>
+			<item name="thrownGrenadeContact" count="0,2"/>
+			<item name="thrownTimedCharge" count="0,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 		</lootgroup>
 		<lootgroup name="groupJuggernaut" count="all">
 			<item group="groupRareManmadeResources" count="1,3"/>
+			<item name="resourceGunPowder" count="75,225"/>
+			<item name="ammoGasCan" count="25,75"/>
 			<item group="groupUncommonManmadeResources"/>
 			<item group="groupUncommonOrganicResources"/>
 			<item group="groupGoreResources" count="3,6"/>

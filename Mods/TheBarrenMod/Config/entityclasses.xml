@@ -1118,7 +1118,7 @@
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
 			</effect_group>
 		</entity_class>
- 		<entity_class name="elementalNitrateWalkerGiantFeral" extends="elementalNitrateWalkerFeral">
+		<entity_class name="elementalNitrateWalkerGiantFeral" extends="elementalNitrateWalkerFeral">
 			<property name="Tags" value="entity,zombie,walker,umazombie,enKnockdown25"/>
 			<property name="HandItem" value="enHand_elementalSandFeral"/>
 			<property name="SizeScale" value="1.35"/>
@@ -1184,7 +1184,7 @@
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
 			</effect_group>
 		</entity_class>
- 		<entity_class name="elementalCoalWalkerGiantFeral" extends="elementalCoalWalker">
+		<entity_class name="elementalCoalWalkerGiantFeral" extends="elementalCoalWalker">
 			<property name="Tags" value="entity,zombie,walker,umazombie,enKnockdown25"/>
 			<property name="HandItem" value="enHand_elementalSandGiant"/>
 			<property name="SizeScale" value="1.35"/>
@@ -2238,7 +2238,7 @@
 	<append xpath="/entity_classes/entity_class[@name='enScreamer196']">
 		<property name="LootDropEntityClass" value="zPackScreamer"/>
 	</append>
-	<append xpath="/entity_classes/entity_class[contains(@name, 'enSnowGiant')]">
+	<append xpath="/entity_classes/entity_class[@name='enSnowGiant']">
 		<property name="LootDropEntityClass" value="EntityLootContainerSnowGiant"/>
 	</append>
 		<!-- Set the loot drops for Snufkin Zs -->

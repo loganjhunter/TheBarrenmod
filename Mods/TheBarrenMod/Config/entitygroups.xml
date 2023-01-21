@@ -45,8 +45,18 @@
 	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'zombieBogeyman')]"/>
 	<remove xpath="/entitygroups/entitygroup/entity[contains(@name,'zombieCrispy')]"/>
 	
+	
+	<!-- Removing the groups that enZombies injected, creating from scratch below this -->
+	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesDay']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesNight']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='DesertZombiesDay']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='DesertZombiesNight']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='SnowZombiesDay']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='SnowZombiesNight']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='WastelandZombiesDay']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='WastelandZombiesNight']"/>
 	<!-- Removing some of the daytime pineforest entities in groups that enZombies injected -->
-	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesDay']/entity[@name='zombieFatHawaiian']"/>
+<!-- 	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesDay']/entity[@name='zombieFatHawaiian']"/>
 	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesDay']/entity[@name='zombieFemaleFat']"/>
 
 	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesDayCity']/entity[@name='zombieFatHawaiian']"/>
@@ -74,9 +84,9 @@
 	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesDayDowntown']/entity[@name='enSwatMale1']"/>
 	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesDayDowntown']/entity[@name='enSwatMale2']"/>
 	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesDayDowntown']/entity[@name='enSwatMale3']"/>
-	
+	 -->
 	<!-- Removing some of the nighttime pineforest entities in groups that enZombies injected -->
-	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesNight']/entity[@name='zombieFatHawaiianFeral']"/>
+<!-- 	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesNight']/entity[@name='zombieFatHawaiianFeral']"/>
 	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesNight']/entity[@name='zombieFemaleFatFeral']"/>
 
 	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesNightCity']/entity[@name='zombieFatHawaiianFeral']"/>
@@ -95,7 +105,7 @@
 	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesNightDowntown']/entity[@name='enSoldierMale2Feral']"/>
 	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesNightDowntown']/entity[@name='enSwatMale1Feral']"/>
 	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesNightDowntown']/entity[@name='enSwatMale2Feral']"/>
-	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesNightDowntown']/entity[@name='enSwatMale3Feral']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesNightDowntown']/entity[@name='enSwatMale3Feral']"/> -->
 	
 	
 	<!-- Adding more enZs to all entities -->	
@@ -103,270 +113,655 @@
 		<entity name="grandOutdoors" prob="0.1"/>
 	</append>
 	<!-- Adding more pineforest entities -->	
-	<append xpath="/entitygroups/entitygroup[@name='PineforestZombiesDay']">
-		<entity name="zombieJoe" prob="0.75"/>
-		<entity name="zombieMarlene" prob="0.75"/>
-		<entity name="zombieMoe" prob="0.75"/>
-		<entity name="zombieTomClark" prob="0.75"/>
-		<entity name="enJoggerFemale1" prob="0.5"/>
-		<entity name="enJoggerFemale2" prob="0.5"/>
-		<entity name="enJoggerFemale3" prob="0.5"/>
-		<entity name="enJoggerFemale4" prob="0.5"/>
-		<entity name="enJoggerFemale5" prob="0.5"/>
-		<entity name="grandOutdoors" prob="0.1"/>
-	</append>
-	<append xpath="/entitygroups/entitygroup[@name='PineforestZombiesNight']">
-		<entity name="zombieJoeFeral" prob="1"/>
-		<entity name="zombieMarleneFeral" prob="1"/>
-		<entity name="zombieMoeFeral" prob="1"/>
-		<entity name="zombieTomClarkFeral" prob="1"/>
-		<entity name="enJoggerFemale1Feral" prob="0.5"/>
-		<entity name="enJoggerFemale2Feral" prob="0.5"/>
-		<entity name="enJoggerFemale3Feral" prob="0.5"/>
-		<entity name="enJoggerFemale4Feral" prob="0.5"/>
-		<entity name="enJoggerFemale5Feral" prob="0.5"/>
-		<entity name="enFarmerGiant" prob="0.15"/>
-		<entity name="enPunkGiant" prob="0.15"/>
-		<entity name="zombieArleneGiant" prob="0.15"/>
-		<entity name="zombieMarleneGiant" prob="0.15"/>
-		<entity name="zombiePartyGirlGiant" prob="0.15"/>
-		<entity name="zombieNurseGiant" prob="0.15"/>
-		<entity name="zombieJoeGiant" prob="0.15"/>
-		<entity name="zombieSteveGiant" prob="0.15"/>
-		<entity name="zombieTomClarkGiant" prob="0.15"/>
-		<entity name="enBikerGiant" prob="0.1"/>
-		<entity name="zombieCowhead" prob="0.1"/>
-		<entity name="zombieBanshee" prob="0.1"/>
-		<entity name="MotherClucker" prob="0.1"/>
-		<entity name="ZombieUndertaker" prob="0.1"/>
-		<entity name="ZombieJuggernaut" prob="0.1"/>
-	</append>
-	<!-- Adding more wasteland entities -->	
-	<append xpath="/entitygroups/entitygroup[@name='WastelandZombiesDay']">
-		<!-- Adding more wasteland entities -->
-		<entity name="enBiker1" prob="0.75"/>
-		<entity name="enBiker2" prob="0.75"/>
-		<entity name="enBiker3" prob="0.75"/>
-		<entity name="enBiker4" prob="0.75"/>
-		<entity name="enUtilityFemale1" prob="1"/>
-		<entity name="enUtilityFemale2" prob="1"/>
-		<entity name="enUtilityMale1" prob="1"/>
-		<entity name="enUtilityMale2" prob="1"/>
-		<entity name="enPunkGiant" prob="0.5"/>
-		<entity name="enSwatGiant" prob="0.5"/>
-		<entity name="enMinerGiant" prob="0.5"/>
-		<entity name="enBikerGiant" prob="0.5"/>
-		<entity name="elementalClayWalker" prob="1"/>		
-		<entity name="enElementalSandWalker" prob="1"/>
-		<entity name="enElementalStoneWalker" prob="1"/>
-		<entity name="enElementalIronWalker" prob="1"/>
-		<entity name="enElementalSandCrawler" prob="1"/>		
-		<entity name="enElementalStoneCrawler" prob="1"/>
-		<entity name="enElementalIronCrawler" prob="1"/>
-		<entity name="animalSpiderPig" prob="1"/>
-		<entity name="elementalClayWalkerGiant" prob="0.5"/>
-		<entity name="elementalShaleWalkerGiant" prob="0.5"/>
-		<entity name="elementalNitrateWalkerGiant" prob="0.5"/>
-		<entity name="elementalCoalWalkerGiant" prob="0.5"/>
-		<entity name="enElementalSandWalkerGiant" prob="0.5"/>
-		<entity name="enElementalStoneWalkerGiant" prob="0.5"/>
-		<entity name="enElementalIronWalkerGiant" prob="0.5"/>
-		<entity name="zombieArleneGiant" prob="0.5"/>
-		<entity name="zombieMarleneGiant" prob="0.5"/>
-		<entity name="zombiePartyGirlGiant" prob="0.5"/>
-		<entity name="zombieNurseGiant" prob="0.5"/>
-		<entity name="zombieJoeGiant" prob="0.5"/>
-		<entity name="zombieSteveGiant" prob="0.5"/>
-		<entity name="zombieTomClarkGiant" prob="0.5"/>
-		<entity name="zombieBusinessManGiant" prob="0.5"/>
-		<entity name="zombieBurntGiant" prob="0.5"/>
-		<entity name="zombieSpiderGiant" prob="0.5"/>
-		<entity name="zombieBoeGiant" prob="0.5"/>
-		<entity name="zombieJanitorGiant" prob="0.5"/>
-		<entity name="zombieMoeGiant" prob="0.5"/>
-		<entity name="zombieLabGiant" prob="0.5"/>
-		<entity name="zombieDarleneGiant" prob="0.5"/>
-		<entity name="zombieYoGiant" prob="0.5"/>
-		<entity name="zombieUtilityWorkerGiant" prob="0.5"/>
-		<entity name="zombieLumberjackGiant" prob="0.5"/>
-		<entity name="zombieFemaleFatGiant" prob="0.5"/>
-		<entity name="zombieFatHawaiianGiant" prob="0.5"/>
-		<entity name="zombieMaleHazmatGiant" prob="0.5"/>
-		<entity name="zombieFatCopGiant" prob="0.5"/>
-		<entity name="zombieSkateboarderGiant" prob="0.5"/>
-		<entity name="zombieSoldierGiant" prob="0.5"/>
-		<entity name="zombieWightGiantFeral" prob="0.5"/>
-		<entity name="zombieMutatedGiant" prob="0.5"/>
-		<entity name="zombieDemolitionGiant" prob="0.25"/>
-		<entity name="elementalClayWalkerFeral" prob="0.25"/>
-		<entity name="elementalShaleWalkerFeral" prob="0.25"/>
-		<entity name="elementalNitrateWalkerFeral" prob="0.25"/>
-		<entity name="elementalCoalWalkerFeral" prob="0.25"/>
-		<entity name="enElementalSandWalkerFeral" prob="0.25"/>
-		<entity name="enElementalSandCrawlerFeral" prob="0.25"/>
-		<entity name="enElementalStoneWalkerFeral" prob="0.25"/>
-		<entity name="enElementalStoneCrawlerFeral" prob="0.25"/>
-		<entity name="enElementalIronWalkerFeral" prob="0.25"/>
-		<entity name="enElementalIronCrawlerFeral" prob="0.25"/>
-		<entity name="grandOutdoors" prob="0.25"/>
-		<entity name="MotherClucker" prob="0.5"/>
-		<entity name="zombieBanshee" prob="0.5"/>
-		<entity name="ZombieBomber" prob="0.5"/>
-		<entity name="zombieCowhead" prob="0.5"/>
-		<entity name="ZombieJuggernaut" prob="0.5"/>
-		<entity name="zombieMotorhead" prob="0.5"/>
-		<entity name="zombiePsycho" prob="0.5"/>
-		<entity name="zombieScorcher" prob="0.5"/>
-		<entity name="ZombieUndertaker" prob="0.5"/>
-	</append>
-	<append xpath="/entitygroups/entitygroup[@name='WastelandZombiesNight']">
-		<entity name="enPunkGiant" prob="1.00"/>
-		<entity name="zombieSoldierGiant" prob="1.00"/>
-		<entity name="enSoldier196Giant" prob="1.00"/>
-		<entity name="enSwatGiant" prob="1.00"/>
-		<entity name="enMinerGiant" prob="1.00"/>
-		<entity name="enBikerGiant" prob="1.00"/>
-		<entity name="zombieArleneFeral" prob="1"/>
-		<entity name="zombieBikerFeral" prob="0.5"/>
-		<entity name="zombieBoeFeral" prob="1"/>
-		<entity name="zombieBusinessManFeral" prob="1"/>
-		<entity name="zombieDemolition" prob="1"/>
-		<entity name="zombieFatCopFeral" prob="1"/>
-		<entity name="zombieFatHawaiianFeral" prob="1"/>
-		<entity name="zombieFemaleFatFeral" prob="1"/>
-		<entity name="zombieJanitorFeral" prob="1"/>
-		<entity name="zombieLabFeral" prob="1"/>
-		<entity name="zombieMaleHazmatFeral" prob="1"/>
-		<entity name="zombiePartyGirlFeral" prob="1"/>
-		<entity name="zombieSkateboarderFeral" prob="1"/>
-		<entity name="zombieSoldierFeral" prob="1"/>
-		<entity name="zombieSpiderFeral" prob="1"/>
-		<entity name="zombieUtilityWorkerFeral" prob="1"/>
-		<entity name="zombieWightFeral" prob="1"/>
-		<entity name="zombieJoeFeral" prob="1"/>
-		<entity name="elementalClayWalkerFeral" prob="1"/>		
-		<entity name="enElementalSandWalkerFeral" prob="1"/>
-		<entity name="enElementalStoneWalkerFeral" prob="1"/>
-		<entity name="enElementalIronWalkerFeral" prob="1"/>
-		<entity name="elementalClayWalkerGiant" prob="0.5"/>
-		<entity name="elementalShaleWalkerGiant" prob="0.5"/>
-		<entity name="elementalNitrateWalkerGiant" prob="0.5"/>
-		<entity name="elementalCoalWalkerGiant" prob="0.5"/>
-		<entity name="enElementalSandWalkerGiant" prob="0.5"/>
-		<entity name="enElementalStoneWalkerGiant" prob="0.5"/>
-		<entity name="enElementalIronWalkerGiant" prob="0.5"/>
-		<entity name="elementalClayWalkerGiantFeral" prob="0.25"/>
-		<entity name="elementalShaleWalkerGiantFeral" prob="0.25"/>
-		<entity name="elementalNitrateWalkerGiantFeral" prob="0.25"/>
-		<entity name="elementalCoalWalkerGiantFeral" prob="0.25"/>
-		<entity name="enElementalSandWalkerGiantFeral" prob="0.25"/>
-		<entity name="enElementalStoneWalkerGiantFeral" prob="0.25"/>
-		<entity name="enElementalIronWalkerGiantFeral" prob="0.25"/>
-		<entity name="animalSpiderPig" prob="1"/>
-		<entity name="zombieArleneGiant" prob="0.75"/>
-		<entity name="zombieMarleneGiant" prob="0.75"/>
-		<entity name="zombiePartyGirlGiant" prob="0.75"/>
-		<entity name="zombieNurseGiant" prob="0.75"/>
-		<entity name="zombieJoeGiant" prob="0.75"/>
-		<entity name="zombieSteveGiant" prob="0.75"/>
-		<entity name="zombieTomClarkGiant" prob="0.75"/>
-		<entity name="zombieBusinessManGiant" prob="0.75"/>
-		<entity name="zombieBurntGiant" prob="0.75"/>
-		<entity name="zombieSpiderGiant" prob="0.75"/>
-		<entity name="zombieBoeGiant" prob="0.75"/>
-		<entity name="zombieJanitorGiant" prob="0.75"/>
-		<entity name="zombieMoeGiant" prob="0.75"/>
-		<entity name="zombieLabGiant" prob="0.75"/>
-		<entity name="zombieDarleneGiant" prob="0.75"/>
-		<entity name="zombieYoGiant" prob="0.75"/>
-		<entity name="zombieUtilityWorkerGiant" prob="0.75"/>
-		<entity name="zombieLumberjackGiant" prob="0.75"/>
-		<entity name="zombieFemaleFatGiant" prob="75"/>
-		<entity name="zombieFatHawaiianGiant" prob="0.75"/>
-		<entity name="zombieMaleHazmatGiant" prob="0.75"/>
-		<entity name="zombieFatCopGiant" prob="0.75"/>
-		<entity name="zombieSkateboarderGiant" prob="0.75"/>
-		<entity name="zombieSoldierGiant" prob="0.75"/>
-		<entity name="zombieWightGiantFeral" prob="0.75"/>
-		<entity name="zombieMutatedGiant" prob="0.75"/>
-		<entity name="zombieDemolitionGiant" prob="0.75"/>
-		<entity name="elementalClayWalkerFeral" prob="0.75"/>
-		<entity name="zombieScreamerGiant" prob="0.1"/>
-		<entity name="MotherClucker" prob="0.75"/>
-		<entity name="zombieBanshee" prob="0.75"/>
-		<entity name="ZombieBomber" prob="0.75"/>
-		<entity name="zombieCowhead" prob="0.75"/>
-		<entity name="ZombieJuggernaut" prob="0.75"/>
-		<entity name="zombieMotorhead" prob="0.75"/>
-		<entity name="zombiePsycho" prob="0.75"/>
-		<entity name="zombieScorcher" prob="0.75"/>
-		<entity name="ZombieUndertaker" prob="0.75"/>
-	</append>
+	<append xpath="/entitygroups">
+		<entitygroup name="PineforestZombiesDay">
+			<entity name="zombieArlene"/>
+			<entity name="zombieDarlene"/>
+			<entity name="zombieSteve"/>
+			<entity name="zombieYo"/>
+			<entity name="enForestFemale1"/>
+			<entity name="enForestFemale2"/>
+			<entity name="enForestFemale3"/>
+			<entity name="enForestFemale4"/>
+			<entity name="enForestFemale5"/>
+			<entity name="enForestMale1"/>
+			<entity name="enForestMale2"/>
+			<entity name="enForestMale3"/>
+			<entity name="enForestMale4"/>
+			<entity name="enForestMale5"/>	
+			<entity name="zombieBoe" prob="0.75" />
+			<entity name="zombieJoe" prob="0.75"/>
+			<entity name="zombieMarlene" prob="0.75"/>
+			<entity name="zombieMoe" prob="0.75"/>
+			<entity name="zombieTomClark" prob="0.75"/>
+			<entity name="enForestHikerFemale1" prob="0.75"/>
+			<entity name="enForestHikerFemale2" prob="0.75"/>
+			<entity name="enForestHikerMale1" prob="0.75"/>
+			<entity name="enForestHikerMale2" prob="0.75"/>	
+			<entity name="enJoggerFemale1" prob="0.5"/>
+			<entity name="enJoggerFemale2" prob="0.5"/>
+			<entity name="enJoggerFemale3" prob="0.5"/>
+			<entity name="enJoggerFemale4" prob="0.5"/>
+			<entity name="enJoggerFemale5" prob="0.5"/>
+			<entity name="enSchoolFemale1" prob="0.5"/>
+			<entity name="enSchoolFemale2" prob="0.5"/>
+			<entity name="enSchoolMale1" prob="0.5"/>
+			<entity name="enSchoolMale2" prob="0.5"/>
+			<entity name="enFarmerFemale1" prob="0.25"/>
+			<entity name="enFarmerFemale2" prob="0.25"/>
+			<entity name="enFarmerFemale3" prob="0.25"/>
+			<entity name="enFarmerMale1" prob="0.25"/>
+			<entity name="enFarmerMale2" prob="0.25"/>
+			<entity name="enPunkFemale1" prob="0.25"/>
+			<entity name="enPunkMale1" prob="0.25"/>
+			<entity name="enPunkFemale2" prob="0.25"/>
+			<entity name="enPunkMale2" prob="0.25"/>
+			<entity name="enPunkFemale3" prob="0.25"/>
+			<entity name="enPunkMale3" prob="0.25"/>
+			<entity name="enPunkFemale4" prob="0.25"/>
+			<entity name="enPunkMale4" prob="0.25"/>
+			<entity name="zombieSkateboarder" prob="0.25"/>
+			<entity name="zombieFatHawaiian" prob="0.15"/>			
+			<entity name="grandOutdoors" prob="0.1"/>
+			<entity name="enNurseHD" prob="0.1"/>
+			<entity name="zombieNurse" prob="0.1"/>
+			<entity name="zombiePartyGirl" prob="0.1"/>
+			<entity name="zombieBusinessMan" prob="0.1"/>
+			<entity name="zombieJanitor" prob="0.1"/>
+			<entity name="elementalClayWalker" prob=".05"/>
+			<entity name="elementalClayCrawler" prob=".05"/>
+			<entity name="elementalClayWalkerGiant" prob=".01"/>
+			<entity name="enElementalStoneCrawler" prob=".05"/>
+			<entity name="enElementalStoneWalker" prob=".05"/>
+			<entity name="enElementalStoneWalkerGiant" prob=".01"/>
+			<entity name="enElementalIronCrawler" prob=".05"/>
+			<entity name="enElementalIronWalker" prob=".05"/>	
+			<entity name="enElementalIronWalkerGiant" prob=".01"/>
+			<entity name="zombieSoldier" prob="0.025"/>
+			<entity name="enSoldierFemale1" prob="0.025"/>
+			<entity name="enSoldierMale1" prob="0.025"/>
+			<entity name="enSoldierFemale2" prob="0.025"/>
+			<entity name="enSoldierMale2" prob="0.025"/>
+			<entity name="enSoldier196" prob="0.025"/>	
+		</entitygroup>
+		<entitygroup name="PineforestZombiesNight">
+			<entity name="zombieArleneFeral"/>
+			<entity name="zombieDarleneFeral"/>
+			<entity name="zombieSteveFeral"/>
+			<entity name="zombieYoFeral"/>
+			<entity name="zombieBoeFeral" prob="0.5"/>
+			<entity name="zombieJoeFeral" prob="1"/>
+			<entity name="zombieMarleneFeral" prob="1"/>
+			<entity name="zombieMoeFeral" prob="1"/>
+			<entity name="zombieTomClarkFeral" prob="1"/>		
+			<entity name="enFarmerFemale1Feral" prob="0.25"/>
+			<entity name="enFarmerFemale2Feral" prob="0.25"/>
+			<entity name="enFarmerFemale3Feral" prob="0.25"/>
+			<entity name="enFarmerMale1Feral" prob="0.25"/>
+			<entity name="enFarmerMale2Feral" prob="0.25"/>		
+			<entity name="enPunkFemale1Feral" prob="0.25"/>
+			<entity name="enPunkMale1Feral" prob="0.25"/>
+			<entity name="enPunkFemale2Feral" prob="0.25"/>
+			<entity name="enPunkMale2Feral" prob="0.25"/>
+			<entity name="enPunkFemale3Feral" prob="0.25"/>
+			<entity name="enPunkMale3Feral" prob="0.25"/>
+			<entity name="enPunkFemale4Feral" prob="0.25"/>
+			<entity name="enPunkMale4Feral" prob="0.25"/>
+			<entity name="zombieSkateboarder" prob="0.25"/>
+			<entity name="zombieFatHawaiianFeral" prob="0.15"/>
+			<entity name="enJoggerFemale1Feral" prob="0.5"/>
+			<entity name="enJoggerFemale2Feral" prob="0.5"/>
+			<entity name="enJoggerFemale3Feral" prob="0.5"/>
+			<entity name="enJoggerFemale4Feral" prob="0.5"/>
+			<entity name="enJoggerFemale5Feral" prob="0.5"/>
+			<entity name="enFarmerGiant" prob="0.15"/>
+			<entity name="enPunkGiant" prob="0.15"/>
+			<entity name="zombieArleneGiant" prob="0.15"/>
+			<entity name="zombieMarleneGiant" prob="0.15"/>
+			<entity name="zombiePartyGirlGiant" prob="0.15"/>
+			<entity name="zombieNurseGiant" prob="0.15"/>
+			<entity name="zombieJoeGiant" prob="0.15"/>
+			<entity name="zombieSteveGiant" prob="0.15"/>
+			<entity name="zombieTomClarkGiant" prob="0.15"/>
+			<entity name="enBikerGiant" prob="0.1"/>
+			<entity name="zombieCowhead" prob="0.1"/>
+			<entity name="zombieBanshee" prob="0.1"/>
+			<entity name="MotherClucker" prob="0.1"/>
+			<entity name="ZombieUndertaker" prob="0.1"/>
+			<entity name="ZombieJuggernaut" prob="0.1"/>
+			<entity name="elementalClayWalkerFeral" prob=".05"/>
+			<entity name="elementalClayWalkerGiant" prob=".03"/>
+			<entity name="enElementalStoneWalkerFeral" prob=".05"/>
+			<entity name="enElementalStoneCrawlerFeral" prob=".05"/>
+			<entity name="enElementalStoneWalkerGiant" prob=".03"/>
+			<entity name="enElementalIronWalkerFeral" prob=".05"/>
+			<entity name="enElementalIronCrawlerFeral" prob=".05"/>
+			<entity name="enElementalIronWalkerGiant" prob=".03"/>
+			<entity name="enNurseHDFeral" prob="0.1"/>
+			<entity name="zombieNurseFeral" prob="0.1"/>
+			<entity name="zombiePartyGirlFeral" prob="0.1"/>
+			<entity name="zombieBusinessManFeral" prob="0.1"/>
+			<entity name="zombieJanitorFeral" prob="0.1"/>
+			<entity name="zombieSoldierFeral" prob="0.025"/>
+			<entity name="enSoldierFemale1Feral" prob="0.025"/>
+			<entity name="enSoldierMale1Feral" prob="0.025"/>
+			<entity name="enSoldierFemale2Feral" prob="0.025"/>
+			<entity name="enSoldierMale2Feral" prob="0.025"/>
+			<entity name="enSoldier196Feral" prob="0.025"/>
+		</entitygroup>
+		<!-- Adding more wasteland entities -->	
+		<entitygroup name="WastelandZombiesDay">
+			<entity name="enBiker1" prob="0.75"/>
+			<entity name="enBiker1Feral" prob="0.5"/>
+			<entity name="enBiker1Radiated" prob="0.25"/>
+			<entity name="enBiker2" prob="0.75"/>
+			<entity name="enBiker2Feral" prob="0.5"/>
+			<entity name="enBiker2Radiated" prob="0.25"/>
+			<entity name="enBiker3" prob="0.75"/>
+			<entity name="enBiker3Feral" prob="0.5"/>
+			<entity name="enBiker3Radiated" prob="0.25"/>
+			<entity name="enBiker4" prob="0.75"/>
+			<entity name="enBiker4Feral" prob="0.5"/>
+			<entity name="enBiker4Radiated" prob="0.25"/>
+			<entity name="enBikerGiant" prob="0.3"/>		
+			<entity name="enUtilityFemale1" prob="0.75"/>
+			<entity name="enUtilityFemale1Feral" prob="0.5"/>
+			<entity name="enUtilityFemale1Radiated" prob="0.25"/>
+			<entity name="enUtilityFemale2" prob="0.75"/>
+			<entity name="enUtilityFemale2Feral" prob="0.5"/>
+			<entity name="enUtilityFemale2Radiated" prob="0.25"/>
+			<entity name="enUtilityMale1" prob="0.75"/>
+			<entity name="enUtilityMale1Feral" prob="0.5"/>
+			<entity name="enUtilityMale1Radiated" prob="0.25"/>
+			<entity name="enUtilityMale2" prob="0.75"/>
+			<entity name="enUtilityMale2Feral" prob="0.5"/>
+			<entity name="enUtilityMale2Radiated" prob="0.25"/>
+			<entity name="enUtilityMale3" prob="0.75"/>
+			<entity name="enUtilityMale3Feral" prob="0.5"/>
+			<entity name="enUtilityMale3Radiated" prob="0.25"/>
+			<entity name="enUtilityMale4" prob="0.75"/>
+			<entity name="enUtilityMale4Feral" prob="0.5"/>
+			<entity name="enUtilityMale4Radiated" prob="0.25"/>
+			<entity name="enUtilityMale5" prob="0.75"/>
+			<entity name="enUtilityMale5Feral" prob="0.5"/>
+			<entity name="enUtilityMale5Radiated" prob="0.25"/>
+			<entity name="enUtilityGiant" prob="0.3"/>
+			<entity name="enPunkFemale1Feral" prob="0.5"/>
+			<entity name="enPunkFemale2Feral" prob="0.5"/>
+			<entity name="enPunkFemale3Feral" prob="0.5"/>
+			<entity name="enPunkFemale4Feral" prob="0.5"/>
+			<entity name="enPunkMale1Feral" prob="0.5"/>
+			<entity name="enPunkMale2Feral" prob="0.5"/>
+			<entity name="enPunkMale3Feral" prob="0.5"/>
+			<entity name="enPunkMale4Feral" prob="0.5"/>		
+			<entity name="enPunkGiant" prob="0.3"/>
+			<entity name="zombieUtilityWorker" prob="0.75"/>
+			<entity name="zombieUtilityWorkerFeral" prob="0.5"/>
+			<entity name="zombieUtilityWorkerRadiated" prob="0.25"/>
+			<entity name="zombieUtilityWorkerGiant" prob="0.3"/>	
+			<entity name="zombieSoldier" prob="0.75"/>
+			<entity name="zombieSoldierFeral" prob="0.5"/>
+			<entity name="zombieSoldierRadiated" prob="0.25"/>
+			<entity name="zombieSoldierGiant" prob="0.3"/>	
+			<entity name="enSoldier196" prob="0.75"/>
+			<entity name="enSoldier196Feral" prob="0.5"/>
+			<entity name="enSoldier196Radiated" prob="0.25"/>
+			<entity name="enSoldier196Giant" prob="0.3"/>			
+			<entity name="enSoldierFemale1" prob="0.75"/>
+			<entity name="enSoldierFemale1Feral" prob="0.5"/>
+			<entity name="enSoldierFemale1Radiated" prob="0.25"/>
+			<entity name="enSoldierFemale2" prob="0.75"/>
+			<entity name="enSoldierFemale2Feral" prob="0.5"/>
+			<entity name="enSoldierFemale2Radiated" prob="0.25"/>
+			<entity name="enSoldierMale1" prob="0.75"/>
+			<entity name="enSoldierMale1Feral" prob="0.5"/>
+			<entity name="enSoldierMale1Radiated" prob="0.25"/>
+			<entity name="enSoldierMale2" prob="0.75"/>
+			<entity name="enSoldierMale2Feral" prob="0.5"/>
+			<entity name="enSoldierMale2Radiated" prob="0.25"/>
+			<entity name="enSoldierGiant" prob="0.3"/>
+			<entity name="enSwatMale1" prob="0.75"/>
+			<entity name="enSwatMale1Feral" prob="0.5"/>
+			<entity name="enSwatMale1Radiated" prob="0.25"/>
+			<entity name="enSwatMale2" prob="0.75"/>
+			<entity name="enSwatMale2Feral" prob="0.5"/>
+			<entity name="enSwatMale2Radiated" prob="0.25"/>
+			<entity name="enSwatMale3" prob="0.75"/>
+			<entity name="enSwatMale3Feral" prob="0.5"/>
+			<entity name="enSwatMale3Radiated" prob="0.25"/>
+			<entity name="enSwatGiant" prob="0.3"/>
+			<entity name="zombieSoldier" prob="0.75"/>
+			<entity name="zombieSoldierFeral" prob="0.5"/>
+			<entity name="zombieSoldierRadiated" prob="0.25"/>
+
+			
+			<entity name="zombieLab" prob="0.75"/>
+			<entity name="zombieLabFeral" prob="0.5"/>
+			<entity name="zombieLabRadiated" prob="0.25"/>
+			<entity name="zombieLabGiant" prob="0.3"/>		
+			<entity name="zombiePartyGirl" prob="0.75"/>
+			<entity name="zombiePartyGirlFeral" prob="0.5"/>
+			<entity name="zombiePartyGirlRadiated" prob="0.25"/>
+			<entity name="zombiePartyGirlGiant" prob="0.3"/>
+			<entity name="zombieBurnt" prob="0.75"/>
+			<entity name="zombieBurntFeral" prob="0.5"/>
+			<entity name="zombieBurntRadiated" prob="0.25"/>
+			<entity name="zombieBurntGiant" prob="0.3"/>
+			<entity name="zombieDemolition" prob="0.5"/>
+			<entity name="elementalClayWalkerFeral" prob="0.5"/>
+			<entity name="elementalClayWalkerGiant" prob="0.25"/>
+			<entity name="elementalClayWalkerGiantFeral" prob="0.1"/>
+			<entity name="enElementalIronWalkerFeral" prob="0.5"/>
+			<entity name="enElementalIronCrawlerFeral" prob="0.5"/>
+			<entity name="enElementalIronWalkerGiant" prob="0.25"/>
+			<entity name="enElementalIronWalkerGiantFeral" prob="0.1"/>
+			<entity name="enElementalStoneWalkerFeral" prob="0.5"/>
+			<entity name="enElementalStoneCrawlerFeral" prob="0.5"/>
+			<entity name="enElementalStoneWalkerGiant" prob="0.25"/>
+			<entity name="enElementalStoneWalkerGiantFeral" prob="0.1"/>
+			<entity name="zombieWightFeral" prob="0.75"/>
+			<entity name="zombieWightRadiated" prob="0.5"/>
+			<entity name="zombieWightGiantFeral" prob="0.25"/>			
+			
+			
+
+			
+			<entity name="enMinerGiant" prob="0.5"/>
+			<entity name="enBikerGiant" prob="0.5"/>
+			<entity name="animalSpiderPig" prob="0.5"/>
+			<entity name="zombieArleneGiant" prob="0.5"/>
+			<entity name="zombieMarleneGiant" prob="0.5"/>
+			<entity name="zombiePartyGirlGiant" prob="0.5"/>
+			<entity name="zombieNurseGiant" prob="0.5"/>
+			<entity name="zombieJoeGiant" prob="0.5"/>
+			<entity name="zombieSteveGiant" prob="0.5"/>
+			<entity name="zombieTomClarkGiant" prob="0.5"/>
+			<entity name="zombieBusinessManGiant" prob="0.5"/>
+			<entity name="zombieBurntGiant" prob="0.5"/>
+			<entity name="zombieSpiderGiant" prob="0.5"/>
+			<entity name="zombieBoeGiant" prob="0.5"/>
+			<entity name="zombieJanitorGiant" prob="0.5"/>
+			<entity name="zombieMoeGiant" prob="0.5"/>
+			<entity name="zombieLabGiant" prob="0.5"/>
+			<entity name="zombieDarleneGiant" prob="0.5"/>
+			<entity name="zombieYoGiant" prob="0.5"/>
+			<entity name="zombieUtilityWorkerGiant" prob="0.5"/>
+			<entity name="zombieFemaleFatGiant" prob="0.5"/>
+			<entity name="zombieFatHawaiianGiant" prob="0.5"/>
+			<entity name="zombieMaleHazmatGiant" prob="0.5"/>
+			<entity name="zombieFatCopGiant" prob="0.5"/>
+			<entity name="zombieSkateboarderGiant" prob="0.5"/>
+			<entity name="zombieSoldierGiant" prob="0.5"/>
+			<entity name="zombieWightGiantFeral" prob="0.5"/>
+			<entity name="zombieMutatedGiant" prob="0.5"/>
+			<entity name="zombieDemolitionGiant" prob="0.25"/>
+
+			<entity name="grandOutdoors" prob="0.25"/>
+			<entity name="MotherClucker" prob="0.25"/>
+			<entity name="zombieBanshee" prob="0.25"/>
+			<entity name="zombieScreamerFeral" prob="0.25"/>
+			<entity name="ZombieBomber" prob="0.25"/>
+			<entity name="zombieCowhead" prob="0.25"/>
+			<entity name="ZombieJuggernaut" prob="0.25"/>
+			<entity name="zombieMotorhead" prob="0.25"/>
+			<entity name="zombiePsycho" prob="0.25"/>
+			<entity name="zombieScorcher" prob="0.25"/>
+			<entity name="ZombieUndertaker" prob="0.5"/>
+		</entitygroup>
+		<entitygroup name="WastelandZombiesNight">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<entity name="enPunkGiant" prob="1.00"/>
+			<entity name="zombieSoldierGiant" prob="1.00"/>
+			<entity name="enSoldier196Giant" prob="1.00"/>
+			<entity name="enSwatGiant" prob="1.00"/>
+			<entity name="enMinerGiant" prob="1.00"/>
+			<entity name="enBikerGiant" prob="1.00"/>
+			<entity name="zombieArleneFeral" prob="1"/>
+			<entity name="zombieBikerFeral" prob="0.5"/>
+			<entity name="zombieBoeFeral" prob="1"/>
+			<entity name="zombieBusinessManFeral" prob="1"/>
+			<entity name="zombieDemolition" prob="1"/>
+			<entity name="zombieFatCopFeral" prob="1"/>
+			<entity name="zombieFatHawaiianFeral" prob="1"/>
+			<entity name="zombieFemaleFatFeral" prob="1"/>
+			<entity name="zombieJanitorFeral" prob="1"/>
+			<entity name="zombieLabFeral" prob="1"/>
+			<entity name="zombieMaleHazmatFeral" prob="1"/>
+			<entity name="zombiePartyGirlFeral" prob="1"/>
+			<entity name="zombieSkateboarderFeral" prob="1"/>
+			<entity name="zombieSoldierFeral" prob="1"/>
+			<entity name="zombieSpiderFeral" prob="1"/>
+			<entity name="zombieUtilityWorkerFeral" prob="1"/>
+			<entity name="zombieWightFeral" prob="1"/>
+			<entity name="zombieJoeFeral" prob="1"/>
+			<entity name="elementalClayWalkerFeral" prob="1"/>		
+			<entity name="enElementalSandWalkerFeral" prob="1"/>
+			<entity name="enElementalStoneWalkerFeral" prob="1"/>
+			<entity name="enElementalIronWalkerFeral" prob="1"/>
+			<entity name="elementalClayWalkerGiant" prob="0.5"/>
+			<entity name="elementalShaleWalkerGiant" prob="0.5"/>
+			<entity name="elementalNitrateWalkerGiant" prob="0.5"/>
+			<entity name="elementalCoalWalkerGiant" prob="0.5"/>
+			<entity name="enElementalSandWalkerGiant" prob="0.5"/>
+			<entity name="enElementalStoneWalkerGiant" prob="0.5"/>
+			<entity name="enElementalIronWalkerGiant" prob="0.5"/>
+			<entity name="elementalClayWalkerGiantFeral" prob="0.25"/>
+			<entity name="elementalShaleWalkerGiantFeral" prob="0.25"/>
+			<entity name="elementalNitrateWalkerGiantFeral" prob="0.25"/>
+			<entity name="elementalCoalWalkerGiantFeral" prob="0.25"/>
+			<entity name="enElementalSandWalkerGiantFeral" prob="0.25"/>
+			<entity name="enElementalStoneWalkerGiantFeral" prob="0.25"/>
+			<entity name="enElementalIronWalkerGiantFeral" prob="0.25"/>
+			<entity name="animalSpiderPig" prob="1"/>
+			<entity name="zombieArleneGiant" prob="0.75"/>
+			<entity name="zombieMarleneGiant" prob="0.75"/>
+			<entity name="zombiePartyGirlGiant" prob="0.75"/>
+			<entity name="zombieNurseGiant" prob="0.75"/>
+			<entity name="zombieJoeGiant" prob="0.75"/>
+			<entity name="zombieSteveGiant" prob="0.75"/>
+			<entity name="zombieTomClarkGiant" prob="0.75"/>
+			<entity name="zombieBusinessManGiant" prob="0.75"/>
+			<entity name="zombieBurntGiant" prob="0.75"/>
+			<entity name="zombieSpiderGiant" prob="0.75"/>
+			<entity name="zombieBoeGiant" prob="0.75"/>
+			<entity name="zombieJanitorGiant" prob="0.75"/>
+			<entity name="zombieMoeGiant" prob="0.75"/>
+			<entity name="zombieLabGiant" prob="0.75"/>
+			<entity name="zombieDarleneGiant" prob="0.75"/>
+			<entity name="zombieYoGiant" prob="0.75"/>
+			<entity name="zombieUtilityWorkerGiant" prob="0.75"/>
+			<entity name="zombieLumberjackGiant" prob="0.75"/>
+			<entity name="zombieFemaleFatGiant" prob="75"/>
+			<entity name="zombieFatHawaiianGiant" prob="0.75"/>
+			<entity name="zombieMaleHazmatGiant" prob="0.75"/>
+			<entity name="zombieFatCopGiant" prob="0.75"/>
+			<entity name="zombieSkateboarderGiant" prob="0.75"/>
+			<entity name="zombieSoldierGiant" prob="0.75"/>
+			<entity name="zombieWightGiantFeral" prob="0.75"/>
+			<entity name="zombieMutatedGiant" prob="0.75"/>
+			<entity name="zombieDemolitionGiant" prob="0.75"/>
+			<entity name="elementalClayWalkerFeral" prob="0.75"/>
+			<entity name="zombieScreamerGiant" prob="0.1"/>
+			<entity name="MotherClucker" prob="0.75"/>
+			<entity name="zombieBanshee" prob="0.75"/>
+			<entity name="ZombieBomber" prob="0.75"/>
+			<entity name="zombieCowhead" prob="0.75"/>
+			<entity name="ZombieJuggernaut" prob="0.75"/>
+			<entity name="zombieMotorhead" prob="0.75"/>
+			<entity name="zombiePsycho" prob="0.75"/>
+			<entity name="zombieScorcher" prob="0.75"/>
+			<entity name="ZombieUndertaker" prob="0.75"/>
+		</entitygroup>
 	
 	<!-- Adding more desert entities -->
-	<append xpath="/entitygroups/entitygroup[@name='DesertZombiesDay']">
-		<entity name="elementalClayWalker" prob="1"/>
-		<entity name="elementalClayCrawler" prob="1"/>
-		<entity name="elementalShaleWalker" prob="1"/>
-		<entity name="elementalShaleCrawler" prob="1"/>
-		<entity name="zombieArlene" prob="1"/>
-		<entity name="zombieDarlene" prob="1"/>
-		<entity name="zombieSteve" prob="1"/>
-		<entity name="zombieYo" prob="1"/>
-		<entity name="zombieBoe" prob="1"/>
-		<entity name="enDesertMiner1" prob="1"/>
-		<entity name="enDesertMiner2" prob="1"/>
-		<entity name="enDesertMiner3" prob="1"/>
-		<entity name="zombieFatHawaiian" prob="0.5"/>
-		<entity name="zombieFemaleFat" prob="0.5"/>
-		<entity name="enUtilityFemale1" prob="0.25"/>
-		<entity name="enUtilityFemale2" prob="0.25"/>
-		<entity name="enUtilityMale1" prob="0.25"/>
-		<entity name="enUtilityMale2" prob="0.25"/>
-		<entity name="enSoldier196" prob="0.25"/>
-		<entity name="enSoldierFemale1" prob="0.25"/>
-		<entity name="enSoldierFemale2" prob="0.25"/>
-		<entity name="enSoldierMale1" prob="0.25"/>
-		<entity name="enSoldierMale2" prob="0.25"/>
-		<entity name="enSwatMale1" prob="0.25"/>
-		<entity name="enSwatMale2" prob="0.25"/>
-		<entity name="enMinerGiant" prob="0.1"/>
-		<entity name="grandOutdoors" prob="0.1"/>
-	</append>
-	<append xpath="/entitygroups/entitygroup[@name='DesertZombiesNight']">
-		<entity name="elementalClayWalkerFeral" prob="1"/>
-		<entity name="elementalShaleWalkerFeral" prob="1"/>
-		<entity name="zombieArleneFeral" prob="1"/>
-		<entity name="zombieDarleneFeral" prob="1"/>
-		<entity name="zombieSteveFeral" prob="1"/>
-		<entity name="zombieYoFeral" prob="1"/>
-		<entity name="zombieBoeFeral" prob="1"/>
-		<entity name="zombieFatHawaiianFeral" prob="0.5"/>
-		<entity name="zombieFemaleFatFeral" prob="0.5"/>
-		<entity name="enMinerGiant" prob="0.5"/>
-		<entity name="enDesertMiner1Feral" prob="1"/>
-		<entity name="enDesertMiner2Feral" prob="1"/>
-		<entity name="enDesertMiner3Feral" prob="1"/>
-		<entity name="zombieFatHawaiianFeral" prob="0.5"/>
-		<entity name="zombieFemaleFatFeral" prob="0.5"/>
-		<entity name="enUtilityFemale1Feral" prob="0.25"/>
-		<entity name="enUtilityFemale2Feral" prob="0.25"/>
-		<entity name="enUtilityMale1Feral" prob="0.25"/>
-		<entity name="enUtilityMale2Feral" prob="0.25"/>
-		<entity name="enSoldier196Feral" prob="0.25"/>
-		<entity name="enSoldierFemale1Feral" prob="0.25"/>
-		<entity name="enSoldierFemale2Feral" prob="0.25"/>
-		<entity name="enSoldierMale1Feral" prob="0.25"/>
-		<entity name="enSoldierMale2Feral" prob="0.25"/>
-		<entity name="enSwatMale2Feral" prob="0.25"/>
-		<entity name="enSwatMale3Feral" prob="0.25"/>
-	</append>
+		<entitygroup name="DesertZombiesDay">
+			<entity name="zombieSteveCrawler" prob="2"/>	
+			<entity name="zombieArlene" prob="1"/>
+			<entity name="zombieDarlene" prob="1"/>
+			<entity name="zombieSteve" prob="1"/>
+			<entity name="zombieYo" prob="1"/>
+			<entity name="zombieBoe" prob="1"/>
+			<entity name="enDesertMiner1" prob="0.8"/>
+			<entity name="enDesertMiner2" prob="0.8"/>
+			<entity name="enDesertMiner3" prob="0.8"/>
+			<entity name="zombieFatHawaiian" prob="0.5"/>
+			<entity name="zombieFemaleFat" prob="0.5"/>		
+			<entity name="enSchoolFemale1" prob="0.5"/>
+			<entity name="enSchoolFemale2" prob="0.5"/>
+			<entity name="enSchoolMale1" prob="0.5"/>
+			<entity name="enSchoolMale2" prob="0.5"/>			
+			<entity name="elementalClayWalker" prob="0.05"/>
+			<entity name="elementalClayCrawler" prob="0.05"/>
+			<entity name="elementalClayWalkerGiant" prob="0.01"/>
+			<entity name="elementalShaleWalker" prob="0.05"/>
+			<entity name="elementalShaleCrawler" prob="0.05"/>
+			<entity name="elementalShaleWalkerGiant" prob="0.01"/>
+			<entity name="enElementalSandWalker" prob="0.05"/>
+			<entity name="enElementalSandCrawler" prob="0.05"/>
+			<entity name="enElementalSandWalkerGiant" prob="0.01"/>
+			<entity name="enElementalStoneWalker" prob="0.05"/>
+			<entity name="enElementalStoneCrawler" prob="0.05"/>			
+			<entity name="enElementalStoneWalkerGiant" prob="0.01"/>			
+			<entity name="enUtilityFemale1" prob="0.25"/>
+			<entity name="enUtilityFemale2" prob="0.25"/>
+			<entity name="enUtilityMale1" prob="0.25"/>
+			<entity name="enUtilityMale2" prob="0.25"/>
+			<entity name="enNurseHD" prob="0.1"/>
+			<entity name="zombieNurse" prob="0.1"/>
+			<entity name="zombiePartyGirl" prob="0.5"/>
+			<entity name="zombieBusinessMan" prob="0.5"/>
+			<entity name="zombieJanitor" prob="0.25"/>
+			<entity name="enSoldier196" prob="0.25"/>
+			<entity name="enSoldierFemale1" prob="0.25"/>
+			<entity name="enSoldierFemale2" prob="0.25"/>
+			<entity name="enSoldierMale1" prob="0.25"/>
+			<entity name="enSoldierMale2" prob="0.25"/>
+			<entity name="enSwatMale1" prob="0.25"/>
+			<entity name="enSwatMale2" prob="0.25"/>
+			<entity name="enDesertGiant" prob="0.3"/>
+			<entity name="enMinerGiant" prob="0.1"/>
+			<entity name="grandOutdoors" prob="0.1"/>
+		</entitygroup>
+		<entitygroup name="DesertZombiesNight">
+			<entity name="enUtilityFemale1Feral" prob="0.25"/>
+			<entity name="enUtilityFemale2Feral" prob="0.25"/>
+			<entity name="enUtilityMale1Feral" prob="0.25"/>
+			<entity name="enUtilityMale2Feral" prob="0.25"/>
+			<entity name="enSoldier196Feral" prob="0.25"/>
+			<entity name="enSoldierFemale1Feral" prob="0.25"/>
+			<entity name="enSoldierFemale2Feral" prob="0.25"/>
+			<entity name="enSoldierMale1Feral" prob="0.25"/>
+			<entity name="enSoldierMale2Feral" prob="0.25"/>
+			<entity name="enSwatMale2Feral" prob="0.25"/>
+			<entity name="enSwatMale3Feral" prob="0.25"/>
+			<entity name="enDesertMiner1Feral" prob="0.8"/>
+			<entity name="enDesertMiner2Feral" prob="0.8"/>
+			<entity name="enDesertMiner3Feral" prob="0.8"/>
+			<entity name="zombieFatHawaiianFeral" prob="0.5"/>
+			<entity name="zombieFemaleFatFeral" prob="0.5"/>		
+			<entity name="enSchoolFemale1Feral" prob="0.5"/>
+			<entity name="enSchoolFemale2Feral" prob="0.5"/>
+			<entity name="enSchoolMale1Feral" prob="0.5"/>
+			<entity name="enSchoolMale2Feral" prob="0.5"/>			
+			<entity name="elementalClayWalkerFeral" prob="0.05"/>
+			<entity name="elementalClayCrawler" prob="0.05"/>
+			<entity name="elementalClayWalkerGiant" prob="0.02"/>
+			<entity name="elementalClayWalkerGiantFeral" prob="0.01"/>
+			<entity name="elementalShaleWalkerFeral" prob="0.05"/>
+			<entity name="elementalShaleCrawler" prob="0.05"/>
+			<entity name="elementalShaleWalkerGiant" prob="0.02"/>
+			<entity name="elementalShaleWalkerGiantFeral" prob="0.01"/>
+			<entity name="enElementalSandWalker" prob="0.05"/>
+			<entity name="enElementalSandCrawler" prob="0.05"/>
+			<entity name="enElementalSandWalkerGiant" prob="0.02"/>
+			<entity name="enElementalSandWalkerGiantFeral" prob="0.01"/>
+			<entity name="enElementalStoneWalker" prob="0.05"/>
+			<entity name="enElementalStoneCrawler" prob="0.05"/>			
+			<entity name="enElementalStoneWalkerGiant" prob="0.02"/>
+			<entity name="enElementalStoneWalkerGiantFeral" prob="0.01"/>			
+			<entity name="enUtilityFemale1Feral" prob="0.25"/>
+			<entity name="enUtilityFemale2Feral" prob="0.25"/>
+			<entity name="enUtilityMale1Feral" prob="0.25"/>
+			<entity name="enUtilityMale2Feral" prob="0.25"/>
+			<entity name="enNurseHDFeral" prob="0.1"/>
+			<entity name="zombieNurseFeral" prob="0.1"/>
+			<entity name="zombiePartyGirlFeral" prob="0.5"/>
+			<entity name="zombieBusinessManFeral" prob="0.5"/>
+			<entity name="zombieJanitorFeral" prob="0.25"/>
+			<entity name="enSoldier196Feral" prob="0.25"/>
+			<entity name="enSoldierFemale1Feral" prob="0.25"/>
+			<entity name="enSoldierFemale2Feral" prob="0.25"/>
+			<entity name="enSoldierMale1Feral" prob="0.25"/>
+			<entity name="enSoldierMale2Feral" prob="0.25"/>
+			<entity name="enSwatMale1Feral" prob="0.25"/>
+			<entity name="enSwatMale2Feral" prob="0.25"/>
+			<entity name="enDesertGiant" prob="0.5"/>
+			<entity name="zombieCowhead" prob="0.1"/>
+			<entity name="zombieMotorhead" prob="0.1"/>
+			<entity name="ZombieUndertaker" prob="0.1"/>
+			<entity name="ZombieJuggernaut" prob="0.1"/>
+		</entitygroup>
+	
 	<!-- Adding more snow entities -->	
-	<append xpath="/entitygroups/entitygroup[@name='SnowZombiesDay']">
-		
-	</append>
-	<append xpath="/entitygroups/entitygroup[@name='SnowZombiesNight']">
-		
+		<entitygroup name="SnowZombiesDay">
+			<entity name="zombieBoe" prob="1"/>
+			<entity name="zombieBusinessMan" prob="1"/>
+			<entity name="zombieDarlene" prob="1"/>	
+			<entity name="zombieJoe" prob="1"/>
+			<entity name="zombieMoe" prob="1"/>
+			<entity name="zombieSteve" prob="1"/>
+			<entity name="zombieTomClark" prob="1"/>
+			<entity name="zombieLumberjack" prob="1.5" />
+			<entity name="enLumberjack1" prob="1.5"/>
+			<entity name="enLumberjack2" prob="1.5"/>
+			<entity name="enLumberjack3" prob="1.5"/>
+			<entity name="enLumberjack4" prob="1.5"/>
+			<entity name="zombieUtilityWorker" prob="0.25"/>
+			<entity name="zombieBusinessMan" prob="1"/>
+			<entity name="enPunkFemale1" prob="0.5"/>
+			<entity name="enPunkMale1" prob="0.5"/>
+			<entity name="enPunkFemale2" prob="0.5"/>
+			<entity name="enPunkMale2" prob="0.5"/>
+			<entity name="enPunkFemale3" prob="0.5"/>
+			<entity name="enPunkMale3" prob="0.5"/>
+			<entity name="enPunkFemale4" prob="0.5"/>
+			<entity name="enPunkMale4" prob="0.5"/>
+			<entity name="zombieFemaleFat" prob="0.5"/>
+			<entity name="enUtilityFemale1" prob="0.25"/>
+			<entity name="enUtilityFemale2" prob="0.25"/>
+			<entity name="enUtilityMale1" prob="0.25"/>
+			<entity name="enUtilityMale2" prob="0.25"/>
+			<entity name="enBiker1" prob="0.25"/>
+			<entity name="enBiker2" prob="0.25"/>
+			<entity name="enBiker3" prob="0.25"/>
+			<entity name="enBiker4" prob="0.25"/>
+			<entity name="zombieJanitor" prob="0.25"/>		
+			<entity name="zombieNurse" prob="0.1"/>
+			<entity name="enNurseHD" prob="0.1"/>		
+			<entity name="zombieFatCop" prob="0.1"/>
+			<entity name="enSoldier196" prob="0.05"/>
+			<entity name="enSoldierFemale1" prob="0.05"/>
+			<entity name="enSoldierFemale2" prob="0.05"/>
+			<entity name="enSoldierMale1" prob="0.05"/>
+			<entity name="enSoldierMale2" prob="0.05"/>
+			<entity name="enSwatMale1" prob="0.02"/>
+			<entity name="enSwatMale2" prob="0.02"/>
+			<entity name="elementalCoalWalker" prob=".05"/>
+			<entity name="elementalCoalCrawler" prob=".05"/>
+			<entity name="elementalCoalWalkerGiant" prob=".01"/>
+			<entity name="elementalNitrateCrawler" prob=".05"/>
+			<entity name="elementalNitrateWalker" prob=".05"/>
+			<entity name="elementalNitrateWalkerGiant" prob=".01"/>
+			<entity name="grandOutdoors" prob="0.1"/>
+			<entity name="enSnowGiant" prob="0.3"/>
+		</entitygroup>
+		<entitygroup name="SnowZombiesNight">
+			<entity name="zombieBoeFeral" prob="1"/>
+			<entity name="zombieBusinessManFeral" prob="1"/>
+			<entity name="zombieDarleneFeral" prob="1"/>		
+			<entity name="zombieJoeFeral" prob="1"/>
+			<entity name="zombieMoeFeral" prob="1"/>
+			<entity name="zombieSteveFeral" prob="1"/>
+			<entity name="zombieTomClarkFeral" prob="1"/>
+			<entity name="zombieUtilityWorkerFeral" prob="0.25"/>
+			<entity name="zombieBusinessManFeral" prob="1"/>
+			<entity name="enPunkFemale1Feral" prob="0.5"/>
+			<entity name="enPunkMale1Feral" prob="0.5"/>
+			<entity name="enPunkFemale2Feral" prob="0.5"/>
+			<entity name="enPunkMale2Feral" prob="0.5"/>
+			<entity name="enPunkFemale3Feral" prob="0.5"/>
+			<entity name="enPunkMale3Feral" prob="0.5"/>
+			<entity name="enPunkFemale4Feral" prob="0.5"/>
+			<entity name="enPunkMale4Feral" prob="0.5"/>
+			<entity name="zombieFemaleFatFeral" prob="0.5"/>
+			<entity name="enUtilityFemale1Feral" prob="0.25"/>
+			<entity name="enUtilityFemale2Feral" prob="0.25"/>
+			<entity name="enUtilityMale1Feral" prob="0.25"/>
+			<entity name="enUtilityMale2Feral" prob="0.25"/>
+			<entity name="enBiker1Feral" prob="0.25"/>
+			<entity name="enBiker2Feral" prob="0.25"/>
+			<entity name="enBiker3Feral" prob="0.25"/>
+			<entity name="enBiker4Feral" prob="0.25"/>
+			<entity name="zombieJanitorFeral" prob="0.25"/>	
+			<entity name="zombieWightFeral" prob="0.2"/>			
+			<entity name="zombieNurseFeral" prob="0.1"/>
+			<entity name="enNurseHDFeral" prob="0.1"/>		
+			<entity name="zombieFatCopFeral" prob="0.1"/>
+			<entity name="enSoldier196Feral" prob="0.05"/>
+			<entity name="enSoldierFemale1Feral" prob="0.05"/>
+			<entity name="enSoldierFemale2Feral" prob="0.05"/>
+			<entity name="enSoldierMale1Feral" prob="0.05"/>
+			<entity name="enSoldierMale2Feral" prob="0.05"/>
+			<entity name="enSwatMale1Feral" prob="0.02"/>
+			<entity name="enSwatMale2Feral" prob="0.02"/>
+			<entity name="elementalCoalWalkerFeral" prob=".05"/>
+			<entity name="elementalCoalWalkerGiant" prob=".1"/>
+			<entity name="elementalNitrateWalkerFeral" prob=".05"/>
+			<entity name="elementalNitrateWalkerGiant" prob=".1"/>
+			<entity name="zombieCowhead" prob="0.1"/>
+			<entity name="zombieBanshee" prob="0.1"/>
+			<entity name="ZombieUndertaker" prob="0.1"/>
+			<entity name="ZombieJuggernaut" prob="0.1"/>
+			<entity name="enSnowGiant" prob="0.75" />
+		</entitygroup>
 	</append>
 	<!-- Adding another zombie scout -->	
 	<append xpath="/entitygroups/entitygroup[@name='ZombieScouts']">
