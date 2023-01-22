@@ -1197,7 +1197,7 @@
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
 			</effect_group>
 		</entity_class>
-		<entity_class name="enElementalSandWalkerGiant" extends="elementalShaleWalker">
+		<entity_class name="enElementalSandWalkerGiant" extends="enElementalSandWalker">
 			<property name="Tags" value="entity,zombie,walker,umazombie,enKnockdown25"/>
 			<property name="HandItem" value="enHand_elementalSandGiant"/>
 			<property name="SizeScale" value="1.35"/>
@@ -4482,7 +4482,7 @@
 			<property name="Faction" value="none"/>	
 		</entity_class>	
 		<entity_class name="EntityLootContainerSnowGiant">	<property name="HideInSpawnMenu" value="true"/>
-			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackBluePrefab.prefab"/>
 			<property name="ModelType" value="Custom"/>
 			<property name="Prefab" value="Backpack"/>
 			<property name="Class" value="EntityLootContainer"/>

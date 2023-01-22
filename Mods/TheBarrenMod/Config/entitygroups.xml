@@ -168,15 +168,15 @@
 			<entity name="zombiePartyGirl" prob="0.1"/>
 			<entity name="zombieBusinessMan" prob="0.1"/>
 			<entity name="zombieJanitor" prob="0.1"/>
-			<entity name="elementalClayWalker" prob=".05"/>
-			<entity name="elementalClayCrawler" prob=".05"/>
-			<entity name="elementalClayWalkerGiant" prob=".01"/>
-			<entity name="enElementalStoneCrawler" prob=".05"/>
-			<entity name="enElementalStoneWalker" prob=".05"/>
-			<entity name="enElementalStoneWalkerGiant" prob=".01"/>
-			<entity name="enElementalIronCrawler" prob=".05"/>
-			<entity name="enElementalIronWalker" prob=".05"/>	
-			<entity name="enElementalIronWalkerGiant" prob=".01"/>
+			<entity name="elementalClayWalker" prob=".1"/>
+			<entity name="elementalClayCrawler" prob=".1"/>
+			<entity name="elementalClayWalkerGiant" prob=".05"/>
+			<entity name="enElementalStoneCrawler" prob=".1"/>
+			<entity name="enElementalStoneWalker" prob=".1"/>
+			<entity name="enElementalStoneWalkerGiant" prob=".05"/>
+			<entity name="enElementalIronCrawler" prob=".1"/>
+			<entity name="enElementalIronWalker" prob=".1"/>	
+			<entity name="enElementalIronWalkerGiant" prob=".05"/>
 			<entity name="zombieSoldier" prob="0.025"/>
 			<entity name="enSoldierFemale1" prob="0.025"/>
 			<entity name="enSoldierMale1" prob="0.025"/>
@@ -229,13 +229,13 @@
 			<entity name="MotherClucker" prob="0.1"/>
 			<entity name="ZombieUndertaker" prob="0.1"/>
 			<entity name="ZombieJuggernaut" prob="0.1"/>
-			<entity name="elementalClayWalkerFeral" prob=".05"/>
-			<entity name="elementalClayWalkerGiant" prob=".03"/>
-			<entity name="enElementalStoneWalkerFeral" prob=".05"/>
-			<entity name="enElementalStoneCrawlerFeral" prob=".05"/>
+			<entity name="elementalClayWalkerFeral" prob=".1"/>
+			<entity name="elementalClayWalkerGiant" prob=".05"/>
+			<entity name="enElementalStoneWalkerFeral" prob=".1"/>
+			<entity name="enElementalStoneCrawlerFeral" prob=".1"/>
 			<entity name="enElementalStoneWalkerGiant" prob=".03"/>
-			<entity name="enElementalIronWalkerFeral" prob=".05"/>
-			<entity name="enElementalIronCrawlerFeral" prob=".05"/>
+			<entity name="enElementalIronWalkerFeral" prob=".1"/>
+			<entity name="enElementalIronCrawlerFeral" prob=".1"/>
 			<entity name="enElementalIronWalkerGiant" prob=".03"/>
 			<entity name="enNurseHDFeral" prob="0.1"/>
 			<entity name="zombieNurseFeral" prob="0.1"/>
@@ -549,18 +549,15 @@
 			<entity name="enSchoolFemale1" prob="0.5"/>
 			<entity name="enSchoolFemale2" prob="0.5"/>
 			<entity name="enSchoolMale1" prob="0.5"/>
-			<entity name="enSchoolMale2" prob="0.5"/>			
-			<entity name="elementalClayWalker" prob="0.05"/>
-			<entity name="elementalClayCrawler" prob="0.05"/>
-			<entity name="elementalClayWalkerGiant" prob="0.01"/>
-			<entity name="elementalShaleWalker" prob="0.05"/>
-			<entity name="elementalShaleCrawler" prob="0.05"/>
+			<entity name="enSchoolMale2" prob="0.5"/>
+			<entity name="elementalShaleWalker" prob="0.1"/>
+			<entity name="elementalShaleCrawler" prob="0.1"/>
 			<entity name="elementalShaleWalkerGiant" prob="0.01"/>
-			<entity name="enElementalSandWalker" prob="0.05"/>
-			<entity name="enElementalSandCrawler" prob="0.05"/>
-			<entity name="enElementalSandWalkerGiant" prob="0.01"/>
-			<entity name="enElementalStoneWalker" prob="0.05"/>
-			<entity name="enElementalStoneCrawler" prob="0.05"/>			
+			<entity name="enElementalSandWalker" prob="0.25"/>
+			<entity name="enElementalSandCrawler" prob="0.25"/>
+			<entity name="enElementalSandWalkerGiant" prob="0.1"/>
+			<entity name="enElementalStoneWalker" prob="0.1"/>
+			<entity name="enElementalStoneCrawler" prob="0.1"/>			
 			<entity name="enElementalStoneWalkerGiant" prob="0.01"/>			
 			<entity name="enUtilityFemale1" prob="0.25"/>
 			<entity name="enUtilityFemale2" prob="0.25"/>
@@ -602,21 +599,17 @@
 			<entity name="enSchoolFemale1Feral" prob="0.5"/>
 			<entity name="enSchoolFemale2Feral" prob="0.5"/>
 			<entity name="enSchoolMale1Feral" prob="0.5"/>
-			<entity name="enSchoolMale2Feral" prob="0.5"/>			
-			<entity name="elementalClayWalkerFeral" prob="0.05"/>
-			<entity name="elementalClayCrawler" prob="0.05"/>
-			<entity name="elementalClayWalkerGiant" prob="0.02"/>
-			<entity name="elementalClayWalkerGiantFeral" prob="0.01"/>
-			<entity name="elementalShaleWalkerFeral" prob="0.05"/>
-			<entity name="elementalShaleCrawler" prob="0.05"/>
+			<entity name="enSchoolMale2Feral" prob="0.5"/>	
+			<entity name="elementalShaleWalkerFeral" prob="0.25"/>
+			<entity name="elementalShaleCrawler" prob="0.25"/>
 			<entity name="elementalShaleWalkerGiant" prob="0.02"/>
 			<entity name="elementalShaleWalkerGiantFeral" prob="0.01"/>
-			<entity name="enElementalSandWalker" prob="0.05"/>
-			<entity name="enElementalSandCrawler" prob="0.05"/>
-			<entity name="enElementalSandWalkerGiant" prob="0.02"/>
+			<entity name="enElementalSandWalker" prob="0.25"/>
+			<entity name="enElementalSandCrawler" prob="0.25"/>
+			<entity name="enElementalSandWalkerGiant" prob="0.05"/>
 			<entity name="enElementalSandWalkerGiantFeral" prob="0.01"/>
-			<entity name="enElementalStoneWalker" prob="0.05"/>
-			<entity name="enElementalStoneCrawler" prob="0.05"/>			
+			<entity name="enElementalStoneWalker" prob="0.1"/>
+			<entity name="enElementalStoneCrawler" prob="0.1"/>			
 			<entity name="enElementalStoneWalkerGiant" prob="0.02"/>
 			<entity name="enElementalStoneWalkerGiantFeral" prob="0.01"/>			
 			<entity name="enUtilityFemale1Feral" prob="0.25"/>
@@ -686,11 +679,11 @@
 			<entity name="enSoldierMale2" prob="0.05"/>
 			<entity name="enSwatMale1" prob="0.02"/>
 			<entity name="enSwatMale2" prob="0.02"/>
-			<entity name="elementalCoalWalker" prob=".05"/>
-			<entity name="elementalCoalCrawler" prob=".05"/>
+			<entity name="elementalCoalWalker" prob=".25"/>
+			<entity name="elementalCoalCrawler" prob=".25"/>
 			<entity name="elementalCoalWalkerGiant" prob=".01"/>
-			<entity name="elementalNitrateCrawler" prob=".05"/>
-			<entity name="elementalNitrateWalker" prob=".05"/>
+			<entity name="elementalNitrateCrawler" prob=".25"/>
+			<entity name="elementalNitrateWalker" prob=".25"/>
 			<entity name="elementalNitrateWalkerGiant" prob=".01"/>
 			<entity name="grandOutdoors" prob="0.1"/>
 			<entity name="enSnowGiant" prob="0.3"/>
@@ -734,9 +727,9 @@
 			<entity name="enSoldierMale2Feral" prob="0.05"/>
 			<entity name="enSwatMale1Feral" prob="0.02"/>
 			<entity name="enSwatMale2Feral" prob="0.02"/>
-			<entity name="elementalCoalWalkerFeral" prob=".05"/>
+			<entity name="elementalCoalWalkerFeral" prob=".1"/>
 			<entity name="elementalCoalWalkerGiant" prob=".1"/>
-			<entity name="elementalNitrateWalkerFeral" prob=".05"/>
+			<entity name="elementalNitrateWalkerFeral" prob=".1"/>
 			<entity name="elementalNitrateWalkerGiant" prob=".1"/>
 			<entity name="zombieCowhead" prob="0.1"/>
 			<entity name="zombieBanshee" prob="0.1"/>

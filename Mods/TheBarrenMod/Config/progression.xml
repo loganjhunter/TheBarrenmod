@@ -27,7 +27,7 @@
 						<passive_effect name="DamageModifier" operation="perc_add" level="2,8" value="0.1,.7" tags="head"/>
 						<passive_effect name="DamageModifier" operation="perc_add" level="9,10" value=".85,1" tags="head"/>
 						<passive_effect name="DismemberChance" operation="base_add" level="2,10" value=".05,.45"/>
-						<passive_effect name="HarvestCount" operation="base_add" level="2,10" value="0.1" tags="WasteTreasuresHoneyHarvest"/>
+						<passive_effect name="HarvestCount" operation="base_add" level="2,10" value="0.1,1" tags="WasteTreasuresHoneyHarvest"/>
 
 					<effect_description level="1"  desc_key="attPerceptionRank01Desc" long_desc_key="attPerceptionRank01LongDesc"/>
 					<effect_description level="2"  desc_key="attPerceptionRank02Desc" long_desc_key="attPerceptionRank02LongDesc"/>
