@@ -132,8 +132,8 @@
 			<property name="DescriptionKey" value="ctnStarterBagDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
-				<property name="Create_item" value="drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,meleeWpnBladeT0BoneKnife,meleeWpnClubT0WoodenClub,meleeWpnBatonT0PipeBaton,meleeWpnKnucklesT0LeatherKnuckles,gunBowT0PrimitiveBow,ammoArrowStone,trapSpikesWoodDmg0,toolCookingPot,bedrollBlockVariantHelper"/>
-				<property name="Create_item_count" value="1,1,1,1,1,1,1,1,1,50,3"/>
+				<property name="Create_item" value="drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,meleeWpnBladeT0BoneKnife,meleeWpnClubT0WoodenClub,meleeWpnKnucklesT0LeatherKnuckles,gunBowT0PrimitiveBow,ammoArrowStone,trapSpikesWoodDmg0,toolCookingPot,bedrollBlockVariantHelper"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1,1,50,15,1,1"/>
 			</property>
 		</item>
 		<!-- New resources -->
@@ -2343,6 +2343,9 @@
 	<set xpath="/items/item[@name='gunBotT1JunkSledge']/property[@name='Weight']/@value">125</set>
 	<set xpath="/items/item[@name='gunBotT2JunkTurret']/property[@name='Material']/@value">MmechanicalParts</set>
 	<set xpath="/items/item[@name='gunBotT2JunkTurret']/property[@name='Weight']/@value">150</set>	
+		<!-- Scraping for misc things -->
+	<append xpath="/items/item[@name='armorClothMaster']"><property name="Weight" value="50"/></append>
+	<append xpath="/items/item[@name='drinkCanEmpty']"><property name="Weight" value="10"/></append>
 <!-- 	<set xpath="/items/item[@name='gunBotT3JunkDrone']/property[@name='Material']/@value">MmechanicalParts</set>
 	<set xpath="/items/item[@name='gunBotT3JunkDrone']/property[@name='Weight']/@value">175</set>	 -->
 	

@@ -283,12 +283,8 @@
 			<property name="OnlySimpleRotations" value="true"/>
 			<property name="ImposterDontBlock" value="true"/>
 			<property name="IsTerrainDecoration" value="true"/>
-			<property class="RepairItems">
-				<property name="resourceForgedIron" value="8"/>
-				<property name="resourceMechanicalParts" value="8"/>
-				<property name="resourceElectricParts" value="8"/>
-				<property name="resourceElectricParts" value="3"/>
-			</property>
+			<property name="DescriptionKey" value="brokenGeneratorbankDesc"/>
+			
 			<drop event="Harvest" name="resourceScrapIron" count="192" tag="allHarvest"/>
 			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 			<drop event="Harvest" name="resourceForgedIron" count="3" tag="salvageHarvest"/>
@@ -297,7 +293,6 @@
 			<drop event="Destroy" count="0"/>
 			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 			<property name="Group" value="Decor/Miscellaneous"/>
-			<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="FilterTags" value="MC_building,SC_electrical"/>
 		</block>
@@ -318,12 +313,12 @@
 			<property name="IsTerrainDecoration" value="true"/>
 			<drop event="Harvest" name="resourceScrapIron" count="120" tag="allHarvest"/>
 			<drop event="Harvest" name="resourceAcid" count="1,2" prob="0.6" tool_category="Disassemble"/>
-			<drop event="Harvest" name="MresourceScrapLeadSmall" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="MresourceScrapLeadSmall" count="10,100" tag="salvageHarvest"/>
 			<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
 			<drop event="Destroy" count="0"/>
 			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 			<property name="Group" value="Decor/Miscellaneous"/>
-			<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
+			<property name="DescriptionKey" value="brokenCarBatteryDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="FilterTags" value="MC_building,SC_electrical"/>
 		</block>
@@ -350,7 +345,7 @@
 			<drop event="Destroy" count="0"/>
 			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 			<property name="Group" value="Decor/Miscellaneous"/>
-			<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
+			<property name="DescriptionKey" value="brokenBatterybankDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="FilterTags" value="MC_building,SC_electrical"/>
 		</block>
@@ -380,7 +375,7 @@
 			<drop event="Destroy" count="0"/>
 			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 			<property name="Group" value="Decor/Miscellaneous"/>
-			<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
+			<property name="DescriptionKey" value="brokenSolarbankDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="FilterTags" value="MC_building,SC_electrical"/>
 		</block>
@@ -399,12 +394,13 @@
 			<property name="OnlySimpleRotations" value="true"/>
 			<property name="ImposterDontBlock" value="true"/>
 			<property name="IsTerrainDecoration" value="true"/>
+			<property name="DescriptionKey" value="brokenSmallEngineDesc"/>
 			<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
-			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			
 			<drop event="Harvest" name="resourceMechanicalParts" count="1,2" prob="0.5" tag="salvageHarvest"/>
 			<drop event="Harvest" name="resourceMetalPipe" count="1,2" prob="0.5" tag="salvageHarvest"/>
 			<drop event="Harvest" name="ammoGasCan" count="10,20" prob="0.5" tag="salvageHarvest"/>
-			<drop event="Destroy" name="resourceScrapIron" count="17,35" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceScrapIron" count="200,600" tag="allHarvest"/>
 			<property name="FilterTags" value="MC_building,SC_automotive"/>
 		</block>
 		<block name="cntLootingToolBox">
@@ -433,7 +429,7 @@
 			<property name="Extends" value="decoLaptop"/>
 			<property name="CreativeMode" value="Player"/>
 			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="#Entities/LootContainers?metalToolBoxClosedPrefab.prefab"/>
+			<property name="Model" value="Entities/Commercial/laptopOpenPrefab"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="CustomIcon" value="decoLaptop"/>
 			<property name="HandleFace" value="Bottom"/>

@@ -137,8 +137,10 @@
 	<remove xpath="/recipes/recipe[@name='plantedBlueberry1']"></remove>
 	<remove xpath="/recipes/recipe[contains(@name, 'MailBox')]"></remove>
 	<remove xpath="/recipes/recipe[contains(@name, 'WoodFurniture')]"></remove>
+	<remove xpath="/recipes/recipe[contains(@name, 'lanternLight_player')]"></remove>
 <!-- 	<remove xpath="/recipes/recipe[@name='farmPlotBlockVariantHelper']"></remove> -->
 	<remove xpath="/recipes/recipe[contains(@name, 'planted')]"></remove>
+	<remove xpath="/recipes/recipe[contains(@name, 'tv')]"></remove>
 	<remove xpath="/recipes/recipe[@name='sinksToiletsBlockVariantHelper']"></remove>
 	<remove xpath="/recipes/recipe[@name='woodFenceRailingTrellisSheetBlockVariantHelper']"></remove>
 	<remove xpath="/recipes/recipe[@name='metalFenceRailingTrellisSheetBlockVariantHelper']"></remove>
