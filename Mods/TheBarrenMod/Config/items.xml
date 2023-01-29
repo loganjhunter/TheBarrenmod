@@ -2297,6 +2297,8 @@
 	
 	</append>
 	<!-- Change scrapping due to parts removal -->
+	<set xpath="/items/item[@name='armorSteelMaster']/property[@name='Material']/@value">Mmetal</set>
+	<set xpath="/items/item[@name='armorSteelMaster']/property[@name='Weight']/@value">250</set>
 	<set xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/property[@name='Material']/@value">Mmetal</set>
 	<set xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/property[@name='Weight']/@value">450</set>
 	<set xpath="/items/item[@name='meleeWpnBladeT3Machete']/property[@name='Material']/@value">Mmetal</set>
@@ -2344,8 +2346,17 @@
 	<set xpath="/items/item[@name='gunBotT2JunkTurret']/property[@name='Material']/@value">MmechanicalParts</set>
 	<set xpath="/items/item[@name='gunBotT2JunkTurret']/property[@name='Weight']/@value">150</set>	
 		<!-- Scraping for misc things -->
-	<append xpath="/items/item[@name='armorClothMaster']"><property name="Weight" value="50"/></append>
+	<append xpath="/items/item[@name='armorClothMaster']"><property name="Weight" value="15"/></append>
+	<append xpath="/items/item[@name='armorLeatherMaster']"><property name="Weight" value="10"/></append>
+	<append xpath="/items/item[@name='armorScrapMaster']"><property name="Weight" value="50"/></append>
+	<append xpath="/items/item[@name='armorIronMaster']"><property name="Weight" value="100"/></append>
+	<append xpath="/items/item[@name='apparelPlantFiberMaster']"><property name="Weight" value="10"/></append>
 	<append xpath="/items/item[@name='drinkCanEmpty']"><property name="Weight" value="10"/></append>
+	
+	<append xpath="/items/item[@name='drinkJarEmpty']/property[@class='Action1']">
+		<property name="Focused_blockname_6" value="terrSnow"/>
+		<property name="Sound_start" value="Sounds/Step/stepsnow1"/>
+	</append>
 <!-- 	<set xpath="/items/item[@name='gunBotT3JunkDrone']/property[@name='Material']/@value">MmechanicalParts</set>
 	<set xpath="/items/item[@name='gunBotT3JunkDrone']/property[@name='Weight']/@value">175</set>	 -->
 	

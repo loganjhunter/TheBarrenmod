@@ -106,8 +106,44 @@
 	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesNightDowntown']/entity[@name='enSwatMale1Feral']"/>
 	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesNightDowntown']/entity[@name='enSwatMale2Feral']"/>
 	<remove xpath="/entitygroups/entitygroup[@name='PineforestZombiesNightDowntown']/entity[@name='enSwatMale3Feral']"/> -->
-	
-	
+	<!-- Removing wandering hordes to start from scratch -->
+<!-- 	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS1']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS2']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS5']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS8']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS11']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS14']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS18']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS22']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS27']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS31']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS36']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS41']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS46']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS52']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS58']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS64']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS70']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS76']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS82']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS1']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS2']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS4']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS7']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS10']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS13']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS16']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS19']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS23']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS27']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS31']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS35']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS40']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS44']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS49']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS54']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS59']"/>
+	<remove xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS64']"/> -->
 	<!-- Adding more enZs to all entities -->	
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
 		<entity name="grandOutdoors" prob="0.1"/>
@@ -976,10 +1012,111 @@
 		<entitygroup name="MotherClucker">
 			<entity name="MotherClucker" />
 		</entitygroup>
-	</append>
+	
 	
 	<!-- Wandering horde groups (copied from scout groups) -->	
 	<!-- Changed groups as some enZs have been removed-->
+	
+<!-- 	<entitygroup name="wanderingHordeStageGS1">
+		<entity name="zombieSkateboarder"/>
+		<entity name="zombieFemaleFat"/>
+		<entity name="zombieYo"/>
+		<entity name="zombieArlene"/>
+		<entity name="zombieBusinessMan"/>
+		<entity name="zombieBoe"/>
+		<entity name="zombieJoe"/>
+		<entity name="zombieMarlene"/>
+		<entity name="zombieDarlene"/>
+		<entity name="zombieNurse"/>
+	</entitygroup>
+	<entitygroup name="wanderingHordeStageGS2">
+		<entity name="zombieSkateboarder"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieNurse"/> 		<entity name="zombieMoe"/> 		<entity name="zombieJoe"/> 		<entity name="zombieSteve"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieYo"/> 		<entity name="zombieBoe"/> 		<entity name="zombieArlene"/> 		<entity name="zombieBusinessMan"/> 		</entitygroup>
+	<entitygroup name="wanderingHordeStageGS5">
+		<entity name="zombieNurse"/> 		<entity name="zombieSteve"/> 		<entity name="zombieJoe"/> 		<entity name="zombieMoe"/> 		<entity name="zombieYo"/> 		<entity name="zombieMarlene"/> 		<entity name="zombieTomClark"/> 		<entity name="zombieBoe"/> 		<entity name="zombieSkateboarder"/> 		<entity name="zombieArlene"/> 	</entitygroup>
+	<entitygroup name="wanderingHordeStageGS8">
+		<entity name="zombieArlene"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieYo"/> 		<entity name="zombieNurse"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieMarlene"/> 		<entity name="zombieMoe"/> 		<entity name="zombieJoe"/> 		<entity name="zombieBoe"/> 		<entity name="zombieSkateboarder"/> 	</entitygroup>
+	<entitygroup name="wanderingHordeStageGS11">
+		<entity name="zombieDarlene"/> 		<entity name="zombieNurse"/> 		<entity name="zombieJoe"/> 		<entity name="zombieMoe"/> 		<entity name="zombieBusinessMan"/> 		<entity name="zombieYo"/> 		<entity name="zombieBoe"/> 		<entity name="zombieSteve"/> 		<entity name="zombieMarlene"/> 		<entity name="zombieSkateboarder"/> 	</entitygroup>
+	<entitygroup name="wanderingHordeStageGS14">
+		<entity name="zombieBusinessMan"/> 		<entity name="zombieYo"/> 		<entity name="zombieMoe"/> 		<entity name="zombieSkateboarder"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieJoe"/> 		<entity name="zombieNurse"/> 		<entity name="zombieBoe"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieSteve"/> 	</entitygroup>
+	<entitygroup name="wanderingHordeStageGS18">
+		<entity name="zombieJoe"/> 		<entity name="zombieSteve"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieSkateboarder"/> 		<entity name="zombieBoe"/> 		<entity name="zombieArlene"/> 		<entity name="zombieTomClark"/> 		<entity name="zombieMarlene"/> 		<entity name="zombieNurse"/> 	</entitygroup>
+	<entitygroup name="wanderingHordeStageGS20">
+		<entity name="zombieFemaleFat"/> 
+		<entity name="zombieDarlene"/> 
+		<entity name="zombieSkateboarder"/> 
+		<entity name="zombieNurse"/> 
+		<entity name="zombieYo"/> 
+		<entity name="zombieMarlene"/> 
+		<entity name="zombieBusinessMan"/> 
+		<entity name="zombieArlene"/> 
+		<entity name="zombieBoe"/> 
+		<entity name="zombieMoe"/> 
+	</entitygroup>
+	<entitygroup name="wanderingHordeStageGS22">
+		<entity name="zombieFemaleFat"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieSkateboarder"/> 		<entity name="zombieNurse"/> 		<entity name="zombieYo"/> 		<entity name="zombieMarlene"/> 		<entity name="zombieBusinessMan"/> 		<entity name="zombieArlene"/> 		<entity name="zombieBoe"/> 		<entity name="zombieMoe"/> 	</entitygroup>
+	<entitygroup name="wanderingHordeStageGS27">
+		<entity name="zombieYo"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieArlene"/> 		<entity name="zombieJoe"/> 		<entity name="zombieBoe"/> 		<entity name="zombieNurse"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieSkateboarder"/> 		<entity name="zombieMoe"/> 		<entity name="zombieBusinessMan"/> 	</entitygroup>
+	<entitygroup name="wanderingHordeStageGS31">
+		<entity name="zombieDarlene"/> 		<entity name="zombieNurse"/> 		<entity name="zombieBoe"/> 		<entity name="zombieSteve"/> 		<entity name="zombieMarlene"/> 		<entity name="zombieMoe"/> 		<entity name="zombieSkateboarder"/> 		<entity name="animalZombieVulture" prob="0.114"/> 		<entity name="zombieYo"/> 		<entity name="zombieJoe"/> 	</entitygroup>
+	<entitygroup name="wanderingHordeStageGS36">
+		<entity name="zombieFemaleFat"/> 		<entity name="zombieMarlene"/> 		<entity name="zombieBusinessMan"/> 		<entity name="zombieUtilityWorker"/> 		<entity name="zombieMaleHazmat"/> 		<entity name="zombieYo"/> 		<entity name="zombieMoe"/> 		<entity name="zombieSpider" prob="0.05"/> 		<entity name="zombieJoe"/> 	</entitygroup>
+	<entitygroup name="wanderingHordeStageGS41">
+		<entity name="zombieMoe"/> 		<entity name="animalZombieVulture" prob="0.119"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieMaleHazmat"/> 		<entity name="zombieJanitor"/> 		<entity name="animalZombieDog" prob="0.05"/> 		<entity name="zombieDarlene" prob="0.064"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieBusinessMan"/> 		<entity name="zombieArlene" prob="0.064"/> 		<entity name="zombieBoe"/> 	</entitygroup>
+	<entitygroup name="wanderingHordeStageGS46">
+		<entity name="zombieMarlene"/> 		<entity name="zombieFatHawaiian"/> 		<entity name="zombieJoe"/> 		<entity name="zombieDarlene" prob="0.072"/> 		<entity name="zombieBusinessMan" prob="0.072"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieBoe"/> 		<entity name="zombieArlene"/> 		<entity name="zombieBiker"/> 		<entity name="zombieFatCop" prob="0.08"/> 	</entitygroup> -->
+	<entitygroup name="wanderingHordeStageGS50">
+		<entity name="zombieMiniBomber"/> 
+	</entitygroup>
+<!-- 	<entitygroup name="wanderingHordeStageGS52">
+		<entity name="zombieBusinessMan" prob="0.081"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieArlene" prob="0.081"/> 		<entity name="zombieMarlene" prob="0.081"/> 		<entity name="zombieTomClark" prob="0.081"/> 		<entity name="zombieSoldier" prob="0.558"/> 		<entity name="zombieNurse"/> 		<entity name="zombieFatCop" prob="0.08"/> 		<entity name="zombieYo"/> 		<entity name="zombieUtilityWorker"/> 	</entitygroup>
+	<entitygroup name="wanderingHordeStageGS58">
+		<entity name="zombieDarlene"/> 		<entity name="zombieSpider" prob="0.09"/> 		<entity name="zombieNurse"/> 		<entity name="zombieFatCop" prob="0.08"/> 		<entity name="animalZombieDog" prob="0.05"/> 		<entity name="zombieBusinessMan"/> 		<entity name="zombieMarlene" prob="0.091"/> 		<entity name="zombieMaleHazmat"/> 		<entity name="zombieMoe" prob="0.091"/> 	</entitygroup>
+	<entitygroup name="wanderingHordeStageGS64">
+		<entity name="zombieJanitor" prob="0.05"/> 		<entity name="zombieNurse" prob="0.1"/> 		<entity name="animalZombieDog" prob="0.05"/> 		<entity name="zombieSteve" prob="0.1"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieSpider" prob="0.5"/> 		<entity name="zombieBusinessMan" prob="0.1"/> 		<entity name="zombieFemaleFat" prob="0.1"/> 		<entity name="zombieFemaleFat"/> 	</entitygroup>
+	<entitygroup name="wanderingHordeStageGS70">
+		<entity name="animalZombieDog" prob="0.05"/> 		<entity name="animalZombieVulture" prob="0.132"/> 		<entity name="zombieTomClark" prob="0.109"/> 		<entity name="zombieFatHawaiian" prob="0.094"/> 		<entity name="zombieMoe" prob="0.109"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieMarlene"/> 		<entity name="zombieSpider" prob="0.05"/> 		<entity name="zombieFatHawaiian"/> 	</entitygroup>
+	<entitygroup name="wanderingHordeStageGS76">
+		<entity name="zombieMarlene"/> 		<entity name="zombieFatCop" prob="0.08"/> 		<entity name="zombieDarlene" prob="0.119"/> 		<entity name="zombieMoe"/> 		<entity name="zombieFatHawaiian"/> 		<entity name="zombieNurse"/> 		<entity name="zombieYo"/> 		<entity name="zombieJoe" prob="0.119"/> 		<entity name="zombieSteve" prob="0.119"/> 	</entitygroup>
+	<entitygroup name="wanderingHordeStageGS82">
+		<entity name="zombieSkateboarder" prob="0.128"/> 		<entity name="zombieBusinessMan" prob="0.128"/> 		<entity name="zombieJanitor"/> 		<entity name="zombieDarlene" prob="0.128"/> 		<entity name="zombieNurse" prob="0.128"/> 		<entity name="zombieSpider" prob="0.05"/> 		<entity name="zombieMoe" prob="0.128"/> 		<entity name="zombieFemaleFat" prob="0.128"/> 		<entity name="zombieFatCop" prob="0.08"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS1">
+		<entity name="zombieJoe"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieArlene"/> 		<entity name="zombieYo"/> 		<entity name="zombieBusinessMan"/> 		<entity name="zombieNurse"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieSkateboarder"/> 		<entity name="zombieMarlene"/> 		<entity name="zombieBoe"/> 		<entity name="zombieSteve"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS2">
+		<entity name="zombieNurse"/> 		<entity name="zombieBusinessMan"/> 		<entity name="zombieSteve"/> 		<entity name="zombieBoe"/> 		<entity name="zombieSkateboarder"/> 		<entity name="zombieArlene"/> 		<entity name="zombieTomClark"/> 		<entity name="zombieMarlene"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieYo"/> 		<entity name="zombieJoe"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS4">
+		<entity name="zombieMarlene"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieBusinessMan"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieNurse"/> 		<entity name="zombieYo"/> 		<entity name="zombieJoe"/> 		<entity name="zombieMoe"/> 		<entity name="zombieSteve"/> 		<entity name="zombieArlene"/> 		<entity name="zombieSkateboarder"/> 		<entity name="zombieBoe"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS7">
+		<entity name="zombieSkateboarder"/> 		<entity name="zombieBoe"/> 		<entity name="zombieBusinessMan"/> 		<entity name="zombieArlene"/> 		<entity name="zombieYo"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieJoe"/> 		<entity name="zombieNurse"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieMarlene"/> 		<entity name="zombieMoe"/> 		<entity name="zombieSteve"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS10">
+		<entity name="zombieDarlene"/> 	 		<entity name="zombieFemaleFat"/> 	 		<entity name="zombieMarlene"/> 	 		<entity name="zombieSkateboarder"/> 		<entity name="zombieNurse"/> 		<entity name="zombieMoe"/> 		<entity name="zombieArlene"/> 		<entity name="zombieYo"/> 		<entity name="zombieJoe"/> 		<entity name="zombieBoe"/> 		<entity name="zombieSteve"/> 		<entity name="zombieBusinessMan"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS13">
+		<entity name="zombieBoe"/> 		<entity name="zombieArlene"/> 		<entity name="zombieMoe"/> 		<entity name="zombieSteve"/> 		<entity name="zombieNurse"/> 		<entity name="zombieMarlene"/> 		<entity name="zombieJoe"/> 		<entity name="zombieSkateboarder"/> 		<entity name="zombieTomClark"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieBusinessMan"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS16">
+		<entity name="zombieNurse"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieBoe"/> 		<entity name="zombieMarlene"/> 		<entity name="zombieMoe"/> 		<entity name="zombieSkateboarder"/> 		<entity name="zombieSteve"/> 		<entity name="zombieBusinessMan"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieYo"/> 		<entity name="zombieArlene"/> 		<entity name="zombieJoe"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS19">
+		<entity name="zombieFemaleFat"/> 		<entity name="zombieNurse"/> 		<entity name="zombieBusinessMan"/> 		<entity name="zombieMarlene"/> 		<entity name="zombieMoe"/> 		<entity name="zombieSteve"/> 		<entity name="zombieJoe"/> 		<entity name="zombieArlene"/> 		<entity name="zombieTomClark"/> 		<entity name="zombieBoe"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieYo"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS23">
+		<entity name="zombieJoe"/> 		<entity name="zombieYo"/> 		<entity name="zombieNurse"/> 		<entity name="zombieBusinessMan"/> 		<entity name="animalZombieDog" prob="0.05"/> 		<entity name="zombieSkateboarder"/> 		<entity name="zombieSteve"/> 		<entity name="zombieArlene"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieMarlene"/> 		<entity name="zombieBoe"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS27">
+		<entity name="zombieBusinessMan"/> 		<entity name="zombieJoe"/> 		<entity name="zombieSkateboarder"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieSteve"/> 		<entity name="zombieDarlene" prob="0.048"/> 		<entity name="animalZombieDog" prob="0.05"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieYo"/> 		<entity name="zombieNurse"/> 		<entity name="animalZombieVulture" prob="0.114"/> 		<entity name="zombieUtilityWorker"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS31">
+		<entity name="zombieDarlene" prob="0.055"/> 		<entity name="zombieMarlene" prob="0.055"/> 		<entity name="animalZombieDog" prob="0.05"/> 		<entity name="zombieYo"/> 		<entity name="zombieBusinessMan"/> 		<entity name="zombieJanitor"/> 		<entity name="zombieTomClark"/> 		<entity name="zombieSkateboarder"/> 		<entity name="zombieBoe"/> 		<entity name="zombieSteve" prob="0.055"/> 		<entity name="zombieArlene"/> 		<entity name="zombieFemaleFat"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS35">
+		<entity name="zombieArlene" prob="0.062"/> 		<entity name="zombieNurse" prob="0.062"/> 		<entity name="zombieMarlene" prob="0.062"/> 		<entity name="zombieNurse"/> 		<entity name="zombieSpider" prob="0.06"/> 		<entity name="zombieArlene"/> 		<entity name="zombieYo" prob="0.062"/> 		<entity name="animalZombieVulture" prob="0.118"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieSkateboarder"/> 		<entity name="zombieMoe"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS40">
+		<entity name="animalZombieDog" prob="0.05"/> 		<entity name="zombieFatCop" prob="0.08"/> 		<entity name="zombieBusinessMan" prob="0.07"/> 		<entity name="zombieUtilityWorker"/> 		<entity name="zombieTomClark"/> 		<entity name="zombieArlene" prob="0.07"/> 		<entity name="zombieJoe" prob="0.07"/> 		<entity name="zombieSkateboarder" prob="0.07"/> 		<entity name="zombieYo"/> 		<entity name="zombieSpider" prob="0.07"/> 		<entity name="zombieDarlene" prob="0.07"/> 		<entity name="zombieNurse"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS44">
+		<entity name="zombieMoe"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieDarlene" prob="0.077"/> 		<entity name="zombieJoe" prob="0.077"/> 		<entity name="zombieSteve"/> 		<entity name="zombieSpider" prob="0.07"/> 		<entity name="zombieBusinessMan"/> 		<entity name="zombieArlene"/> 		<entity name="zombieSkateboarder"/> 		<entity name="zombieSkateboarder" prob="0.077"/> 		<entity name="zombieYo"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS49">
+		<entity name="zombieSkateboarder" prob="0.086"/> 		<entity name="animalZombieDog" prob="0.05"/> 		<entity name="zombieNurse" prob="0.086"/> 		<entity name="zombieTomClark"/> 		<entity name="zombieJanitor" prob="0.086"/> 		<entity name="zombieBusinessMan"/> 		<entity name="zombieSteve" prob="0.086"/> 		<entity name="zombieMoe" prob="0.086"/> 		<entity name="zombieSteve"/> 		<entity name="zombieMarlene" prob="0.086"/> 		<entity name="zombieArlene"/> 		<entity name="zombieJoe" prob="0.086"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS54">
+		<entity name="zombieMoe"/> 		<entity name="zombieNurse" prob="0.095"/> 		<entity name="zombieSkateboarder" prob="0.095"/> 		<entity name="zombieMarlene"/> 		<entity name="zombieBusinessMan"/> 		<entity name="zombieMoe" prob="0.095"/> 		<entity name="zombieTomClark"/> 		<entity name="animalZombieDog" prob="0.05"/> 		<entity name="zombieYo"/> 		<entity name="animalZombieVulture" prob="0.127"/> 		<entity name="zombieNurse"/> 		<entity name="zombieDarlene" prob="0.095"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS59">
+		<entity name="zombieJoe"/> 		<entity name="zombieBusinessMan" prob="0.104"/> 		<entity name="zombieSpider" prob="0.05"/> 		<entity name="zombieFemaleFat" prob="0.104"/> 		<entity name="zombieBoe" prob="0.104"/> 		<entity name="zombieYo"/> 		<entity name="zombieUtilityWorker" prob="0.104"/> 		<entity name="zombieNurse"/> 		<entity name="zombieSteve"/> 		<entity name="zombieNurse" prob="0.104"/> 	</entitygroup>
+	<entitygroup name="FwanderingHordeStageGS64">
+		<entity name="zombieJoe" prob="0.112"/> 		<entity name="zombieFemaleFat"/> 		<entity name="zombieSpider" prob="0.05"/> 		<entity name="zombieFatCop" prob="0.08"/> 		<entity name="zombieDarlene" prob="0.112"/> 		<entity name="zombieDarlene"/> 		<entity name="zombieJanitor" prob="0.05"/> 		<entity name="zombieMarlene"/> 		<entity name="zombieBusinessMan"/> 		<entity name="zombieFatCop" prob="0.08"/> 		<entity name="zombieFemaleFat" prob="0.112"/> 		<entity name="zombieTomClark"/> 	</entitygroup> -->
+</append>	
 	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS1']">
 		<entity name="enJoggerFemale1"/>
 		<entity name="enJoggerFemale2"/>
@@ -989,7 +1126,7 @@
 <!-- 	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS2']">
 
 	</append> -->
-	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS5']">
+<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS5']">
 		<entity name="zombieNurse"/>
 		<entity name="zombieSteve"/>
 		<entity name="zombieJoe"/>
@@ -1001,11 +1138,11 @@
 		<entity name="zombieSkateboarder"/>
 		<entity name="zombieArlene"/>
 		<entity name="zombieBusinessMan"/>
-	</append>
+	</append> 
 <!-- 	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS8']">
 	
 	</append> -->
-	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS11']">
+ 	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS11']">
 		<entity name="enSchoolFemale1"/>
 		<entity name="enSchoolFemale2"/>
 		<entity name="enSchoolMale1"/>
@@ -1024,7 +1161,7 @@
 <!-- 	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS18']">
 	
 	</append> -->
-	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS22']">
+ 	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS22']">
 		<entity name="zombieArlene"/>	
 		<entity name="zombieDarlene"/>
 		<entity name="zombieFemaleFat" prob="0.25"/>
@@ -1050,13 +1187,13 @@
 <!-- 	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS27']">
 	
 	</append> -->
-	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS31']">
+ 	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS31']">
 		<entity name="zombieMiniBomber"/>	
 	</append>
 <!-- 	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS36']">
 	
 	</append> -->
-	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS41']">
+ 	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS41']">
 		<entity name="zombieMiniBomber"/>	
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS46']">
@@ -1071,7 +1208,7 @@
 <!-- 	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS58']">
 	
 	</append> -->
-	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS64']">
+ 	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS64']">
 		<entity name="enBiker1"/>
 		<entity name="enBiker2"/>
 		<entity name="enBiker3"/>
@@ -1083,7 +1220,7 @@
 <!-- 	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS70']">
 	
 	</append> -->
-	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS76']">
+ 	<append xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS76']">
 		<entity name="enFarmerGiant"/>
 		<entity name="enJoggerGiant"/>
 		<entity name="enNurseHDGiant"/>
@@ -1117,7 +1254,7 @@
 		<entity name="zombieSkateboarderFeral"/>
 		<entity name="zombieArleneFeral"/>
 		<entity name="zombieBusinessManFeral"/>
-	</append>
+	</append> 
 <!-- 	<append xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS2']">
 	
 	</append> 
@@ -1127,7 +1264,7 @@
 	<append xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS7']">
 	
 	</append>-->
-	<append xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS10']">
+ 	<append xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS10']">
 		<entity name="elementalClayWalkerFeral"/>
 		<entity name="enElementalSandCrawlerFeral"/>
 		<entity name="enElementalSandWalkerFeral"/>
@@ -1143,7 +1280,7 @@
 		<entity name="enSchoolFemale2Feral"/>
 		<entity name="enSchoolMale1Feral"/>
 		<entity name="enSchoolMale2Feral"/>		
-	</append>
+	</append> 
 	<!-- <append xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS16']">
 	
 	</append> -->
@@ -1164,7 +1301,7 @@
 		<entity name="enForestHikerFemale2Feral"/>
 		<entity name="enForestHikerMale1Feral"/>
 		<entity name="enForestHikerMale2Feral"/>
-	</append>
+	</append> 
 	<!-- <append xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS27']">
 	
 	</append>
@@ -1204,7 +1341,7 @@
 		<entity name="enElementalStoneWalkerGiantFeral"/>
 		<entity name="enElementalIronWalkerGiantFeral" prob="0.75"/>
 		<entity name="elementalShaleWalkerGiantFeral" prob="0.5"/>
-	</append>
+	</append> 
 <!-- 	<append xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS59']">
 	
 	</append>

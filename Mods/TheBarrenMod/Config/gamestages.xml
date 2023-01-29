@@ -401,10 +401,10 @@
 	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='50']/spawn/@num">20</set>
 	
 	<!-- Change wondering hordes for some game stages to bombers -->
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='10']/spawn/@group">wanderingHordeStageGS10</set>	
+<!-- 	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='10']/spawn/@group">wanderingHordeStageGS10</set>	
 	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='20']/spawn/@group">wanderingHordeStageGS20</set>		
 	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='30']/spawn/@group">wanderingHordeStageGS30</set>	
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='40']/spawn/@group">wanderingHordeStageGS40</set>	
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='40']/spawn/@group">wanderingHordeStageGS40</set>	 -->
 	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='50']/spawn/@group">wanderingHordeStageGS50</set>
 		
 	<!-- Increase max alive for generated screamer / scout horde -->

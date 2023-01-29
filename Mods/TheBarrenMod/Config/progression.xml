@@ -221,6 +221,7 @@
 			<skill name="skillPerceptionScavenging" parent="attPerception" name_key="skillPerceptionScavengingName" desc_key="skillPerceptionScavengingDesc" icon="ui_game_symbol_hand"><effect_group/></skill>
 
 			<skill name="skillStrengthCombat" parent="attStrength" name_key="skillCombatPerksName" desc_key="skillCombatPerksDesc" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
+			<skill name="skillStrengthInfluence" parent="attStrength" name_key="skillStrengthInfluenceName" desc_key="skillStrengthInfluenceDesc" icon="ui_game_symbol_influence"><effect_group/></skill>
 			<skill name="skillStrengthGeneral" parent="attStrength" name_key="skillStrengthGeneralName" desc_key="skillStrengthGeneralDesc" icon="ui_game_symbol_muscle"><effect_group/></skill>
 
 
@@ -232,7 +233,7 @@
 			<skill name="skillAgilityAthletics" parent="attAgility" name_key="skillAgilityAthleticsName" desc_key="skillAgilityAthleticsDesc" icon="ui_game_symbol_run"><effect_group/></skill>
 
 			<skill name="skillIntellectCombat" parent="attIntellect" name_key="skillCombatPerksName" desc_key="skillCombatPerksDesc" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
-			<skill name="skillIntellectInfluence" parent="attIntellect" name_key="skillIntellectInfluenceName" desc_key="skillIntellectInfluenceDesc" icon="ui_game_symbol_influence"><effect_group/></skill>
+			
 			<skill name="skillIntellectCraftsmanship" parent="attIntellect" name_key="skillIntellectCraftsmanshipName" desc_key="skillIntellectCraftsmanshipDesc" icon="ui_game_symbol_misc_crafting"><effect_group/></skill>
 
 
@@ -334,7 +335,35 @@
 					<effect_description level="4" desc_key="perkPenetratorRank4Desc" long_desc_key="perkPenetratorRank4LongDesc"/>
 				</effect_group>
 			</perk>
+			
+			<perk name="perkMasterChef" max_level="4" parent="skillPerceptionGeneral" name_key="perkMasterChefName" desc_key="perkMasterChefDesc" icon="ui_game_symbol_spatula">
+				<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="1" desc_key="reqStrengthLevel01"/></level_requirements>
+				<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="4" desc_key="reqStrengthLevel04"/></level_requirements>
+				<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="6" desc_key="reqStrengthLevel06"/></level_requirements>
+				<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="8" desc_key="reqStrengthLevel08"/></level_requirements>
 
+				<effect_group>
+					<passive_effect name="CraftingTier" operation="base_set" level="1,5" value="1,5" tags="perkMasterChef"/><!-- fake crafting perk that is used to scale resources -->
+					<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-.1,-.5" tags="perkMasterChef"/>
+
+					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,4" value="1"
+						tags="foodBaconAndEggs,foodBoiledMeat,foodGrilledMeat,foodBakedPotato,foodCornOnTheCob,drinkJarRedTea,drinkJarCoffee,drinkJarGoldenRodTea"/>
+					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,4" value="1"
+						tags="foodSteakAndPotato,foodMeatStew,foodVegetableStew"/>
+					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,4" value="1"
+						tags="foodShamChowder,foodHoboStew"/>
+					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,4" value="1"
+						tags="foodGumboStew"/>
+					<!-- <passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1"
+						tags="drinkJarGrandpasMoonshine,drinkJarGrandpasAwesomeSauce,drinkJarGrandpasLearningElixir"/> -->
+
+					<effect_description level="1" desc_key="perkMasterChefRank1Desc" long_desc_key="perkMasterChefRank1LongDesc"/>
+					<effect_description level="2" desc_key="perkMasterChefRank2Desc" long_desc_key="perkMasterChefRank2LongDesc"/>
+					<effect_description level="3" desc_key="perkMasterChefRank3Desc" long_desc_key="perkMasterChefRank3LongDesc"/>
+					<effect_description level="4" desc_key="perkMasterChefRank4Desc" long_desc_key="perkMasterChefRank4LongDesc"/>
+					<!-- <effect_description level="5" desc_key="perkMasterChefRank5Desc" long_desc_key="perkMasterChefRank5LongDesc"/> -->
+				</effect_group>
+			</perk>
 		<!-- Scavenging Perks (Perception) -->
 			<perk name="perkLuckyLooter" parent="skillPerceptionScavenging" name_key="perkLuckyLooterName" desc_key="perkLuckyLooterDesc" icon="ui_game_symbol_shopping_cart">
 				<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="1" desc_key="reqPerceptionLevel01"/></level_requirements>
@@ -500,66 +529,51 @@
 				</effect_group>
 			</perk>
 
-			<!-- Sledgehammers -->
-<!-- 			<perk name="perkSkullCrusher" parent="skillStrengthCombat" name_key="perkSkullCrusherName" desc_key="perkSkullCrusherDesc" icon="ui_game_symbol_sledge">
-				<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="1" desc_key="reqStrengthLevel01"/></level_requirements>
-				<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="3" desc_key="reqStrengthLevel03"/></level_requirements>
-				<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="5" desc_key="reqStrengthLevel05"/></level_requirements>
-				<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="7" desc_key="reqStrengthLevel07"/></level_requirements>
-				<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="10" desc_key="reqStrengthLevel10"/></level_requirements>
+		<!-- Influence Perks (Strength) -->
+
+			<perk name="perkCharismaticNature" max_level="4" parent="skillStrengthInfluence" name_key="perkCharismaticNatureName" desc_key="perkCharismaticNatureDesc" icon="ui_game_symbol_talk">
+				<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="1" desc_key="reqStrengthLevel01"/></level_requirements>
+				<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqStrengthLevel03"/></level_requirements>
+				<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqStrengthLevel05"/></level_requirements>
+				<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="7" desc_key="reqStrengthLevel07"/></level_requirements>
+				<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqStrengthLevel10"/></level_requirements>
 
 				<effect_group>
-					<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkSkullCrusher"/>
-					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeWpnSledgeT1IronSledgehammer"/>
+					<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="1" target="selfAOE" target_tags="ally,party" range="15">
+						<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="1"/>
+						<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="1"/>
+					</triggered_effect>
 
-					<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkSkullCrusher"/>
-					<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkSkullCrusher"/>
+					<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="2" target="selfAOE" target_tags="ally,party" range="15">
+						<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="2"/>
+						<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="2"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="3" target="selfAOE" target_tags="ally,party" range="15">
+						<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="3"/>
+						<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="3"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="4" target="selfAOE" target_tags="ally,party" range="15">
+						<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="GTE" value="4"/>
+						<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="4"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffPerkCharismaticNature" target="selfAOE" target_tags="ally,party" range="15">
+						<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="GTE" value="1"/>
+					</triggered_effect>
+
+					<!-- testing
+					<triggered_effect trigger="onSelfProgressionUpdate" action="LogMessage" message="buff triggered"/>
+					-->
+
+					<effect_description level="1" desc_key="perkCharismaticNatureRank1Desc" long_desc_key="perkCharismaticNatureRank1LongDesc"/>
+					<effect_description level="2" desc_key="perkCharismaticNatureRank2Desc" long_desc_key="perkCharismaticNatureRank2LongDesc"/>
+					<effect_description level="3" desc_key="perkCharismaticNatureRank3Desc" long_desc_key="perkCharismaticNatureRank3LongDesc"/>
+					<effect_description level="4" desc_key="perkCharismaticNatureRank4Desc" long_desc_key="perkCharismaticNatureRank4LongDesc"/>
+					<effect_description level="5" desc_key="perkCharismaticNatureRank5Desc" long_desc_key="perkCharismaticNatureRank5LongDesc"/>
 				</effect_group>
-
-				<effect_group>
-					<requirement name="ItemHasTags" tags="perkSkullCrusher"/>
-
-					<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
-						<requirement name="ProgressionLevel" progression_name="perkSkullCrusher" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
-						<requirement name="ProgressionLevel" progression_name="perkSkullCrusher" operation="Equals" value="2"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown02">
-						<requirement name="ProgressionLevel" progression_name="perkSkullCrusher" operation="Equals" value="3"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="45"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown02">
-						<requirement name="ProgressionLevel" progression_name="perkSkullCrusher" operation="Equals" value="4"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown02">
-						<requirement name="ProgressionLevel" progression_name="perkSkullCrusher" operation="Equals" value="5"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="75"/>
-					</triggered_effect>
-
-					<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="1.3" target_tags="zombie,animal" buff="buffInjuryKnockdown01">
-						<requirement name="ProgressionLevel" progression_name="perkSkullCrusher" operation="Equals" value="3"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="1.3" target_tags="zombie,animal" buff="buffInjuryKnockdown01">
-						<requirement name="ProgressionLevel" progression_name="perkSkullCrusher" operation="Equals" value="4"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="35"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="1.4" target_tags="zombie,animal" buff="buffInjuryKnockdown01">
-						<requirement name="ProgressionLevel" progression_name="perkSkullCrusher" operation="Equals" value="5"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
-					</triggered_effect>
-
-					<effect_description level="1" desc_key="perkSkullCrusherRank1Desc" long_desc_key="perkSkullCrusherRank1LongDesc"/>
-					<effect_description level="2" desc_key="perkSkullCrusherRank2Desc" long_desc_key="perkSkullCrusherRank2LongDesc"/>
-					<effect_description level="3" desc_key="perkSkullCrusherRank3Desc" long_desc_key="perkSkullCrusherRank3LongDesc"/>
-					<effect_description level="4" desc_key="perkSkullCrusherRank4Desc" long_desc_key="perkSkullCrusherRank4LongDesc"/>
-					<effect_description level="5" desc_key="perkSkullCrusherRank5Desc" long_desc_key="perkSkullCrusherRank5LongDesc"/>
-				</effect_group>
-			</perk> -->
+			</perk>
 
 		<!-- Strength General Perks -->
 			<perk name="perkSexualTrex" max_level="4" parent="skillStrengthGeneral" name_key="perkSexualTrexName" desc_key="perkSexualTrexDesc" icon="ui_game_symbol_trex">
@@ -650,35 +664,7 @@
 				</effect_group>
 			</perk>
 		-->
-			<perk name="perkMasterChef" parent="skillStrengthGeneral" name_key="perkMasterChefName" desc_key="perkMasterChefDesc" icon="ui_game_symbol_spatula">
-				<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="1" desc_key="reqStrengthLevel01"/></level_requirements>
-				<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="3" desc_key="reqStrengthLevel03"/></level_requirements>
-				<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="5" desc_key="reqStrengthLevel05"/></level_requirements>
-				<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="7" desc_key="reqStrengthLevel07"/></level_requirements>
-				<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="10" desc_key="reqStrengthLevel10"/></level_requirements>
 
-				<effect_group>
-					<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkMasterChef"/><!-- fake crafting perk that is used to scale resources -->
-					<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-.1,-.5" tags="perkMasterChef"/>
-
-					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1"
-						tags="foodBaconAndEggs,foodBoiledMeat,foodGrilledMeat,foodBakedPotato,foodCornBread,foodCornOnTheCob,drinkJarRedTea,drinkJarCoffee,drinkJarGoldenRodTea"/>
-					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1"
-						tags="foodSteakAndPotato,foodBlueberryPie,foodMeatStew,foodVegetableStew,foodPumpkinPie,foodPumpkinCheesecake,foodPumpkinBread"/>
-					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1"
-						tags="foodShamChowder,foodHoboStew,foodFishTacos,drinkYuccaJuiceSmoothie,foodChiliDog,drinkJarBeer"/>
-					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1"
-						tags="foodGumboStew,foodShepardsPie,foodSpaghetti,foodTunaFishGravyToast"/>
-					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1"
-						tags="drinkJarGrandpasMoonshine,drinkJarGrandpasAwesomeSauce,drinkJarGrandpasLearningElixir"/>
-
-					<effect_description level="1" desc_key="perkMasterChefRank1Desc" long_desc_key="perkMasterChefRank1LongDesc"/>
-					<effect_description level="2" desc_key="perkMasterChefRank2Desc" long_desc_key="perkMasterChefRank2LongDesc"/>
-					<effect_description level="3" desc_key="perkMasterChefRank3Desc" long_desc_key="perkMasterChefRank3LongDesc"/>
-					<effect_description level="4" desc_key="perkMasterChefRank4Desc" long_desc_key="perkMasterChefRank4LongDesc"/>
-					<effect_description level="5" desc_key="perkMasterChefRank5Desc" long_desc_key="perkMasterChefRank5LongDesc"/>
-				</effect_group>
-			</perk>
 
 
 
@@ -1233,30 +1219,32 @@
 			</perk>
 
 		<!-- Intellect Combat Perks -->
-			<perk name="perkDemolitionsExpert" parent="skillIntellectCombat" name_key="perkDemolitionsExpertName" desc_key="perkDemolitionsExpertDesc" icon="ui_game_symbol_explosion">
+			<perk name="perkDemolitionsExpert" max_level="6" parent="skillIntellectCombat" name_key="perkDemolitionsExpertName" desc_key="perkDemolitionsExpertDesc" icon="ui_game_symbol_explosion">
 				<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="1" desc_key="reqPerceptionLevel01"/></level_requirements>
 				<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="3" desc_key="reqPerceptionLevel03"/></level_requirements>
 				<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="5" desc_key="reqPerceptionLevel05"/></level_requirements>
 				<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="7" desc_key="reqPerceptionLevel07"/></level_requirements>
 				<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/></level_requirements>
+				<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/></level_requirements>
 
 				<effect_group>
-					<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkDemolitionsExpert"/>
+					<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="1,2,3,4,4,5" tags="perkDemolitionsExpert"/>
 
-					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="thrownAmmoPipeBomb,mineCookingPot,rScrapIronPlateMine"/>
-					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="thrownDynamite,mineHubcap"/>
-					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="thrownGrenade,resourceGunPowderBundle"/>
-					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="ammoRocketHE,ammoRocketFrag,resourceRocketTip,resourceRocketCasing"/>
-					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1" tags="thrownGrenadeContact,thrownTimedCharge,mineAirFilter"/>
+					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="thrownAmmoPipeBomb,mineCookingPot,rScrapIronPlateMine"/>
+					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,6" value="1" tags="thrownDynamite,mineHubcap"/>
+					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,6" value="1" tags="thrownGrenade,resourceGunPowderBundle"/>
+					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,6" value="1" tags="ammoRocketHE,ammoRocketFrag,resourceRocketTip,resourceRocketCasing"/>
+					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,6" value="1" tags="thrownGrenadeContact,thrownTimedCharge,mineAirFilter"/>
+					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,6" value="1" tags="ammoAtomicArrow,ammoAtomicBolt,thrownAmmoAtomicPipeBomb"/>
 
 				</effect_group>
 
 				<effect_group>
-						<passive_effect name="DismemberChance" operation="base_add" level="1,2,3,4,5" value=".05,.1,.2,.3,.45" tags="perkDemolitionsExpert"/>
-						<passive_effect name="BlockDamage" operation="perc_add" level="0,5" value="0,.5" tags="perkDemolitionsExpert"/>
-						<passive_effect name="EntityDamage" operation="perc_add" level="0,5" value="0,.5" tags="perkDemolitionsExpert"/>
-						<passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value="0.1,0.5" tags="perkDemolitionsExpert"/>
-						<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value="0.15,0.35" tags="perkDemolitionsExpert"/>
+				<passive_effect name="DismemberChance" operation="base_add" level="1,2,3,4,5,6" value=".05,.1,.2,.3,.45,.5" tags="perkDemolitionsExpert"/>
+				<passive_effect name="BlockDamage" operation="perc_add" level="0,6" value="0,.6" tags="perkDemolitionsExpert"/>
+				<passive_effect name="EntityDamage" operation="perc_add" level="0,6" value="0,.6" tags="perkDemolitionsExpert"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" level="1,6" value="0.1,0.6" tags="perkDemolitionsExpert"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value="0.15,0.40" tags="perkDemolitionsExpert"/>
 
 						<!--
 					<requirement name="ItemHasTags" tags="perkDemolitionsExpert"/>
@@ -1269,6 +1257,7 @@
 					<effect_description level="3" desc_key="perkDemolitionsExpertRank3Desc" long_desc_key="perkDemolitionsExpertRank3LongDesc"/>
 					<effect_description level="4" desc_key="perkDemolitionsExpertRank4Desc" long_desc_key="perkDemolitionsExpertRank4LongDesc"/>
 					<effect_description level="5" desc_key="perkDemolitionsExpertRank5Desc" long_desc_key="perkDemolitionsExpertRank5LongDesc"/>
+					<effect_description level="6" desc_key="perkDemolitionsExpertRank6Desc" long_desc_key="perkDemolitionsExpertRank6LongDesc"/>
 				</effect_group>
 				<!-- Arrow gravity still in progress -->
 			</perk>
@@ -1334,51 +1323,7 @@
 				</effect_group>
 			</perk> -->
 
-		<!-- Influence Perks (Intellect) -->
-
-			<perk name="perkCharismaticNature" max_level="4" parent="skillIntellectInfluence" name_key="perkCharismaticNatureName" desc_key="perkCharismaticNatureDesc" icon="ui_game_symbol_talk">
-				<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="1" desc_key="reqIntellectLevel01"/></level_requirements>
-				<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
-				<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
-				<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="7" desc_key="reqIntellectLevel07"/></level_requirements>
-				<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
-
-				<effect_group>
-					<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="1" target="selfAOE" target_tags="ally,party" range="15">
-						<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="1"/>
-						<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="1"/>
-					</triggered_effect>
-
-					<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="2" target="selfAOE" target_tags="ally,party" range="15">
-						<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="2"/>
-						<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="2"/>
-					</triggered_effect>
-
-					<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="3" target="selfAOE" target_tags="ally,party" range="15">
-						<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="3"/>
-						<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="3"/>
-					</triggered_effect>
-
-					<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="4" target="selfAOE" target_tags="ally,party" range="15">
-						<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="GTE" value="4"/>
-						<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="4"/>
-					</triggered_effect>
-
-					<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffPerkCharismaticNature" target="selfAOE" target_tags="ally,party" range="15">
-						<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="GTE" value="1"/>
-					</triggered_effect>
-
-					<!-- testing
-					<triggered_effect trigger="onSelfProgressionUpdate" action="LogMessage" message="buff triggered"/>
-					-->
-
-					<effect_description level="1" desc_key="perkCharismaticNatureRank1Desc" long_desc_key="perkCharismaticNatureRank1LongDesc"/>
-					<effect_description level="2" desc_key="perkCharismaticNatureRank2Desc" long_desc_key="perkCharismaticNatureRank2LongDesc"/>
-					<effect_description level="3" desc_key="perkCharismaticNatureRank3Desc" long_desc_key="perkCharismaticNatureRank3LongDesc"/>
-					<effect_description level="4" desc_key="perkCharismaticNatureRank4Desc" long_desc_key="perkCharismaticNatureRank4LongDesc"/>
-					<effect_description level="5" desc_key="perkCharismaticNatureRank5Desc" long_desc_key="perkCharismaticNatureRank5LongDesc"/>
-				</effect_group>
-			</perk>
+		
 
 		<!-- Craftsmanship Perks (Intellect) -->
 			<perk name="perkPhysician" max_level="4" parent="skillIntellectCraftsmanship" name_key="perkPhysicianName" desc_key="perkPhysicianDesc" icon="ui_game_symbol_medical">

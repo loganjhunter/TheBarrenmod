@@ -154,6 +154,10 @@
 	<remove xpath="/recipes/recipe[@name='oldChair1VariantHelper']"></remove>
 	<remove xpath="/recipes/recipe[@name='keystoneBlock']"></remove>
 	<remove xpath="/recipes/recipe[@name='bladeTrap']"></remove>	
+	<remove xpath="/recipes/recipe[@name='glassBulletproofBlockVariantHelper']"></remove>	
+	<!-- <remove xpath="/recipes/recipe[@name='glassBlockVariantHelper']"></remove> -->	
+	
+	
 	<!-- End of removal -->	
 	<!-- Use broken weapons to create new ones -->	
 	<remove xpath="/recipes/recipe[@name='meleeWpnBladeT1HuntingKnife']"></remove>

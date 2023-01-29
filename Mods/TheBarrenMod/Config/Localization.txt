@@ -85,6 +85,9 @@ meleeToolBrokenT1Wrench,items,Tool,,,Broken Wrench,, ,,,,,,,,,,,,
 meleeToolBrokenT1WrenchDesc,items,Gun,,,"Useless broken wrench",, ,,,,,,,,,,,,
 meleeToolBrokenWireTool,items,Tool,,,Broken Wire Tool,, ,,,,,,,,,,,,
 meleeToolBrokenWireToolDesc,items,Gun,,,"You won't be doing any electrical work with this",, ,,,,,,,,,,,,
+meleeToolAxeBrokenChainsaw,items,Tool,,,Broken Chainsaw,, ,,,,,,,,,,,,
+meleeToolAxeBrokenChainsawDesc,items,Gun,,,"Oh my darling, this chainsaw appears to have sputtered out",, ,,,,,,,,,,,,
+
 ammoAtomicArrow,items,Ammo,,,Organic Matter Neutralizer Arrow (Ammo),, ,,,,,,,,,,,,
 ammoAtomicArrowDesc,items,Ammo,,,"Aim one of these into the group of things you want removed",, ,,,,,,,,,,,,
 ammoAtomicBolt,items,Ammo,,,Organic Matter Neutralizer Bolt (Ammo),, ,,,,,,,,,,,,
@@ -131,6 +134,16 @@ brokenGeneratorbankDesc,blocks,Container,,,"This isn't generating anything anymo
 brokenSolarbank,blocks,Container,,,Broken Solar Bank,, ,,,,,,,,,,,,
 brokenSolarbankDesc,blocks,Container,,,"No amount of sun will make this work.\n Try placing it and taking it apart" ,, ,,,,,,,,,,,,
 attPerceptionDesc,progression,Attribute,,,"Perception is the measure of your sensory awareness. Increasing Perception raises the headshot bonus and dismemberment chance with spears, rifles, explosive weapons and tools. Also chances of finding honey in stumps",, ,,,,,,,,,,,,
+
+skillStrengthInfluenceName,progression,Skill,,,Influence Perks,,
+perkMasterChefRank1LongDesc,progression,perk Str,,,"Cooking is not your thing but you know some basics. Unlocks basic recipes such as bacon and eggs, boiled and grilled meats, baked potatoes, teas and coffee. Cook 20% faster.",,
+perkMasterChefRank2LongDesc,progression,perk Str,,,"Just like grandma used to make, tasty hearty meals that fill you up for days. Craft steak and potatoes, meat stew, and vegetable stew. Cook 30% faster.",,
+perkMasterChefRank3LongDesc,progression,perk Str,,,"Learn how to make nutritious pot luck meals from canned goods. Craft Sham Chowder and Hobo Stew. Cook 40% faster.",,
+perkMasterChefRank4LongDesc,progression,perk Str,,,"Unlocks Gumbo Stew. Cook 50% faster. Use 20% less of a recipe's main ingredients.",,
+
+perkDemolitionsExpertRank6Desc,progression,perk Per,,,Master of the 3 shells,, ,,,,,,,,,,,,
+perkDemolitionsExpertRank6LongDesc,progression,perk Per,,,"Regular demolitions men have nothing on you. YOU know how to use The Three Shells. Increase damage 60%, reload speed by 40%, aim 60% faster and a 50% greater chance to dismember. Stun lasts longer on enemies.\nCraft Atomic Bolts, Atomic Arrows, Atomic Pipe Bombs.",, ,,,,,,,,,,,,
+skillStrengthInfluence,progression,Skill,,,Influence Perks,, ,,,,,,,,,,,,
 
 
 ttBrokenKnuckles,UI,Tooltip,,,Stop hitting yourself!,, ,,,,,,,,,,,,

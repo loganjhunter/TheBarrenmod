@@ -21,6 +21,8 @@
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'bookArtOfMining')]"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'bookNeedleAndThread')]"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'bookWasteTreasures')]"></remove>
+	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'bookLuckyLooter')]"></remove>
+	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'bookNightStalker')]"></remove>	
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'Schematic')]"></remove>
 	<remove xpath="/lootcontainers/lootgroup[@name='groupTreasureMaps']"></remove>
 	<remove xpath="/lootcontainers/lootgroup[@name='vehicleMods']"></remove>
@@ -72,6 +74,14 @@
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'Flaming')]"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'ShotgunSlug')]"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'BreachingSlug')]"></remove>
+	<!-- Remove unwanted ammo -->
+	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'modMeleeGraveDigger')]"></remove>
+	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'modMeleeWoodSplitter')]"></remove>
+	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'modFuelTank')]"></remove>
+	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'modMeleeBunkerBuster')]"></remove>
+	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'modMeleeIronBreaker')]"></remove>
+	
+	
 	<!-- Remove unwanted weapon parts and vehicles -->
 	<remove xpath="/lootcontainers/lootgroup/item[@name='gunMGT1AK47Parts']"></remove>	
 	<remove xpath="/lootcontainers/lootgroup/item[@name='gunHandgunT1PistolParts']"></remove>	
@@ -146,6 +156,11 @@
 	<remove xpath="/lootcontainers/lootcontainer/item[@name='casinoCoin']"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'bladeTrap')]"></remove>
 
+	<append xpath="/lootcontainers">
+		<lootprobtemplate name="veryHigh">
+			<loot level="1,999999" prob=".85"/>
+		</lootprobtemplate>
+	</append>
 	<!-- New food and candy-->
 	<append xpath="/lootcontainers/lootgroup[@name='rottenFood']">
 		<item name="foodSpartanLoaf"/>
@@ -428,7 +443,7 @@
 			<item name="gunRifleBrokenSniperRifle"/>
 		</lootgroup>
 		<lootgroup name="groupGunMGT0MGs" count="1" loot_quality_template="QLTemplateT0">
-			<item name="gunMGT1AK47" loot_prob_template="medLow"/>
+			<item name="gunMGT1AK47" loot_prob_template="low"/>
 			<item name="gunMGBrokenAK47"/>
 			<item name="gunMGBrokenTacticalAR"/>
 			<item name="gunMGBrokenM60"/>
@@ -890,7 +905,7 @@
 		<lootgroup name="groupArlene">
 			<item group="groupCommonManmadeResources" loot_prob_template="medHigh"/>			
 			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
-			<item group="groupDrinksCommon" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item group="groupCommonMelee" loot_prob_template="med"/>	
 			<item group="foodCandy" loot_prob_template="veryLow"/>				
 		</lootgroup>		
@@ -928,8 +943,9 @@
 		</lootgroup>
 		<lootgroup name="groupMarlene">
 			<item group="groupCommonManmadeResources" loot_prob_template="medHigh"/>
-			<item group="groupDrinksUncommon" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
+			<item group="groupGunHandgunScaled" loot_prob_template="medHigh"/>
 			<item group="groupCommonMelee" loot_prob_template="medLow"/>			
 			<item group="groupAmmoResourcesSmall" loot_prob_template="veryLow"/>	
 		</lootgroup>		
@@ -968,7 +984,7 @@
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>
 		<lootgroup name="groupPartyGirl">
-			<item group="groupDrinksUncommon" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item name="drinkJarBeer" count="1,2" loot_prob_template="high"/>
 			<item group="dyes" loot_prob_template="high"/>
 			<item group="foodCandy" loot_prob_template="medHigh"/>
@@ -1007,18 +1023,20 @@
 			<item group="foodCandy" count="0,1"/>
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>
-		<lootgroup name="groupNurse">	
-			<item group="groupFancyApparel" loot_prob_template="high"/>
-			<item group="groupLowerMed" loot_prob_template="veryHigh"/>
+		<lootgroup name="groupNurse" count="1">	
+			<item group="groupLowerMed" loot_prob_template="veryHigh"/>					
+			<item group="groupMedicalSmall01" loot_prob_template="veryHigh"/>
 			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
+			<item group="groupFancyApparel" loot_prob_template="high"/>	
 			<item name="foodHoney" loot_prob_template="medHigh"/>
 			<item name="drugHerbalAntibiotics" loot_prob_template="med"/>
-			<item name="drugPainkillers" loot_prob_template="med"/>
-			<item name="drugVitamins" loot_prob_template="med"/>
+			<item name="drugPainkillers" loot_prob_template="medHigh"/>
+			<item name="drugVitamins" loot_prob_template="medHigh"/>
 			<item name="medicalSplint" count="1" loot_prob_template="med"/>			
 		</lootgroup>		
 		<lootgroup name="groupNurses" count="all">
-			<item group="groupNurse" count="0,1"/>
+			<item group="groupNurse" count="1"/>
+			<item group="groupLowerMed" loot_prob_template="veryHigh"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>		
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceCloth" count="1,3"/>			
@@ -1045,7 +1063,7 @@
 		</lootgroup>
 		<lootgroup name="groupJoe">
 			<item group="groupCommonApparelNoPants" loot_prob_template="high"/>
-			<item group="groupDrinksUncommon" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>	
 			<item group="groupCommonManmadeResources" loot_prob_template="medHigh"/>
 			<item group="groupCommonOrganicResources" loot_prob_template="medHigh"/>
@@ -1087,7 +1105,7 @@
 		</lootgroup>
 		<lootgroup name="groupSteve">
 			<item group="groupCommonApparel" loot_prob_template="high"/>
-			<item group="groupDrinksUncommon" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
 			<item group="groupMeleeWpnAllScaled" loot_prob_template="high"/>
 			<item group="groupAmmoResourcesSmall" loot_prob_template="medHigh"/>
@@ -1128,7 +1146,8 @@
 		</lootgroup>
 		<lootgroup name="groupTomClark">
 			<item group="groupCommonApparel" loot_prob_template="high"/>
-			<item group="groupDrinksUncommon" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
+			<item group="groupGunHandgunScaled" loot_prob_template="medHigh"/>
 			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
 			<item group="groupCommonMelee" loot_prob_template="high"/>
 			<item group="groupAmmoResourcesSmall" loot_prob_template="medHigh"/>
@@ -1174,7 +1193,7 @@
 		</lootgroup>
 		<lootgroup name="groupBusinessMan">
 			<item group="groupCommonMelee" loot_prob_template="high"/>
-			<item group="groupDrinksUncommon" loot_prob_template="high"/>			
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>			
 			<item group="groupAmmoResourcesSmall" loot_prob_template="med"/>			
 			<item group="groupCommonGuns" loot_prob_template="med"/>
 			<item group="foodCandy" loot_prob_template="low"/>
@@ -1315,7 +1334,7 @@
 		</lootgroup>
 		<lootgroup name="groupBoe">			
 			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
-			<item group="groupDrinksUncommon" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item group="groupCommonMelee" loot_prob_template="high"/>
 			<item group="groupMeleeTool" loot_prob_template="high"/>
 			<item group="groupApparelFaceCover" loot_prob_template="medHigh"/>
@@ -1367,12 +1386,14 @@
 		</lootgroup>
 		<lootgroup name="groupJanitor" count="1">
 			<item group="groupMeleeTool" loot_prob_template="high"/>
-			<item group="workstationToolsScaled" loot_prob_template="med"/>	
+			<item group="workstationToolsScaled" loot_prob_template="med"/>
 			<item group="groupWorkingStiffsCrate" loot_prob_template="high"/>	
 			<item group="groupGunShotgunScaled" loot_prob_template="medHigh"/>
 			<item group="groupMeleeWpnBatonScaled" loot_prob_template="medHigh"/>
 			<item group="groupWorkbenchLoot02" loot_prob_template="medHigh"/>
-			<item group="groupWorkbenchLoot03" loot_prob_template="med"/>
+			<item group="groupWorkbenchLoot03" loot_prob_template="med"/>				
+			<item name="woodShapes:VariantHelper" count="7,21" loot_prob_template="high"/>
+			<item name="cobblestoneShapes:VariantHelper" count="7,21" loot_prob_template="medHigh"/>
 			<item name="toolBellows" loot_prob_template="medHigh"/>
 			<item name="toolAnvil" loot_prob_template="med"/>	
 			<item name="drinkJarCoffee" loot_prob_template="high"/>
@@ -1382,7 +1403,7 @@
 			<item name="armorMiningHelmet" mods="modArmorHelmetLight" mod_chance="1" loot_prob_template="med"/>
 		</lootgroup>		
 		<lootgroup name="groupJanitors" count="all">
-			<item group="groupJanitor" count="0,1"/>
+			<item group="groupJanitor" count="1"/>
 			<item name="apparelOveralls" count="0,1"/>
 			<item name="cntLootingToolBox" count="0,1"/>
 			<item name="resourceNail" count="0,10"/>			
@@ -1521,9 +1542,10 @@
 		<lootgroup name="groupDarlene">
 			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
 			<item group="groupCommonApparel" loot_prob_template="high"/>
-			<item group="groupDrinksUncommon" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item group="groupMeleeWpnBladeScaled" loot_prob_template="high"/>
 			<item group="groupGunHandgunScaled" loot_prob_template="medHigh"/>
+			<item group="groupMedicalUncommon" loot_prob_template="medHigh"/>	
 			<item group="groupModAllScaled" loot_prob_template="med"/>
 			<item group="groupGoreResources" count="1,2"/>
 		</lootgroup>		
@@ -1569,7 +1591,7 @@
 		</lootgroup>
 		<lootgroup name="groupYo">
 			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
-			<item group="groupDrinksUncommon" loot_prob_template="high"/>4
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item group="groupCommonManmadeResources" loot_prob_template="medHigh"/>
 			<item name="resourceMechanicalParts" count="1,3" loot_prob_template="medHigh"/>
 			<item name="resourceOil" count="1,2" loot_prob_template="med"/>
@@ -1631,6 +1653,7 @@
 		<lootgroup name="groupUtilityWorker">
 			<item group="groupMeleeTool" loot_prob_template="veryHigh"/>			
 			<item group="groupRareManmadeResources" loot_prob_template="medHigh"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item group="groupSmallEngine" loot_prob_template="medHigh"/>
 			<item group="groupCarBattery" loot_prob_template="medHigh"/>
 			<item group="groupArmorScaled" loot_prob_template="med"/>
@@ -1641,7 +1664,9 @@
 			<item group="groupWorkbenchLoot02" loot_prob_template="medHigh"/>
 			<item group="groupWorkbenchLoot03" loot_prob_template="med"/>			
 			<item name="drinkJarCoffee" loot_prob_template="high"/>
-			<item name="drinkJarBeer" count="1,2" loot_prob_template="high"/>
+			<item name="drinkJarBeer" count="1,2" loot_prob_template="high"/>							
+			<item name="woodShapes:VariantHelper" count="10,25" loot_prob_template="high"/>
+			<item name="cobblestoneShapes:VariantHelper" count="10,25" loot_prob_template="medHigh"/>
 		</lootgroup>		
 		<lootgroup name="groupUtilityWorkers" count="all">
 			<item group="groupUtilityWorker" count="0,2"/>
@@ -1738,6 +1763,7 @@
 			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
 			<item group="groupArmorScaled" loot_prob_template="veryHigh"/>			
 			<item group="groupMeleeWpnBladeScaled" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item group="groupChainsawsTiered" loot_prob_template="veryLow"/>
 			<item group="groupCommonManmadeResources" loot_prob_template="med"/>
 			<item group="groupWorkbenchLoot02" loot_prob_template="medHigh"/>
@@ -1752,7 +1778,7 @@
 			<item group="groupUncommonOrganicResources" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="2,3"/>
-			<item name="resourceWood" count="1,20"/>
+			<item name="resourceWood" count="10,20"/>
 			<item name="resourceYuccaFibers" count="2,4"/>
 			<item name="resourceCloth" count="2,4"/>
 		</lootgroup>
@@ -1763,7 +1789,7 @@
 			<item group="groupUncommonOrganicResources" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="2,3"/>
-			<item name="resourceWood" count="5,25"/>
+			<item name="resourceWood" count="15,30"/>
 			<item name="resourceYuccaFibers" count="2,4"/>
 			<item name="resourceCloth" count="2,4"/>
 		</lootgroup>	
@@ -1776,7 +1802,7 @@
 			<item group="groupGoreResources" count="2,3"/>
 			<item name="drinkJarCoffee" count="1"/>
 			<item group="groupChainsawsTiered" count="0,1"/>
-			<item name="resourceWood" count="10,30"/>			
+			<item name="resourceWood" count="20,40"/>			
 			<item name="resourceYuccaFibers" count="2,4"/>
 			<item name="resourceCloth" count="2,4"/>
 		</lootgroup>
@@ -1799,6 +1825,7 @@
 			<item group="groupFoodPileSmall" loot_prob_template="veryHigh"/>
 			<item group="groupShamwayCrate" loot_prob_template="high"/>
 			<item group="groupFoodPileMed" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item group="groupFoodPileLarge" loot_prob_template="medHigh"/>
 			<item group="groupRareManmadeResources" loot_prob_template="med"/>
 			<item group="groupRareOrganicResources" loot_prob_template="med"/>
@@ -1809,8 +1836,7 @@
 			<item group="groupApparelClothes" count="0,1"/>
 			<item group="groupUncommonManmadeResources" count="0,1"/>
 			<item group="groupUncommonOrganicResources" count="0,1"/>
-			<item group="groupCommonGuns" count="0,1"/>
-			<item group="groupCommonOrganicResources" count="1,3"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="2,4"/>
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>
@@ -1820,7 +1846,7 @@
 			<item group="groupUncommonOrganicResources" count="0,1"/>
 			<item group="groupCommonGuns" count="0,1"/>
 			<item group="groupAmmo9mm" count="0,1"/>
-			<item group="groupCommonOrganicResources" count="1,3"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="2,4"/>
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>	
@@ -1831,7 +1857,7 @@
 			<item group="groupCommonGuns" count="1"/>
 			<item group="foodCandy" count="0,1"/>
 			<item group="groupAmmo9mm" count="1"/>
-			<item group="groupCommonOrganicResources" count="1,3"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="2,4"/>
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>
@@ -1857,7 +1883,7 @@
 			<item group="groupWorkbenchLoot02" loot_prob_template="medHigh"/>
 		</lootgroup>		
 		<lootgroup name="groupFatHawaiians" count="all">
-			<item group="groupFatHawaiian" count="12"/>
+			<item group="groupFatHawaiian" count="0,1"/>
 			<item group="groupApparelClothes" count="0,1"/>
 			<item group="groupUncommonManmadeResources" count="0,1"/>
 			<item group="groupUncommonOrganicResources" count="0,1"/>
@@ -1995,7 +2021,7 @@
 		</lootgroup>
 		<lootgroup name="groupSkateboarder">
 			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
-			<item group="groupDrinksUncommon" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item group="groupCommonManmadeResources" loot_prob_template="medHigh"/>
 			<item name="resourceMechanicalParts" count="1,3" loot_prob_template="medHigh"/>
 			<item name="resourceOil" count="1,2" loot_prob_template="med"/>
@@ -2305,13 +2331,15 @@
 		</lootgroup>		
 		<lootgroup name="groupenFarmer">
 			<item name="lanternLight_player" loot_prob_template="high"/>
+			<item name="woodShapes:VariantHelper" count="10,25" loot_prob_template="high"/>
+			<item name="cobblestoneShapes:VariantHelper" count="10,25" loot_prob_template="medHigh"/>
 			<item group="groupCommonApparel" loot_prob_template="veryHigh"/>
 			<item group="groupIngredientsCommon" loot_prob_template="high"/>
 			<item group="farmerSeeds" loot_prob_template="high"/>
-			<item group="groupDrinksCommon" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item group="groupIngredientsUncommon" loot_prob_template="high"/>			
 			<item group="groupCookingTools" loot_prob_template="high"/>
-			<item group="groupDrinksUncommon" loot_prob_template="medHigh"/>			
+			<item group="groupDrinksSmall01" loot_prob_template="medHigh"/>			
 			<item group="groupIngredientsRare" loot_prob_template="med"/>	
 			<item group="groupCarBattery" loot_prob_template="medLow"/>
 			<item group="groupSmallEngine" loot_prob_template="medLow"/>
@@ -2359,7 +2387,7 @@
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>
 		<lootgroup name="groupenForest">
-			<item group="groupDrinksUncommon" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item group="groupMeleeWpnBladeScaled" loot_prob_template="high"/>
 			<item group="groupGunBowScaled" loot_prob_template="high"/>
 			<item group="groupAmmoArrows" loot_prob_template="high"/>
@@ -2402,13 +2430,13 @@
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>
 		<lootgroup name="groupenForestHiker">
-			<item group="groupDrinksUncommon" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item group="groupCookingTools" loot_prob_template="veryHigh"/>
 			<item group="groupIngredientsCommon" loot_prob_template="high"/>
 			<item group="groupIngredientsUncommon" loot_prob_template="medHigh"/>
 			<item group="groupUncommonManmadeResources" loot_prob_template="med"/>
 			<item group="groupIngredientsRare" loot_prob_template="med"/>	
-			<item group="groupMedicalSmall01" loot_prob_template="med"/>
+			<item group="groupMedicalPileSmall" loot_prob_template="med"/>
 			<item name="lanternLight_player" loot_prob_template="high"/>
 			<item name="apparelWornBoots" mods="dye" mod_chance="0" loot_prob_template="med"/>
 			<item name="apparelTShirtPlain" mods="dye" mod_chance="0" loot_prob_template="veryHigh"/>
@@ -2437,7 +2465,7 @@
 			<item group="groupenForestHiker" count="1,3"/>
 			<item group="groupenForestHikerWeapons" count="1,2"/>
 			<item group="groupIngredientsRare" count="0,1"/>
-			<item group="groupMedicalSmall01" count="0,1"/>
+			<item group="groupMedicalPileSmall" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceCloth" count="1,3"/>
@@ -2446,7 +2474,7 @@
 			<item group="groupenForestHiker" count="1,4"/>
 			<item group="groupenForestHikerWeapons" count="1"/>
 			<item group="groupIngredientsRare" count="0,1"/>
-			<item group="groupMedicalSmall01" count="0,1"/>
+			<item group="groupMedicalPileSmall" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,3"/>
 			<item group="groupGoreResources" count="2,3"/>
 			<item name="resourceCloth" count="2,5"/>
@@ -2456,7 +2484,8 @@
 			<item name="apparelDenimShortsPants" mods="dye" mod_chance="0" loot_prob_template="veryHigh"/>
 			<item name="apparelRunningShoesRegular" loot_prob_template="high"/>
 			<item name="apparelRunningShoesHP" loot_prob_template="med"/>
-			<item group="groupMedicalSmall01" loot_prob_template="med"/>
+			<item group="groupMedicalPileSmall" loot_prob_template="med"/>
+			<item group="groupMedicalUncommon" loot_prob_template="med"/>			
 			<item group="groupCollegeApparel" loot_prob_template="veryLow"/>
 			<item group="groupDrinksRare" loot_prob_template="veryLow"/>			
 			<item name="drugHealthBar" loot_prob_template="low"/>
@@ -2485,7 +2514,7 @@
 			<item name="drinkJarEmpty" count="1,2"/>
 			<item name="drinkJarBoiledWater" count="1,2"/>
 			<item name="drinkJarPureMineralWater" count="0,1"/>
-			<item group="groupMedicalSmall01" count="0,1"/>
+			<item group="groupMedicalPileSmall" count="0,1"/>
 			<item name="drugHealthBar" count="0,1"/>
 		</lootgroup>
 		<lootgroup name="groupenJoggersGiant" count="all">
@@ -2496,7 +2525,7 @@
 			<item name="drinkJarEmpty" count="1,2"/>
 			<item name="drinkJarBoiledWater" count="1,2"/>
 			<item name="drinkJarPureMineralWater" count="0,1"/>
-			<item group="groupMedicalSmall01" count="0,1"/>
+			<item group="groupMedicalPileSmall" count="0,1"/>
 		</lootgroup>		
 		<lootgroup name="groupenLumberjack">
 			<item group="groupCommonOrganicResources"/>
@@ -2554,7 +2583,7 @@
 			<item group="groupMedicalUncommon" loot_prob_template="medHigh"/>
 			<item group="groupMedicalRare" loot_prob_template="med"/>
 			<item name="resourceSewingKit" loot_prob_template="medHigh"/>
-			<item name="drugVitamins" loot_prob_template="low"/>
+			<item name="drugVitamins" loot_prob_template="medHigh"/>
 			<item name="medicalFirstAidBandage" count="0,2" loot_prob_template="medHigh"/>
 			<item name="resourceScrapPolymers" count="0,2" loot_prob_template="medHigh"/>
 			<item name="medicalAloeCream" count="1" loot_prob_template="veryHigh"/>
@@ -2562,7 +2591,7 @@
 		</lootgroup>
 		<lootgroup name="groupenNursesHD" count="all">
 			<item group="groupenNurseHD" count="0,1"/>
-			<!-- <item group="groupMedicalSmall01" count="0,1"/> -->
+			<!-- <item group="groupMedicalPileSmall" count="0,1"/> -->
 			<item group="groupMedicalPileSmall" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>		
 			<item group="groupGoreResources" count="1,2"/>
@@ -2570,14 +2599,14 @@
 		</lootgroup>
 		<lootgroup name="groupenNursesHDFeral" count="all">
 			<item group="groupenNurseHD" count="0,2"/>
-			<item group="groupMedicalSmall01" count="1"/>
+			<item group="groupMedicalPileSmall" count="1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>		
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceCloth" count="1,3"/>
 		</lootgroup>	
 		<lootgroup name="groupenNursesHDRadiated" count="all">
 			<item group="groupenNurseHD" count="1,3"/>
-			<item group="groupMedicalSmall01" count="1"/>
+			<item group="groupMedicalPileSmall" count="1"/>
 			<item group="groupMedicalHighLow" count="0,1"/>
 			<item name="medicalFirstAidKit" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
@@ -2586,14 +2615,14 @@
 		</lootgroup>
 		<lootgroup name="groupenNursesHDGiant" count="all">
 			<item group="groupenNurseHD" count="1,4"/>
-			<item group="groupMedicalSmall01" count="1"/>
+			<item group="groupMedicalPileSmall" count="1"/>
 			<item group="groupMedicalHighLow" count="0,1"/>
 			<item name="medicalFirstAidKit" count="0,1"/>
 			<item group="groupGoreResources" count="2,3"/>
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>
 		<lootgroup name="groupenPunk">
-			<item group="groupDrinksUncommon" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item group="groupUncommonManmadeResources" loot_prob_template="med"/>
 			<item group="dyes" loot_prob_template="med"/>
 			<item name="resourceMechanicalParts" count="1,3" loot_prob_template="medHigh"/>
@@ -2652,7 +2681,7 @@
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>
 		<lootgroup name="groupenSchool">
-			<item group="groupDrinksUncommon" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item group="groupAllMeleeTiered" loot_prob_template="high"/>			
 			<item group="groupCommonManmadeResources" loot_prob_template="high"/>
 			<item group="groupCollegeApparel" loot_prob_template="low"/>
@@ -2697,30 +2726,31 @@
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>
 		<lootgroup name="groupenSoldier">
-			<item group="groupRareManmadeResources" loot_prob_template="med"/>
 			<item group="groupFoodCommon" loot_prob_template="veryHigh"/>
 			<item group="groupArmorScaled" loot_prob_template="high"/>
+			<item name="apparelArmyShirt" loot_prob_template="veryHigh"/> 	
 			<item name="resourceMilitaryFiber" loot_prob_template="high"/>
 			<item group="groupAmbulance" loot_prob_template="medHigh"/>
-			<item group="groupArmorScaledTPlus" loot_prob_template="medHigh"/>
-			<item group="groupArmorModsScaled" loot_prob_template="medHigh"/>
-			<item group="groupWeaponModsScaled" loot_prob_template="medHigh"/>
-			<item group="groupWeapons_Demolitionist" loot_prob_template="med"/>
-			<item name="apparelArmyShirt" loot_prob_template="veryHigh"/> 			
+			<item group="groupRareManmadeResources" loot_prob_template="med"/>
+			<item group="groupArmorScaledTPlus" loot_prob_template="med"/>
+			<item group="groupArmorModsScaled" loot_prob_template="med"/>
+			<item group="groupWeaponModsScaled" loot_prob_template="med"/>
+			<item group="groupWeapons_Demolitionist" loot_prob_template="medLow"/>					
 		</lootgroup>
-		<lootgroup name="groupenSoldierWeapons"  count="1">
+		<lootgroup name="groupenSoldierWeapons">
 			<item group="groupMeleeWpnBladeScaled" loot_prob_template="veryHigh"/>
 			<item group="groupGunHandgunScaled" loot_prob_template="veryHigh"/>
-			<item group="groupAmmo762mm" count="0,40" loot_prob_template="high"/>
+			<item group="groupAmmo762mm" count="0,4" loot_prob_template="high"/>
+			<item group="groupGunMGScaled" loot_prob_template="high"/>
 			<item group="groupGunRifleScaled" loot_prob_template="high"/>
 			<item group="groupWeapons_Demolitionist" loot_prob_template="low"/>
 		</lootgroup>
 		<lootgroup name="groupenSoldiers" count="all">
 			<item group="groupenSoldier" count="1"/>
-			<item group="groupGunMGScaled" count="0,1"/>
+			<!-- <item group="groupGunMGScaled" count="0,1"/> -->
 			<item group="groupenSoldierWeapons" count="0,1"/>
 			<item group="groupMeleeWpnBladeScaled" count="0,1"/>
-			<item group="groupAmmo762mm" count="0,25"/>
+			<item group="groupAmmo762mm" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceMilitaryFiber" count="1,3"/>
@@ -2729,7 +2759,7 @@
 			<item group="groupenSoldier" count="0,2"/>
 			<item group="groupenSoldierWeapons" count="0,2"/>
 			<item group="groupGunBowScaled" count="1"/>
-			<item group="groupAmmo762mm" count="10,35"/>
+			<item group="groupAmmo762mm" count="1,2"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceMilitaryFiber" count="1,3"/>
@@ -2738,17 +2768,22 @@
 			<item group="groupenSoldier" count="1,3"/>
 			<item group="groupenSoldierWeapons" count="0,3"/>
 			<item group="groupGunMGScaled" count="0,1"/>
-			<item group="groupAmmo762mm" count="20,50"/>
+			<item group="groupAmmo762mm" count="2,5"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceMilitaryFiber" count="1,3"/>
 		</lootgroup>	
 		<lootgroup name="groupenSoldiersGiant" count="all">
-			<item group="groupenSoldier" count="1,4"/>
+			<item group="groupenSoldier" count="1,2"/>
+			<item group="groupenSoldierWeapons" count="0,2"/>
+			<item group="groupGunBowScaled" count="1"/>
+			<item group="groupAmmo762mm" count="1,2"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupGoreResources" count="2,4"/>
+			<item name="resourceMilitaryFiber" count="1,3"/>
 			<item group="groupenSoldierWeapons" count="0,2"/>
 			<item group="groupGunRifleScaled" count="0,1"/>
 			<item group="groupGoreResources" count="3,7"/>
-			<item group="groupAmmo762mm" count="20,50"/>
 			<item group="groupCommonOrganicResources" count="1,3"/>
 			<item group="groupGoreResources" count="2,3"/>
 			<item name="resourceMilitaryFiber" count="2,5"/>
@@ -2757,7 +2792,7 @@
 			<item group="groupenSoldier" count="0,1"/>
 			<item group="groupenSoldierWeapons" count="0,1"/>
 			<item group="groupMeleeWpnBladeScaled" count="0,1"/>
-			<item group="groupAmmo762mm" count="0,25"/>
+			<item group="groupAmmo762mm" count="0,2"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceMilitaryFiber" count="1,3"/>
@@ -2766,7 +2801,7 @@
 			<item group="groupenSoldier" count="0,2"/>
 			<item group="groupenSoldierWeapons" count="0,2"/>
 			<item group="groupMeleeWpnBladeScaled" count="0,1"/>
-			<item group="groupAmmo762mm" count="10,35"/>
+			<item group="groupAmmo762mm" count="1,3"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceMilitaryFiber" count="1,3"/>
@@ -2776,7 +2811,7 @@
 			<item group="groupenSoldierWeapons" count="0,3"/>
 			<item group="groupGunRifleScaled" count="0,1"/>
 			<item group="groupMeleeWpnBladeScaled" count="0,1"/>
-			<item group="groupAmmo762mm" count="20,50"/>
+			<item group="groupAmmo762mm" count="2,5"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceMilitaryFiber" count="1,3"/>
@@ -2786,7 +2821,7 @@
 			<item group="groupenSoldierWeapons" count="0,2"/>
 			<item group="groupMeleeWpnBladeScaled" count="0,1"/>
 			<item group="groupGunRifleScaled" count="0,1"/>
-			<item group="groupAmmo762mm" count="20,50"/>
+			<item group="groupAmmo762mm" count="2,5"/>
 			<item group="groupCommonOrganicResources" count="1,3"/>
 			<item group="groupGoreResources" count="2,3"/>
 			<item name="resourceMilitaryFiber" count="2,5"/>
@@ -3313,7 +3348,7 @@
 		<lootcontainer name="zPackYoGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupYosGiant"/>
 		</lootcontainer>
-		<lootcontainer name="zUtilityWorker" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackUtilityWorker" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupUtilityWorkers"/>
 		</lootcontainer>
 		<lootcontainer name="zPackUtilityWorkerFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
