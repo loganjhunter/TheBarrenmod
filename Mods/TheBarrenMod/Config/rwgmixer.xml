@@ -52,9 +52,9 @@
 
 			<property class="rivers">
 				<property name="scale" value="1,1.5"/>
-				<property name="few" value="0"/>
-				<property name="default" value="1"/>
-				<property name="many" value="1"/>
+				<property name="few" value="2"/>
+				<property name="default" value="3"/>
+				<property name="many" value="4"/>
 			</property>
 			
 			<property class="craters">
@@ -123,9 +123,9 @@
 			
 			<property class="rivers">
 				<property name="scale" value="1,1.5"/>
-				<property name="few" value="0"/>
-				<property name="default" value="1"/>
-				<property name="many" value="2"/>
+				<property name="few" value="2"/>
+				<property name="default" value="3"/>
+				<property name="many" value="4"/>
 			</property>
 			
 			<property class="craters">
@@ -195,9 +195,9 @@
 
 			<property class="rivers">
 				<property name="scale" value="1,1.5"/>
-				<property name="few" value="0"/>
-				<property name="default" value="1"/>
-				<property name="many" value="1"/>
+				<property name="few" value="2"/>
+				<property name="default" value="3"/>
+				<property name="many" value="4"/>
 			</property>
 			
 			<property class="craters">
@@ -267,9 +267,9 @@
 
 			<property class="rivers">
 				<property name="scale" value="1,1.5"/>
-				<property name="few" value="0"/>
-				<property name="default" value="1"/>
-				<property name="many" value="1"/>
+				<property name="few" value="2"/>
+				<property name="default" value="5"/>
+				<property name="many" value="8"/>
 			</property>
 			
 			<property class="craters">

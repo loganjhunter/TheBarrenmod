@@ -3,7 +3,11 @@
 	<!-- Removed landclaim block -->	
 	<remove xpath="/blocks/block[@name='keystoneBlock']"></remove>
 	<remove xpath="/blocks/block[@name='bladeTrap']"></remove>
-	<set xpath="/blocks/block[@name='terrDestroyedStone']/property[@name='Material']/@value">Mstone</set>
+<!-- 	<set xpath="/blocks/block[@name='terrDestroyedStone']/property[@name='Material']/@value">Mstone</set> -->
+
+
+	
+	<set xpath="/blocks/block/drop[contains(@event, 'Fall')]/@name">terrDestroyedWoodDebris</set> 
 	<set xpath="/blocks/block[@name='rubblePileBricks']/property[@name='Material']/@value">Mstone</set>
 	<set xpath="/blocks/block[@name='decoCowSkull']/property[@name='Material']/@value">Mstone</set>
 	<set xpath="/blocks/block[@name='palletBricksBase']/property[@name='Material']/@value">Mstone</set>
@@ -11,8 +15,192 @@
 	
 	
 	<!-- End of removal -->	
+
 	
 	<append xpath="/blocks">
+		
+		<!-- Variation of War3zuk Healing Bedroll, was granted permission to use this -->	
+		<block name="cleanBedroll">
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="cleanBedrollDesc"/>
+			<property name="Class" value="SleepingBag"/>
+			<property name="IndexName" value="brBlock"/> <!-- need this to show the bigger covering area -->
+			<property name="Material" value="Mplants"/>
+			<property name="MaxDamage" value="100"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/RespawnPoints/bedRollPrefab"/>
+			<property name="CustomIcon" value="bedroll"/>
+			<property name="CustomIconTint" value="523538"/>
+			<property name="TintColor" value="523538"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="ModelOffset" value=".5,.5,0"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,2,1"/>
+			<property name="FallDamage" value=".8"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="FuelValue" value="20"/>
+			<property name="CanPickup" value="true" param1="bedrollBlockVariantHelper"/>
+			<!-- <property name="BuffsWhenWalkedOn" value="buffHealHealth"/> -->
+			<property name="BuffsWhenWalkedOn" value="buffCleanBedroll"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Group" value="Basics,Building,advBuilding"/>			
+			<property class="RepairItems">
+				<property name="resourceYuccaFibers" value="20"/>
+			</property>
+			<drop event="Harvest" name="resourceYuccaFibers" count="5" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceYuccaFibers" count="1,3"/>
+			<drop event="Fall" name="resourceYuccaFibers" count="5" prob="1" stick_chance="0"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="FilterTags" value="MC_building,SC_decor"/>
+		</block>
+	
+		<block name="cleanTwinBedMade">
+			<property name="DescriptionKey" value="cleanTwinBedMadeDesc"/>
+			<property name="Class" value="SleepingBag"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Furniture/bedMadePrefab"/>
+			<property name="CustomIcon" value="bunkBedMade"/>
+			<property name="CustomIconTint" value="523538"/>
+			<property name="TintColor" value="523538"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Texture" value="282"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,1,2"/>
+			<property name="FallDamage" value=".6"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="FuelValue" value="6"/>
+			<property name="BuffsWhenWalkedOn" value="buffCleanTwinBedMade"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="DowngradeBlock" value="bunkBedFrame"/>
+			<property class="RepairItems">
+				<property name="resourceCloth" value="10"/>
+			</property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceCloth" count="5" tag="salvageHarvest"/>
+			<drop event="Destroy" name="resourceCloth" count="5"/>
+			<property name="Group" value="Decor/Miscellaneous"/>
+			<property name="EconomicValue" value="1330"/>
+			<property name="FilterTags" value="MC_building,SC_decor"/>
+		</block>
+	
+		<block name="cleanKingBed">
+			<property name="DescriptionKey" value="cleanKingBedDesc"/>
+			<property name="Class" value="SleepingBag"/>
+			<property name="Material" value="Mfurniture"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Furniture/kingSizedBedPrefab"/>
+			<property name="CustomIcon" value="bed02"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="FallDamage" value=".6"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+			<property name="BuffsWhenWalkedOn" value="buffCleanKingBed"/>
+			<property name="SellableToTrader" value="false"/>
+			<!-- A15
+			<property name="BuffsWhenWalkedOn" value="sleepingBigBedTrigger"/>
+			-->
+			<property class="RepairItems">
+				<property name="resourceCloth" value="40"/>
+				<property name="resourceSpring" value="20"/>
+				<property name="resourceWood" value="20"/>
+				<property name="resourceMetalPipe" value="10"/>
+			</property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceCloth" count="16" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceWood" count="8" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceSpring" count="6" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMetalPipe" count="2,3" tag="salvageHarvest"/>
+			<drop event="Destroy" name="resourceScrapIron" count="10,15"/>
+			<property name="Group" value="Decor/Miscellaneous"/>
+			<property name="EconomicValue" value="2600"/>
+			<property name="FilterTags" value="MC_building,SC_decor"/>
+		</block>
+	
+		<block name="cleanHospitalBed">
+			<property name="DescriptionKey" value="cleanHospitalBedDesc"/>
+			<property name="Class" value="SleepingBag"/>
+			<property name="Extends" value="gurneyBed"/>
+			<property name="Model" value="Entities/Furniture/hospitalBedPrefab" param1="main_mesh"/>
+			<property name="CustomIcon" value="hospitalBed"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,1,2"/>
+			<property name="FallDamage" value=".6"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="BuffsWhenWalkedOn" value="buffHospitalBed"/>
+			<property name="SellableToTrader" value="false"/>
+			<!-- <property class="RepairItems">
+				<property name="resourceScrapPolymers" value="8"/>
+				<property name="resourceSpring" value="10"/>
+				<property name="resourceMetalPipe" value="10"/>
+			</property> -->
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMetalPipe" count="2,3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="1,3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapPolymers" count="3,6" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceScrapIron" count="5,20"/>
+		</block>
+
+		<block name="titaniumMaster">
+			<property name="CreativeMode" value="None"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="DescriptionKey" value="titaniumBlockGroupDesc"/>
+			<property name="Material" value="Mtitanium"/>
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="PassThroughDamage" value="true"/>
+			<property name="CustomIconTint" value="b3f2f2"/>
+			<property name="TintColor" value="b3f2f2"/>
+			<property name="Texture" value="191"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="RepairItems">
+				<property name="resourceForgedTitanium" value="8"/>
+			</property>
+			<property name="CustomUpgradeSound" value="place_block_metal"/>
+			<drop event="Harvest" name="resourceScrapIron" count="15" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="EconomicValue" value="160"/>
+			<property name="DescriptionKey" value="titaniumBlockGroupDesc"/>
+			<property name="FilterTags" value="MC_building"/>
+			<property name="SortOrder1" value="40p0"/>
+			<property name="SortOrder2" value="0002"/>
+		</block>
+		
+		<block name="titaniumShapes" shapes="All">
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="DescriptionKey" value="titaniumBlockGroupDesc"/>
+			<property name="Material" value="Mtitanium_shapes"/>
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="PassThroughDamage" value="true"/>
+			<property name="CustomIconTint" value="b3f2f2"/>
+			<property name="TintColor" value="b3f2f2"/>
+			<property name="Texture" value="191"/>			
+			<property name="UiBackgroundTexture" value="191"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="RepairItems">
+				<property name="resourceForgedTitanium" value="8"/>
+			</property>
+			<property name="CustomUpgradeSound" value="place_block_metal"/>
+			<drop event="Harvest" name="resourceScrapIron" count="30" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="EconomicValue" value="160"/>
+			<property name="FilterTags" value="MC_Shapes"/>
+			<property name="SortOrder1" value="0011"/>
+		</block>
+		
 		<!-- Started experimenting with steel spikes, no recipe, looking for reskin -->
 		<block name="trapSpikesScrapSteelMaster">
 			<property name="CreativeMode" value="None"/>
@@ -45,6 +233,36 @@
 			<property name="SortOrder1" value="70g0"/>
 		</block>
 
+
+		<block name="pianoWire">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Class" value="Damage"/>
+			<property name="BlockTag" value="Spike"/>
+			<property name="Damage" value="1"/>
+			<property name="DamageType" value="BarbedWire"/>
+			<property name="Damage_received" value="6"/>
+			<property name="Material" value="MpianoWire"/>
+			<property name="Shape" value="New"/>
+			<property name="Mesh" value="cutout"/>
+			<property name="LightOpacity" value="0"/>
+			<property name="Model" value="billboard"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
+			<property name="Texture" value="68"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="ShapeMinBB" value="0.3,0,0.3"/>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="SellableToTrader" value="false"/>
+			<!--<property name="BuffsWhenWalkedOn" value="trapDamage1Trigger"/>-->
+			<property class="RepairItems">
+				<property name="resourceScrapIron" value="15"/>
+			</property>
+			<drop event="Destroy" name="resourceScrapIron" count="1,12"/>
+			<property name="EconomicValue" value="15"/>
+			<property name="FilterTags" value="MC_building,SC_traps"/>
+			<property name="SortOrder1" value="70g0"/>
+			<property name="VehicleHitScale" value="8"/>
+		</block>
 		<!-- Player made Stage 3 with blood -->
 		<!-- NOT_A_SHAPE -->
 		<block name="trapSpikesSteelDmg2">
@@ -107,6 +325,7 @@
 			<property name="WakeUpTime" value="0.3"/>
 			<property name="YawRange" value="90"/>
 			<property name="PitchRange" value="90"/>
+			<property name="SellableToTrader" value="false"/>
 			<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
 			<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
 			<property name="DamageBonus.head" value="5"/>
@@ -167,6 +386,7 @@
 			<property name="CustomIconTint" value="9d9d9e"/>
 			<property name="CanPickup" value="true"/>
 			<property name="TakeDelay" value="10"/>
+			<property name="SellableToTrader" value="false"/>
 			<property class="RepairItems">
 				<property name="resourceForgedIron" value="10"/>
 			</property>
@@ -211,6 +431,7 @@
 			<property name="CustomIconTint" value="e6e6e6"/>
 			<property name="CanPickup" value="true"/>
 			<property name="TakeDelay" value="10"/>
+			<property name="SellableToTrader" value="false"/>
 			<property class="RepairItems">
 				<property name="resourceForgedSteel" value="10"/>
 			</property>
@@ -255,6 +476,7 @@
 			<property name="CustomIconTint" value="b3f2f2"/>
 			<property name="CanPickup" value="true"/>
 			<property name="TakeDelay" value="10"/>
+			<property name="SellableToTrader" value="false"/>
 			<property class="RepairItems">
 				<property name="resourceForgedTitanium" value="10"/>
 			</property>
@@ -396,6 +618,7 @@
 			<property name="IsTerrainDecoration" value="true"/>
 			<property name="DescriptionKey" value="brokenSmallEngineDesc"/>
 			<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
+			<property name="SellableToTrader" value="false"/>
 			
 			<drop event="Harvest" name="resourceMechanicalParts" count="1,2" prob="0.5" tag="salvageHarvest"/>
 			<drop event="Harvest" name="resourceMetalPipe" count="1,2" prob="0.5" tag="salvageHarvest"/>
@@ -416,6 +639,7 @@
 			<property name="IsTerrainDecoration" value="true"/>
 			<property name="DescriptionKey" value="cntLootingToolBoxDesc"/>
 			<property name="LootList" value="toolBox"/>
+			<property name="SellableToTrader" value="false"/>
 			<property class="RepairItems">
 				<property name="resourceMechanicalParts" value="2"/>
 				<property name="resourceForgedIron" value="1"/>
@@ -437,6 +661,7 @@
 			<property name="ImposterDontBlock" value="true"/>
 			<property name="IsTerrainDecoration" value="true"/>
 			<property name="DescriptionKey" value="brokenLaptopDesc"/>
+			<property name="SellableToTrader" value="false"/>
 			<drop event="Harvest" name="resourceScrapIron" count="1" tool_category="Disassemble"/>
 			<drop event="Harvest" name="resourceElectricParts" count="1,2" tag="salvageHarvest"/>
 			<drop event="Destroy" name="resourceScrapIron" count="1,12"/>
@@ -446,4 +671,21 @@
 	</append>
 	<!--<set xpath="/blocks/dartTrap/property[@name='AmmoItem']/@value">ammoDartIron,ammoDartSteel,ammoDartTitanium</set>-->
 	<append xpath="/blocks/block[@name='dartTrap']/property[@name='AmmoItem']/@value">,ammoDartSteel,ammoDartTitanium</append>
+		<!-- Make steel shapes upgrade to titanium-->
+	<append xpath="/blocks/block[@name='steelMaster']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="titaniumMaster"/>
+			<property name="Item" value="resourceForgedTitanium"/>
+			<property name="ItemCount" value="10"/>
+			<property name="UpgradeHitCount" value="4"/>
+		</property>	
+	</append>
+	<append xpath="/blocks/block[@name='steelShapes']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="titaniumShapes"/>
+			<property name="Item" value="resourceForgedTitanium"/>
+			<property name="ItemCount" value="10"/>
+			<property name="UpgradeHitCount" value="4"/>
+		</property>	
+	</append>
 </configs>

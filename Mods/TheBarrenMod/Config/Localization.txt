@@ -6,6 +6,30 @@ meleeToolAshesChainsawDesc,items,Tool,,,"The legendary Ash Williams chainsaw.\n\
 hailToTheKingDesc,progression,Perk,"need desc here!\nper level"
 resourceForgedTitanium,items,Item,,,Forged Titanium,, ,,,,,,,,,,,,
 resourceForgedTitaniumDesc,items,Item,,,Can be crafted at the forge after installing a crucible upgrade.,, ,,,,,,,,,,,,
+materialMtitanium_shapes,blocks,Block,,,Titanium
+titaniumShapes:VariantHelper,blocks,Block,,,Titanium Shapes
+
+cleanBedroll,blocks,Block,,,Clean Bedroll,, ,,,,,,,,,,,,
+cleanBedrollDesc,blocks,Block,,,A nice clean bedroll that you can heal on,, ,,,,,,,,,,,,
+cleanTwinBedMade,blocks,Block,,,Clean Twin Size Bed,, ,,,,,,,,,,,,
+cleanTwinBedMadeDesc,blocks,Block,,,Heal up and sleep off that headache on this twin size bed,, ,,,,,,,,,,,,
+cleanKingBed,blocks,Block,,,Clean King Size Bed,, ,,,,,,,,,,,,
+cleanKingBedDesc,blocks,Block,,,"As counterintuitive as it sounds - this king size bed will heal, help your headache, and cure the infection of its occupants",, ,,,,,,,,,,,,
+cleanHospitalBed,blocks,Block,,,Seans Hospital Bed,, ,,,,,,,,,,,,
+cleanHospitalBedDesc,blocks,Block,,,"Hello Nurse!\nTake a rest on this bed to heal, cure concussion, infections, and abrasions\n\n\n(Actual nurse not included)",, ,,,,,,,,,,,,
+
+buffCleanBedrollName,buffs,Buff,,,Clean Bedroll Recovery,, ,,,,,,,,,,,,
+buffCleanBedrollNameDesc,buffs,Buff,,,You are recovering health up to your maximum health.\n\nHealth +0.5 / second (food)\nHealth +2 / second (medical items),, ,,,,,,,,,,,,
+buffCleanTwinBedMadeName,buffs,Buff,,,Clean Twin Size Bed Recovery,, ,,,,,,,,,,,,
+buffCleanTwinBedMadeDesc,buffs,Buff,,,Your concussion is being cured and you are recovering health up to your maximum health.\n\nHealth +0.5 / second (food)\nHealth +2 / second (medical items),, ,,,,,,,,,,,,
+buffCleanKingBedName,buffs,Buff,,,Clean Kind Size Bed Recovery,, ,,,,,,,,,,,,
+buffCleanKingBedDesc,buffs,Buff,,,Your concussion is being cured and you are recovering health up to your maximum health.\n\nHealth +0.5 / second (food)\nHealth +2 / second (medical items),, ,,,,,,,,,,,,
+buffHospitalBedName,buffs,Buff,,,Seans Hospital Bed Recovery,, ,,,,,,,,,,,,
+buffHospitalBedDesc,buffs,Buff,,,Your concussion is being cured and you are recovering health up to your maximum health.\n\nHealth +0.5 / second (food)\nHealth +2 / second (medical items),, ,,,,,,,,,,,,
+
+
+
+
 bladeTrapIron,blocks,Electricity,,,Iron Blade Trap,, ,,,,,,,,,,,,
 bladeTrapIronDesc,blocks,Electricity,,,Used to chop up zombies into many pieces. Just add zombies and stir.,, ,,,,,,,,,,,,
 bladeTrapSteel,blocks,Electricity,,,Steel Blade Trap,, ,,,,,,,,,,,,
@@ -17,7 +41,7 @@ ammoDartSteelDesc,items,Ammo,,,Used as ammunition for traps.,, ,,,,,,,,,,,,
 ammoDartTitanium,items,Ammo,,,Titanium Dart (Ammo),, ,,,,,,,,,,,,
 ammoDartTitaniumDesc,items,Ammo,,,Used as ammunition for traps.,, ,,,,,,,,,,,,
 apparelCollegeRunningShoes,items,Clothes,,,College Running Shoes,, ,,,,,,,,,,,,
-apparelCollegeRunningShoesDesc,items,Clothes,,,These things smell just as bad as what's chasing you, but at least you can run 15% faster in them.,, ,,,,,,,,,,,,
+apparelCollegeRunningShoesDesc,items,Clothes,,,"These things smell just as bad as what's chasing you, but at least you can run 15% faster in them.",, ,,,,,,,,,,,,
 apparelCollegeRunningTShirt,items,Clothes,,,College Running TShirt,, ,,,,,,,,,,,,
 apparelCollegeRunningTShirtDesc,items,Clothes,,,Nothing says supporting your local college team like a sweet t-shirt. Run 15% faster.,, ,,,,,,,,,,,,
 apparelCollegeRunningShorts,items,Clothes,,,College Running Shorts,, ,,,,,,,,,,,,

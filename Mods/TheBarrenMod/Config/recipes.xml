@@ -190,6 +190,7 @@
 	<remove xpath="/recipes/recipe[@name='shotgunTurret']"></remove>
 
 	<append xpath="/recipes">
+		<!-- New glue recipes -->	
 		<recipe name="resourceGlue" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkAdvancedEngineering">
 			<ingredient name="resourceBone" count="7"/>
 			<ingredient name="drinkJarRiverWater" count="1"/>
@@ -205,7 +206,13 @@
 				<passive_effect name="CraftingIngredientCount" level="1,5" operation="base_add" value="-1" tags="resourceBone"/>
 			</effect_group>
 		</recipe>
-	
+		
+		<!-- New titanium block -->	
+		<recipe name="titaniumShapes:VariantHelper" count="1">
+			<ingredient name="resourceForgedTitanium" count="10"/>
+		</recipe>
+		
+		<!-- New weapons recipes for broken items -->	
 		<recipe name="meleeWpnBladeT1HuntingKnife" count="1" tags="learnable,perkDeepCuts">
 			<ingredient name="meleeWpnBladeBrokenHuntingKnife" count="1"/>
 			<ingredient name="resourceWood" count="4"/>
@@ -453,11 +460,7 @@
 				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceForgedSteel,gunShotgunBrokenPumpShotgun,resourceOil,resourceScrapPolymers"/>
 			</effect_group>
 		</recipe>		
-	</append> 
 
-
-
-	<append xpath="/recipes">
 		<!-- Adding titanium -->	
 		<recipe name="resourceForgedTitanium" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering" craft_tool="toolForgeCrucible">
 			<ingredient name="unit_iron" count="25"/>
@@ -481,7 +484,7 @@
 				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="unit_clay,unit_iron"/>
 			</effect_group>
 		</recipe>
-		<!-- Adding new blade traps -->
+		<!-- Adding new traps -->
 		<recipe name="bladeTrapIron" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable"> <!-- trap -->
 			<ingredient name="resourceForgedIron" count="20"/>
 			<ingredient name="resourceMechanicalParts" count="8"/>
@@ -525,7 +528,7 @@
 		</recipe>
 		
 		
-		<!-- New atomic ammo -->
+		<!-- Adding new atomic ammo -->
 		<recipe name="ammoAtomicArrow" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
 			<ingredient name="resourceScrapPolymers" count="10"/>
 			<ingredient name="ammoArrowExploding" count="10"/>
@@ -548,6 +551,36 @@
 			<ingredient name="resourceGunPowder" count="40"/>
 			<ingredient name="resourceDuctTape" count="1"/>
 			<ingredient name="ammoGasCan" count="5"/>
+			<ingredient name="resourceForgedTitanium" count="5"/>
+		</recipe>
+		<!-- Adding new healing beds -->
+		<recipe name="cleanBedroll" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceCloth" count="20"/>
+			<ingredient name="resourceCropCottonPlant" count="20"/>
+		</recipe>
+		<recipe name="cleanTwinBedMade" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceCloth" count="30"/>
+			<ingredient name="resourceCropCottonPlant" count="30"/>
+			<ingredient name="resourceSpring" count="10"/>
+			<ingredient name="resourceWood" count="10"/>
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceForgedIron" count="5"/>
+		</recipe>
+		<recipe name="cleanKingBed" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceCloth" count="40"/>
+			<ingredient name="resourceCropCottonPlant" count="40"/>
+			<ingredient name="resourceSpring" count="20"/>
+			<ingredient name="resourceWood" count="20"/>
+			<ingredient name="resourceMetalPipe" count="20"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+		</recipe>
+		<recipe name="cleanHospitalBed" count="1" craft_area="workbench" tags="workbenchCrafting">			
+			<ingredient name="resourceCloth" count="40"/>
+			<ingredient name="resourceCropCottonPlant" count="40"/>
+			<ingredient name="resourceSpring" count="20"/>			
+			<ingredient name="resourceMetalPipe" count="20"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceDuctTape" count="4"/>
 			<ingredient name="resourceForgedTitanium" count="5"/>
 		</recipe>
 	</append>

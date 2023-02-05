@@ -17,6 +17,30 @@
 			<property name="forge_category" value="iron"/>
 			<property name="Experience" value="30"/>
 		</material>
+		<material id="Mtitanium">
+			<property name="damage_category" value="metal"/>
+			<property name="surface_category" value="metal"/>
+			<property name="forge_category" value="iron"/>
+			<property name="Hardness" type="float" value="1"/>
+			<property name="stepsound" value="metal"/>
+			<property name="stability_glue" value="400"/>
+			<property name="Mass" type="int" value="20"/>
+			<property name="explosionresistance" value="2.25"/>
+			<property name="MaxDamage" value="20000"/>
+			<property name="Experience" value="8"/>
+		</material>
+		<material id="Mtitanium_shapes">
+			<property name="damage_category" value="metal"/>
+			<property name="surface_category" value="metal"/>
+			<property name="forge_category" value="iron"/>
+			<property name="Hardness" type="float" value="1"/>
+			<property name="stepsound" value="metal"/>
+			<property name="stability_glue" value="400"/>
+			<property name="Mass" type="int" value="20"/>
+			<property name="explosionresistance" value="2.25"/>
+			<property name="MaxDamage" value="20000"/>
+			<property name="Experience" value="8"/>
+		</material>
 		<material id="MtrapSpikesSteel">
 			<property name="damage_category" value="metal"/>
 			<property name="surface_category" value="metal"/>
@@ -67,5 +91,18 @@
 			<property name="MaxDamage" value="4000"/>
 			<property name="Experience" value="2"/>
 		</material>	
+		<!-- Adding piano wire -->
+		<material id="MpianoWire">
+			<property name="damage_category" value="metal"/>
+			<property name="surface_category" value="metal"/>
+			<property name="forge_category" value="iron"/>
+			<property name="Hardness" type="float" value="1"/>
+			<property name="stepsound" value="metal"/>
+			<property name="stability_glue" value="10"/>
+			<property name="Mass" type="int" value="1"/>
+			<property name="MaxDamage" value="200"/>
+			<property name="movement_factor" value="0.2"/>
+			<property name="Experience" value="2"/>
+		</material>
 	</append>
 </configs>

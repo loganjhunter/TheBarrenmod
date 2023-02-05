@@ -158,7 +158,7 @@
 
 	<append xpath="/lootcontainers">
 		<lootprobtemplate name="veryHigh">
-			<loot level="1,999999" prob=".85"/>
+			<loot level="1,999999" prob=".87"/>
 		</lootprobtemplate>
 	</append>
 	<!-- New food and candy-->
@@ -945,7 +945,7 @@
 			<item group="groupCommonManmadeResources" loot_prob_template="medHigh"/>
 			<item group="groupDrinksSmall01" loot_prob_template="high"/>
 			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
-			<item group="groupGunHandgunScaled" loot_prob_template="medHigh"/>
+			<item group="groupGunHandgunScaled" loot_prob_template="high"/>
 			<item group="groupCommonMelee" loot_prob_template="medLow"/>			
 			<item group="groupAmmoResourcesSmall" loot_prob_template="veryLow"/>	
 		</lootgroup>		
@@ -1024,22 +1024,23 @@
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>
 		<lootgroup name="groupNurse" count="1">	
+			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
 			<item group="groupLowerMed" loot_prob_template="veryHigh"/>					
 			<item group="groupMedicalSmall01" loot_prob_template="veryHigh"/>
-			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
-			<item group="groupFancyApparel" loot_prob_template="high"/>	
+			<item group="groupMedicalMed02" loot_prob_template="high"/>
+			<item group="groupMedicalLarge01" loot_prob_template="medLow"/>			
 			<item name="foodHoney" loot_prob_template="medHigh"/>
 			<item name="drugHerbalAntibiotics" loot_prob_template="med"/>
 			<item name="drugPainkillers" loot_prob_template="medHigh"/>
 			<item name="drugVitamins" loot_prob_template="medHigh"/>
 			<item name="medicalSplint" count="1" loot_prob_template="med"/>			
-		</lootgroup>		
+		</lootgroup>
 		<lootgroup name="groupNurses" count="all">
 			<item group="groupNurse" count="1"/>
-			<item group="groupLowerMed" loot_prob_template="veryHigh"/>
+ 			<item group="groupLowerMed" loot_prob_template="veryHigh"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>		
 			<item group="groupGoreResources" count="1,2"/>
-			<item name="resourceCloth" count="1,3"/>			
+			<item name="resourceCloth" count="1,3"/>	 		
 		</lootgroup>
 		<lootgroup name="groupNursesFeral" count="all">
 			<item group="groupNurse" count="0,2"/>
@@ -1055,7 +1056,7 @@
 			<item name="resourceCloth" count="1,3"/>
 		</lootgroup>
 		<lootgroup name="groupNursesGiant" count="all">
-			<item group="groupNurse" count="1,4"/>
+			<item group="groupNurse" count="1,2"/>
 			<item group="groupMedicalHighLow" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,3"/>
 			<item group="groupGoreResources" count="3,4"/>
@@ -1254,7 +1255,7 @@
 			<item name="resourcePotassiumNitratePowder" count="100,200" loot_prob_template="high"/>	
 			<item name="toolCookingGrill" loot_prob_template="high"/>	
 			<item name="resourceGunPowder" count="100,200" loot_prob_template="medHigh"/>
-			<item name="toolBellows" loot_prob_template="medHigh"/>	
+			<item name="toolBellows" loot_prob_template="med"/>	
 			<item name="toolAnvil" loot_prob_template="med"/>	
 		</lootgroup>		
 		<lootgroup name="groupBurnts" count="all">
@@ -1394,7 +1395,7 @@
 			<item group="groupWorkbenchLoot03" loot_prob_template="med"/>				
 			<item name="woodShapes:VariantHelper" count="7,21" loot_prob_template="high"/>
 			<item name="cobblestoneShapes:VariantHelper" count="7,21" loot_prob_template="medHigh"/>
-			<item name="toolBellows" loot_prob_template="medHigh"/>
+			<item name="toolBellows" loot_prob_template="med"/>
 			<item name="toolAnvil" loot_prob_template="med"/>	
 			<item name="drinkJarCoffee" loot_prob_template="high"/>
 			<item name="resourceDuctTape" count="1,3" loot_prob_template="medHigh"/>
@@ -1654,8 +1655,8 @@
 			<item group="groupMeleeTool" loot_prob_template="veryHigh"/>			
 			<item group="groupRareManmadeResources" loot_prob_template="medHigh"/>
 			<item group="groupDrinksSmall01" loot_prob_template="high"/>
-			<item group="groupSmallEngine" loot_prob_template="medHigh"/>
-			<item group="groupCarBattery" loot_prob_template="medHigh"/>
+			<item group="groupSmallEngine" loot_prob_template="med"/>
+			<item group="groupCarBattery" loot_prob_template="med"/>
 			<item group="groupArmorScaled" loot_prob_template="med"/>
 			<item group="groupArmorModsScaled" loot_prob_template="med"/>
 			<item group="groupGeneratorbank" loot_prob_template="med"/>
@@ -1711,8 +1712,8 @@
 			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
 			<item group="groupApparelFaceCover" loot_prob_template="medHigh"/>
 			<item group="groupArmorScaled" loot_prob_template="medHigh"/>
-			<item group="groupSmallEngine" loot_prob_template="medHigh"/>
-			<item group="groupCarBattery" loot_prob_template="medHigh"/>
+			<item group="groupSmallEngine" loot_prob_template="med"/>
+			<item group="groupCarBattery" loot_prob_template="med"/>
 			<item name="drinkJarBeer" count="1,2" loot_prob_template="veryHigh"/>
 			<item name="apparelBandana" loot_prob_template="high" mods="dye" mod_chance="0"/>
 			<item name="apparelToughGuySunglasses" loot_prob_template="med"/>
@@ -1851,7 +1852,7 @@
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>	
 		<lootgroup name="groupFemaleFatsRadiated" count="all">
-			<item group="groupFemaleFat" count="1,3"/>
+			<item group="groupFemaleFat" count="1,2"/>
 			<item group="groupUncommonManmadeResources" count="0,1"/>
 			<item group="groupUncommonOrganicResources" count="0,1"/>
 			<item group="groupCommonGuns" count="1"/>
@@ -1862,7 +1863,7 @@
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>
 		<lootgroup name="groupFemaleFatsGiant" count="all">
-			<item group="groupFemaleFat" count="1,4"/>
+			<item group="groupFemaleFat" count="1,2"/>
 			<item group="groupUncommonManmadeResources" count="0,1"/>
 			<item group="groupUncommonOrganicResources" count="0,1"/>
 			<item group="groupCommonGuns" count="0,1"/>
@@ -1903,7 +1904,7 @@
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>	
 		<lootgroup name="groupFatHawaiiansRadiated" count="all">
-			<item group="groupFatHawaiian" count="1,3"/>
+			<item group="groupFatHawaiian" count="1,2"/>
 			<item group="groupUncommonManmadeResources" count="0,1"/>
 			<item group="groupUncommonOrganicResources" count="0,1"/>
 			<item group="groupGunShotgunScaled" count="0,1"/>
@@ -1914,7 +1915,7 @@
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>
 		<lootgroup name="groupFatHawaiiansGiant" count="all">
-			<item group="groupFatHawaiian" count="1,4"/>
+			<item group="groupFatHawaiian" count="1,2"/>
 			<item group="groupUncommonManmadeResources" count="0,1"/>
 			<item group="groupUncommonOrganicResources" count="0,1"/>
 			<item group="groupGunShotgunScaled" count="0,1"/>
@@ -1982,7 +1983,7 @@
 			<item group="groupFatCop" count="0,1"/>
 			<item group="groupFatCopWeapons" count="0,1"/>
 			<item group="groupApparelClothes" count="0,1"/>
-			<item group="groupAmmo9mm" count="0,1"/>
+			<item group="groupAmmo9mm" count="1"/>
 			<item group="groupCommonOrganicResources" count="1,3"/>
 			<item group="groupGoreResources" count="2,4"/>
 			<item name="resourceCloth" count="2,5"/>
@@ -1992,13 +1993,13 @@
 			<item group="groupFatCopWeapons" count="1"/>
 			<item group="groupApparelClothes" count="0,1"/>
 			<item group="groupGunHandgunScaled" count="1"/>
-			<item group="groupAmmo9mm" count="1"/>
+			<item group="groupAmmo9mm" count="1,2"/>
 			<item group="groupCommonOrganicResources" count="1,3"/>
 			<item group="groupGoreResources" count="2,4"/>
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>	
 		<lootgroup name="groupFatCopsRadiated" count="all">
-			<item group="groupFatCop" count="1,3"/>
+			<item group="groupFatCop" count="1,2"/>
 			<item group="groupFatCopWeapons" count="1,2"/>
 			<item group="groupApparelClothes" count="0,1"/>
 			<item group="groupGunHandgunScaled" count="0,1"/>
@@ -2010,10 +2011,11 @@
 			<item name="resourceCloth" count="2,5"/>
 		</lootgroup>
 		<lootgroup name="groupFatCopsGiant" count="all">
-			<item group="groupFatCop" count="1,4"/>
+			<item group="groupFatCop" count="1,2"/>
 			<item group="groupFatCopWeapons" count="1"/>
 			<item group="groupApparelClothes" count="0,1"/>
 			<item group="groupGunShotgunScaled" count="0,1"/>
+			<item group="groupAmmo9mm" count="1"/>
 			<item group="groupAmmoShells" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="2,4"/>
 			<item group="groupGoreResources" count="3,5"/>
@@ -2102,6 +2104,8 @@
 			<item group="groupSoldier" count="1"/>
 			<item group="groupSoldierWeapons" count="0,1"/>
 			<item group="groupArmorScaled" count="0,1"/>
+			<item group="groupAmmo762mm" count="0,1"/>
+			<item group="groupAmmo9mm" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
 			<item name="resourceCloth" count="1,3"/>
@@ -2109,7 +2113,7 @@
 		<lootgroup name="groupSoldiersFeral" count="all">
 			<item group="groupSoldier" count="0,2"/>
 			<item group="groupSoldierWeapons" count="1"/>
-			<item group="groupAmmo762mm" count="0,1"/>
+			<item group="groupAmmo762mm" count="1"/>
 			<item group="groupArmorScaled" count="1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
@@ -2846,7 +2850,7 @@
 		<lootgroup name="groupenSwats" count="all">
 			<item group="groupenSwat" count="0,1"/>
 			<item group="groupenSwatWeapons" count="0,1"/>
-			<item group="groupAmmoShells" count="0,25"/>
+			<item group="groupAmmoShells" count="0,2"/>
 			<item group="groupMeleeWpnBatonScaled" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
@@ -2855,7 +2859,7 @@
 		<lootgroup name="groupenSwatsFeral" count="all">
 			<item group="groupenSwat" count="0,2"/>
 			<item group="groupenSwatWeapons" count="0,1"/>
-			<item group="groupAmmoShells" count="10,35"/>
+			<item group="groupAmmoShells" count="1,3"/>
 			<item group="groupMeleeWpnBatonScaled" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
 			<item group="groupGoreResources" count="1,2"/>
@@ -2864,7 +2868,7 @@
 		<lootgroup name="groupenSwatsRadiated" count="all">
 			<item group="groupenSwat" count="1,3"/>
 			<item group="groupenSwatWeapons" count="1,2"/>
-			<item group="groupAmmoShells" count="20,50"/>
+			<item group="groupAmmoShells" count="2,5"/>
 			<item group="groupMeleeWpnBatonScaled" count="1"/>
 			<item group="groupWeapons_Demolitionist" count="0,1"/>
 			<item group="groupCommonOrganicResources" count="1,2"/>
@@ -2874,7 +2878,7 @@
 		<lootgroup name="groupenSwatGiant" count="all">
 			<item group="groupenSwat" count="1,4"/>
 			<item group="groupenSwatWeapons" count="2"/>
-			<item group="groupAmmoShells" count="20,50"/>
+			<item group="groupAmmoShells" count="2,5"/>
 			<item group="groupMeleeWpnBatonScaled" count="1"/>
 			<item group="groupCommonOrganicResources" count="1,3"/>
 			<item group="groupGoreResources" count="2,3"/>
@@ -2887,10 +2891,10 @@
 			<item group="groupUncommonManmadeResources" loot_prob_template="high"/>		
 			<item group="groupWorkingStiffsCrate" loot_prob_template="high"/>
 			<item group="groupRareManmadeResources" loot_prob_template="medHigh"/>
-			<item group="groupSmallEngine" loot_prob_template="medHigh"/>
-			<item group="groupCarBattery" loot_prob_template="medHigh"/>
-			<item group="groupGeneratorbank" loot_prob_template="med"/>
-			<item group="groupBatterybank" loot_prob_template="med"/>
+			<item group="groupSmallEngine" loot_prob_template="med"/>
+			<item group="groupCarBattery" loot_prob_template="med"/>
+			<item group="groupGeneratorbank" loot_prob_template="medLow"/>
+			<item group="groupBatterybank" loot_prob_template="medLow"/>
 			<item group="groupSolarbank" loot_prob_template="medLow"/>			
 			<item group="groupWorkbenchLoot03" loot_prob_template="med"/>	
 			<item name="meleeToolFlashlight02" loot_prob_template="veryHigh"/>		
@@ -2939,11 +2943,13 @@
 			<item group="groupUncommonManmadeResources" loot_prob_template="high"/>
 			<item group="workstationToolsScaled" loot_prob_template="high"/>	
 			<item group="groupWorkingStiffsCrate" loot_prob_template="high"/>
+			<item name="woodShapes:VariantHelper" count="15,21" loot_prob_template="high"/>
+			<item name="cobblestoneShapes:VariantHelper" count="7,21" loot_prob_template="medHigh"/>
 			<item group="groupRareManmadeResources" loot_prob_template="medHigh"/>
-			<item group="groupSmallEngine" loot_prob_template="medHigh"/>
-			<item group="groupCarBattery" loot_prob_template="medHigh"/>
-			<item group="groupGeneratorbank" loot_prob_template="med"/>
-			<item group="groupBatterybank" loot_prob_template="med"/>			
+			<item group="groupSmallEngine" loot_prob_template="med"/>
+			<item group="groupCarBattery" loot_prob_template="med"/>
+			<item group="groupGeneratorbank" loot_prob_template="medLow"/>
+			<item group="groupBatterybank" loot_prob_template="medLow"/>			
 			<item group="groupWorkbenchLoot03" loot_prob_template="med"/>	
 			<item group="groupWeapons_Demolitionist" loot_prob_template="med"/>
 			<item group="groupWeapons_DemolitionistTPlus" loot_prob_template="low"/>
@@ -2951,8 +2957,8 @@
 			<item name="meleeToolFlashlight02" loot_prob_template="veryHigh"/>		
 			<item name="drinkJarCoffee" loot_prob_template="high"/>
 			<item name="drinkJarBeer" count="1,2" loot_prob_template="high"/>	
-			<item name="toolBellows" loot_prob_template="medHigh"/>	
-			<item name="toolAnvil" loot_prob_template="medHigh"/>
+			<item name="toolBellows" loot_prob_template="med"/>	
+			<item name="toolAnvil" loot_prob_template="med"/>
 			<item name="resourceGunPowder" count="0,125" loot_prob_template="medHigh"/>
 		</lootgroup>
 		<lootgroup name="groupenMiners" count="all">
@@ -3002,8 +3008,8 @@
 			<item group="groupArmorScaled" loot_prob_template="medHigh"/>
 			<item group="groupWeaponsMeleeScaled" loot_prob_template="medHigh"/>
 			<item group="groupWeaponModsScaled" loot_prob_template="medHigh"/>
-			<item group="groupSmallEngine" loot_prob_template="medHigh"/>
-			<item group="groupCarBattery" loot_prob_template="medHigh"/>
+			<item group="groupSmallEngine" loot_prob_template="med"/>
+			<item group="groupCarBattery" loot_prob_template="med"/>
 			<item name="drinkJarBeer" count="1,2" loot_prob_template="veryHigh"/>			
 			<item name="apparelBandana" loot_prob_template="high" mods="dye" mod_chance="0"/>
 			<item name="apparelToughGuySunglasses" loot_prob_template="med"/>
@@ -3162,10 +3168,10 @@
 		<lootcontainer name="zPackArleneFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupArlenesFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackArleneRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackArleneRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupArlenesRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackArleneGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackArleneGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupArlenesGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackMarlene" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3174,10 +3180,10 @@
 		<lootcontainer name="zPackMarleneFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupMarlenesFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackMarleneRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackMarleneRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupMarlenesRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackMarleneGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackMarleneGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupMarlenesGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackPartyGirl" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3186,10 +3192,10 @@
 		<lootcontainer name="zPackPartyGirlFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupPartyGirlsFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackPartyGirlRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackPartyGirlRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupPartyGirlsRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackPartyGirlGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackPartyGirlGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupPartyGirlsGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackNurse" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3198,10 +3204,10 @@
 		<lootcontainer name="zPackNurseFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupNursesFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackNurseRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackNurseRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupNursesRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackNurseGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackNurseGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupNursesGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackJoe" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3210,10 +3216,10 @@
 		<lootcontainer name="zPackJoeFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupJoesFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackJoeRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackJoeRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupJoesRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackJoeGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackJoeGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupJoesGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackSteve" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3222,10 +3228,10 @@
 		<lootcontainer name="zPackSteveFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupStevesFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackSteveRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackSteveRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupStevesRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackSteveGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackSteveGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupStevesGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackTomClark" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3234,10 +3240,10 @@
 		<lootcontainer name="zPackTomClarkFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupTomClarksFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackTomClarkRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackTomClarkRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupTomClarksRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackTomClarkGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackTomClarkGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupTomClarksGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackBusinessMan" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3246,10 +3252,10 @@
 		<lootcontainer name="zPackBusinessManFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupBusinessMenFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackBusinessManRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackBusinessManRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupBusinessMenRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackBusinessManGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackBusinessManGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupBusinessMenGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackBurnt" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3258,10 +3264,10 @@
 		<lootcontainer name="zPackBurntFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupBurntsFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackBurntRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackBurntRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupBurntsRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackBurntGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackBurntGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupBurntsGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackSpider" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3270,10 +3276,10 @@
 		<lootcontainer name="zPackSpiderFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupSpidersFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackSpiderRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackSpiderRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupSpidersRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackSpiderGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackSpiderGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupSpidersGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackBoe" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3282,10 +3288,10 @@
 		<lootcontainer name="zPackBoeFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupBoesFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackBoeRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackBoeRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupBoesRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackBoeGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackBoeGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupBoesGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackJanitor" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3294,10 +3300,10 @@
 		<lootcontainer name="zPackJanitorFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupJanitorsFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackJanitorRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackJanitorRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupJanitorsRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackJanitorGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackJanitorGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupJanitorsGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackMoe" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3306,10 +3312,10 @@
 		<lootcontainer name="zPackMoeFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupMoesFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackMoeRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackMoeRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupMoesRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackMoeGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackMoeGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupMoesGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackLab" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3318,10 +3324,10 @@
 		<lootcontainer name="zPackLabFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupLabsFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackLabRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackLabRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupLabsRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackLabGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackLabGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupLabsGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackDarlene" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3330,10 +3336,10 @@
 		<lootcontainer name="zPackDarleneFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupDarlenesFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackDarleneRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackDarleneRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupDarlenesRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackDarleneGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackDarleneGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupDarlenesGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackYo" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3342,10 +3348,10 @@
 		<lootcontainer name="zPackYoFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupYosFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackYoRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackYoRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupYosRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackYoGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackYoGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupYosGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackUtilityWorker" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3354,10 +3360,10 @@
 		<lootcontainer name="zPackUtilityWorkerFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupUtilityWorkersFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackUtilityWorkerRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackUtilityWorkerRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupUtilityWorkersRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackUtilityWorkerGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackUtilityWorkerGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupUtilityWorkersGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackBiker" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3366,10 +3372,10 @@
 		<lootcontainer name="zPackBikerFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupBikersFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackBikerRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackBikerRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupBikersRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackBikerGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackBikerGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupBikersGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackLumberjack" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3378,10 +3384,10 @@
 		<lootcontainer name="zPackLumberjackFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupLumberjacksFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackLumberjackRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackLumberjackRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupLumberjacksRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackLumberjackGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackLumberjackGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupLumberjacksGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackFemaleFat" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3390,10 +3396,10 @@
 		<lootcontainer name="zPackFemaleFatFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupFemaleFatsFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackFemaleFatRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackFemaleFatRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupFemaleFatsRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackFemaleFatGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackFemaleFatGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupFemaleFatsGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackFatHawaiian" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3402,10 +3408,10 @@
 		<lootcontainer name="zPackFatHawaiianFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupFatHawaiiansFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackFatHawaiianRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackFatHawaiianRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupFatHawaiiansRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackFatHawaiianGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackFatHawaiianGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupFatHawaiiansGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackMaleHazmat" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3414,10 +3420,10 @@
 		<lootcontainer name="zPackMaleHazmatFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupMaleHazmatsFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackMaleHazmatRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackMaleHazmatRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupMaleHazmatsRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackMaleHazmatGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackMaleHazmatGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupMaleHazmatsGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackFatCop" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3426,10 +3432,10 @@
 		<lootcontainer name="zPackFatCopFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupFatCopsFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackFatCopRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackFatCopRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupFatCopsRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackFatCopGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackFatCopGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupFatCopsGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackSkateboarder" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3438,10 +3444,10 @@
 		<lootcontainer name="zPackSkateboarderFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupSkateboardersFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackSkateboarderRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackSkateboarderRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupSkateboardersRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackSkateboarderGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackSkateboarderGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupSkateboardersGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackSoldier" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3450,19 +3456,19 @@
 		<lootcontainer name="zPackSoldierFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupSoldiersFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackSoldierRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackSoldierRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupSoldiersRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackSoldierGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackSoldierGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupSoldiersGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackWightFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupWightsFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackWightRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackWightRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupWightsRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackWightGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackWightGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupWightsGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackScreamer" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3471,10 +3477,10 @@
 		<lootcontainer name="zPackScreamerFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupScreamersFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackScreamerRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackScreamerRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupScreamersRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackScreamerGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackScreamerGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupScreamersGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackMutated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3483,16 +3489,16 @@
 		<lootcontainer name="zPackMutatedFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupMutatedsFeral"/>
 		</lootcontainer>
-		<lootcontainer name="zPackMutatedRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackMutatedRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupMutatedsRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="zPackMutatedGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="zPackMutatedGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupMutatedsGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackDemolition" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupDemolitions"/>
 		</lootcontainer>
-		<lootcontainer name="zPackDemolitionGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="zPackDemolitionGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupDemolitionsGiant"/>
 		</lootcontainer>
 		<lootcontainer name="zPackSteveCrawler" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3573,10 +3579,10 @@
 		<lootcontainer name="enPackFarmerFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenFarmersFeral"/>
 		</lootcontainer>
-		<lootcontainer name="enPackFarmerRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="enPackFarmerRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenFarmersRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="enPackFarmerGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="enPackFarmerGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupenFarmerGiant"/>
 		</lootcontainer>	
 		<lootcontainer name="enPackForest" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3585,10 +3591,10 @@
 		<lootcontainer name="enPackForestFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenForestsFeral"/>
 		</lootcontainer>
-		<lootcontainer name="enPackForestRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="enPackForestRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenForestsRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="enPackForestGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="enPackForestGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupenForestGiants"/>
 		</lootcontainer>
 		<lootcontainer name="enPackForestHiker" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3597,10 +3603,10 @@
 		<lootcontainer name="enPackForestHikerFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenForestHikersFeral"/>
 		</lootcontainer>
-		<lootcontainer name="enPackForestHikerRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="enPackForestHikerRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenForestHikersRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="enPackForestHikerGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="enPackForestHikerGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupenForestHikersGiant"/>
 		</lootcontainer>
 		<lootcontainer name="enPackJogger" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3609,10 +3615,10 @@
 		<lootcontainer name="enPackJoggerFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenJoggersFeral"/>
 		</lootcontainer>
-		<lootcontainer name="enPackJoggerRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="enPackJoggerRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenJoggersRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="enPackJoggerGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="enPackJoggerGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupenJoggersGiant"/>
 		</lootcontainer>
 		<lootcontainer name="enPackLumberjack" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3621,10 +3627,10 @@
 		<lootcontainer name="enPackLumberjackFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenLumberjacksFeral"/>
 		</lootcontainer>	
-		<lootcontainer name="enPackLumberjackRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="enPackLumberjackRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenLumberjacksRadiated"/>
 		</lootcontainer>	
-		<lootcontainer name="enPackLumberjackGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="enPackLumberjackGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupenLumberjackGiant"/>
 		</lootcontainer>			
 		
@@ -3634,10 +3640,10 @@
 		<lootcontainer name="enPackNurseHDFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenNursesHDFeral"/>
 		</lootcontainer>	
-		<lootcontainer name="enPackNurseHDRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="enPackNurseHDRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenNursesHDRadiated"/>
 		</lootcontainer>	
-		<lootcontainer name="enPackNurseHDGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="enPackNurseHDGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupenNursesHDGiant"/>
 		</lootcontainer>			
 		<lootcontainer name="enPackPunk" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3647,10 +3653,10 @@
 			<item group="groupenPunksFeral"/>
 		</lootcontainer>
 		<!-- No rad punks -->
-		<!-- <lootcontainer name="enPackPunkRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<!-- <lootcontainer name="enPackPunkRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenPunksRadiated"/>
 		</lootcontainer> -->
-		<lootcontainer name="enPackPunkGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="enPackPunkGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupenPunksGiant"/>
 		</lootcontainer>
 		<lootcontainer name="enPackSchool" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3659,10 +3665,10 @@
 		<lootcontainer name="enPackSchoolFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenSchoolsFeral"/>
 		</lootcontainer>
-		<lootcontainer name="enPackSchoolRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="enPackSchoolRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenSchoolsRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="enPackSchoolGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="enPackSchoolGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupenSchoolsGiant"/>
 		</lootcontainer>
 		<lootcontainer name="enPackSoldier" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3671,10 +3677,10 @@
 		<lootcontainer name="enPackSoldierFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenSoldiersFeral"/>
 		</lootcontainer>
-		<lootcontainer name="enPackSoldierRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="enPackSoldierRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenSoldiersRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="enPackSoldierGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="enPackSoldierGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupenSoldiersGiant"/>
 		</lootcontainer>
 		<lootcontainer name="enPackSoldier196" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3683,10 +3689,10 @@
 		<lootcontainer name="enPackSoldier196Feral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenSoldier196Feral"/>
 		</lootcontainer>
-		<lootcontainer name="enPackSoldier196Radiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="enPackSoldier196Radiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenSoldier196Radiated"/>
 		</lootcontainer>
-		<lootcontainer name="enPackSoldier196Giant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="enPackSoldier196Giant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupenSoldier196Giant"/>
 		</lootcontainer>
 		<lootcontainer name="enPackSwat" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3695,10 +3701,10 @@
 		<lootcontainer name="enPackSwatFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenSwatsFeral"/>
 		</lootcontainer>			
-		<lootcontainer name="enPackSwatRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="enPackSwatRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenSwatsRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="enPackSwatGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="enPackSwatGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupenSwatGiant"/>
 		</lootcontainer>	
 		<lootcontainer name="enPackUtility" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3707,10 +3713,10 @@
 		<lootcontainer name="enPackUtilityFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenUtilitiesFeral"/>
 		</lootcontainer>
-		<lootcontainer name="enPackUtilityRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="enPackUtilityRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenUtilitiesRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="enPackUtilityGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="enPackUtilityGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupenUtilityGiant"/>
 		</lootcontainer>			
 		<lootcontainer name="enPackMiner" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3719,10 +3725,10 @@
 		<lootcontainer name="enPackMinerFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenMinersFeral"/>
 		</lootcontainer>			
-		<lootcontainer name="enPackMinersRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="enPackMinersRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenMinersRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="enPackMinerGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="enPackMinerGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupenMinerGiant"/>
 		</lootcontainer>	 
 		<lootcontainer name="enPackBiker" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
@@ -3731,22 +3737,22 @@
 		<lootcontainer name="enPackBikerFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenBikersFeral"/>
 		</lootcontainer>			
-		<lootcontainer name="enPackBikerRadiated" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="enPackBikerRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenBikersRadiated"/>
 		</lootcontainer>
-		<lootcontainer name="enPackBikerGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+		<lootcontainer name="enPackBikerGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupenBikerGiant"/>
 		</lootcontainer>
-		<lootcontainer name="enPackSnowGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="enPackSnowGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenSnowGiant"/>
 		</lootcontainer>		
-		<lootcontainer name="enPackDesertGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="enPackDesertGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenDesertGiant"/>
 		</lootcontainer>
-<!-- 			<lootcontainer name="enBurntGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+<!-- 			<lootcontainer name="enBurntGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenBurntGiant"/>
 		</lootcontainer>
-		<lootcontainer name="enWastelandGiant" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="enWastelandGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenWastelandGiant"/>
 		</lootcontainer>
 		-->	

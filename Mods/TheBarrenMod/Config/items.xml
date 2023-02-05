@@ -2357,6 +2357,13 @@
 		<property name="Focused_blockname_6" value="terrSnow"/>
 		<property name="Sound_start" value="Sounds/Step/stepsnow1"/>
 	</append>
+	<!-- Allow for titanium upgrading -->
+	<append xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@class='Action1']">
+		<property name="Allowed_upgrade_items" value="resourceForgedTitanium"/>
+	</append>
+	<append xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/property[@class='Action1']">
+		<property name="Allowed_upgrade_items" value="resourceForgedTitanium"/>
+	</append>
 <!-- 	<set xpath="/items/item[@name='gunBotT3JunkDrone']/property[@name='Material']/@value">MmechanicalParts</set>
 	<set xpath="/items/item[@name='gunBotT3JunkDrone']/property[@name='Weight']/@value">175</set>	 -->
 	

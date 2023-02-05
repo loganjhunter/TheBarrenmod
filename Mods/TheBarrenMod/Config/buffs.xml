@@ -2,6 +2,208 @@
 <configs>
 
 	<append xpath="/buffs">
+	<!-- New Healing Blocks-->
+		<buff name="buffCleanBedroll" name_key="buffCleanBedrollName" description_key="buffCleanBedrollDesc" icon="ui_game_symbol_map_bed" icon_color="207,237,237">
+			<stack_type value="ignore"/>
+			<update_rate value="1"/>
+			<display_value value=".healHealthAmountDisplay"/>
+			<effect_group>
+				<requirement name="CVarCompare" cvar=".NoHealingManager" operation="Equals" value="0"/>
+				<requirement name="CVarCompare" cvar="foodHealthAmount" operation="GTE" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value=".5"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="foodHealthAmount" operation="subtract" value=".5"/>
+			</effect_group>
+
+			<effect_group>
+				<requirement name="CVarCompare" cvar=".NoHealingManager" operation="Equals" value="0"/>
+				<requirement name="CVarCompare" cvar="medicalRegHealthAmount" operation="GT" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value="@medRegHealthIncSpeed"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="subtract" value="2"/>
+			</effect_group>
+
+			<effect_group name="display">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="set" value="@medicalRegHealthAmount"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="divide" value="2"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="multiply" value="@medRegHealthIncSpeed"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="add" value="@foodHealthAmount"/>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="set" value="@medicalRegHealthAmount"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="divide" value="2"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="multiply" value="@medRegHealthIncSpeed"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="add" value="@foodHealthAmount"/>
+			</effect_group>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffCleanBedroll">
+					<requirement name="CVarCompare" cvar="medicalRegHealthAmount" operation="LTE" value="0"/>
+					<requirement name="CVarCompare" cvar="foodHealthAmount" operation="LTE" value="-.5"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="medRegHealthIncSpeed" operation="set" value="2"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="foodHealthAmount" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="set" value="0"/>
+			</effect_group>
+			
+		</buff>		
+		<buff name="buffCleanTwinBedMade" name_key="buffCleanTwinBedMadeName" description_key="buffCleanTwinBedMadeDesc" icon="ui_game_symbol_map_bed" icon_color="125,180,249">
+			<stack_type value="ignore"/>
+			<update_rate value="1"/>
+			<display_value value=".healHealthAmountDisplay"/>
+			<effect_group>
+				<requirement name="CVarCompare" cvar=".NoHealingManager" operation="Equals" value="0"/>
+				<requirement name="CVarCompare" cvar="foodHealthAmount" operation="GTE" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value=".5"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="foodHealthAmount" operation="subtract" value=".5"/>
+			</effect_group>
+
+			<effect_group>
+				<requirement name="CVarCompare" cvar=".NoHealingManager" operation="Equals" value="0"/>
+				<requirement name="CVarCompare" cvar="medicalRegHealthAmount" operation="GT" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value="@medRegHealthIncSpeed"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="subtract" value="2"/>
+			</effect_group>
+
+			<effect_group name="display">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="set" value="@medicalRegHealthAmount"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="divide" value="2"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="multiply" value="@medRegHealthIncSpeed"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="add" value="@foodHealthAmount"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryConcussion"/>
+				
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="set" value="@medicalRegHealthAmount"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="divide" value="2"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="multiply" value="@medRegHealthIncSpeed"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="add" value="@foodHealthAmount"/>
+				
+				
+			</effect_group>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffCleanTwinBedMade">
+					<requirement name="CVarCompare" cvar="medicalRegHealthAmount" operation="LTE" value="0"/>
+					<requirement name="CVarCompare" cvar="foodHealthAmount" operation="LTE" value="-.5"/>				
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="medRegHealthIncSpeed" operation="set" value="2"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="foodHealthAmount" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugPainkillersHealed" operation="set" value="0"/>
+
+			</effect_group>
+			<effect_group>
+				<requirement name="!HasBuff" buff="buffInjuryConcussion"/>
+				<requirement name="CVarCompare" cvar="$buffDrugPainkillersHealed" operation="Equals" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value="40"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugPainkillersHealed" operation="set" value="1"/>
+			</effect_group>
+			
+			
+		</buff>
+		<buff name="buffCleanKingBed" name_key="buffCleanKingBedName" description_key="buffCleanKingBedDesc" icon="ui_game_symbol_map_bed" icon_color="66,149,255">
+			<stack_type value="ignore"/>
+			<update_rate value="1"/>
+			<display_value value=".healHealthAmountDisplay"/>
+			<effect_group>
+				<requirement name="CVarCompare" cvar=".NoHealingManager" operation="Equals" value="0"/>
+				<requirement name="CVarCompare" cvar="foodHealthAmount" operation="GTE" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value=".5"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="foodHealthAmount" operation="subtract" value=".5"/>
+			</effect_group>
+
+			<effect_group>
+				<requirement name="CVarCompare" cvar=".NoHealingManager" operation="Equals" value="0"/>
+				<requirement name="CVarCompare" cvar="medicalRegHealthAmount" operation="GT" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value="@medRegHealthIncSpeed"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="subtract" value="2"/>
+			</effect_group>
+
+			<effect_group name="display">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="set" value="@medicalRegHealthAmount"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="divide" value="2"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="multiply" value="@medRegHealthIncSpeed"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="add" value="@foodHealthAmount"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryConcussion"/>
+				<!-- <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value=".25"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInfectionAddCure"/> -->
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="set" value="@medicalRegHealthAmount"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="divide" value="2"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="multiply" value="@medRegHealthIncSpeed"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="add" value="@foodHealthAmount"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value=".25"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffInfectionAddCure"/>
+				
+			</effect_group>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffCleanKingBed">
+					<requirement name="CVarCompare" cvar="medicalRegHealthAmount" operation="LTE" value="0"/>
+					<requirement name="CVarCompare" cvar="foodHealthAmount" operation="LTE" value="-.5"/>				
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="medRegHealthIncSpeed" operation="set" value="2"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="foodHealthAmount" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugPainkillersHealed" operation="set" value="0"/>
+
+			</effect_group>
+			<effect_group>
+				<requirement name="!HasBuff" buff="buffInjuryConcussion"/>
+				<requirement name="CVarCompare" cvar="$buffDrugPainkillersHealed" operation="Equals" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value="40"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugPainkillersHealed" operation="set" value="1"/>
+			</effect_group>
+			
+<!-- 			<effect_group tiered="false">
+				<display_value name="dCureInfection" value=".25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInfectionAddCure"/>
+			</effect_group> -->
+			
+		</buff>
+		<buff name="buffHospitalBed" name_key="buffHospitalBedName" description_key="buffHospitalBedDesc" icon="ui_game_symbol_map_bed" icon_color="6,79,173">
+			<stack_type value="ignore"/>
+			<update_rate value="1"/>
+			<display_value value=".healHealthAmountDisplay"/>
+			<effect_group>
+				<requirement name="CVarCompare" cvar=".NoHealingManager" operation="Equals" value="0"/>
+				<requirement name="CVarCompare" cvar="foodHealthAmount" operation="GTE" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value=".5"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="foodHealthAmount" operation="subtract" value=".5"/>
+			</effect_group>
+
+			<effect_group>
+				<requirement name="CVarCompare" cvar=".NoHealingManager" operation="Equals" value="0"/>
+				<requirement name="CVarCompare" cvar="medicalRegHealthAmount" operation="GT" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value="@medRegHealthIncSpeed"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="subtract" value="2"/>
+			</effect_group>
+
+			<effect_group name="display">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="set" value="@medicalRegHealthAmount"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="divide" value="2"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="multiply" value="@medRegHealthIncSpeed"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="add" value="@foodHealthAmount"/>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="set" value="@medicalRegHealthAmount"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="divide" value="2"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="multiply" value="@medRegHealthIncSpeed"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="add" value="@foodHealthAmount"/>
+			</effect_group>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHospitalBed">
+					<requirement name="CVarCompare" cvar="medicalRegHealthAmount" operation="LTE" value="0"/>
+					<requirement name="CVarCompare" cvar="foodHealthAmount" operation="LTE" value="-.5"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="medRegHealthIncSpeed" operation="set" value="2"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="foodHealthAmount" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".healHealthAmountDisplay" operation="set" value="0"/>
+			</effect_group>
+			
+		</buff>
 		<buff name="buffDrugBerserkerJoes" name_key="drugBerserkerJoes" description_key="drugBerserkerJoesDesc" icon="ui_game_symbol_candy_skull_crushers" icon_color="232,142,188">
 			<stack_type value="replace"/><duration value="0"/>
 			<display_value value=".buffDrugBerserkerJoesDisplay"/><display_value_format value="time"/>
