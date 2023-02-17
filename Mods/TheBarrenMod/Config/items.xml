@@ -2358,12 +2358,11 @@
 		<property name="Sound_start" value="Sounds/Step/stepsnow1"/>
 	</append>
 	<!-- Allow for titanium upgrading -->
-	<append xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@class='Action1']">
-		<property name="Allowed_upgrade_items" value="resourceForgedTitanium"/>
-	</append>
-	<append xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/property[@class='Action1']">
-		<property name="Allowed_upgrade_items" value="resourceForgedTitanium"/>
-	</append>
+
+	<set xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,ironDoor1_v1,vaultDoor01,scrapHatch_v1,vaultHatch_v1,cellarDoorDoubleIron,cellarDoorDoubleSteel,shuttersIronBlockVariantHelper,shuttersSteelBlockVariantHelper,resourceYuccaFibers,resourceCloth,resourceScrapPolymers,resourceForgedTitanium</set>
+	
+	<set xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,ironDoor1_v1,vaultDoor01,scrapHatch_v1,vaultHatch_v1,cellarDoorDoubleIron,cellarDoorDoubleSteel,shuttersIronBlockVariantHelper,shuttersSteelBlockVariantHelper,resourceYuccaFibers,resourceCloth,resourceScrapPolymers,resourceForgedTitanium</set>
+
 <!-- 	<set xpath="/items/item[@name='gunBotT3JunkDrone']/property[@name='Material']/@value">MmechanicalParts</set>
 	<set xpath="/items/item[@name='gunBotT3JunkDrone']/property[@name='Weight']/@value">175</set>	 -->
 	
