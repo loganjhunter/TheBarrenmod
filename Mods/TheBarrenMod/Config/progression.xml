@@ -1219,28 +1219,29 @@
 			</perk>
 
 		<!-- Intellect Combat Perks -->
-			<perk name="perkDemolitionsExpert" max_level="6" parent="skillIntellectCombat" name_key="perkDemolitionsExpertName" desc_key="perkDemolitionsExpertDesc" icon="ui_game_symbol_explosion">
-				<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="1" desc_key="reqPerceptionLevel01"/></level_requirements>
-				<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="3" desc_key="reqPerceptionLevel03"/></level_requirements>
-				<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="5" desc_key="reqPerceptionLevel05"/></level_requirements>
-				<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="7" desc_key="reqPerceptionLevel07"/></level_requirements>
-				<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/></level_requirements>
-				<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/></level_requirements>
+			<perk name="perkDemolitionsExpert" max_level="5" parent="skillIntellectCombat" name_key="perkDemolitionsExpertName" desc_key="perkDemolitionsExpertDesc" icon="ui_game_symbol_explosion">
+				<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="1" desc_key="reqIntellectLevel01"/></level_requirements>
+				<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
+				<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
+				<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="7" desc_key="reqIntellectLevel07"/></level_requirements>
+				<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+<!-- 				<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements> -->
 
 				<effect_group>
-					<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="1,2,3,4,4,5" tags="perkDemolitionsExpert"/>
+					<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkDemolitionsExpert"/>
 
-					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="thrownAmmoPipeBomb,mineCookingPot,rScrapIronPlateMine"/>
-					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,6" value="1" tags="thrownDynamite,mineHubcap"/>
-					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,6" value="1" tags="thrownGrenade,resourceGunPowderBundle"/>
-					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,6" value="1" tags="ammoRocketHE,ammoRocketFrag,resourceRocketTip,resourceRocketCasing"/>
-					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,6" value="1" tags="thrownGrenadeContact,thrownTimedCharge,mineAirFilter"/>
-					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,6" value="1" tags="ammoAtomicArrow,ammoAtomicBolt,thrownAmmoAtomicPipeBomb"/>
+					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="thrownAmmoPipeBomb,mineCookingPot,rScrapIronPlateMine"/>
+					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="thrownDynamite,mineHubcap"/>
+					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="thrownGrenade,resourceGunPowderBundle"/>
+					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="ammoRocketHE,ammoRocketFrag,resourceRocketTip,resourceRocketCasing"/>
+					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1" tags="thrownGrenadeContact,thrownTimedCharge,mineAirFilter,ammoAtomicArrow,ammoAtomicBolt,thrownAmmoAtomicPipeBomb"/>
+<!-- 					<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,6" value="1" tags="ammoAtomicArrow,ammoAtomicBolt,thrownAmmoAtomicPipeBomb"/> -->
 
 				</effect_group>
 
 				<effect_group>
-				<passive_effect name="DismemberChance" operation="base_add" level="1,2,3,4,5,6" value=".05,.1,.2,.3,.45,.5" tags="perkDemolitionsExpert"/>
+<!-- 				<passive_effect name="DismemberChance" operation="base_add" level="1,2,3,4,5,6" value=".05,.1,.2,.3,.45,.5" tags="perkDemolitionsExpert"/> -->
+				<passive_effect name="DismemberChance" operation="base_add" level="1,2,3,4,5" value=".05,.1,.2,.3,.5" tags="perkDemolitionsExpert"/>
 				<passive_effect name="BlockDamage" operation="perc_add" level="0,6" value="0,.6" tags="perkDemolitionsExpert"/>
 				<passive_effect name="EntityDamage" operation="perc_add" level="0,6" value="0,.6" tags="perkDemolitionsExpert"/>
 				<passive_effect name="WeaponHandling" operation="perc_add" level="1,6" value="0.1,0.6" tags="perkDemolitionsExpert"/>
@@ -1257,7 +1258,7 @@
 					<effect_description level="3" desc_key="perkDemolitionsExpertRank3Desc" long_desc_key="perkDemolitionsExpertRank3LongDesc"/>
 					<effect_description level="4" desc_key="perkDemolitionsExpertRank4Desc" long_desc_key="perkDemolitionsExpertRank4LongDesc"/>
 					<effect_description level="5" desc_key="perkDemolitionsExpertRank5Desc" long_desc_key="perkDemolitionsExpertRank5LongDesc"/>
-					<effect_description level="6" desc_key="perkDemolitionsExpertRank6Desc" long_desc_key="perkDemolitionsExpertRank6LongDesc"/>
+<!-- 					<effect_description level="6" desc_key="perkDemolitionsExpertRank6Desc" long_desc_key="perkDemolitionsExpertRank6LongDesc"/> -->
 				</effect_group>
 				<!-- Arrow gravity still in progress -->
 			</perk>
