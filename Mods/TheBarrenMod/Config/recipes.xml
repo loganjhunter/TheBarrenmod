@@ -211,7 +211,9 @@
 		<recipe name="titaniumShapes:VariantHelper" count="1">
 			<ingredient name="resourceForgedTitanium" count="10"/>
 		</recipe>
-		
+		<recipe name="unobtainiumShapes:VariantHelper" count="1">
+			<ingredient name="resourceForgedUnobtainium" count="10"/>
+		</recipe>		
 		<!-- New weapons recipes for broken items -->	
 		<recipe name="meleeWpnBladeT1HuntingKnife" count="1" tags="learnable,perkDeepCuts">
 			<ingredient name="meleeWpnBladeBrokenHuntingKnife" count="1"/>
@@ -469,6 +471,14 @@
 				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="unit_clay,unit_iron"/>
 			</effect_group>
 		</recipe>
+		<!-- Adding titanium -->	
+		<recipe name="resourceForgedUnobtainium" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering" craft_tool="toolForgeCrucible">
+			<ingredient name="unit_unob" count="50"/>
+			<ingredient name="unit_clay" count="15"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="unit_clay,unit_iron"/>
+			</effect_group>
+		</recipe>		
 		<!-- Adding new darts -->	
 		<recipe name="ammoDartSteel" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering" craft_tool="toolForgeCrucible">
 			<ingredient name="unit_iron" count="5"/>
@@ -479,6 +489,13 @@
 		</recipe>
 		<recipe name="ammoDartTitanium" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering" craft_tool="toolForgeCrucible">
 			<ingredient name="unit_iron" count="7"/>
+			<ingredient name="unit_clay" count="4"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="unit_clay,unit_iron"/>
+			</effect_group>
+		</recipe>
+		<recipe name="ammoDartUnobtainium" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering" craft_tool="toolForgeCrucible">
+			<ingredient name="unit_unob" count="7"/>
 			<ingredient name="unit_clay" count="4"/>
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="unit_clay,unit_iron"/>
@@ -514,16 +531,24 @@
 				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="bladeTrapTitanium,resourceMechanicalParts,resourceElectricParts,resourceOil"/>
 			</effect_group>
 		</recipe>	
+		<recipe name="bladeTrapUnobtainium" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable"> <!-- trap -->
+			<ingredient name="resourceForgedUnobtainium" count="20"/>
+			<ingredient name="resourceMechanicalParts" count="12"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceOil" count="14"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="bladeTrapTitanium,resourceMechanicalParts,resourceElectricParts,resourceOil"/>
+			</effect_group>
+		</recipe>	
 		
 		<recipe name="auto762Turret" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable"> <!-- trap -->
 			<ingredient name="motionsensor" count="1"/>
-			<ingredient name="gunMGT1AK47" count="1"/>
-			<ingredient name="resourceForgedSteel" count="20"/>
+			<ingredient name="gunMGBrokenTacticalAR" count="1"/>
+			<ingredient name="resourceForgedTitanium" count="20"/>
 			<ingredient name="resourceMechanicalParts" count="12"/>
-			<ingredient name="resourceElectricParts" count="5"/>
 			<ingredient name="resourceOil" count="14"/>
 			<effect_group>
-				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceForgedSteel,resourceMechanicalParts,resourceElectricParts,resourceOil"/>
+				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceForgedTitanium,resourceMechanicalParts,gunMGBrokenTacticalAR,resourceOil"/>
 			</effect_group>
 		</recipe>
 		
@@ -533,24 +558,21 @@
 			<ingredient name="resourceScrapPolymers" count="10"/>
 			<ingredient name="ammoArrowExploding" count="10"/>
 			<ingredient name="ammoRocketHE" count="1"/>
-			<ingredient name="resourceDuctTape" count="5"/>
-			<ingredient name="ammoGasCan" count="5"/>
+			<ingredient name="resourceDuctTape" count="2"/>
 			<ingredient name="resourceForgedTitanium" count="5"/> 
 		</recipe>
 		<recipe name="ammoAtomicBolt" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
 			<ingredient name="resourceScrapPolymers" count="10"/>
 			<ingredient name="ammoCrossbowBoltExploding" count="10"/>
 			<ingredient name="ammoRocketHE" count="1"/>
-			<ingredient name="resourceDuctTape" count="5"/>
-			<ingredient name="ammoGasCan" count="5"/>
+			<ingredient name="resourceDuctTape" count="2"/>
 			<ingredient name="resourceForgedTitanium" count="5"/>
 		</recipe>
 		<recipe name="thrownAmmoAtomicPipeBomb" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
 			<ingredient name="resourceScrapPolymers" count="5"/>
 			<ingredient name="resourceMetalPipe" count="2"/>
 			<ingredient name="resourceGunPowder" count="40"/>
-			<ingredient name="resourceDuctTape" count="1"/>
-			<ingredient name="ammoGasCan" count="5"/>
+			<ingredient name="resourceDuctTape" count="2"/>
 			<ingredient name="resourceForgedTitanium" count="5"/>
 		</recipe>
 		<!-- Adding new healing beds -->

@@ -105,8 +105,8 @@
 		<group name="enUtilityGiant" emptyChance="0" decoyChance="0" decoy1hpChance="0">
 			<spawner name="enUtilityGiant" count="1"/>
 		</group>		
-<!--		<group name="enMinerGiant" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="enMinerGiant" count="1"/>
+<!--		<group name="enDesertGiant" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="enDesertGiant" count="1"/>
 		</group>-->
 		<group name="enBikerGiant" emptyChance="0" decoyChance="0" decoy1hpChance="0">
 			<spawner name="enBikerGiant" count="1"/>
@@ -556,8 +556,978 @@
 	<!-- Remove GS for reworks during BloodMoon / feral sizes -->
 	<remove xpath="/gamestages/spawner[@name='BloodMoonHorde']"></remove>
 
-	<!-- Reworked GS 1-372 for during BloodMoon / feral sizes  -->
+	
 	<append xpath="/gamestages">
+		<!-- Nurse Spawner  -->
+		<spawner name="NurseGSList">
+		<gamestage stage="1">
+			<spawn group="nurseHordeStageGS1" num="1" maxAlive="2" duration="1"/>
+		</gamestage>
+		<gamestage stage="2">
+			<spawn group="nurseHordeStageGS2" num="1" maxAlive="3" duration="1"/>
+		</gamestage>
+		<gamestage stage="5">
+			<spawn group="nurseHordeStageGS5" num="3" maxAlive="6" duration="1"/>
+		</gamestage>
+		<gamestage stage="8">
+			<spawn group="nurseHordeStageGS8" num="4" maxAlive="9" duration="1"/>
+		</gamestage>
+		<gamestage stage="11">
+			<spawn group="nurseHordeStageGS11" num="6" maxAlive="11" duration="1"/>
+		</gamestage>
+		<gamestage stage="14">
+			<spawn group="nurseHordeStageGS14" num="7" maxAlive="14" duration="1"/>
+		</gamestage>
+		<gamestage stage="18">
+			<spawn group="nurseHordeStageGS18" num="9" maxAlive="18" duration="1"/>
+		</gamestage>
+		<gamestage stage="22">
+			<spawn group="nurseHordeStageGS22" num="11" maxAlive="21" duration="1"/>
+		</gamestage>
+		<gamestage stage="27">
+			<spawn group="nurseHordeStageGS27" num="14" maxAlive="26" duration="1"/>
+		</gamestage>
+		<gamestage stage="31">
+			<spawn group="nurseHordeStageGS31" num="16" maxAlive="29" duration="1"/>
+		</gamestage>
+		<gamestage stage="36">
+			<spawn group="nurseHordeStageGS36" num="18" maxAlive="34" duration="1"/>
+		</gamestage>
+		<gamestage stage="41">
+			<spawn group="nurseHordeStageGS41" num="21" maxAlive="38" duration="1"/>
+		</gamestage>
+		<gamestage stage="46">
+			<spawn group="nurseHordeStageGS46" num="23" maxAlive="43" duration="1"/>
+		</gamestage>
+		<gamestage stage="52">
+			<spawn group="nurseHordeStageGS52" num="26" maxAlive="48" duration="1"/>
+		</gamestage>
+		<gamestage stage="58">
+			<spawn group="nurseHordeStageGS58" num="27" maxAlive="54" duration="1"/>
+		</gamestage>
+		<gamestage stage="64">
+			<spawn group="nurseHordeStageGS64" num="28" maxAlive="59" duration="1"/>
+		</gamestage>
+		<gamestage stage="70">
+			<spawn group="nurseHordeStageGS70" num="30" maxAlive="65" duration="1"/>
+		</gamestage>
+		<gamestage stage="76">
+			<spawn group="nurseHordeStageGS76" num="31" maxAlive="70" duration="1"/>
+		</gamestage>
+		<gamestage stage="82">
+			<spawn group="nurseHordeStageGS82" num="32" maxAlive="75" duration="1"/>
+		</gamestage>
+		<gamestage stage="89">
+			<spawn group="nurseHordeStageGS89" num="33" maxAlive="82" duration="1"/>
+		</gamestage>
+		<gamestage stage="96">
+			<spawn group="nurseHordeStageGS96" num="35" maxAlive="88" duration="1"/>
+		</gamestage>
+		<gamestage stage="103">
+			<spawn group="nurseHordeStageGS103" num="36" maxAlive="94" duration="1"/>
+		</gamestage>
+		<gamestage stage="110">
+			<spawn group="nurseHordeStageGS110" num="38" maxAlive="101" duration="1"/>
+		</gamestage>
+		<gamestage stage="117">
+			<spawn group="nurseHordeStageGS117" num="39" maxAlive="107" duration="1"/>
+		</gamestage>
+		<gamestage stage="125">
+			<spawn group="nurseHordeStageGS125" num="41" maxAlive="114" duration="1"/>
+		</gamestage>
+		<gamestage stage="132">
+			<spawn group="nurseHordeStageGS132" num="42" maxAlive="120" duration="1"/>
+		</gamestage>
+		<gamestage stage="140">
+			<spawn group="nurseHordeStageGS140" num="44" maxAlive="128" duration="1"/>
+		</gamestage>
+		<gamestage stage="148">
+			<spawn group="nurseHordeStageGS148" num="45" maxAlive="135" duration="1"/>
+		</gamestage>
+		<gamestage stage="156">
+			<spawn group="nurseHordeStageGS156" num="47" maxAlive="142" duration="1"/>
+		</gamestage>
+		<gamestage stage="164">
+			<spawn group="nurseHordeStageGS164" num="48" maxAlive="149" duration="1"/>
+		</gamestage>
+		<gamestage stage="172">
+			<spawn group="nurseHordeStageGS172" num="50" maxAlive="156" duration="1"/>
+		</gamestage>
+		<gamestage stage="181">
+			<spawn group="nurseHordeStageGS181" num="52" maxAlive="164" duration="1"/>
+		</gamestage>
+		<gamestage stage="189">
+			<spawn group="nurseHordeStageGS189" num="53" maxAlive="172" duration="1"/>
+		</gamestage>
+		<gamestage stage="198">
+			<spawn group="nurseHordeStageGS198" num="55" maxAlive="180" duration="1"/>
+		</gamestage>
+		<gamestage stage="207">
+			<spawn group="nurseHordeStageGS207" num="57" maxAlive="188" duration="1"/>
+		</gamestage>
+		<gamestage stage="216">
+			<spawn group="nurseHordeStageGS216" num="59" maxAlive="196" duration="1"/>
+		</gamestage>
+		<gamestage stage="225">
+			<spawn group="nurseHordeStageGS225" num="61" maxAlive="204" duration="1"/>
+		</gamestage>
+		<gamestage stage="234">
+			<spawn group="nurseHordeStageGS234" num="62" maxAlive="212" duration="1"/>
+		</gamestage>
+		<gamestage stage="243">
+			<spawn group="nurseHordeStageGS243" num="64" maxAlive="220" duration="1"/>
+		</gamestage>
+		<gamestage stage="252">
+			<spawn group="nurseHordeStageGS252" num="66" maxAlive="228" duration="1"/>
+		</gamestage>
+		<gamestage stage="262">
+			<spawn group="nurseHordeStageGS262" num="68" maxAlive="237" duration="1"/>
+		</gamestage>
+		<gamestage stage="272">
+			<spawn group="nurseHordeStageGS272" num="70" maxAlive="246" duration="1"/>
+		</gamestage>
+		<gamestage stage="281">
+			<spawn group="nurseHordeStageGS281" num="72" maxAlive="254" duration="1"/>
+		</gamestage>
+		<gamestage stage="291">
+			<spawn group="nurseHordeStageGS291" num="74" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="301">
+			<spawn group="nurseHordeStageGS301" num="76" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="311">
+			<spawn group="nurseHordeStageGS311" num="78" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="322">
+			<spawn group="nurseHordeStageGS322" num="80" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="332">
+			<spawn group="nurseHordeStageGS332" num="82" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="343">
+			<spawn group="nurseHordeStageGS343" num="84" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="353">
+			<spawn group="nurseHordeStageGS353" num="86" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="364">
+			<spawn group="nurseHordeStageGS364" num="88" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="374">
+			<spawn group="nurseHordeStageGS374" num="90" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="385">
+			<spawn group="nurseHordeStageGS385" num="93" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="396">
+			<spawn group="nurseHordeStageGS396" num="95" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="407">
+			<spawn group="nurseHordeStageGS407" num="97" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="419">
+			<spawn group="nurseHordeStageGS419" num="99" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="430">
+			<spawn group="nurseHordeStageGS430" num="102" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="441">
+			<spawn group="nurseHordeStageGS441" num="104" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="453">
+			<spawn group="nurseHordeStageGS453" num="106" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="464">
+			<spawn group="nurseHordeStageGS464" num="108" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="476">
+			<spawn group="nurseHordeStageGS476" num="111" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="488">
+			<spawn group="nurseHordeStageGS488" num="113" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="500">
+			<spawn group="nurseHordeStageGS500" num="116" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="512">
+			<spawn group="nurseHordeStageGS512" num="118" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="524">
+			<spawn group="nurseHordeStageGS524" num="120" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="536">
+			<spawn group="nurseHordeStageGS536" num="123" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="548">
+			<spawn group="nurseHordeStageGS548" num="125" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="560">
+			<spawn group="nurseHordeStageGS560" num="128" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="573">
+			<spawn group="nurseHordeStageGS573" num="130" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="585">
+			<spawn group="nurseHordeStageGS585" num="133" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="598">
+			<spawn group="nurseHordeStageGS598" num="135" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="610">
+			<spawn group="nurseHordeStageGS610" num="138" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="623">
+			<spawn group="nurseHordeStageGS623" num="140" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="636">
+			<spawn group="nurseHordeStageGS636" num="143" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="649">
+			<spawn group="nurseHordeStageGS649" num="145" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="662">
+			<spawn group="nurseHordeStageGS662" num="148" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="675">
+			<spawn group="nurseHordeStageGS675" num="151" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="688">
+			<spawn group="nurseHordeStageGS688" num="153" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="702">
+			<spawn group="nurseHordeStageGS702" num="156" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="715">
+			<spawn group="nurseHordeStageGS715" num="159" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="729">
+			<spawn group="nurseHordeStageGS729" num="161" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="742">
+			<spawn group="nurseHordeStageGS742" num="164" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="756">
+			<spawn group="nurseHordeStageGS756" num="167" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="769">
+			<spawn group="nurseHordeStageGS769" num="169" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="783">
+			<spawn group="nurseHordeStageGS783" num="172" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="797">
+			<spawn group="nurseHordeStageGS797" num="175" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="811">
+			<spawn group="nurseHordeStageGS811" num="178" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="825">
+			<spawn group="nurseHordeStageGS825" num="181" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="839">
+			<spawn group="nurseHordeStageGS839" num="183" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="853">
+			<spawn group="nurseHordeStageGS853" num="186" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="868">
+			<spawn group="nurseHordeStageGS868" num="189" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="882">
+			<spawn group="nurseHordeStageGS882" num="192" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="896">
+			<spawn group="nurseHordeStageGS896" num="195" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="911">
+			<spawn group="nurseHordeStageGS911" num="198" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="925">
+			<spawn group="nurseHordeStageGS925" num="201" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="940">
+			<spawn group="nurseHordeStageGS940" num="204" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="955">
+			<spawn group="nurseHordeStageGS955" num="207" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="970">
+			<spawn group="nurseHordeStageGS970" num="210" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="985">
+			<spawn group="nurseHordeStageGS985" num="213" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1000">
+			<spawn group="nurseHordeStageGS1000" num="216" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1015">
+			<spawn group="nurseHordeStageGS1015" num="219" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1030">
+			<spawn group="nurseHordeStageGS1030" num="222" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1045">
+			<spawn group="nurseHordeStageGS1045" num="225" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1060">
+			<spawn group="nurseHordeStageGS1060" num="228" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1075">
+			<spawn group="nurseHordeStageGS1075" num="231" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1091">
+			<spawn group="nurseHordeStageGS1091" num="234" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1106">
+			<spawn group="nurseHordeStageGS1106" num="237" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1122">
+			<spawn group="nurseHordeStageGS1122" num="240" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1137">
+			<spawn group="nurseHordeStageGS1137" num="243" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1153">
+			<spawn group="nurseHordeStageGS1153" num="246" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1169">
+			<spawn group="nurseHordeStageGS1169" num="249" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1185">
+			<spawn group="nurseHordeStageGS1185" num="253" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1201">
+			<spawn group="nurseHordeStageGS1201" num="256" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1217">
+			<spawn group="nurseHordeStageGS1217" num="259" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1233">
+			<spawn group="nurseHordeStageGS1233" num="262" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1249">
+			<spawn group="nurseHordeStageGS1249" num="265" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1265">
+			<spawn group="nurseHordeStageGS1265" num="269" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1281">
+			<spawn group="nurseHordeStageGS1281" num="272" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1298">
+			<spawn group="nurseHordeStageGS1298" num="275" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1314">
+			<spawn group="nurseHordeStageGS1314" num="278" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1331">
+			<spawn group="nurseHordeStageGS1331" num="282" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1347">
+			<spawn group="nurseHordeStageGS1347" num="285" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1364">
+			<spawn group="nurseHordeStageGS1364" num="288" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1380">
+			<spawn group="nurseHordeStageGS1380" num="292" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1397">
+			<spawn group="nurseHordeStageGS1397" num="295" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1414">
+			<spawn group="nurseHordeStageGS1414" num="298" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1431">
+			<spawn group="nurseHordeStageGS1431" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1448">
+			<spawn group="nurseHordeStageGS1448" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1465">
+			<spawn group="nurseHordeStageGS1465" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1482">
+			<spawn group="nurseHordeStageGS1482" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1499">
+			<spawn group="nurseHordeStageGS1499" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1516">
+			<spawn group="nurseHordeStageGS1516" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1533">
+			<spawn group="nurseHordeStageGS1533" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1551">
+			<spawn group="nurseHordeStageGS1551" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1568">
+			<spawn group="nurseHordeStageGS1568" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1586">
+			<spawn group="nurseHordeStageGS1586" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1603">
+			<spawn group="nurseHordeStageGS1603" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1621">
+			<spawn group="nurseHordeStageGS1621" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1638">
+			<spawn group="nurseHordeStageGS1638" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1656">
+			<spawn group="nurseHordeStageGS1656" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1674">
+			<spawn group="nurseHordeStageGS1674" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1692">
+			<spawn group="nurseHordeStageGS1692" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1710">
+			<spawn group="nurseHordeStageGS1710" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1728">
+			<spawn group="nurseHordeStageGS1728" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1746">
+			<spawn group="nurseHordeStageGS1746" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1764">
+			<spawn group="nurseHordeStageGS1764" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1782">
+			<spawn group="nurseHordeStageGS1782" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1800">
+			<spawn group="nurseHordeStageGS1800" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1818">
+			<spawn group="nurseHordeStageGS1818" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1837">
+			<spawn group="nurseHordeStageGS1837" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1855">
+			<spawn group="nurseHordeStageGS1855" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1873">
+			<spawn group="nurseHordeStageGS1873" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1892">
+			<spawn group="nurseHordeStageGS1892" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1911">
+			<spawn group="nurseHordeStageGS1911" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1929">
+			<spawn group="nurseHordeStageGS1929" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1948">
+			<spawn group="nurseHordeStageGS1948" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1967">
+			<spawn group="nurseHordeStageGS1967" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="1986">
+			<spawn group="nurseHordeStageGS1986" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2004">
+			<spawn group="nurseHordeStageGS2004" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2023">
+			<spawn group="nurseHordeStageGS2023" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2042">
+			<spawn group="nurseHordeStageGS2042" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2061">
+			<spawn group="nurseHordeStageGS2061" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2081">
+			<spawn group="nurseHordeStageGS2081" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2100">
+			<spawn group="nurseHordeStageGS2100" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2119">
+			<spawn group="nurseHordeStageGS2119" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2138">
+			<spawn group="nurseHordeStageGS2138" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2158">
+			<spawn group="nurseHordeStageGS2158" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2177">
+			<spawn group="nurseHordeStageGS2177" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2197">
+			<spawn group="nurseHordeStageGS2197" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2216">
+			<spawn group="nurseHordeStageGS2216" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2236">
+			<spawn group="nurseHordeStageGS2236" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2255">
+			<spawn group="nurseHordeStageGS2255" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2275">
+			<spawn group="nurseHordeStageGS2275" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2295">
+			<spawn group="nurseHordeStageGS2295" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2315">
+			<spawn group="nurseHordeStageGS2315" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2334">
+			<spawn group="nurseHordeStageGS2334" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2354">
+			<spawn group="nurseHordeStageGS2354" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2374">
+			<spawn group="nurseHordeStageGS2374" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2394">
+			<spawn group="nurseHordeStageGS2394" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2414">
+			<spawn group="nurseHordeStageGS2414" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2435">
+			<spawn group="nurseHordeStageGS2435" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2455">
+			<spawn group="nurseHordeStageGS2455" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2475">
+			<spawn group="nurseHordeStageGS2475" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2495">
+			<spawn group="nurseHordeStageGS2495" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2516">
+			<spawn group="nurseHordeStageGS2516" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2536">
+			<spawn group="nurseHordeStageGS2536" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2557">
+			<spawn group="nurseHordeStageGS2557" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2577">
+			<spawn group="nurseHordeStageGS2577" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2598">
+			<spawn group="nurseHordeStageGS2598" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2618">
+			<spawn group="nurseHordeStageGS2618" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2639">
+			<spawn group="nurseHordeStageGS2639" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2660">
+			<spawn group="nurseHordeStageGS2660" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2681">
+			<spawn group="nurseHordeStageGS2681" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2702">
+			<spawn group="nurseHordeStageGS2702" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2723">
+			<spawn group="nurseHordeStageGS2723" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2744">
+			<spawn group="nurseHordeStageGS2744" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2765">
+			<spawn group="nurseHordeStageGS2765" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2786">
+			<spawn group="nurseHordeStageGS2786" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2807">
+			<spawn group="nurseHordeStageGS2807" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2828">
+			<spawn group="nurseHordeStageGS2828" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2849">
+			<spawn group="nurseHordeStageGS2849" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2870">
+			<spawn group="nurseHordeStageGS2870" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2892">
+			<spawn group="nurseHordeStageGS2892" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2913">
+			<spawn group="nurseHordeStageGS2913" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2935">
+			<spawn group="nurseHordeStageGS2935" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2956">
+			<spawn group="nurseHordeStageGS2956" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2978">
+			<spawn group="nurseHordeStageGS2978" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="2999">
+			<spawn group="nurseHordeStageGS2999" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3021">
+			<spawn group="nurseHordeStageGS3021" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3043">
+			<spawn group="nurseHordeStageGS3043" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3064">
+			<spawn group="nurseHordeStageGS3064" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3086">
+			<spawn group="nurseHordeStageGS3086" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3108">
+			<spawn group="nurseHordeStageGS3108" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3130">
+			<spawn group="nurseHordeStageGS3130" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3152">
+			<spawn group="nurseHordeStageGS3152" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3174">
+			<spawn group="nurseHordeStageGS3174" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3196">
+			<spawn group="nurseHordeStageGS3196" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3218">
+			<spawn group="nurseHordeStageGS3218" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3240">
+			<spawn group="nurseHordeStageGS3240" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3263">
+			<spawn group="nurseHordeStageGS3263" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3285">
+			<spawn group="nurseHordeStageGS3285" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3307">
+			<spawn group="nurseHordeStageGS3307" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3330">
+			<spawn group="nurseHordeStageGS3330" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3352">
+			<spawn group="nurseHordeStageGS3352" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3375">
+			<spawn group="nurseHordeStageGS3375" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3397">
+			<spawn group="nurseHordeStageGS3397" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3420">
+			<spawn group="nurseHordeStageGS3420" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3442">
+			<spawn group="nurseHordeStageGS3442" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3465">
+			<spawn group="nurseHordeStageGS3465" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3488">
+			<spawn group="nurseHordeStageGS3488" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3510">
+			<spawn group="nurseHordeStageGS3510" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3533">
+			<spawn group="nurseHordeStageGS3533" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3556">
+			<spawn group="nurseHordeStageGS3556" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3579">
+			<spawn group="nurseHordeStageGS3579" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3602">
+			<spawn group="scoutHordeStageGS3602" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3625">
+			<spawn group="scoutHordeStageGS3625" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3648">
+			<spawn group="scoutHordeStageGS3648" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3671">
+			<spawn group="scoutHordeStageGS3671" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3694">
+			<spawn group="scoutHordeStageGS3694" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3718">
+			<spawn group="scoutHordeStageGS3718" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3741">
+			<spawn group="scoutHordeStageGS3741" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3764">
+			<spawn group="scoutHordeStageGS3764" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3787">
+			<spawn group="scoutHordeStageGS3787" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3811">
+			<spawn group="scoutHordeStageGS3811" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3834">
+			<spawn group="scoutHordeStageGS3834" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3858">
+			<spawn group="scoutHordeStageGS3858" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3881">
+			<spawn group="scoutHordeStageGS3881" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3905">
+			<spawn group="scoutHordeStageGS3905" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3929">
+			<spawn group="scoutHordeStageGS3929" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3952">
+			<spawn group="scoutHordeStageGS3952" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="3976">
+			<spawn group="scoutHordeStageGS3976" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4000">
+			<spawn group="scoutHordeStageGS4000" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4024">
+			<spawn group="scoutHordeStageGS4024" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4048">
+			<spawn group="scoutHordeStageGS4048" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4072">
+			<spawn group="scoutHordeStageGS4072" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4096">
+			<spawn group="scoutHordeStageGS4096" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4120">
+			<spawn group="scoutHordeStageGS4120" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4144">
+			<spawn group="scoutHordeStageGS4144" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4168">
+			<spawn group="scoutHordeStageGS4168" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4192">
+			<spawn group="scoutHordeStageGS4192" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4216">
+			<spawn group="scoutHordeStageGS4216" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4240">
+			<spawn group="scoutHordeStageGS4240" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4265">
+			<spawn group="scoutHordeStageGS4265" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4289">
+			<spawn group="scoutHordeStageGS4289" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4313">
+			<spawn group="scoutHordeStageGS4313" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4338">
+			<spawn group="scoutHordeStageGS4338" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4362">
+			<spawn group="scoutHordeStageGS4362" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4387">
+			<spawn group="scoutHordeStageGS4387" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4411">
+			<spawn group="scoutHordeStageGS4411" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4436">
+			<spawn group="scoutHordeStageGS4436" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4461">
+			<spawn group="scoutHordeStageGS4461" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4485">
+			<spawn group="scoutHordeStageGS4485" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4510">
+			<spawn group="scoutHordeStageGS4510" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4535">
+			<spawn group="scoutHordeStageGS4535" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4560">
+			<spawn group="scoutHordeStageGS4560" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4585">
+			<spawn group="scoutHordeStageGS4585" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4610">
+			<spawn group="scoutHordeStageGS4610" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4635">
+			<spawn group="scoutHordeStageGS4635" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4660">
+			<spawn group="scoutHordeStageGS4660" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4685">
+			<spawn group="scoutHordeStageGS4685" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4710">
+			<spawn group="scoutHordeStageGS4710" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4735">
+			<spawn group="scoutHordeStageGS4735" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4760">
+			<spawn group="scoutHordeStageGS4760" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4786">
+			<spawn group="scoutHordeStageGS4786" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4811">
+			<spawn group="scoutHordeStageGS4811" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4836">
+			<spawn group="scoutHordeStageGS4836" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4862">
+			<spawn group="scoutHordeStageGS4862" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4887">
+			<spawn group="scoutHordeStageGS4887" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4913">
+			<spawn group="scoutHordeStageGS4913" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4938">
+			<spawn group="scoutHordeStageGS4938" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4964">
+			<spawn group="scoutHordeStageGS4964" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="4989">
+			<spawn group="scoutHordeStageGS4989" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5015">
+			<spawn group="scoutHordeStageGS5015" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5041">
+			<spawn group="scoutHordeStageGS5041" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5066">
+			<spawn group="scoutHordeStageGS5066" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5092">
+			<spawn group="scoutHordeStageGS5092" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5118">
+			<spawn group="scoutHordeStageGS5118" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5144">
+			<spawn group="scoutHordeStageGS5144" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5170">
+			<spawn group="scoutHordeStageGS5170" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5196">
+			<spawn group="scoutHordeStageGS5196" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5222">
+			<spawn group="scoutHordeStageGS5222" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5248">
+			<spawn group="scoutHordeStageGS5248" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5274">
+			<spawn group="scoutHordeStageGS5274" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5300">
+			<spawn group="scoutHordeStageGS5300" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5326">
+			<spawn group="scoutHordeStageGS5326" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5352">
+			<spawn group="scoutHordeStageGS5352" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5379">
+			<spawn group="scoutHordeStageGS5379" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5405">
+			<spawn group="scoutHordeStageGS5405" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5431">
+			<spawn group="scoutHordeStageGS5431" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5458">
+			<spawn group="scoutHordeStageGS5458" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5484">
+			<spawn group="scoutHordeStageGS5484" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5511">
+			<spawn group="scoutHordeStageGS5511" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5537">
+			<spawn group="scoutHordeStageGS5537" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5564">
+			<spawn group="scoutHordeStageGS5564" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5590">
+			<spawn group="scoutHordeStageGS5590" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5617">
+			<spawn group="scoutHordeStageGS5617" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5644">
+			<spawn group="scoutHordeStageGS5644" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5670">
+			<spawn group="scoutHordeStageGS5670" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5697">
+			<spawn group="scoutHordeStageGS5697" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5724">
+			<spawn group="scoutHordeStageGS5724" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5751">
+			<spawn group="scoutHordeStageGS5751" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+		<gamestage stage="5778">
+			<spawn group="scoutHordeStageGS5778" num="300" maxAlive="256" duration="1"/>
+		</gamestage>
+	</spawner>
+		<!-- Reworked GS 1-372 for during BloodMoon / feral sizes  -->
 		<spawner name="BloodMoonHorde">
 			<gamestage stage="1">
 				<spawn group="feralHordeStageGS1" num="2" maxAlive="6" duration="1"/>

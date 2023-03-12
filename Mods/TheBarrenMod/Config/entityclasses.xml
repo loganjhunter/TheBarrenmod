@@ -316,81 +316,23 @@
 			</effect_group>
 		</entity_class>
 		
-		
-<!-- 		<entity_class name="grandOutdoors" extends="Zombie_Template">
-			<property name="Archetype" value="grandOutdoors" />
-			<property name="Tags" value="entity,npc,human,hostile" />
-			<property name="ExperienceGain" value="440"/>
-			<property name="Mass" value="170"/>
-			<property name="Weight" value="70"/>
-			<property name="LootDropEntityClass" value="EntityLootContainerGrandOutdoors"/>
-			<property name="LootDropProb" value="0.5"/>
-			<property name="WalkType" value="7"/>
-			<property name="Faction" value="none"/>
-			<property name="EntityType" value="Player"/>
-			<property name="Class" value="EntitySurvivor"/>
-			<property name="Parent" value="Players"/>
-			<property name="PhysicsBody" value="zombieStandard"/>
-			<property name="SoundRandom" value="grandoutdoorsroam"/>
-			<property name="SoundAlert" value="grandoutdoorsalert"/>
-			<property name="SoundAttack" value="grandoutdoorsattack"/>
-			<property name="SoundHurt" value="grandoutdoorspain"/>
-			<property name="SoundDeath" value="grandoutdoorsdeath"/>
-			<property name="RootMotion" value="true"/>
-			<property name="MaxTurnSpeed" value="250"/>
-			<property name="MoveSpeed" value="1"/>
-			<property name="MoveSpeedAggro" value="1.25, 1.75"/>
-			<property name="DanceType" value="0" />
-			<property name="SwimSpeed" value="1"/>
-			<property name="SwimStrokeRate" value="1,1.5"/>
-			<property name="CanClimbLadders" value="true"/>
-			<property name="JumpMaxDistance" value="2.8, 3.9"/>
-			<property name="PainResistPerHit" value=".8"/>			
-			<property name="HandItem" value="meleeHandGrandOutdoors"/>
-			<property name="HandItemCrawler" value="meleeHandGrandOutdoorsCrawler"/>
-			<property name="IsEnemyEntity" value="true"/>
-			<property name="SurfaceCategory" value="organic"/>
-			<property name="ParticleOnDeath" value="blood_death"/>
-			<property name="Immunity" value="sickness;disease;wellness"/> 
-			<property name="SightRange" value="37"/>
-			<property name="AITask-1" value="BreakBlock"/>
-			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="Territorial"/>
-			<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityZombie,25,EntityAnimalRabbit,25"/>
-			<property name="AITask-5" value="ApproachSpot"/>
-			<property name="AITask-6" value="Look"/>
-			<property name="AITask-7" value="Wander"/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityAnimalRabbit"/>  
-			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0,EntityAnimalRabbit,0,0"/>
-			<property class="FallLandBehavior">
-				<property name="1None" data="anim=None;height=0,1;weight=0.4"/>
-				<property name="1Land" data="anim=Land;height=0,1;weight=0.4"/>
-				<property name="1LandLow" data="anim=LandLow;height=0,1;weight=0.15"/>
-				<property name="1Stumble" data="anim=Stumble;height=0,1;weight=0.05"/>
-
-				<property name="LowLand" data="anim=LandLow;height=1,3;weight=0.7"/>
-				<property name="LowStumble" data="anim=Stumble;height=1,3;weight=0.3"/>
-
-				<property name="MidStumble" data="anim=Stumble;height=3,5;weight=0.3"/>
-				<property name="MidStumbleAndRage" data="anim=Stumble;height=3,5;weight=0.3;ragePer=0.5,1.5;rageTime=1.0,2.0"/>
-				<property name="MidLandHard" data="anim=LandHard;height=3,5;weight=0.3"/>
-				<property name="MidLandHardAndRage" data="anim=LandHard;height=3,5;weight=0.3;ragePer=0.5,1.5;rageTime=1.0,2.0"/>
-
-				<property name="HighStumbleAndRage" data="anim=Stumble;height=5,13;weight=0.13;ragePer=0.5,1.5;rageTime=2,8"/>
-				<property name="Ragdoll" data="anim=Ragdoll;height=3;weight=0.4"/>
-			</property>
-			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="330"/>
-			</effect_group>
-		</entity_class> -->
-	
 		<!-- giant/boss zombies -->
 		<entity_class name="zombieArleneGiant" extends="zombieArlene">
 			<property name="Tags" value="entity,zombie,walker,boss"/>
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieArleneGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -403,6 +345,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieMarleneGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -415,6 +368,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombiePartyGirlGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -427,6 +391,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieNurseGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -439,6 +414,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieJoeGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -451,6 +437,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieSteveGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -463,6 +460,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieTomClarkGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -475,6 +483,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieBusinessManGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -487,6 +506,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieBurntGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -499,6 +529,10 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieSpiderGiant"/>
 			<property name="JumpMaxDistance" value="11, 13"/>
 			<effect_group name="Base Effects">
@@ -511,6 +545,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieBoeGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -523,6 +568,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieJanitorGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -535,6 +591,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieMoeGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -547,6 +614,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieLabGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -559,6 +637,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieDarleneGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -571,6 +660,17 @@
 			<property name="SizeScale" value="1.4"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieYoGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -583,6 +683,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieUtilityWorkerGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -595,6 +706,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieLumberjackGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -608,6 +730,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1500"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieBikerGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="300"/>
@@ -619,6 +752,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieFemaleFatGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -631,6 +775,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieFatHawaiianGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -643,6 +798,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieMaleHazmatGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -655,6 +821,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieFatCopGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -672,6 +849,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieSkateboarderGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -684,6 +872,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieSoldierGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -696,6 +895,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieWightGiantFeral"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -708,6 +918,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieScreamerGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -720,6 +941,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieMutatedGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -736,6 +968,17 @@
 			<property name="Explosion.BlockDamage" value="6500"/>
 			<property name="Explosion.EntityDamage" value="950"/>
 			<property name="ExperienceGain" value="1400"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerZombieDemolitionGiant"/>
 			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
 			<effect_group name="Base Effects">
@@ -750,6 +993,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerFarmerGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="135"/>
@@ -763,6 +1017,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerForestGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="130"/>
@@ -776,6 +1041,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerForestHikerGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="130"/>
@@ -789,6 +1065,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1500"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerPunkGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
@@ -802,6 +1089,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1500"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerSchoolGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
@@ -815,6 +1113,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1500"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerJoggerGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="175"/>
@@ -827,6 +1136,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1500"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerSoldierGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="250"/>
@@ -839,6 +1159,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1500"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerSoldier196Giant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="250"/>
@@ -852,6 +1183,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1500"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerSwatGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="250"/>
@@ -864,6 +1206,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1500"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerUtilityGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="175"/>
@@ -877,6 +1230,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1500"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerMinerGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="175"/>
@@ -889,6 +1253,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1500"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerBikerGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="220"/>
@@ -901,6 +1276,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1500"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerLumberjackGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="230"/>
@@ -913,24 +1299,118 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerNurseHDGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="120"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
 			</effect_group>
 		</entity_class> 
-		<entity_class name="enMinerGiant" extends="enDesertMale1">
+		<entity_class name="enDesertGiant" extends="enDesertMale1">
 			<property name="Tags" value="entity,zombie,walker,umazombie,enKnockdown25"/>
 			<property name="HandItem" value="enHand_minerGiant"/>
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="1200"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerMinerGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="120"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
 			</effect_group>
-		</entity_class> 		
+		</entity_class> 
+
+		<entity_class name="enHazmatGiant" extends="enHazmatMale1">
+			<property name="Tags" value="entity,zombie,walker,boss"/>
+			<property name="SizeScale" value="1.35"/>
+			<property name="PainResistPerHit" value=".8"/>
+			<property name="ExperienceGain" value="1500"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerHazmatGiant"/>
+			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="280"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="enPatientGiant" extends="enPatientMale2">
+			<property name="Tags" value="entity,zombie,walker,boss"/>
+			<property name="SizeScale" value="1.35"/>
+			<property name="PainResistPerHit" value=".8"/>
+			<property name="ExperienceGain" value="1300"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerPatientGiant"/>
+			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="410"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="enFootballGiant" extends="enFootballMale3">
+			<property name="Tags" value="entity,zombie,walker,boss"/>
+			<property name="SizeScale" value="1.35"/>
+			<property name="PainResistPerHit" value=".8"/>
+			<property name="ExperienceGain" value="1800"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerFootballGiant"/>
+			<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".5"/><property name="DismemberMultiplierLegs" value=".5"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="440"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+			</effect_group>
+		</entity_class>
+
+		
 		<!-- elemental zombies -->	
 		<entity_class name="elementalClayWalker" extends="EN_Zombie_Template_Elemental">
 			<property name="Tags" value="entity,zombie,walker,clay"/>
@@ -980,6 +1460,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".9"/>
 			<property name="ExperienceGain" value="750"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerClayGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="perc_set" value="2.1,2.3"/>
@@ -1046,6 +1537,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".9"/>
 			<property name="ExperienceGain" value="1025"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerShaleGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="perc_set" value="2.1,2.3"/>
@@ -1112,6 +1614,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".8"/>
 			<property name="ExperienceGain" value="750"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerNitrateGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="perc_set" value="2.1,2.3"/>
@@ -1178,6 +1691,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".9"/>
 			<property name="ExperienceGain" value="750"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerCoalGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="perc_set" value="2.1,2.3"/>
@@ -1203,6 +1727,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".9"/>
 			<property name="ExperienceGain" value="750"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerSandGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="perc_set" value="2.1,2.3"/>
@@ -1228,6 +1763,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".9"/>
 			<property name="ExperienceGain" value="750"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStoneGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="perc_set" value="2.1,2.3"/>
@@ -1253,6 +1799,17 @@
 			<property name="SizeScale" value="1.35"/>
 			<property name="PainResistPerHit" value=".9"/>
 			<property name="ExperienceGain" value="750"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="WalkType" value="2"/>
+			<property name="MaxTurnSpeed" value="120"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedPanic" value="0.08"/>
+			<property name="MoveSpeedAggro" value="0.04, 0.8"/>
+			<property name="MoveSpeedRand" value="0, 0"/>
+			<property name="JumpMaxDistance" value="0.25, 0.5"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerIronGiant"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="perc_set" value="2.1,2.3"/>
@@ -1850,6 +2407,9 @@
 	<append xpath="/entity_classes/entity_class[@name='enForestMale5Radiated']">
 		<property name="LootDropEntityClass" value="EntityLootContainerForestRadiated"/>
 	</append>
+	<append xpath="/entity_classes/entity_class[@name='enForestGiant']">
+		<property name="LootDropEntityClass" value="EntityLootContainerForestGiant"/>
+	</append>
 	<append xpath="/entity_classes/entity_class[@name='enJoggerFemale1']">
 		<property name="LootDropEntityClass" value="EntityLootContainerJogger"/>
 	</append>
@@ -2160,6 +2720,123 @@
 	<append xpath="/entity_classes/entity_class[@name='enUtilityMale5Radiated']">
 		<property name="LootDropEntityClass" value="EntityLootContainerUtilityRadiated"/>
 	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertCowboy1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesert"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertCowboy1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertCowboy1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertCowboy2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesert"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertCowboy2Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertCowboy2Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertCowboy3']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesert"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertCowboy3Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertCowboy3Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertCowgirl1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesert"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertCowgirl1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertCowgirl1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertCowgirl2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesert"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertCowgirl2Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertCowgirl2Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertRadiated"/>
+	</append>	
+	<append xpath="/entity_classes/entity_class[@name='enDesertFemale1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesert"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertFemale1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertFemale1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertFemale2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesert"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertFemale2Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertFemale2Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertFemale3']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesert"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertFemale3Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertFemale3Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertFemale4']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesert"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertFemale4Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertFemale4Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertMale1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesert"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertMale1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertMale1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertMale2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesert"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertMale2Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertMale2Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertMale3']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesert"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertMale3Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertMale3Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertMale4']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesert"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertMale4Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enDesertMale4Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerDesertRadiated"/>
+	</append>
 	<append xpath="/entity_classes/entity_class[@name='enDesertMiner1']">
 		<property name="LootDropEntityClass" value="EntityLootContainerMiner"/>
 	</append>
@@ -2226,6 +2903,60 @@
 	<append xpath="/entity_classes/entity_class[@name='enBiker4Radiated']">
 		<property name="LootDropEntityClass" value="EntityLootContainerBikerRadiated"/>
 	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinessman1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinessman"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinessman1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinessmanFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinessman1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinessmanRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinessman2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinessman"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinessman2Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinessmanFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinessman2Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinessmanRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinessman3']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinessman"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinessman3Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinessmanFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinessman3Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinessmanRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinessman4']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinessman"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinessman4Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinessmanFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinessman4Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinessmanRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinesswoman1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinesswoman"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinesswoman1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinesswomanFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinesswoman1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinesswomanRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinesswoman2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinesswoman"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinesswoman2Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinesswomanFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBusinesswoman2Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBusinesswomanRadiated"/>
+	</append>
 	<append xpath="/entity_classes/entity_class[@name='enScreamer1']">
 		<property name="LootDropEntityClass" value="zPackScreamer"/>
 	</append>
@@ -2238,10 +2969,425 @@
 	<append xpath="/entity_classes/entity_class[@name='enScreamer196']">
 		<property name="LootDropEntityClass" value="zPackScreamer"/>
 	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowFemale1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnow"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowFemale1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowFemale1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowFemale2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnow"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowFemale2Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowFemale2Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowFemale3']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnow"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowFemale3Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowFemale3Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowFemale4']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnow"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowFemale4Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowFemale4Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowFemale5']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnow"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowFemale5Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowFemale5Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowRadiated"/>
+	</append>	
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnow"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnow"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale2Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale2Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale3']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnow"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale3Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale3Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale4']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnow"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale4Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale4Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale5']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnow"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale5Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale5Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale6']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnow"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale6Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enSnowMale6Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerSnowRadiated"/>
+	</append>
 	<append xpath="/entity_classes/entity_class[@name='enSnowGiant']">
 		<property name="LootDropEntityClass" value="EntityLootContainerSnowGiant"/>
 	</append>
-		<!-- Set the loot drops for Snufkin Zs -->
+	<append xpath="/entity_classes/entity_class[@name='enBurntFemale1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurnt"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBurntFemale1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurntFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBurntFemale1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurntRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBurntFemale2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurnt"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBurntFemale2Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurntFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBurntFemale2Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurntRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBurntFemaleFlamer']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurnt"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBurntFemaleFlamerFeral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurntFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBurntFemaleFlamerRadiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurntRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBurntMale1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurnt"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBurntMale1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurntFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBurntMale1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurntRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBurntMale2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurnt"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBurntMale2Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurntFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBurntMale2Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurntRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBurntMaleFlamer']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurnt"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBurntMaleFlamerFeral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurntFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enBurntMaleFlamerRadiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerBurntRadiated"/>
+	</append>	
+	<append xpath="/entity_classes/entity_class[@name='enWastelandFemale1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWasteland"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandFemale1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWastelandFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandFemale1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWastelandRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandFemale2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWasteland"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandFemale2Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWastelandFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandFemale2Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWastelandRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandFemale3']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWasteland"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandFemale3Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWastelandFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandFemale3Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWastelandRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandFemaleCrazy']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWasteland"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandFemaleCrazyFeral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWastelandFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandFemaleCrazyRadiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWastelandRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandMale1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWasteland"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandMale1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWastelandFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandMale1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWastelandRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandMale2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWasteland"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandMale2Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWastelandFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandMale2Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWastelandRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandMale3']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWasteland"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandMale3Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWastelandFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandMale3Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWastelandRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandMaleCrazy']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWasteland"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandMaleCrazyFeral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWastelandFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWastelandMaleCrazyRadiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWastelandRadiated"/>
+	</append>	
+	<append xpath="/entity_classes/entity_class[@name='enHazmatFemale1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerHazmat"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enHazmatFemale1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerHazmatFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enHazmatFemale1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerHazmatRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enHazmatFemale2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerHazmat"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enHazmatFemale2Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerHazmatFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enHazmatFemale2Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerHazmatRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enHazmatMale1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerHazmat"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enHazmatMale1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerHazmatFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enHazmatMale1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerHazmatRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enHazmatMale2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerHazmat"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enHazmatMale2Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerHazmatFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enHazmatMale2Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerHazmatRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enHazmatMale3']">
+		<property name="LootDropEntityClass" value="EntityLootContainerHazmat"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enHazmatMale3Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerHazmatFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enHazmatMale3Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerHazmatRadiated"/>
+	</append>	
+	<append xpath="/entity_classes/entity_class[@name='enPatientFemale1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerPatient"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enPatientFemale1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerPatientFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enPatientFemale1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerPatientRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enPatientFemale2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerPatient"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enPatientFemale2Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerPatientFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enPatientFemale2Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerPatientRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enPatientFemale3']">
+		<property name="LootDropEntityClass" value="EntityLootContainerPatient"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enPatientFemale3Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerPatientFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enPatientFemale3Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerPatientRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enPatientMale1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerPatient"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enPatientMale1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerPatientFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enPatientMale1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerPatientRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enPatientMale2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerPatient"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enPatientMale2Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerPatientFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enPatientMale2Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerPatientRadiated"/>
+	</append>	
+	<append xpath="/entity_classes/entity_class[@name='enFootballMale1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerFootball"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enFootballMale1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerFootballFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enFootballMale1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerFootballRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enFootballMale2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerFootball"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enFootballMale2Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerFootballFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enFootballMale2Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerFootballRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enFootballMale3']">
+		<property name="LootDropEntityClass" value="EntityLootContainerFootball"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enFootballMale3Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerFootballFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enFootballMale3Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerFootballRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enFootballMale4']">
+		<property name="LootDropEntityClass" value="EntityLootContainerFootball"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enFootballMale4Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerFootballFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enFootballMale4Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerFootballRadiated"/>
+	</append>	
+	<append xpath="/entity_classes/entity_class[@name='enForestSpider']">
+		<property name="LootDropEntityClass" value="EntityLootContainerForestSpider"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enForestSpiderFeral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerForestSpiderFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enForestSpiderRadiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerForestSpiderRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWildlingFemale1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWildling"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWildlingFemale1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWildlingFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enWildlingFemale1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerWildlingRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enLabFemale1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerLab"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enLabFemale1Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerLabFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enLabFemale1Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerLabRadiated"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enLab196']">
+		<property name="LootDropEntityClass" value="EntityLootContainerLab"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enLab196Feral']">
+		<property name="LootDropEntityClass" value="EntityLootContainerLabFeral"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enLab196Radiated']">
+		<property name="LootDropEntityClass" value="EntityLootContainerLabRadiated"/>
+	</append>
+	<!-- enLabCreatures only have the 1 tier -->
+	<append xpath="/entity_classes/entity_class[@name='enLabCreatureFemale1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerLabCreature"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enLabCreatureFemale2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerLabCreature"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enLabCreatureFemale3']">
+		<property name="LootDropEntityClass" value="EntityLootContainerLabCreature"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enLabCreatureFemale4']">
+		<property name="LootDropEntityClass" value="EntityLootContainerLabCreature"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enLabCreatureMale1']">
+		<property name="LootDropEntityClass" value="EntityLootContainerLabCreature"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enLabCreatureMale2']">
+		<property name="LootDropEntityClass" value="EntityLootContainerLabCreature"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enLabCreatureMale3']">
+		<property name="LootDropEntityClass" value="EntityLootContainerLabCreature"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='enLabCreatureMale4']">
+		<property name="LootDropEntityClass" value="EntityLootContainerLabCreature"/>
+	</append>
+
+
+
+	<!-- Set the loot drops for Snufkin Zs -->
 	<set xpath="/entity_classes/entity_class[@name='zombieBanshee']/property[@name='LootDropEntityClass']/@value">EntityLootContainerBanshee</set>
 	<set xpath="/entity_classes/entity_class[@name='zombieMotorhead']/property[@name='LootDropEntityClass']/@value">EntityLootContainerMotorhead</set>
 	<set xpath="/entity_classes/entity_class[@name='zombiePsycho']/property[@name='LootDropEntityClass']/@value">EntityLootContainerPsycho</set>
@@ -2250,21 +3396,18 @@
 	<set xpath="/entity_classes/entity_class[@name='ZombieBomber']/property[@name='LootDropEntityClass']/@value">EntityLootContainerBomber</set>
 	<set xpath="/entity_classes/entity_class[@name='ZombieJuggernaut']/property[@name='LootDropEntityClass']/@value">EntityLootContainerJuggernaut</set>
 	<set xpath="/entity_classes/entity_class[@name='zombieCowhead']/property[@name='LootDropEntityClass']/@value">EntityLootContainerCowhead</set>
-	<!-- not sold yet on including these -->	
-	<!--	<append xpath="/entity_classes/entity_class[contains(@name, 'enBurntGiant')]">
+	<append xpath="/entity_classes/entity_class[contains(@name, 'enBurntGiant')]">
 		<property name="LootDropEntityClass" value="EntityLootContainerBurntGiant"/>
 	</append>
 	<append xpath="/entity_classes/entity_class[contains(@name, 'enWastelandGiant')]">
 		<property name="LootDropEntityClass" value="EntityLootContainerWastelandGiant"/>
 	</append>
-	
-	
 	<append xpath="/entity_classes/entity_class[contains(@name, 'enBusinessmanBoss')]">
 		<property name="LootDropEntityClass" value="EntityLootContainerBusinessmanBoss"/>
 	</append>
 	<append xpath="/entity_classes/entity_class[contains(@name, 'enScientistBoss1')]">
 		<property name="LootDropEntityClass" value="EntityLootContainerScientistBoss1"/>
-	</append>-->
+	</append>
 	<append xpath="/entity_classes">
 		<!-- Create containers for vanilla zombies, yellow for reg, blue for feral, red for rad, red for giant -->
 		<entity_class name="EntityLootContainerGrandOutdoors">	<property name="HideInSpawnMenu" value="true"/>
@@ -4425,9 +5568,42 @@
 			<property name="TimeStayAfterDeath" value="1200"/>
 			<property name="LootListOnDeath" value="enPackMinerGiant"/> 
 			<property name="Faction" value="none"/>	
+		</entity_class>		
+		<entity_class name="EntityLootContainerDesert">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackDesert"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerDesertFeral">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackBluePrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackDesertFeral"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerDesertRadiated">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackDesertRadiated"/>
+			<property name="Faction" value="none"/>
 		</entity_class>			
 		<entity_class name="EntityLootContainerDesertGiant">	<property name="HideInSpawnMenu" value="true"/>
-			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
 			<property name="ModelType" value="Custom"/>
 			<property name="Prefab" value="Backpack"/>
 			<property name="Class" value="EntityLootContainer"/>
@@ -4480,8 +5656,19 @@
 			<property name="TimeStayAfterDeath" value="1200"/>
 			<property name="LootListOnDeath" value="enPackBikerGiant"/> 
 			<property name="Faction" value="none"/>	
+		</entity_class>
+		<entity_class name="EntityLootContainerBusinessman"> <property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackBusinessman"/>
+			<property name="Faction" value="none"/>
 		</entity_class>	
-		<entity_class name="EntityLootContainerSnowGiant">	<property name="HideInSpawnMenu" value="true"/>
+		<entity_class name="EntityLootContainerBusinessmanFeral">	<property name="HideInSpawnMenu" value="true"/>
 			<property name="Mesh" value="#Entities/LootContainers?zpackBluePrefab.prefab"/>
 			<property name="ModelType" value="Custom"/>
 			<property name="Prefab" value="Backpack"/>
@@ -4489,22 +5676,21 @@
 			<property name="Parent" value="Backpack"/>
 			<property name="IsEnemyEntity" value="false"/>
 			<property name="TimeStayAfterDeath" value="1200"/>
-			<property name="LootListOnDeath" value="enPackSnowGiant"/> 
-			<property name="Faction" value="none"/>
-		</entity_class>
-<!-- not sold yet on including these -->		
-<!-- 		<entity_class name="EntityLootContainerBurntGiant">	<property name="HideInSpawnMenu" value="true"/>
-			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
-			<property name="ModelType" value="Custom"/>
-			<property name="Prefab" value="Backpack"/>
-			<property name="Class" value="EntityLootContainer"/>
-			<property name="Parent" value="Backpack"/>
-			<property name="IsEnemyEntity" value="false"/>
-			<property name="TimeStayAfterDeath" value="1200"/>
-			<property name="LootListOnDeath" value="enPackBurntGiant"/> 
+			<property name="LootListOnDeath" value="enPackBusinessmanFeral"/>
 			<property name="Faction" value="none"/>
 		</entity_class>	
-		<entity_class name="EntityLootContainerWastelandGiant">	<property name="HideInSpawnMenu" value="true"/>
+		<entity_class name="EntityLootContainerBusinessmanRadiated">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackBusinessmanRadiated"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerBusinesswoman"> <property name="HideInSpawnMenu" value="true"/>
 			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
 			<property name="ModelType" value="Custom"/>
 			<property name="Prefab" value="Backpack"/>
@@ -4512,12 +5698,33 @@
 			<property name="Parent" value="Backpack"/>
 			<property name="IsEnemyEntity" value="false"/>
 			<property name="TimeStayAfterDeath" value="1200"/>
-			<property name="LootListOnDeath" value="enPackWastelandGiant"/> 
+			<property name="LootListOnDeath" value="enPackBusinesswoman"/>
 			<property name="Faction" value="none"/>
-		</entity_class>	 -->
-		
-<!-- 		<entity_class name="EntityLootContainerBusinessmanBoss">	<property name="HideInSpawnMenu" value="true"/>
-			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerBusinessmanFeral">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackBluePrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackBusinesswomanFeral"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerBusinessmanRadiated">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackBusinesswomanRadiated"/>
+			<property name="Faction" value="none"/>
+		</entity_class>			
+		<entity_class name="EntityLootContainerBusinessmanBoss">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
 			<property name="ModelType" value="Custom"/>
 			<property name="Prefab" value="Backpack"/>
 			<property name="Class" value="EntityLootContainer"/>
@@ -4526,9 +5733,384 @@
 			<property name="TimeStayAfterDeath" value="1200"/>
 			<property name="LootListOnDeath" value="enPackBusinessmanBoss"/> 
 			<property name="Faction" value="none"/>
+		</entity_class>		
+		<entity_class name="EntityLootContainerSnow"> <property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackSnow"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerSnowFeral">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackBluePrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackSnowFeral"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerSnowRadiated">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackSnowRadiated"/>
+			<property name="Faction" value="none"/>
+		</entity_class>		
+		<entity_class name="EntityLootContainerSnowGiant">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackSnowGiant"/> 
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerBurnt"> <property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackBurnt"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerBurntFeral">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackBluePrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackBurntFeral"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerBurntRadiated">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackBurntRadiated"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerBurntGiant">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackBurntGiant"/> 
+			<property name="Faction" value="none"/>
+		</entity_class>
+		<entity_class name="EntityLootContainerWasteland"> <property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackWasteland"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerWastelandFeral">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackBluePrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackWastelandFeral"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerWastelandRadiated">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackWastelandRadiated"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerWastelandGiant">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackWastelandGiant"/> 
+			<property name="Faction" value="none"/>
+		</entity_class>		
+		<entity_class name="EntityLootContainerHazmat"> <property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackHazmat"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerHazmatFeral">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackBluePrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackHazmatFeral"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerHazmatRadiated">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackHazmatRadiated"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerHazmatGiant">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackHazmatGiant"/> 
+			<property name="Faction" value="none"/>
+		</entity_class>
+		<entity_class name="EntityLootContainerPatient"> <property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackPatient"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerPatientFeral">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackBluePrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackPatientFeral"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerPatientRadiated">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackPatientRadiated"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerPatientGiant">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackPatientGiant"/> 
+			<property name="Faction" value="none"/>
+		</entity_class>
+		<entity_class name="EntityLootContainerFootball"> <property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackFootball"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerFootballFeral">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackBluePrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackFootballFeral"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerFootballRadiated">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackFootballRadiated"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerFootballGiant">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackFootballGiant"/> 
+			<property name="Faction" value="none"/>
+		</entity_class>
+		<!-- enLabCreatures only have the 1 tier -->
+		<entity_class name="EntityLootContainerLabCreature"> <property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackLabCreature"/>
+			<property name="Faction" value="none"/>
+		</entity_class>		
+		<entity_class name="EntityLootContainerForestSpider"> <property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackForestSpider"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerForestSpiderFeral">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackBluePrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackForestSpiderFeral"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerForestSpiderRadiated">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackForestSpiderRadiated"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerWildling"> <property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackWildling"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerWildlingFeral">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackBluePrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackWildlingFeral"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerWildlingRadiated">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackWildlingRadiated"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerLab"> <property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackLab"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerLabFeral">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackBluePrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackLabFeral"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		<entity_class name="EntityLootContainerLabRadiated">	<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="enPackLabRadiated"/>
+			<property name="Faction" value="none"/>
 		</entity_class>	
 		<entity_class name="EntityLootContainerScientistBoss1">	<property name="HideInSpawnMenu" value="true"/>
-			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>
 			<property name="ModelType" value="Custom"/>
 			<property name="Prefab" value="Backpack"/>
 			<property name="Class" value="EntityLootContainer"/>
@@ -4537,7 +6119,7 @@
 			<property name="TimeStayAfterDeath" value="1200"/>
 			<property name="LootListOnDeath" value="enPackScientistBoss1"/> 
 			<property name="Faction" value="none"/>
-		</entity_class> -->
+		</entity_class>
 		<!-- Set the loot containers for Snufkin Zs -->
 		<entity_class name="EntityLootContainerBanshee">	<property name="HideInSpawnMenu" value="true"/>
 			<property name="Mesh" value="#Entities/LootContainers?zpackRedPrefab.prefab"/>

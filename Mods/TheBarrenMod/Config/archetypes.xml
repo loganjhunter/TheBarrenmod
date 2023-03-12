@@ -14,9 +14,12 @@
 					<texture name="unisex_iris" color="eye"/>
 				</part>
 				<part slot="chest" layer="base" mesh="male_clothes_suit_jacket">
-					<texture name="male_torso" color="skin"/>
 					<texture name="unisex_clothes_suit_jacket" color="255,0,230,255"/>
 					<texture name="unisex_clothes_suit_jacket_shirt" color="85,74,96,255"/>
+				</part>
+ 				<part slot="chest" layer="outer" mesh="unisex_clothes_suit_jacket">
+
+					<texture name="unisex_clothes_suit_jacket" color="255,0,230,255"/>
 				</part>
 				<part slot="hands" layer="base" mesh="male_base_hands">
 					<texture name="male_hands" color="skin"/>
@@ -89,6 +92,206 @@
 			</dna>
 		</archetype>
 	</append>	
+	
+	<!-- Covered up the en_LabCreatureFemales a bit for Streamers-->
+
+	<set xpath="/archetypes/archetype[@name='en_LabCreatureFemale1']/base_mesh_parts/part[@slot='chest']/texture[@name='female_torso_nude']/@name">female_torso</set>
+	<set xpath="/archetypes/archetype[@name='en_LabCreatureFemale1']/base_mesh_parts/part[@slot='chest']/texture[@name='unisex_light_skin_overlay']/@name">female_tanktop</set>
+	<set xpath="/archetypes/archetype[@name='en_LabCreatureFemale1']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<remove xpath="/archetypes/archetype[@name='en_LabCreatureFemale1']/base_mesh_parts/part[@slot='legs']/texture[@name='female_bikini_bottom']"></remove>
+	<set xpath="/archetypes/archetype[@name='en_LabCreatureFemale2']/base_mesh_parts/part[@slot='chest']/texture[@name='unisex_light_skin_overlay']/@name">female_tanktop</set>
+	<set xpath="/archetypes/archetype[@name='en_LabCreatureFemale2']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<remove xpath="/archetypes/archetype[@name='en_LabCreatureFemale2']/base_mesh_parts/part[@slot='legs']/texture[@name='female_bikini_bottom']"></remove>
+	<set xpath="/archetypes/archetype[@name='en_LabCreatureFemale3']/base_mesh_parts/part[@slot='chest']/texture[@name='unisex_light_skin_overlay']/@name">female_tanktop</set>
+	<set xpath="/archetypes/archetype[@name='en_LabCreatureFemale3']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<remove xpath="/archetypes/archetype[@name='en_LabCreatureFemale3']/base_mesh_parts/part[@slot='legs']/texture[@name='female_bikini_bottom']"></remove>
+	<set xpath="/archetypes/archetype[@name='en_LabCreatureFemale4']/base_mesh_parts/part[@slot='chest']/texture[@name='unisex_light_skin_overlay']/@name">female_tanktop</set>
+	<set xpath="/archetypes/archetype[@name='en_LabCreatureFemale4']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<remove xpath="/archetypes/archetype[@name='en_LabCreatureFemale4']/base_mesh_parts/part[@slot='legs']/texture[@name='female_bikini_bottom']"></remove>
 
 
+	<!-- Covered up the en_burnts a bit for Streamers-->
+	<set xpath="/archetypes/archetype[@name='en_burntFemale1']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<set xpath="/archetypes/archetype[@name='en_burntFemale1Feral']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<set xpath="/archetypes/archetype[@name='en_burntFemale1Radiated']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<!-- <set xpath="/archetypes/archetype[@name='en_burntFemale2']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set> -->
+	<append xpath="/archetypes/archetype[@name='en_burntFemale2']/base_mesh_parts/part[@slot='chest']"><texture name="female_tanktop" color="0,0,0"/></append>	
+<!-- 	<set xpath="/archetypes/archetype[@name='en_burntFemale2Feral']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+ -->	<append xpath="/archetypes/archetype[@name='en_burntFemale2Feral']/base_mesh_parts/part[@slot='chest']"><texture name="female_tanktop" color="0,0,0"/></append>	
+<!-- 	<set xpath="/archetypes/archetype[@name='en_burntFemale2Radiated']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+ -->	<append xpath="/archetypes/archetype[@name='en_burntFemale2Radiated']/base_mesh_parts/part[@slot='chest']"><texture name="female_tanktop" color="0,0,0"/></append>			
+	<set xpath="/archetypes/archetype[@name='en_burntFemaleFlamer']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<append xpath="/archetypes/archetype[@name='en_burntFemaleFlamer']/base_mesh_parts/part[@slot='chest']"><texture name="female_tanktop" color="0,0,0"/></append>
+	<set xpath="/archetypes/archetype[@name='en_burntFemaleFlamerFeral']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<append xpath="/archetypes/archetype[@name='en_burntFemaleFlamerFeral']/base_mesh_parts/part[@slot='chest']"><texture name="female_tanktop" color="0,0,0"/></append>
+	<set xpath="/archetypes/archetype[@name='en_burntFemaleFlamerRadiated']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<append xpath="/archetypes/archetype[@name='en_burntFemaleFlamerRadiated']/base_mesh_parts/part[@slot='chest']"><texture name="female_tanktop" color="0,0,0"/></append>
+		
+	<!-- Covered up the en_patientFemales a bit for Streamers-->
+	<set xpath="/archetypes/archetype[@name='en_patientFemale1']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale1']/base_mesh_parts/part[@slot='legs']/texture[@name='female_bikini_bottom']"></remove>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale1']/base_mesh_parts/part[@slot='chest']"></remove>
+	<append xpath="/archetypes/archetype[@name='en_patientFemale1']/base_mesh_parts">
+		<part slot="chest" layer="base"  mesh="female_sweatshirt">
+			<texture name="unisex_sweatshirt" color="255,255,255" />
+			<texture name="female_torso_wound" color="128,0,0"/>
+			<texture name="unisex_dirt_overlay" color="128,0,0" />
+		</part>
+	</append>	
+	<append xpath="/archetypes/archetype[@name='en_patientFemale1']/base_mesh_parts">
+		<part slot="legs" layer="inner" mesh="skirt">
+				<texture name="skirt" color="255,255,255"/>
+				<texture name="female_torso_wound" color="128,0,0"/>
+				<texture name="unisex_dirt_overlay" color="128,0,0" />
+		</part>
+	</append>
+	<set xpath="/archetypes/archetype[@name='en_patientFemale1Feral']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale1Feral']/base_mesh_parts/part[@slot='legs']/texture[@name='female_bikini_bottom']"></remove>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale1Feral']/base_mesh_parts/part[@slot='chest']"></remove>
+	<append xpath="/archetypes/archetype[@name='en_patientFemale1Feral']/base_mesh_parts">
+		<part slot="chest" layer="base"  mesh="female_sweatshirt">
+			<texture name="unisex_sweatshirt" color="255,255,255" />
+			<texture name="female_torso_wound" color="140,0,0"/>
+			<texture name="unisex_dirt_overlay" color="140,0,0" />
+		</part>
+	</append>	
+	<append xpath="/archetypes/archetype[@name='en_patientFemale1Feral']/base_mesh_parts">
+		<part slot="legs" layer="inner" mesh="skirt">
+				<texture name="skirt" color="255,255,255"/>
+				<texture name="female_torso_wound" color="140,0,0"/>
+				<texture name="unisex_dirt_overlay" color="140,0,0" />
+		</part>
+	</append>
+	<set xpath="/archetypes/archetype[@name='en_patientFemale1Radiated']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale1Radiated']/base_mesh_parts/part[@slot='legs']/texture[@name='female_bikini_bottom']"></remove>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale1Radiated']/base_mesh_parts/part[@slot='chest']"></remove>
+	<append xpath="/archetypes/archetype[@name='en_patientFemale1Radiated']/base_mesh_parts">
+		<part slot="chest" layer="base"  mesh="female_sweatshirt">
+			<texture name="unisex_sweatshirt" color="255,255,255" />
+			<texture name="female_torso_wound" color="140,255,0"/>
+			<texture name="unisex_dirt_overlay" color="140,255,0" />
+		</part>
+	</append>	
+	<append xpath="/archetypes/archetype[@name='en_patientFemale1Radiated']/base_mesh_parts">
+		<part slot="legs" layer="inner" mesh="skirt">
+				<texture name="skirt" color="255,255,255"/>
+				<texture name="female_torso_wound" color="140,255,0"/>
+				<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+		</part>
+	</append>	
+	<set xpath="/archetypes/archetype[@name='en_patientFemale2']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale2']/base_mesh_parts/part[@slot='legs']/texture[@name='female_bikini_bottom']"></remove>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale2']/base_mesh_parts/part[@slot='chest']"></remove>
+	<append xpath="/archetypes/archetype[@name='en_patientFemale2']/base_mesh_parts">
+		<part slot="chest" layer="base"  mesh="female_sweatshirt">
+			<texture name="unisex_sweatshirt" color="255,255,255" />
+			<texture name="female_torso_wound" color="140,255,0"/>
+			<texture name="unisex_dirt_overlay" color="140,255,0" />
+		</part>
+	</append>	
+	<append xpath="/archetypes/archetype[@name='en_patientFemale2']/base_mesh_parts">
+		<part slot="legs" layer="inner" mesh="skirt">
+				<texture name="skirt" color="255,255,255"/>
+				<texture name="female_torso_wound" color="128,0,0"/>
+				<texture name="unisex_dirt_overlay" color="128,0,0" />
+		</part>
+	</append>
+	<set xpath="/archetypes/archetype[@name='en_patientFemale2Feral']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale2Feral']/base_mesh_parts/part[@slot='legs']/texture[@name='female_bikini_bottom']"></remove>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale2Feral']/base_mesh_parts/part[@slot='chest']"></remove>
+	<append xpath="/archetypes/archetype[@name='en_patientFemale2Feral']/base_mesh_parts">
+		<part slot="chest" layer="base"  mesh="female_sweatshirt">
+			<texture name="unisex_sweatshirt" color="255,255,255" />
+			<texture name="female_torso_wound" color="140,0,0"/>
+			<texture name="unisex_dirt_overlay" color="140,0,0" />
+		</part>
+	</append>	
+	<append xpath="/archetypes/archetype[@name='en_patientFemale2Feral']/base_mesh_parts">
+		<part slot="legs" layer="inner" mesh="skirt">
+				<texture name="skirt" color="255,255,255"/>
+				<texture name="female_torso_wound" color="140,0,0"/>
+				<texture name="unisex_dirt_overlay" color="140,0,0" />
+		</part>
+	</append>
+	<set xpath="/archetypes/archetype[@name='en_patientFemale2Radiated']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale2Radiated']/base_mesh_parts/part[@slot='legs']/texture[@name='female_bikini_bottom']"></remove>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale2Radiated']/base_mesh_parts/part[@slot='chest']"></remove>
+	<append xpath="/archetypes/archetype[@name='en_patientFemale2Radiated']/base_mesh_parts">
+		<part slot="chest" layer="base"  mesh="female_sweatshirt">
+			<texture name="unisex_sweatshirt" color="255,255,255" />
+			<texture name="female_torso_wound" color="140,255,0"/>
+			<texture name="unisex_dirt_overlay" color="140,255,0" />
+		</part>
+	</append>	
+	<append xpath="/archetypes/archetype[@name='en_patientFemale2Radiated']/base_mesh_parts">
+		<part slot="legs" layer="inner" mesh="skirt">
+				<texture name="skirt" color="255,255,255"/>
+				<texture name="female_torso_wound" color="140,255,0"/>
+				<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+		</part>
+	</append>
+	<set xpath="/archetypes/archetype[@name='en_patientFemale3']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale3']/base_mesh_parts/part[@slot='legs']/texture[@name='female_bikini_bottom']"></remove>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale3']/base_mesh_parts/part[@slot='chest']"></remove>
+	<append xpath="/archetypes/archetype[@name='en_patientFemale3']/base_mesh_parts">
+		<part slot="chest" layer="base"  mesh="female_sweatshirt">
+			<texture name="unisex_sweatshirt" color="255,255,255" />
+			<texture name="female_torso_wound" color="128,0,0"/>
+			<texture name="unisex_dirt_overlay" color="128,0,0" />
+		</part>
+	</append>	
+	<append xpath="/archetypes/archetype[@name='en_patientFemale3']/base_mesh_parts">
+		<part slot="legs" layer="inner" mesh="skirt">
+				<texture name="skirt" color="255,255,255"/>
+				<texture name="female_torso_wound" color="128,0,0"/>
+				<texture name="unisex_dirt_overlay" color="128,0,0" />
+		</part>
+	</append>
+	<set xpath="/archetypes/archetype[@name='en_patientFemale3Feral']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale3Feral']/base_mesh_parts/part[@slot='legs']/texture[@name='female_bikini_bottom']"></remove>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale3Feral']/base_mesh_parts/part[@slot='chest']"></remove>
+	<append xpath="/archetypes/archetype[@name='en_patientFemale3Feral']/base_mesh_parts">
+		<part slot="chest" layer="base"  mesh="female_sweatshirt">
+			<texture name="unisex_sweatshirt" color="255,255,255" />
+			<texture name="female_torso_wound" color="128,0,0"/>
+			<texture name="unisex_dirt_overlay" color="128,0,0" />
+		</part>
+	</append>	
+	<append xpath="/archetypes/archetype[@name='en_patientFemale3Feral']/base_mesh_parts">
+		<part slot="legs" layer="inner" mesh="skirt">
+				<texture name="skirt" color="255,255,255"/>
+				<texture name="female_torso_wound" color="140,0,0"/>
+				<texture name="unisex_dirt_overlay" color="140,0,0" />
+		</part>
+	</append>
+	<set xpath="/archetypes/archetype[@name='en_patientFemale3Radiated']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale3Radiated']/base_mesh_parts/part[@slot='legs']/texture[@name='female_bikini_bottom']"></remove>
+	<remove xpath="/archetypes/archetype[@name='en_patientFemale3Radiated']/base_mesh_parts/part[@slot='chest']"></remove>
+	<append xpath="/archetypes/archetype[@name='en_patientFemale3Radiated']/base_mesh_parts">
+		<part slot="chest" layer="base"  mesh="female_sweatshirt">
+			<texture name="unisex_sweatshirt" color="255,255,255" />
+			<texture name="female_torso_wound" color="128,0,0"/>
+			<texture name="unisex_dirt_overlay" color="128,0,0" />
+		</part>
+	</append>	
+	<append xpath="/archetypes/archetype[@name='en_patientFemale3Radiated']/base_mesh_parts">
+		<part slot="legs" layer="inner" mesh="skirt">
+				<texture name="skirt" color="255,255,255"/>
+				<texture name="female_torso_wound" color="140,255,0"/>
+				<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+		</part>
+	</append>
+
+	<!-- Covered up the en_patientFemales a bit for Streamers-->
+	<set xpath="/archetypes/archetype[@name='en_wastelandFemale3']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<set xpath="/archetypes/archetype[@name='en_wastelandFemale3Feral']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<set xpath="/archetypes/archetype[@name='en_wastelandFemale3Radiated']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>	
+	<set xpath="/archetypes/archetype[@name='en_wastelandFemaleCrazy']/base_mesh_parts/part[@slot='chest']/texture[@name='female_torso_nude']/@name">female_torso</set>
+	<set xpath="/archetypes/archetype[@name='en_wastelandFemaleCrazy']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<set xpath="/archetypes/archetype[@name='en_wastelandFemaleCrazyFeral']/base_mesh_parts/part[@slot='chest']/texture[@name='female_torso_nude']/@name">female_torso</set>
+	<set xpath="/archetypes/archetype[@name='en_wastelandFemaleCrazyFeral']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	<set xpath="/archetypes/archetype[@name='en_wastelandFemaleCrazyRadiated']/base_mesh_parts/part[@slot='chest']/texture[@name='female_torso_nude']/@name">female_torso</set>
+	<set xpath="/archetypes/archetype[@name='en_wastelandFemaleCrazyRadiated']/base_mesh_parts/part[@slot='legs']/texture[@name='female_legs_nude']/@name">female_legs</set>
+	
+	
 </configs>

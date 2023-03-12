@@ -77,7 +77,7 @@
 	<remove xpath="/items/item[@name='drinkJarFullRespecAdmin']"></remove>
 	
 	<!-- Remove unwanted resources -->
-	<remove xpath="/items/item[@name='resourceBrokenGlass']"></remove>
+<!-- 	<remove xpath="/items/item[@name='resourceBrokenGlass']"></remove> -->
 	<remove xpath="/items/item[@name='resourceTestosteroneExtract']"></remove>
 	<remove xpath="/items/item[@name='resourceCropHopsFlower']"></remove>
 	<remove xpath="/items/item[@name='resourceDoorKnob']"></remove>
@@ -141,7 +141,7 @@
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MresourceForgedTitanium"/>
+			<property name="Material" value="MresourceForgedUnobtainium"/>
 			<property name="Stacknumber" value="500"/> <!-- STK resource -->
 			<property name="EconomicValue" value="120"/>
 			<property name="CraftingIngredientTime" value="20"/>
@@ -152,6 +152,29 @@
 			<property name="CustomIconTint" value="b3f2f2"/> <!--d9d9d9 e6e6e6 f2f2f2 -->
 			<property name="SellableToTrader" value="false"/>
 		</item>	
+		<item name="resourceForgedUnobtainium">
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceForgedUnobtainium"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="120"/>
+			<property name="CraftingIngredientTime" value="20"/>
+			<property name="RepairTime" value="1.5"/>
+			<property name="RepairAmount" value="500"/>
+			<property name="Group" value="Resources"/>
+			<property name="CustomIcon" value="resourceForgedSteel"/>
+			<property name="CustomIconTint" value="00ff4a"/> <!--d9d9d9 e6e6e6 f2f2f2 -->
+			<property name="SellableToTrader" value="false"/>
+		</item>	
+		<item name="unit_unob">
+			<property name="Extends" value="unit_iron"/>
+			<property name="CustomIcon" value="resourceScrapLead"/>
+			<property name="CustomIconTint" value="00ff4a"/>
+			<property name="Material" value="Munob_scrap"/>
+			<property name="MeltTimePerUnit" value=".75"/>
+			<property name="CreativeMode" value="None"/>
+		</item>
 		<!-- New Trap ammo -->
 		<item name="ammoDartSteel">
 			<property name="Extends" value="ammoArrowIron" param1="HandMeshfile"/>
@@ -215,7 +238,37 @@
 				<passive_effect name="ProjectileVelocity" operation="base_set" value="75"/>
 			</effect_group>
 		</item>
-		
+		<item name="ammoDartUnobtainium">
+			<property name="Extends" value="ammoArrowIron" param1="HandMeshfile"/>
+			<property name="Meshfile" value="Entities/Electrical/steel_dartPrefab"/>
+			<property name="HoldType" value="45"/>
+			<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="DisplayType" value="ammoDartUnobtainium"/>
+			<property name="Stacknumber" value="500"/> <!-- STK ammo -->
+			<property name="EconomicValue" value="116"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="DisplayType" value="ammoDart"/>
+			<property name="CustomIcon" value="ammoDartIron"/>
+			<property name="CustomIconTint" value="00ff4a"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action1">
+				<property name="Velocity" value="75"/>
+				<property name="Gravity" value="-4"/>
+				<property name="LifeTime" value="2"/>
+			</property>
+			<property class="Attributes">
+				<property name="EntityDamage" value="100,200"/>
+				<property name="BlockDamage" value="3,8"/>
+			</property>
+			<effect_group name="ammoDartUnobtainium" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="90"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="4"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth,stone"/>
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="75"/>
+			</effect_group>
+		</item>
 		<!-- Zombie killing chainsaw -->
 		<item name="meleeToolAshesChainsaw">
 		<!-- 	<property name="Tags" value="motorTool,hailToTheKing,chainsaw,canHaveCosmetic"/>-->
@@ -1309,11 +1362,15 @@
 				<property name="Max_strain_time" value=".1"/>
 			</property>	
 			<effect_group name="meleeWpnBladeBrokenHuntingKnife">	
-				<passive_effect name="DegradationMax" tier="1,6"/>			
+				<passive_effect name="DegradationMax" tier="1,6"/>		
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInjuryBleeding" value="20"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="GTE" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenKnives"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" buff="buffInjuryBleeding" value="20"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="GTE" value="50"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenKnives"/>
 			</effect_group>
 		</item>		
 		<item name="meleeWpnBladeBrokenMachete">
@@ -1343,9 +1400,13 @@
 			<effect_group name="meleeWpnBladeBrokenMachete">		
 				<passive_effect name="DegradationMax" tier="1,6"/>		
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="buffInjuryBleeding" value="20"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="GTE" value="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenKnives"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" buff="buffInjuryBleeding" value="20"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="GTE" value="75"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenKnives"/>
 			</effect_group>
 		</item>	
 		<item name="meleeWpnClubBrokenBaseballBat">
@@ -1375,9 +1436,13 @@
 			<effect_group name="meleeWpnClubBrokenBaseballBat">	
 				<passive_effect name="DegradationMax" tier="1,6"/>			
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInjuryConcussion" value="5"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="GTE" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenClubs"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" buff="buffInjuryConcussion" value="10"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="GTE" value="50"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenClubs"/>
 			</effect_group>
 		</item>			
 		<item name="meleeWpnClubBrokenSteelClub">
@@ -1408,9 +1473,13 @@
 			<effect_group name="meleeWpnClubBrokenSteelClub">
 				<passive_effect name="DegradationMax" tier="1,6"/>				
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInjuryConcussion" value="10"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="GTE" value="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenClubs"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" buff="buffInjuryConcussion" value="20"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="GTE" value="75"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenClubs"/>
 			</effect_group>
 		</item>		
 		<item name="meleeWpnBatonBrokenPipeBaton">
@@ -1441,12 +1510,16 @@
 			<effect_group name="meleeWpnBatonBrokenPipeBaton">	
 				<passive_effect name="DegradationMax" tier="1,6"/>			
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInjuryConcussion" value="5"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="GTE" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenClubs"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" buff="buffInjuryConcussion" value="10"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="GTE" value="50"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenClubs"/>
 			</effect_group>
 		</item>
-		<item name="meleeWpnBatonBrokenStunBaton">
+		<item name="meleeWpnBatonBrokenStunBaton">  
 			<property name="Tags" value="tool,noMods"/>
 			<property name="HoldType" value="58"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Melee/TaserBaton/TaserBatonPrefab.prefab"/>
@@ -1469,14 +1542,15 @@
 				<property name="Throw_strength_default" value="8"/>
 				<property name="Throw_strength_max" value="50"/>
 				<property name="Max_strain_time" value=".1"/>
-			</property>
-			
+			</property>			
 			<effect_group name="meleeWpnBatonBrokenStunBaton">	
 				<passive_effect name="DegradationMax" tier="1,6"/>			
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="player#powerattack"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffShocked"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenStunBaton"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenGun"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" buff="buffShocked"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" message_key="ttBrokenStunBaton"/>
 			</effect_group>
 		</item>
 		<item name="gunHandgunBrokenPistol">
@@ -2352,6 +2426,7 @@
 	<append xpath="/items/item[@name='armorIronMaster']"><property name="Weight" value="100"/></append>
 	<append xpath="/items/item[@name='apparelPlantFiberMaster']"><property name="Weight" value="10"/></append>
 	<append xpath="/items/item[@name='drinkCanEmpty']"><property name="Weight" value="10"/></append>
+	<append xpath="/items/item[@name='apparelCoatLeatherPoncho']"><property name="Weight" value="20"/></append>
 	
 	<append xpath="/items/item[@name='drinkJarEmpty']/property[@class='Action1']">
 		<property name="Focused_blockname_6" value="terrSnow"/>
@@ -2359,9 +2434,9 @@
 	</append>
 	<!-- Allow for titanium upgrading -->
 
-	<set xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,ironDoor1_v1,vaultDoor01,scrapHatch_v1,vaultHatch_v1,cellarDoorDoubleIron,cellarDoorDoubleSteel,shuttersIronBlockVariantHelper,shuttersSteelBlockVariantHelper,resourceYuccaFibers,resourceCloth,resourceScrapPolymers,resourceForgedTitanium</set>
+	<set xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,ironDoor1_v1,vaultDoor01,scrapHatch_v1,vaultHatch_v1,cellarDoorDoubleIron,cellarDoorDoubleSteel,shuttersIronBlockVariantHelper,shuttersSteelBlockVariantHelper,resourceYuccaFibers,resourceCloth,resourceScrapPolymers,resourceForgedTitanium,resourceForgedUnobtainium</set>
 	
-	<set xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,ironDoor1_v1,vaultDoor01,scrapHatch_v1,vaultHatch_v1,cellarDoorDoubleIron,cellarDoorDoubleSteel,shuttersIronBlockVariantHelper,shuttersSteelBlockVariantHelper,resourceYuccaFibers,resourceCloth,resourceScrapPolymers,resourceForgedTitanium</set>
+	<set xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,ironDoor1_v1,vaultDoor01,scrapHatch_v1,vaultHatch_v1,cellarDoorDoubleIron,cellarDoorDoubleSteel,shuttersIronBlockVariantHelper,shuttersSteelBlockVariantHelper,resourceYuccaFibers,resourceCloth,resourceScrapPolymers,resourceForgedTitanium,resourceForgedUnobtainium</set>
 
 <!-- 	<set xpath="/items/item[@name='gunBotT3JunkDrone']/property[@name='Material']/@value">MmechanicalParts</set>
 	<set xpath="/items/item[@name='gunBotT3JunkDrone']/property[@name='Weight']/@value">175</set>	 -->

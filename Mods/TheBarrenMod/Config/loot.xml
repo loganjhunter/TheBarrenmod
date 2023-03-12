@@ -14,7 +14,19 @@
 	<!--<remove xpath="/lootcontainers/lootcontainer[not (@id[contains(., '1') or contains (., '2') or contains (., '3') or contains (., '4') or contains (., '70') or contains (., '71') or contains (., '73')])]">  </remove>-->
 	<!--<remove xpath="/lootcontainers/lootcontainer[not (contains(@id, '1')) or not (contains(@id, '2')) or not (contains(@id, '3')) or not (contains(@id, '4')) or not (contains(@id, '70')) or not (contains(@id, '71')) or not (contains(@id, '73'))]">  </remove>-->
 	<!--<remove xpath="/lootcontainers/lootgroup">  </remove>-->
-		<!-- Remove unwanted books, all schematics -->
+	
+	<!-- Remove existing groupAirDrops for reworking-->
+	<remove xpath="/lootcontainers/lootgroup[@name='groupAirDropT1Bundles']"></remove>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupAirDropT2Bundles']"></remove>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupAirDropT3Bundles']"></remove>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupAirDropT4Bundles']"></remove>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupAirDropT5Bundles']"></remove>	
+ 	<remove xpath="/lootcontainers/lootgroup[@name='groupAirDrop01']"></remove>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupAirDrop02']"></remove>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupAirDrop03']"></remove>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupAirDrop']"></remove>	
+	<remove xpath="/lootcontainers/lootcontainer[@name='airDrop']"></remove>
+	<!-- Remove unwanted books, all schematics -->
  	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'bookSpearHunter')]"></remove>	
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'bookFiremansAlmanac')]"></remove>
 	<remove xpath="/lootcontainers/lootgroup/item[contains(@name, 'bookEnforcer')]"></remove>
@@ -161,13 +173,50 @@
 			<loot level="1,999999" prob=".87"/>
 		</lootprobtemplate>
 	</append>
-	<!-- New food and candy-->
+	<!-- New food and candy-->	
 	<append xpath="/lootcontainers/lootgroup[@name='rottenFood']">
 		<item name="foodSpartanLoaf"/>
 		<item name="foodSpartanSingleSizeSteak"/>
 		<item name="foodSpartansSingleSizeLasagna"/>				
 	</append>
 	
+	<!-- New airdrops -->	
+	<append xpath="/lootcontainers">
+		<lootgroup name="groupAirDropT1Bundles" count="all">
+				<item name="resourceCrushedSand" count="1,50"/>
+				<item name="resourceBrokenGlass" count="1,20"/>
+		</lootgroup>		
+		<lootgroup name="groupAirDropT2Bundles" count="all">
+				<item name="resourceCrushedSand" count="1,40"/>
+				<item name="resourceBrokenGlass" count="1,15"/>
+				<item name="toolBeaker" count="0,1"/>
+		</lootgroup>
+		<lootgroup name="groupAirDropT3Bundles" count="all">
+				<item name="resourceCrushedSand" count="1,30"/>
+				<item name="resourceBrokenGlass" count="1,10"/>
+				<item name="toolBeaker" count="0,2"/>
+		</lootgroup>
+		<lootgroup name="groupAirDropT4Bundles" count="all">
+				<item name="resourceCrushedSand" count="1,20"/>
+				<item name="resourceBrokenGlass" count="1,5"/>
+				<item name="toolBeaker" count="1"/>
+		</lootgroup>
+		<lootgroup name="groupAirDropT5Bundles" count="all">
+				<item name="resourceCrushedSand" count="0,10"/>
+				<item name="resourceBrokenGlass" count="0,5"/>
+				<item name="toolBeaker" count="1,2"/>
+		</lootgroup>
+		<lootgroup name="groupAirDrop">
+			<item group="groupAirDropT1Bundles" loot_prob_template="ProbT0"/>
+			<item group="groupAirDropT2Bundles" loot_prob_template="ProbT1"/>
+			<item group="groupAirDropT3Bundles" loot_prob_template="ProbT2"/>
+			<item group="groupAirDropT4Bundles" loot_prob_template="ProbT3"/>
+			<item group="groupAirDropT5Bundles" loot_prob_template="ProbT3"/>
+		</lootgroup>
+		<lootcontainer id="34" name="airDrop" count="1" size="4,1" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupAirDrop"/>
+		</lootcontainer>
+	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='foodCandy']">
 		<item name="drugBerserkerJoes" loot_prob_template="veryLow"/>		
 	</append>
@@ -893,7 +942,6 @@
 			<item group="farmerSeeds" loot_prob_template="medHigh"/>
 			<item group="rareFoodDrink" loot_prob_template="med"/>
 		</lootgroup>
-
 		<!-- Create lootgroup for new npc -->
 		<lootgroup name="groupGrandOutdoors" count="all">
 			<item group="groupSpartanFoods"/>
@@ -1285,8 +1333,7 @@
 			<item name="resourceCoal" count="150,250"/>
 			<item name="resourcePotassiumNitratePowder" count="150,250"/>
 			<item name="resourceGunPowder" count="25,100"/>
-			<item name="resourceOil" count="0,2"/>
-			
+			<item name="resourceOil" count="0,2"/>			
 		</lootgroup>
 		<lootgroup name="groupSpider">
 			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
@@ -3063,12 +3110,532 @@
 			<item group="groupGoreResources" count="2,4"/>
 			<item name="resourceCloth" count="3,6"/>
 		</lootgroup>
-		<lootgroup name="groupenDesertGiant" count="all">
+		<lootgroup name="groupenBusinessman">
+			<item group="groupCommonMelee" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>			
+			<item group="groupAmmoResourcesSmall" loot_prob_template="med"/>			
+			<item group="groupCommonGuns" loot_prob_template="med"/>
+			<item group="foodCandy" loot_prob_template="low"/>
+			<item name="drinkJarCoffee" loot_prob_template="high"/>
+			<item name="brokenLaptop" loot_prob_template="high"/>
+			<item name="drinkYuccaJuiceSmoothie" loot_prob_template="med"/>
+			<item name="drinkJarPureMineralWater" loot_prob_template="low"/>
+			<item name="drinkCanMegaCrush" loot_prob_template="med"/>			
+		</lootgroup>		
+		<lootgroup name="groupenBusinessmen" count="all">
+			<item group="groupenBusinessman" count="0,1"/>
+			<item group="groupFancyApparel" count="0,1"/>
+			<item group="groupCommonManmadeResources"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourcePaper" count="2,5"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>
+		<lootgroup name="groupenBusinessmenFeral" count="all">
+			<item group="groupenBusinessman" count="0,2"/>
+			<item group="groupFancyApparel" count="0,1"/>
+			<item group="groupCommonManmadeResources"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupAmmo9mm"/>
+			<item group="groupGunHandgunScaled" count="0,1"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="drinkJarPureMineralWater" count="0,1"/>
+			<item name="resourcePaper" count="2,5"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>	
+		<lootgroup name="groupenBusinessmenRadiated" count="all">
+			<item group="groupenBusinessman" count="1,3"/>
+			<item group="groupFancyApparel" count="0,1"/>
+			<item group="groupCommonManmadeResources"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupAmmo9mm"/>
+			<item group="groupGunHandgunScaled" count="0,1"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="drinkJarPureMineralWater" count="0,1"/>
+			<item name="resourcePaper" count="2,5"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>
+		<lootgroup name="groupenBusinesswoman">
+			<item group="groupCommonMelee" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>			
+			<item group="groupAmmoResourcesSmall" loot_prob_template="med"/>			
+			<item group="groupCommonGuns" loot_prob_template="med"/>
+			<item group="foodCandy" loot_prob_template="low"/>
+			<item name="drinkJarCoffee" loot_prob_template="high"/>
+			<item name="brokenLaptop" loot_prob_template="high"/>
+			<item name="drinkYuccaJuiceSmoothie" loot_prob_template="med"/>
+			<item name="drinkJarPureMineralWater" loot_prob_template="low"/>
+			<item name="drinkCanMegaCrush" loot_prob_template="med"/>			
+		</lootgroup>		
+		<lootgroup name="groupenBusinesswomen" count="all">
+			<item group="groupenBusinesswoman" count="0,1"/>
+			<item name="apparelSkirt" count="0,1"/>
+			<item group="groupCommonManmadeResources"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourcePaper" count="2,5"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>
+		<lootgroup name="groupenBusinesswomenFeral" count="all">
+			<item group="groupenBusinesswoman" count="0,2"/>
+			<item name="apparelSkirt" count="0,1"/>
+			<item group="groupCommonManmadeResources"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupAmmo9mm"/>
+			<item group="groupGunHandgunScaled" count="0,1"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="drinkJarPureMineralWater" count="0,1"/>
+			<item name="resourcePaper" count="2,5"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>	
+		<lootgroup name="groupenBusinesswomenRadiated" count="all">
+			<item group="groupenBusinesswoman" count="1,3"/>
+			<item name="apparelSkirt" count="0,1"/>
+			<item group="groupCommonManmadeResources"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupAmmo9mm"/>
+			<item group="groupGunHandgunScaled" count="0,1"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="drinkJarPureMineralWater" count="0,1"/>
+			<item name="resourcePaper" count="2,5"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>
+		<lootgroup name="groupenBusinessmenBoss" count="all">
+			<item group="groupenBusinessman" count="1,4"/>
+			<item group="groupFancyApparel" count="0,1"/>
+			<item group="groupCommonManmadeResources" count="1,2"/>
+			<item group="groupCommonOrganicResources" count="1,3"/>
+			<item group="groupAmmo9mm"/>
+			<item group="groupGunHandgunScaled" count="0,1"/>
+			<item group="groupBasicSurvival"/>
+			<item group="groupGoreResources" count="2,4"/>
+			<item name="drinkJarPureMineralWater" count="0,1"/>
+			<item name="resourcePaper" count="4,11"/>
+			<item name="resourceCloth" count="2,5"/>		
+		</lootgroup>
+		<!-- new groups start - **********NEEDS WORK!!!!**********-->
+		<lootgroup name="groupenDesert">
+			<item group="groupArmorMiningHelmets" loot_prob_template="high"/>
+			<item group="groupMeleeTool" loot_prob_template="high"/>
+			<item group="groupUncommonManmadeResources" loot_prob_template="high"/>
+			<item group="workstationToolsScaled" loot_prob_template="high"/>	
+			<item group="groupWorkingStiffsCrate" loot_prob_template="high"/>
+			<item name="woodShapes:VariantHelper" count="15,21" loot_prob_template="high"/>
+			<item name="cobblestoneShapes:VariantHelper" count="7,21" loot_prob_template="medHigh"/>
+			<item group="groupRareManmadeResources" loot_prob_template="medHigh"/>
+			<item group="groupSmallEngine" loot_prob_template="med"/>
+			<item group="groupCarBattery" loot_prob_template="med"/>
+			<item group="groupGeneratorbank" loot_prob_template="medLow"/>
+			<item group="groupBatterybank" loot_prob_template="medLow"/>			
+			<item group="groupWorkbenchLoot03" loot_prob_template="med"/>	
+			<item group="groupWeapons_Demolitionist" loot_prob_template="med"/>
+			<item group="groupWeapons_DemolitionistTPlus" loot_prob_template="low"/>
+			<item name="apparelSkirt" loot_prob_template="veryHigh"/>
+			<item name="meleeToolFlashlight02" loot_prob_template="veryHigh"/>		
+			<item name="drinkJarCoffee" loot_prob_template="high"/>
+			<item name="drinkJarBeer" count="1,2" loot_prob_template="high"/>	
+			<item name="toolBellows" loot_prob_template="med"/>	
+			<item name="toolAnvil" loot_prob_template="med"/>
+			<item name="resourceGunPowder" count="0,125" loot_prob_template="medHigh"/>
+		</lootgroup>
+		<lootgroup name="groupenDeserts" count="all">
+			<item group="groupenDesert" count="0,1"/>
+			<item name="resourceCrushedSand" count="0,250"/>
+			<item name="resourceRockSmall" count="0,250"/>
+			<item name="resourceClayLump" count="0,250"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>
+		<lootgroup name="groupenDesertsFeral" count="all">
+			<item group="groupenDesert" count="0,2"/>
+			<item name="resourceCrushedSand" count="100,250"/>
+			<item name="resourceRockSmall" count="100,250"/>
+			<item name="resourceClayLump" count="100,250"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>		
+		<lootgroup name="groupenDesertsRadiated" count="all">
+			<item group="groupenDesert" count="1,3" loot_prob_template="veryHigh"/>
+			<item group="groupUncommonManmadeResources" count="1,2"/>
+			<item group="groupCarBattery" count="0,1"/>
+			<item name="resourceCrushedSand" count="0,750"/>
+			<item name="resourceRockSmall" count="0,750"/>
+			<item name="resourceScrapIron" count="0,750"/>
+			<item name="resourceOilShale" count="0,750"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>			
+		</lootgroup>
+		<lootgroup name="groupenDesertsGiant" count="all"> <!-- this one is good-->
 			<item name="medicalAloeCream" count="0,3"/>
 			<item name="resourceCropAloeLeaf" count="0,6"/>
 			<item name="resourceYuccaFibers" count="0,12"/>
-			<item name="resourceCrushedSand" count="0,150"/>
+			<item name="resourceClayLump" count="0,500"/>
+			<item name="resourceRockSmall" count="0,500"/>		
+			<item name="resourceCrushedSand" count="0,500"/>	
 		</lootgroup>
+		<lootgroup name="groupenSnow">
+			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
+			<item group="groupArmorScaled" loot_prob_template="veryHigh"/>			
+			<item group="groupMeleeWpnBladeScaled" loot_prob_template="high"/>
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
+			<item group="groupChainsawsTiered" loot_prob_template="veryLow"/>
+			<item group="groupCommonManmadeResources" loot_prob_template="med"/>
+			<item group="groupWorkbenchLoot02" loot_prob_template="medHigh"/>
+			<item group="groupWorkbenchLoot03" loot_prob_template="med"/>
+			<item name="apparelSkiGoggles" loot_prob_template="high"/>
+			<item name="drinkJarCoffee" loot_prob_template="high"/>
+		</lootgroup>	
+		<lootgroup name="groupenSnows" count="all">
+			<item group="groupenSnow" count="0,1"/>
+			<item name="resourceCrushedSand" count="0,250"/>
+			<item name="resourceRockSmall" count="0,250"/>
+			<item name="resourceClayLump" count="0,250"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>
+		<lootgroup name="groupenSnowsFeral" count="all">
+			<item group="groupenSnow" count="0,2"/>
+			<item name="resourceCrushedSand" count="100,250"/>
+			<item name="resourceRockSmall" count="100,250"/>
+			<item name="resourceClayLump" count="100,250"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>		
+		<lootgroup name="groupenSnowsRadiated" count="all">
+			<item group="groupenSnow" count="1,3"/>
+			<item group="groupUncommonManmadeResources" count="1,2"/>
+			<item group="groupCarBattery" count="0,1"/>
+			<item name="resourceCrushedSand" count="0,750"/>
+			<item name="resourceRockSmall" count="0,750"/>
+			<item name="resourceScrapIron" count="0,750"/>
+			<item name="resourceOilShale" count="0,750"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>			
+		</lootgroup>
+		<lootgroup name="groupenSnowsGiant" count="all"> <!-- this one is good-->
+			<item group="groupenSnow" count="1,4"/>
+			<item group="groupFancyApparel" count="0,1"/>
+			<item group="groupCommonManmadeResources" count="1,2"/>
+			<item group="groupCommonOrganicResources" count="1,3"/>
+			<item group="groupAmmo9mm"/>
+			<item group="groupGunHandgunScaled" count="0,1"/>
+			<item group="groupBasicSurvival"/>
+			<item group="groupGoreResources" count="2,4"/>
+			<item name="drinkJarPureMineralWater" count="0,1"/>
+			<item name="resourcePaper" count="4,11"/>
+			<item name="resourceCloth" count="2,5"/>
+		</lootgroup>
+		<lootgroup name="groupenBurnt">
+			<item name="resourceCoal" count="100,200" loot_prob_template="high"/>
+			<item name="resourcePotassiumNitratePowder" count="100,200" loot_prob_template="high"/>	
+			<item name="toolCookingGrill" loot_prob_template="high"/>	
+			<item name="resourceGunPowder" count="100,200" loot_prob_template="medHigh"/>
+			<item name="toolBellows" loot_prob_template="med"/>	
+			<item name="toolAnvil" loot_prob_template="med"/>	
+		</lootgroup>		
+		<lootgroup name="groupenBurnts" count="all">
+			<item group="groupenBurnt" count="0,1"/>
+			<item group="groupCommonOrganicResources"/>
+			<item group="groupGoreResources" count="1,2"/>
+		</lootgroup>
+		<lootgroup name="groupenBurntsFeral" count="all">
+			<item group="groupenBurnt" count="0,2"/>
+			<item group="groupCommonOrganicResources"/>
+			<item group="groupGoreResources" count="1,2"/>
+		</lootgroup>	
+		<lootgroup name="groupenBurntsRadiated" count="all">
+			<item group="groupModAllScaled" count="0,1"/>
+			<item group="groupenBurnt" count="1,3"/>
+			<item group="groupCommonOrganicResources"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCoal" count="150,250"/>
+			<item name="resourcePotassiumNitratePowder" count="150,250"/>
+			<item name="resourceGunPowder" count="25,100"/>
+			<item name="resourceOil" count="0,2"/>
+		</lootgroup>
+		<lootgroup name="groupenBurntsGiant" count="all">
+			<item group="groupenBurnt" count="1,4"/>
+			<item group="groupGrills" count="2"/>
+			<item group="groupGoreResources" count="2,4"/>
+			<item name="resourceCoal" count="150,250"/>
+			<item name="resourcePotassiumNitratePowder" count="150,250"/>
+			<item name="resourceGunPowder" count="25,100"/>
+			<item name="resourceOil" count="0,2"/>			
+		</lootgroup>
+		<lootgroup name="groupenWasteland">
+			<item name="resourceAcid" count="1,2" loot_prob_template="veryHigh"/>	
+		</lootgroup>		
+		<lootgroup name="groupenWastelands" count="all">
+			<item group="groupenWasteland" count="0,1"/>
+			<item group="groupCommonOrganicResources" count="1,3"/>
+			<item group="groupGoreResources" count="2,4"/>
+			<item name="resourceCloth" count="2,5"/>
+		</lootgroup>
+		<lootgroup name="groupenWastelandsFeral" count="all">
+			<item group="groupenWasteland" count="0,2"/>
+			<item group="groupCommonOrganicResources" count="1,3"/>
+			<item group="groupGoreResources" count="2,4"/>
+			<item name="resourceCloth" count="2,5"/>
+		</lootgroup>	
+		<lootgroup name="groupenWastelandsRadiated">
+			<item group="groupenWasteland" count="1,3"/>
+			<item group="groupCommonOrganicResources" count="1,3"/>
+			<item group="groupGoreResources" count="2,4"/>
+			<item name="resourceCloth" count="2,5"/>
+		</lootgroup>
+		<lootgroup name="groupenWastelandsGiant" count="all">
+			<item group="groupenWasteland" count="1,4"/>
+			<item group="groupCommonOrganicResources" count="1,3"/>
+			<item group="groupGoreResources" count="3,7"/>
+		</lootgroup>
+		<lootgroup name="groupenHazmat">
+			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
+			<item group="groupLabResources" loot_prob_template="high"/>
+			<item group="groupUncommonManmadeResources" loot_prob_template="high"/>
+			<item group="groupCommonLabResources" loot_prob_template="medhigh"/>
+			<item group="groupUncommonLabResources" loot_prob_template="med"/>
+			<item group="groupRareManmadeResources" loot_prob_template="medlow"/>			
+			<item group="groupModAllScaled" loot_prob_template="med"/>	
+			<item name="resourceScrapPolymers" count="1,3" loot_prob_template="veryHigh"/>
+			<item group="groupRareOrganicResources" loot_prob_template="med"/>
+			<item group="groupMeleeTool" loot_prob_template="high"/>
+		</lootgroup>		
+		<lootgroup name="groupenHazmats" count="all">
+			<item group="groupenHazmat" count="0,1"/>
+			<item group="groupHazmatApparel" count="0,1"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceScrapPolymers" count="1,3"/>
+		</lootgroup>
+		<lootgroup name="groupenHazmatsFeral" count="all">
+			<item group="groupenHazmat" count="0,2"/>
+			<item group="groupHazmatApparel" count="0,1"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceScrapPolymers" count="1,3"/>
+		</lootgroup>	
+		<lootgroup name="groupenHazmatsRadiated" count="all">
+			<item group="groupenHazmat" count="1,3"/>
+			<item group="groupHazmatApparel" count="0,1"/>
+			<item group="groupLabResources" count="1"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceScrapPolymers" count="1,3"/>
+		</lootgroup>
+		<lootgroup name="groupenHazmatsGiant" count="all">
+			<item group="groupenHazmat" count="1,4"/>
+			<item group="groupHazmatApparel" count="0,1"/>
+			<item group="groupLabResources" count="0,1"/>
+			<item group="groupCommonOrganicResources" count="1,3"/>
+			<item group="groupGoreResources" count="2,3"/>
+			<item name="resourceScrapPolymers" count="2,5"/>
+		</lootgroup>
+		<lootgroup name="groupenPatient" count="1">	
+			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
+			<item group="groupLowerMed" loot_prob_template="veryHigh"/>					
+			<item group="groupMedicalSmall01" loot_prob_template="veryHigh"/>
+			<item group="groupMedicalMed02" loot_prob_template="high"/>
+			<item group="groupMedicalLarge01" loot_prob_template="medLow"/>			
+			<item name="foodHoney" loot_prob_template="medHigh"/>
+			<item name="drugHerbalAntibiotics" loot_prob_template="med"/>
+			<item name="drugPainkillers" loot_prob_template="medHigh"/>
+			<item name="drugVitamins" loot_prob_template="medHigh"/>
+			<item name="medicalSplint" count="1" loot_prob_template="med"/>			
+		</lootgroup>
+		<lootgroup name="groupenPatients" count="all">
+			<item group="groupenPatient" count="1"/>
+ 			<item group="groupLowerMed" loot_prob_template="veryHigh"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>		
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>	 		
+		</lootgroup>
+		<lootgroup name="groupenPatientsFeral" count="all">
+			<item group="groupenPatient" count="0,2"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>	
+		<lootgroup name="groupenPatientsRadiated" count="all">
+			<item group="groupenPatient" count="1,3"/>
+			<item group="groupMedicalHighLow" count="0,1"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>
+		<lootgroup name="groupenPatientsGiant" count="all">
+			<item group="groupenPatient" count="1,2"/>
+			<item group="groupMedicalHighLow" count="0,1"/>
+			<item group="groupCommonOrganicResources" count="1,3"/>
+			<item group="groupGoreResources" count="3,4"/>
+			<item name="resourceCloth" count="2,5"/>
+		</lootgroup>	
+		<lootgroup name="groupenFootball">
+			<item group="groupDrinksSmall01" loot_prob_template="high"/>
+			<item group="groupAllMeleeTiered" loot_prob_template="high"/>			
+			<item group="groupCommonManmadeResources" loot_prob_template="high"/>
+			<item group="groupenSchoolBooks" loot_prob_template="medHigh"/>
+			<item group="groupCollegeApparel" loot_prob_template="medLow"/>
+			<item group="foodCandy" loot_prob_template="low"/>
+			<item name="apparelRunningShoesRegular" loot_prob_template="med"/>
+			<item name="apparelTShirtPlain" mods="dye" mod_chance="0" loot_prob_template="veryHigh"/>
+			<item name="apparelHoodySweatshirt" mods="dye" mod_chance="0" loot_prob_template="veryHigh"/>
+		</lootgroup>
+		<lootgroup name="groupenFootballs" count="all">
+			<item group="groupenFootball" count="0,1"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>
+		<lootgroup name="groupenFootballsFeral" count="all">
+			<item group="groupenFootball" count="0,2"/>
+			<item group="perkBooks" count="0,1"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>		
+		<lootgroup name="groupenFootballsRadiated" count="all">
+			<item group="groupenFootball" count="1,3"/>
+			<item group="perkBooks" count="0,2"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>
+		<lootgroup name="groupenFootballsGiant" count="all">
+			<item group="groupenFootball" count="1,4"/>
+			<item group="perkBooks" count="0,1"/>
+			<item group="groupCommonOrganicResources" count="1,3"/>
+			<item group="groupGoreResources" count="2,3"/>
+			<item name="resourceCloth" count="2,5"/>
+		</lootgroup>	
+		<lootgroup name="groupenLabCreature">
+			<item name="resourceAcid" count="1,2" loot_prob_template="veryHigh"/>	
+		</lootgroup>		
+		<lootgroup name="groupenLabCreatures" count="all">
+			<item group="groupenLabCreature" count="0,1"/>
+			<item group="groupCommonOrganicResources" count="1,3"/>
+			<item group="groupGoreResources" count="2,4"/>
+			<item name="resourceCloth" count="2,5"/>
+		</lootgroup>	
+		<lootgroup name="groupenScientistBoss1">
+			<item name="meleeWpnBladeT1HuntingKnife" loot_prob_template="med"/>
+			<item group="groupMeleeWpnClubT1BaseballBats" loot_prob_template="med"/>
+		</lootgroup>
+		<lootgroup name="groupenScientistsBoss1">
+			<item group="groupenScientistBoss1" count="0,1"/>
+			<item group="groupCommonOrganicResources" count="1,3"/>
+			<item group="groupGoreResources" count="2,4"/>
+			<item name="resourceCloth" count="2,5"/>
+		</lootgroup>		
+		<lootgroup name="groupenForestSpider">
+			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
+			<item group="groupCommonMelee" loot_prob_template="high"/>
+			<item group="groupUncommonMelee" loot_prob_template="med"/>
+			<item group="foodCandy" loot_prob_template="low"/>
+		</lootgroup>		
+		<lootgroup name="groupenForestSpiders" count="all">
+			<item group="groupenForestSpider" count="0,1"/>
+			<item group="groupCommonApparel" count="0,1"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupUncommonManmadeResources" count="1,3"/>
+			<item group="groupUncommonOrganicResources" count="1,3"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>
+		<lootgroup name="groupenForestSpidersFeral" count="all">
+			<item group="groupenForestSpider" count="0,2"/>
+			<item group="groupCommonApparel" count="0,1"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupUncommonManmadeResources" count="1,3"/>
+			<item group="groupUncommonOrganicResources" count="1,3"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>	
+		<lootgroup name="groupenForestSpidersRadiated" count="all">
+			<item group="groupenForestSpider" count="1,3"/>
+			<item group="groupCommonApparel" count="0,1"/>
+			<item group="groupArmorModsScaled" count="0,1"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupUncommonManmadeResources" count="1,3"/>
+			<item group="groupUncommonOrganicResources" count="1,3"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>		
+		<lootgroup name="groupenWildling">
+			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
+			<item group="groupCommonMelee" loot_prob_template="high"/>
+			<item group="groupUncommonMelee" loot_prob_template="med"/>
+			<item group="foodCandy" loot_prob_template="low"/>
+		</lootgroup>		
+		<lootgroup name="groupenWildlings" count="all">
+			<item group="groupenWildling" count="0,1"/>
+			<item group="groupCommonApparel" count="0,1"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupUncommonManmadeResources" count="1,3"/>
+			<item group="groupUncommonOrganicResources" count="1,3"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>
+		<lootgroup name="groupenWildlingsFeral" count="all">
+			<item group="groupenWildling" count="0,2"/>
+			<item group="groupCommonApparel" count="0,1"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupUncommonManmadeResources" count="1,3"/>
+			<item group="groupUncommonOrganicResources" count="1,3"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>	
+		<lootgroup name="groupenWildlingsRadiated" count="all">
+			<item group="groupenWildling" count="1,3"/>
+			<item group="groupCommonApparel" count="0,1"/>
+			<item group="groupArmorModsScaled" count="0,1"/>
+			<item group="groupCommonOrganicResources" count="1,2"/>
+			<item group="groupUncommonManmadeResources" count="1,3"/>
+			<item group="groupUncommonOrganicResources" count="1,3"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>		
+		<lootgroup name="groupenLab">
+			<item group="groupBasicSurvival" loot_prob_template="veryHigh"/>
+			<item group="groupLabResources" loot_prob_template="high"/>
+			<item group="groupUncommonManmadeResources" loot_prob_template="high"/>
+			<item group="groupRareManmadeResources" loot_prob_template="med"/>
+			<item group="groupHazmatApparel" loot_prob_template="high"/>
+			<item group="groupModAllScaled" loot_prob_template="med"/>
+			<item group="groupMeleeTool" loot_prob_template="med"/>
+			<item name="apparelNerdGlasses" loot_prob_template="medHigh"/>	
+			<item name="resourceScrapPolymers" count="1,3"/>
+		</lootgroup>		
+		<lootgroup name="groupenLabs" count="all">
+			<item group="groupenLab" count="0,1"/>
+			<item group="groupCommonApparelNoPants" count="0,1"/>
+			<item group="groupUncommonManmadeResources" count="1,2"/>
+			<item name="resourceScrapPolymers" count="0,3"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>
+		<lootgroup name="groupenLabsFeral" count="all">
+			<item group="groupenLab" count="0,2"/>
+			<item group="groupCommonApparelNoPants" count="0,1"/>
+			<item group="groupUncommonManmadeResources" count="0,1"/>
+			<item group="groupUncommonOrganicResources" count="1,2"/>
+			<item name="resourceScrapPolymers" count="1,5"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>	
+		<lootgroup name="groupenLabsRadiated" count="all">
+			<item group="groupenLab" count="1,3"/>
+			<item group="groupCommonApparelNoPants" count="0,1"/>
+			<item group="groupUncommonManmadeResources" count="1,2"/>
+			<item group="groupUncommonOrganicResources" count="1,2"/>
+			<item name="resourceScrapPolymers" count="3,9"/>
+			<item name="resourceAcid" count="1,2"/>
+			<item group="groupGoreResources" count="1,2"/>
+			<item name="resourceCloth" count="1,3"/>
+		</lootgroup>
+		<!-- new groups end -->
+		
+		
+		
 <!-- not sold yet on including these -->
 <!--		<lootgroup name="groupenBurntGiant">
 			<item name="meleeWpnBladeT1HuntingKnife" loot_prob_template="med"/>
@@ -3730,7 +4297,7 @@
 		</lootcontainer>
 		<lootcontainer name="enPackMinerGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupenMinerGiant"/>
-		</lootcontainer>	 
+		</lootcontainer>		
 		<lootcontainer name="enPackBiker" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupenBikers"/>
 		</lootcontainer>
@@ -3743,26 +4310,147 @@
 		<lootcontainer name="enPackBikerGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 			<item group="groupenBikerGiant"/>
 		</lootcontainer>
-		<lootcontainer name="enPackSnowGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupenSnowGiant"/>
-		</lootcontainer>		
-		<lootcontainer name="enPackDesertGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupenDesertGiant"/>
+		<lootcontainer name="enPackBusinessman" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenBusinessmen"/>
 		</lootcontainer>
-<!-- 			<lootcontainer name="enBurntGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupenBurntGiant"/>
+		<lootcontainer name="enPackBusinessmanFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenBusinessmenFeral"/>
+		</lootcontainer>			
+		<lootcontainer name="enPackBusinessmanRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenBusinessmenRadiated"/>
+		</lootcontainer>
+<!-- 		<lootcontainer name="enPackBusinessmanGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
+			<item group="groupenBusinessmenGiant"/>
+		</lootcontainer> -->
+		<lootcontainer name="enPackBusinesswoman" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenBusinesswomen"/>
+		</lootcontainer>
+		<lootcontainer name="enPackBusinesswomanFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenBusinesswomenFeral"/>
+		</lootcontainer>			
+		<lootcontainer name="enPackBusinesswomanRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenBusinesswomenRadiated"/>
+		</lootcontainer>
+ 		<lootcontainer name="enBusinessmanBoss" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenBusinessmenBoss"/>
+		</lootcontainer>
+		<lootcontainer name="enPackSnow" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenSnows"/>
+		</lootcontainer>
+		<lootcontainer name="enPackSnowFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenSnowsFeral"/>
+		</lootcontainer>			
+		<lootcontainer name="enPackSnowRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenSnowsRadiated"/>
+		</lootcontainer>
+		<lootcontainer name="enPackSnowGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenSnowsGiant"/>
+		</lootcontainer>		
+		<lootcontainer name="enPackDesert" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenDeserts"/>
+		</lootcontainer>
+		<lootcontainer name="enPackDesertFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenDesertsFeral"/>
+		</lootcontainer>			
+		<lootcontainer name="enPackDesertRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenDesertsRadiated"/>
+		</lootcontainer>
+		<lootcontainer name="enPackDesertGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenDesertsGiant"/>
+		</lootcontainer>
+		<lootcontainer name="enPackBurnt" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenBurnts"/>
+		</lootcontainer>
+		<lootcontainer name="enPackBurntFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenBurntsFeral"/>
+		</lootcontainer>			
+		<lootcontainer name="enPackBurntRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenBurntsRadiated"/>
+		</lootcontainer>
+ 		<lootcontainer name="enBurntGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenBurntsGiant"/>
+		</lootcontainer>
+		<lootcontainer name="enPackWasteland" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenWastelands"/>
+		</lootcontainer>
+		<lootcontainer name="enPackWastelandFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenWastelandsFeral"/>
+		</lootcontainer>			
+		<lootcontainer name="enPackWastelandRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenWastelandsRadiated"/>
 		</lootcontainer>
 		<lootcontainer name="enWastelandGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupenWastelandGiant"/>
+			<item group="groupenWastelandsGiant"/>
+		</lootcontainer>		
+		<lootcontainer name="enPackHazmat" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenHazmats"/>
 		</lootcontainer>
-		-->	
-<!-- 		<lootcontainer name="enBusinessmanBoss" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupenBusinessmanBoss"/>
+		<lootcontainer name="enPackHazmatFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenHazmatsFeral"/>
+		</lootcontainer>			
+		<lootcontainer name="enPackHazmatRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenHazmatsRadiated"/>
+		</lootcontainer>
+		<lootcontainer name="enPackHazmatGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenHazmatsGiant"/>
+		</lootcontainer>
+		<lootcontainer name="enPackPatient" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenPatients"/>
+		</lootcontainer>
+		<lootcontainer name="enPackPatientFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenPatientsFeral"/>
+		</lootcontainer>			
+		<lootcontainer name="enPackPatientRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenPatientsRadiated"/>
+		</lootcontainer>
+		<lootcontainer name="enPackPatientGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenPatientsGiant"/>
+		</lootcontainer>
+		<lootcontainer name="enPackFootball" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenFootballs"/>
+		</lootcontainer>
+		<lootcontainer name="enPackFootballFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenFootballsFeral"/>
+		</lootcontainer>			
+		<lootcontainer name="enPackFootballRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenFootballsRadiated"/>
+		</lootcontainer>
+		<lootcontainer name="enPackFootballGiant" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenFootballsGiant"/>
+		</lootcontainer>
+		<lootcontainer name="enPackLabCreature" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenLabCreatures"/>
 		</lootcontainer>
 		<lootcontainer name="enScientistBoss1" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupenScientistBoss1"/>
-		</lootcontainer> -->
-		
+			<item group="groupenScientistsBoss1"/>
+		</lootcontainer>		
+		<lootcontainer name="enPackForestSpider" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenForestSpiders"/>
+		</lootcontainer>
+		<lootcontainer name="enPackForestSpiderFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenForestSpidersFeral"/>
+		</lootcontainer>			
+		<lootcontainer name="enPackForestSpiderRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenForestSpidersRadiated"/>
+		</lootcontainer>
+		<lootcontainer name="enPackWildling" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenWildlings"/>
+		</lootcontainer>
+		<lootcontainer name="enPackWildlingFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenWildlingsFeral"/>
+		</lootcontainer>			
+		<lootcontainer name="enPackWildlingRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenWildlingsRadiated"/>
+		</lootcontainer>
+		<lootcontainer name="enPackLab" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenLabs"/>
+		</lootcontainer>
+		<lootcontainer name="enPackLabFeral" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenLabsFeral"/>
+		</lootcontainer>			
+		<lootcontainer name="enPackLabRadiated" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupenLabsRadiated"/>
+		</lootcontainer>
 		<!-- Create lootgroup for Snufkin Zs -->
 				
 		<lootcontainer name="packBanshee" count="1" size="6,2" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
