@@ -526,6 +526,8 @@ loadingTipGetSomeRest_title,UI,Loading Screen,x,,Get Some Rest,, ,,,,,,,,,,,,
 loadingTipGetSomeRest,UI,Loading Screen,x,,"Stand on a clean bedroll to heal up a bit courtesy of War3zuk. Or upgrade to a twin size, king size, or hospital bed to cure more ailments",, ,,,,,,,,,,,,
 loadingTipEight_title,UI,Loading Screen,x,,Eight...Eight...,, ,,,,,,,,,,,,
 loadingTipEight,UI,Loading Screen,x,,"I forget what Eight was for.",, ,,,,,,,,,,,,
+loadingTipPreGenMaps_title,UI,Loading Screen,x,,Pre-Gen Worlds,, ,,,,,,,,,,,,
+loadingTipPreGenMaps,UI,Loading Screen,x,,"To get the full experience of the mod you should use one of the pre-generated maps that come with it",, ,,,,,,,,,,,,
 loadingTipMapSize_title,UI,Loading Screen,x,,Size Matters,, ,,,,,,,,,,,,
 loadingTipMapSize,UI,Loading Screen,x,,"This mod is meant to be played on a 3k map. You can still increase the size if you want but you will need to keep in mind you'll be walking and running everywhere and there aren't any cities or towns to explore on the map or traders to be found. You'll have your different biomes and zombies that are specific to that biome but that's it.",, ,,,,,,,,,,,,
 loadingTipStillReading_title,UI,Loading Screen,x,,Are You Still Reading This?,, ,,,,,,,,,,,,
@@ -538,6 +540,9 @@ loadingTipReallyStillReading_title,UI,Loading Screen,x,,You Really Are Still Rea
 loadingTipReallyStillReading,UI,Loading Screen,x,,"Well good on you. I'm glad that someone appreciates these loading tips.",, ,,,,,,,,,,,,
 loadingTipPlaceableLoot_title,UI,Loading Screen,x,,Placeable Loot,, ,,,,,,,,,,,,
 loadingTipPlaceableLoot,UI,Loading Screen,x,,"You might find some loot that might not have a obvious use. Try placing it down and harvesting from it",, ,,,,,,,,,,,,
+loadingTipWater_title,UI,Loading Screen,x,,Hydration,, ,,,,,,,,,,,,
+loadingTipWater,UI,Loading Screen,x,,"If you're in need of water go scoop up some snow by holding some empty jars and [action:local:Secondary]. \nBut watch out where the huskeys go...",, ,,,,,,,,,,,,
+
 
 loadingTip_title,UI,Loading Screen,x,,title words,, ,,,,,,,,,,,,
 loadingTip,UI,Loading Screen,x,,"content words",, ,,,,,,,,,,,,

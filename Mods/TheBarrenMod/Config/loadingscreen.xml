@@ -12,13 +12,16 @@
 			<tip key="loadingTipResources"/>
 			<tip key="loadingTipOffense"/>
 			<tip key="loadingTipGetSomeRest"/>			
-			<tip key="loadingTipEight"/>	
+			<tip key="loadingTipEight"/>
+			<tip key="loadingTipPreGenMaps"/>			
 			<tip key="loadingTipMapSize"/>
 			<tip key="loadingTipStillReading"/>
 			<tip key="loadingTipHowDidIGetHere"/>
 			<tip key="loadingTipSameAsItEverWas"/>
 			<tip key="loadingTipReallyStillReading"/>
 			<tip key="loadingTipPlaceableLoot"/>
+			<tip key="loadingTipWater"/>
+			
 		</tips>
 		
 	</append> 
